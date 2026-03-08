@@ -1,11 +1,11 @@
 # Foundational Generative AI Research Papers - Summarized
 
-A curated collection of the **35 most influential papers** that shaped modern generative AI, with comprehensive summaries designed to make cutting-edge research accessible to everyone.
+A curated collection of the **52 most influential papers** that shaped modern generative AI, with comprehensive summaries designed to make cutting-edge research accessible to everyone.
 
-[![Papers](https://img.shields.io/badge/Papers-35-blue.svg)](./papers/)
+[![Papers](https://img.shields.io/badge/Papers-52-blue.svg)](./papers/)
 [![Guides](https://img.shields.io/badge/Guides-6-green.svg)](./docs/)
 [![License](https://img.shields.io/badge/License-Educational-orange.svg)](./LICENSE)
-[![Updated](https://img.shields.io/badge/Updated-October_2025-green.svg)](./README.md)
+[![Updated](https://img.shields.io/badge/Updated-March_2026-green.svg)](./README.md)
 
 ---
 
@@ -45,7 +45,8 @@ genai-research-papers-summarized/
 │   ├── architectures/                 # Foundational architectures
 │   │   ├── 01-attention-is-all-you-need/
 │   │   ├── 11-vision-transformer/
-│   │   └── 20-mamba/
+│   │   ├── 20-mamba/
+│   │   └── 37-mixture-of-experts/
 │   ├── language-models/               # LLM papers
 │   │   ├── 03-bert/
 │   │   ├── 04-gpt3-few-shot-learners/
@@ -53,14 +54,24 @@ genai-research-papers-summarized/
 │   │   ├── 14-constitutional-ai/
 │   │   ├── 15-llama/
 │   │   ├── 17-llama2/
-│   │   └── 19-dpo/
+│   │   ├── 19-dpo/
+│   │   ├── 36-gpt4/
+│   │   ├── 40-gpt4o/
+│   │   ├── 41-llama4/
+│   │   ├── 42-gpt5/
+│   │   └── 43-claude4/
 │   ├── image-generation/              # Image generation papers
 │   │   ├── 02-generative-adversarial-networks/
 │   │   ├── 06-diffusion-models/
-│   │   └── 07-stable-diffusion/
+│   │   ├── 07-stable-diffusion/
+│   │   ├── 44-sora-dit/
+│   │   └── 48-dalle3/
 │   ├── multimodal/                    # Cross-modal papers
 │   │   ├── 08-clip/
-│   │   └── 23-gpt4v/
+│   │   ├── 23-gpt4v/
+│   │   ├── 46-llava/
+│   │   ├── 47-gemini3/
+│   │   └── 49-whisper/
 │   └── techniques/                    # Methods and techniques
 │       ├── 09-chain-of-thought/
 │       ├── 10-lora/
@@ -71,7 +82,13 @@ genai-research-papers-summarized/
 │       ├── 21-react/
 │       ├── 22-qlora/
 │       ├── 24-toolformer/
-│       └── 25-tree-of-thoughts/
+│       ├── 25-tree-of-thoughts/
+│       ├── 38-grpo/
+│       ├── 39-rlvr/
+│       ├── 45-speculative-decoding/
+│       ├── 50-test-time-compute/
+│       ├── 51-process-reward-models/
+│       └── 52-pagedattention-vllm/
 └── resources/                         # Additional resources
     ├── images/                        # Diagrams and visualizations
     └── notebooks/                     # Jupyter notebooks
@@ -103,8 +120,15 @@ genai-research-papers-summarized/
 - Selective state spaces
 - [Paper](https://arxiv.org/abs/2312.00752)
 
+**4. Sparse Architecture:** [Mixture-of-Experts (Mixtral)](./papers/architectures/37-mixture-of-experts/) (2024)
+- 🔥 **CRITICAL** - Architecture behind every frontier model
+- 47B params, 13B active - matches LLaMA 2 70B
+- Sparse routing, expert specialization
+- Now used by DeepSeek-V3, Llama 4, Qwen3
+- [Paper](https://arxiv.org/abs/2401.04088)
+
 ### 🤖 Language Models
-**Recommended Reading Order:** Evolution → Alignment → Modern (2024-2025)
+**Recommended Reading Order:** Evolution → Frontier → Alignment → Open Source → Reasoning → Unified
 
 #### **Early Evolution (Historical Context)**
 
@@ -117,6 +141,20 @@ genai-research-papers-summarized/
 - ⭐ **HIGH** - Few-shot learning paradigm
 - 175B parameters, foundation for ChatGPT
 - [Paper](https://arxiv.org/abs/2005.14165)
+
+#### **The Frontier Era**
+
+**3.** [GPT-4](./papers/language-models/36-gpt4/) (2023)
+- 🔥 **CRITICAL** - Defined the frontier model era
+- Passed bar exam (90th percentile), MMLU 86.4%
+- First multimodal GPT, predictable scaling
+- [Paper](https://arxiv.org/abs/2303.08774)
+
+**4.** [GPT-4o](./papers/language-models/40-gpt4o/) (2024)
+- 🔥 **CRITICAL** - First native omni-model
+- Text, audio, image in one model, 232ms voice latency
+- 2x faster, 50% cheaper than GPT-4 Turbo
+- [System Card](https://cdn.openai.com/gpt-4o-system-card.pdf)
 
 #### **Alignment Methods (How to Make Them Helpful)**
 
@@ -152,6 +190,12 @@ genai-research-papers-summarized/
 - 70B matches 405B performance
 - [Paper](https://www.meta.ai/blog/meta-llama-3-3/)
 
+**9.** [Llama 4](./papers/language-models/41-llama4/) (2025)
+- 🔥 **HIGH** - First open-source multimodal MoE
+- Scout: 10M token context, Maverick: beats GPT-4o
+- 17B active params, natively multimodal
+- [Blog](https://ai.meta.com/blog/llama-4-multimodal-intelligence/)
+
 #### **Efficiency Breakthroughs (2024)**
 
 **9.** [DeepSeek-V3](./papers/language-models/27-deepseek-v3/) (2024)
@@ -161,7 +205,7 @@ genai-research-papers-summarized/
 
 #### **Reasoning Era (2024-2025)**
 
-**10.** [OpenAI o1](./papers/language-models/31-openai-o1/) (2024)
+**11.** [OpenAI o1](./papers/language-models/31-openai-o1/) (2024)
 - 🔥 **CRITICAL** - Started reasoning model era
 - PhD-level performance, RL for reasoning
 - [Announcement](https://openai.com/index/learning-to-reason-with-llms/)
@@ -176,10 +220,24 @@ genai-research-papers-summarized/
 - Adaptive reasoning, beats competitors
 - [Paper](https://arxiv.org/abs/2505.09388)
 
-**13.** [Claude 3.5 Sonnet](./papers/language-models/30-claude-3.5-sonnet/) (2024)
+**15.** [Claude 3.5 Sonnet](./papers/language-models/30-claude-3.5-sonnet/) (2024)
 - 🔥 **CRITICAL** - Computer use capability
 - Best coding model (49% SWE-Bench)
 - [Announcement](https://www.anthropic.com/news/3-5-models-and-computer-use)
+
+#### **Unified Intelligence (2025-2026)**
+
+**16.** [GPT-5](./papers/language-models/42-gpt5/) (2025)
+- 🔥 **CRITICAL** - Unified fast + reasoning model
+- 94.6% AIME, 74.9% SWE-bench, 80% fewer hallucinations
+- Adaptive routing between fast and deep thinking
+- [System Card](https://cdn.openai.com/gpt-5-system-card.pdf)
+
+**17.** [Claude 4 Family](./papers/language-models/43-claude4/) (2025-2026)
+- 🔥 **CRITICAL** - Agentic AI leader
+- 80.9% SWE-bench (Opus 4.5), best coding model
+- Multi-agent orchestration, extended thinking
+- [Announcement](https://www.anthropic.com/news/claude-4)
 
 ### 🎨 Image Generation
 **Recommended Reading Order:** GANs (historical) → Diffusion theory → Practical implementation
@@ -200,6 +258,18 @@ genai-research-papers-summarized/
 - Open-source, democratized AI art
 - [Paper](https://arxiv.org/abs/2112.10752)
 
+**4.** [DALL-E 3](./papers/image-generation/48-dalle3/) (2023)
+- ⭐ **HIGH** - Solved prompt adherence
+- Better captions = better images, first readable text in images
+- ChatGPT integration eliminated prompt engineering
+- [Paper](https://cdn.openai.com/papers/dall-e-3.pdf)
+
+**5.** [Sora / DiT](./papers/image-generation/44-sora-dit/) (2024)
+- 🔥 **CRITICAL** - Video generation + Diffusion Transformers
+- Transformers replaced U-Net in diffusion models
+- Spacetime patches enable flexible video generation
+- [DiT Paper](https://arxiv.org/abs/2212.09748) | [Sora Report](https://openai.com/index/video-generation-models-as-world-simulators/)
+
 ### 🔗 Multimodal
 **Recommended Reading Order:** Vision-language bridge → Practical multimodal → Next-gen unified AI
 
@@ -209,23 +279,41 @@ genai-research-papers-summarized/
 - Zero-shot image classification, powers text-to-image models
 - [Paper](https://arxiv.org/abs/2103.00020)
 
-**2.** [GPT-4V(ision)](./papers/multimodal/23-gpt4v/) (2023)
+**2.** [Whisper](./papers/multimodal/49-whisper/) (2022)
+- 🔥 **CRITICAL** - Foundation model for speech
+- 680K hours of training data, 99 languages, zero-shot robustness
+- 50% fewer errors than specialized models
+- [Paper](https://arxiv.org/abs/2212.04356)
+
+**3.** [LLaVA](./papers/multimodal/46-llava/) (2023)
+- 🔥 **HIGH** - Blueprint for open-source multimodal
+- Vision encoder + projection + LLM = visual assistant
+- 85% of GPT-4V quality, spawned dozens of derivatives
+- [Paper](https://arxiv.org/abs/2304.08485)
+
+**4.** [GPT-4V(ision)](./papers/multimodal/23-gpt4v/) (2023)
 - 🔥 **CRITICAL** - Multimodal frontier model
 - GPT-4 with vision capabilities
 - State-of-the-art VQA and OCR, real-world applications
 - [Paper](https://cdn.openai.com/papers/GPTV_System_Card.pdf)
 
-**3.** [Gemini 2.5](./papers/multimodal/29-gemini-2.5/) (2025)
-- 🔥 **CRITICAL** - Most advanced multimodal AI
-- Native multimodal (text, image, audio, video)
-- 1M context, 3-hour video understanding, integrated thinking mode
-- [Paper](https://arxiv.org/abs/2507.06261)
-
-**4.** [SAM 2](./papers/multimodal/32-sam2/) (2024)
+**5.** [SAM 2](./papers/multimodal/32-sam2/) (2024)
 - 🔥 **HIGH** - Universal video segmentation
 - 44 FPS real-time performance
 - Zero-shot generalization across domains
 - [Paper](https://arxiv.org/abs/2408.00714)
+
+**6.** [Gemini 2.5](./papers/multimodal/29-gemini-2.5/) (2025)
+- 🔥 **CRITICAL** - Advanced multimodal AI
+- Native multimodal (text, image, audio, video)
+- 1M context, 3-hour video understanding, integrated thinking mode
+- [Paper](https://arxiv.org/abs/2507.06261)
+
+**7.** [Gemini 3](./papers/multimodal/47-gemini3/) (2025)
+- 🔥 **CRITICAL** - First model to cross 1500 LMArena ELO
+- 91.8% MMLU, 95% AIME, best video understanding
+- Deep Think mode: 45.1% ARC-AGI-2
+- [Announcement](https://blog.google/products-and-platforms/products/gemini/gemini-3/)
 
 ### ⚡ Techniques & Methods
 **Recommended Reading Order:** Scaling foundations → Efficiency → Reasoning → Agents
@@ -259,9 +347,23 @@ genai-research-papers-summarized/
 - 4-bit quantization + LoRA, 16× memory reduction
 - [Paper](https://arxiv.org/abs/2305.14314)
 
+#### **Inference Optimization**
+
+**6.** [Speculative Decoding](./papers/techniques/45-speculative-decoding/) (2023)
+- 🔥 **CRITICAL** - 2-3x faster inference, identical output
+- Draft model guesses, target model verifies in parallel
+- Used by every major LLM provider
+- [Paper](https://arxiv.org/abs/2211.17192)
+
+**7.** [PagedAttention / vLLM](./papers/techniques/52-pagedattention-vllm/) (2023)
+- 🔥 **CRITICAL** - Made LLM serving practical
+- Virtual memory for GPU KV-cache, 24x throughput improvement
+- Near-zero memory waste, powers most production LLM deployments
+- [Paper](https://arxiv.org/abs/2309.06180)
+
 #### **Production Techniques**
 
-**6.** [RAG](./papers/techniques/13-rag/) (2020)
+**7.** [RAG](./papers/techniques/13-rag/) (2020)
 - 🔥 **CRITICAL** - Production standard
 - Retrieval-augmented generation, reduces hallucinations
 - [Paper](https://arxiv.org/abs/2005.11401)
@@ -287,6 +389,32 @@ genai-research-papers-summarized/
 - 🔥 **HIGH** - Small models rival large ones
 - MCTS for math, 7B model beats 70B+ competitors
 - [Paper](https://arxiv.org/abs/2501.04519)
+
+**11.** [Test-Time Compute Scaling](./papers/techniques/50-test-time-compute/) (2024)
+- 🔥 **CRITICAL** - Theoretical foundation for reasoning models
+- Think harder, not bigger - small model + more compute matches 14x larger model
+- Compute-optimal strategies for easy vs. hard problems
+- [Paper](https://arxiv.org/abs/2408.03314)
+
+**12.** [Process Reward Models (Let's Verify Step by Step)](./papers/techniques/51-process-reward-models/) (2023)
+- 🔥 **CRITICAL** - Step-by-step verification for reasoning
+- Process supervision beats outcome supervision (78.2% vs 72.4% on MATH)
+- PRM800K dataset, foundation for o1/R1 verification
+- [Paper](https://arxiv.org/abs/2305.20050)
+
+#### **RL Training Methods**
+
+**11.** [GRPO](./papers/techniques/38-grpo/) (2024)
+- 🔥 **CRITICAL** - The algorithm behind reasoning models
+- No critic model needed, 50% less memory than PPO
+- Powers DeepSeek-R1, industry standard for reasoning training
+- [Paper](https://arxiv.org/abs/2402.03300)
+
+**12.** [RLVR](./papers/techniques/39-rlvr/) (2024-2025)
+- 🔥 **CRITICAL** - New training paradigm
+- Verifiable rewards replace human preferences for reasoning
+- Emergent reasoning from correctness signal alone
+- [Key Paper](https://arxiv.org/abs/2501.12948)
 
 #### **Agentic Capabilities**
 
@@ -345,8 +473,8 @@ Focus on "Why This Matters" sections + [Comparisons Guide](./docs/COMPARISONS.md
 
 | Category | Count | Total Reading Time |
 |----------|-------|-------------------|
-| **Papers** | 35 | 30-38 hours |
-| **Words** | 220,000+ | - |
+| **Papers** | 52 | 48-58 hours |
+| **Words** | 360,000+ | - |
 | **Guides** | 6 | 3-4 hours |
 | **Terms Explained** | 250+ | - |
 
@@ -356,10 +484,10 @@ Focus on "Why This Matters" sections + [Comparisons Guide](./docs/COMPARISONS.md
 - 2018: 1 paper (BERT)
 - 2020: 5 papers (GPT-3, Scaling Laws, ViT, DDPM, RAG)
 - 2021: 2 papers (CLIP, LoRA)
-- 2022: 5 papers (InstructGPT, Chain-of-Thought, Stable Diffusion, Constitutional AI, FlashAttention, Chinchilla)
-- 2023: 10 papers (LLaMA, LLaMA 2, Mamba, DPO, GPT-4V, ReAct, QLoRA, Toolformer, Tree of Thoughts)
-- **2024: 5 papers** (DeepSeek-V3, o1, Claude 3.5 Sonnet, SAM 2, LLaMA 3.3)
-- **2025: 5 papers** (DeepSeek-R1, Qwen3, Gemini 2.5, Meta-CoT, rStar-Math)
+- 2022: 7 papers (InstructGPT, Whisper, Chain-of-Thought, Stable Diffusion, Constitutional AI, FlashAttention, Chinchilla, DiT, Speculative Decoding)
+- 2023: 16 papers (GPT-4, LLaVA, DALL-E 3, Process Reward Models, PagedAttention/vLLM, LLaMA, LLaMA 2, Mamba, DPO, GPT-4V, ReAct, QLoRA, Toolformer, Tree of Thoughts)
+- **2024: 10 papers** (Mixtral/MoE, GPT-4o, Sora, GRPO, Test-Time Compute, DeepSeek-V3, o1, Claude 3.5 Sonnet, SAM 2, LLaMA 3.3)
+- **2025-2026: 10 papers** (DeepSeek-R1, RLVR, Qwen3, Gemini 2.5, Gemini 3, Llama 4, GPT-5, Claude 4, Meta-CoT, rStar-Math)
 
 ---
 
@@ -462,8 +590,8 @@ Gratitude to the researchers who created these foundational works:
 
 ---
 
-**Last Updated:** 2025-10-19
-**Papers:** 35 foundational works (2014-2025)
-**Total Content:** 220,000+ words
-**Includes:** Latest 2024-2025 breakthroughs (DeepSeek-R1, Gemini 2.5, Qwen3, o1, and more)
+**Last Updated:** 2026-03-08
+**Papers:** 52 foundational works (2014-2026)
+**Total Content:** 360,000+ words
+**Includes:** Latest breakthroughs through early 2026 (GPT-5, Claude 4, Llama 4, GRPO, RLVR, and more)
 **Repository:** [github.com/PatrickWiloak/genai-research-papers-summarized](https://github.com/PatrickWiloak/genai-research-papers-summarized)
