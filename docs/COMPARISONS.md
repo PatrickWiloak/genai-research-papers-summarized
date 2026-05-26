@@ -415,4 +415,82 @@ Prompting (task-specific instructions)
 
 ---
 
-**Last Updated:** 2025-10-19
+## 🆕 Newer Comparisons
+
+### Generative Model Families: VAE vs GAN vs Diffusion
+
+| Aspect | VAE (#67) | GAN (#2) | Diffusion (#75) |
+|--------|-----------|----------|-----------------|
+| **Training** | Stable (max-likelihood) | Unstable (adversarial) | Stable (denoising) |
+| **Sample quality** | Blurry | Sharp, high quality | Highest quality |
+| **Mode coverage** | Excellent | Mode collapse risk | Excellent |
+| **Latent space** | Structured, smooth | Implicit | Implicit |
+| **Speed** | Fast | Fast | Slow (many steps) |
+| **Likelihood** | ELBO (tractable) | None | Tractable bound |
+| **Now used for** | Latent space of Stable Diffusion | StyleGAN; specialized | Default for image/video/audio |
+
+**Key insight:** Diffusion won quality; VAEs survive as the compressor in latent diffusion; GANs survive in niches needing speed and unconditional sampling.
+
+---
+
+### Preference Optimization: RLHF vs DPO vs KTO
+
+| Aspect | RLHF/PPO (#5) | DPO (#19) | KTO (#93) |
+|--------|---------------|-----------|-----------|
+| **Data format** | (prompt, chosen, rejected) pairs | (prompt, chosen, rejected) pairs | (prompt, response, thumbs ±) |
+| **Reward model** | Required | None | None |
+| **Training stages** | 3 (SFT, RM, RL) | 2 (SFT, DPO) | 2 (SFT, KTO) |
+| **Stability** | Hard to tune | Easy | Easy |
+| **Theoretical basis** | Bradley-Terry + PPO | Bradley-Terry, closed form | Kahneman-Tversky prospect theory |
+| **Best when** | You have lots of pairs and compute | You have pairs and want simplicity | You only have unary feedback |
+
+---
+
+### Reasoning Approaches: CoT vs Self-Consistency vs Tree of Thoughts vs Test-Time RL
+
+| Aspect | CoT (#9) | Self-Consistency (#85) | ToT (#25) | Quiet-STaR / o1 (#82, #31) |
+|--------|----------|------------------------|-----------|---------------------------|
+| **Inference cost** | 1× | k× (k samples) | k×d× (k branches × d deep) | k× (longer outputs) |
+| **Training change?** | None | None | None | Yes (RL on rationales) |
+| **Best for** | Simple multi-step problems | Verifiable answers | Search-amenable problems | Open-ended hard reasoning |
+| **Headline finding** | "Let's think step by step" works | Majority vote massively helps | Backtracking helps | Train to think → o1-class |
+
+---
+
+### Open vs Closed Frontier Models (2025-26)
+
+| Capability | Closed Best | Open Best | Gap |
+|-----------|-------------|-----------|-----|
+| **General chat** | Claude 4 / GPT-5 / Gemini 3 | DeepSeek-V3 / Llama 4 / Qwen3 | ~3-6 months |
+| **Reasoning** | o1 / o-series | DeepSeek-R1 / Qwen3 | ~3 months |
+| **Coding** | Claude 4 / GPT-5 | DeepSeek-V3 / Qwen3 | ~3-6 months |
+| **Multimodal** | Gemini 3 / GPT-4o / Claude 4 | Llama 4 / Qwen3-VL | ~6 months |
+| **Cost** | $$$ API | $ self-host | Closed expensive |
+| **Privacy** | Sent to provider | Local | Open wins |
+
+**Pattern:** Closed leads on the frontier; open catches up in 3-6 months, then becomes the workhorse for production due to cost and privacy. DeepSeek and Qwen are the new pace-setters in the open ecosystem.
+
+---
+
+### Agents: ReAct vs Reflexion vs Self-Refine vs Voyager
+
+| | ReAct (#21) | Self-Refine (#84) | Reflexion (#83) | Voyager (#86) |
+|--|-------------|-------------------|-----------------|---------------|
+| **Loop** | Thought → Action → Observation | Generate → Critique → Refine | Try → Reflect → Retry w/ memory | Curriculum + skill library |
+| **Memory** | None | None | Episodic reflections | Persistent skill library |
+| **Best for** | Tool use, search | Quality refinement | Multi-attempt tasks | Open-ended exploration |
+
+---
+
+### Scientific AI Programs
+
+| | AlphaZero (#89) | AlphaFold 2/3 (#87/88) | AlphaGeometry (#61) | AlphaEvolve (#62) |
+|--|-----------------|------------------------|---------------------|-------------------|
+| **Domain** | Board games | Protein structure | Olympiad geometry | Open algorithms |
+| **Mechanism** | Self-play + MCTS | Evoformer / Diffusion | LM + symbolic solver | LLM + evolution |
+| **Headline result** | Mastered Go/Chess/Shogi | Solved 50-yr challenge; Nobel 2024 | IMO silver-medal level | Beat 56-yr-old Strassen bound |
+| **Lesson** | RL from scratch works | Domain priors + ML | Hybrid neuro-symbolic | LLMs can do real research |
+
+---
+
+**Last Updated:** 2026-05-26

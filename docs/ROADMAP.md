@@ -1,6 +1,8 @@
 # Learning Roadmap - From Beginner to Expert
 
-A structured path through the 15 papers based on your background and goals.
+A structured path through the 94 papers based on your background and goals.
+
+> **Note:** The original beginner / engineer / researcher / PM tracks below were designed around the original 15 papers. They remain a valid foundation. The **Extended Tracks** section at the bottom adds modern reasoning, agents, scientific AI, and the wider open-source ecosystem.
 
 ---
 
@@ -492,4 +494,80 @@ Mix and match based on your specific interests:
 
 **Questions?** Open an issue or check [Contributing](./CONTRIBUTING.md).
 
-**Last Updated:** 2025-10-19
+---
+
+## 🆕 Extended Tracks (adds papers beyond the original 15)
+
+### Track A: Pre-Transformer Foundations (4 papers, ~4 hours)
+For learners who want the *full* historical arc before diving into the Transformer.
+
+1. **Word2Vec** (#63) — meaning lives in vector geometry
+2. **Seq2Seq** (#64) — encoder-decoder paradigm invented
+3. **Bahdanau Attention** (#65) — attention invented; ancestor of the Transformer
+4. **ResNet** (#66) — skip connections; in every Transformer block
+
+### Track B: The GPT Lineage (5 papers, ~5 hours)
+The clearest narrative arc in modern AI.
+
+1. **GPT-1** (#69) — decoder-only Transformer, the pretrain-finetune recipe
+2. **GPT-2** (#70) — zero-shot transfer at 1.5B params
+3. **GPT-3** (#4) — few-shot in-context learning at 175B
+4. **InstructGPT** (#5) — RLHF turns GPT into ChatGPT
+5. **GPT-4 / GPT-4o / GPT-5** (#36, #40, #42) — modern frontier
+
+### Track C: Modern Reasoning Models (6 papers, ~7 hours)
+How models learned to think.
+
+1. **Chain-of-Thought** (#9) — "Let's think step by step"
+2. **Self-Consistency** (#85) — majority vote over samples
+3. **STaR** (#81) — bootstrap reasoning
+4. **Process Reward Models** (#51) — step-level verification
+5. **Quiet-STaR** (#82) — internal thoughts at every token
+6. **OpenAI o1 / DeepSeek-R1** (#31, #26) — RL-trained reasoning
+
+### Track D: Agents & Tool Use (6 papers, ~6 hours)
+1. **ReAct** (#21) — reasoning + acting
+2. **Toolformer** (#24) — self-taught tools
+3. **Reflexion** (#83) — verbal RL for agents
+4. **Self-Refine** (#84) — LLM as critic
+5. **Voyager** (#86) — Minecraft agent w/ skill library
+6. **SWE-bench** (#91) — the coding-agent benchmark
+
+### Track E: Image Generation Deep Dive (8 papers, ~10 hours)
+1. **VAE** (#67) — latent variable generators
+2. **GANs** (#2) — adversarial training
+3. **DDPM** (#75) — diffusion that beats GANs
+4. **VQ-VAE / VQ-GAN** (#76, #77) — discrete tokens for images
+5. **Stable Diffusion** (#7) — latent diffusion
+6. **Imagen** (#78) — frozen T5 text encoder
+7. **ControlNet / DreamBooth** (#79, #80) — control + personalize
+8. **Sora / DiT** (#44) — diffusion Transformers for video
+
+### Track F: Scientific & World-Model AI (7 papers, ~8 hours)
+For learners interested in AI for science and embodied intelligence.
+
+1. **AlphaZero** (#89) — self-play RL
+2. **AlphaFold 2 & 3** (#87, #88) — solved protein folding
+3. **ESM-2** (#96) — protein language model
+4. **DreamerV3** (#95) — world-model RL
+5. **Genie** (#94) — foundation world model
+6. **CICERO** (#97) — Diplomacy AI
+7. **AlphaGeometry / AlphaEvolve** (#61, #62) — discovery-engine AI
+
+### Track G: Open-Source LLM Ecosystem (6 papers, ~6 hours)
+1. **LLaMA / LLaMA 2** (#15, #17)
+2. **Mistral 7B** (#72)
+3. **Mixtral 8x7B** (#73)
+4. **DeepSeek-V3** (#27)
+5. **Qwen3** (#28)
+6. **Llama Guard** (#92) — safety classifier
+
+### Track H: Interpretability & Safety (4 papers, ~4 hours)
+1. **Constitutional AI** (#14)
+2. **DPO / KTO** (#19, #93)
+3. **Llama Guard** (#92)
+4. **Sparse Autoencoders / Scaling Monosemanticity** (#90)
+
+---
+
+**Last Updated:** 2026-05-26

@@ -1,368 +1,236 @@
-# Quick Reference Guide - All Papers at a Glance
+# Quick Reference Guide - All 94 Papers at a Glance
 
-A one-page overview of all 15 foundational GenAI papers for quick lookup.
-
----
-
-## Architecture Papers
-
-| # | Paper | Year | Key Contribution | Impact |
-|---|-------|------|------------------|--------|
-| 1 | **Attention Is All You Need** | 2017 | Self-attention mechanism, Transformer architecture | Foundation for all modern LLMs (GPT, BERT, etc.) |
-| 2 | **GANs** | 2014 | Generator-discriminator adversarial training | Launched generative modeling, deepfakes, image synthesis |
-| 6 | **Diffusion Models (DDPM)** | 2020 | Iterative denoising process | Alternative to GANs, foundation for DALL-E 2, Midjourney |
-| 11 | **Vision Transformer (ViT)** | 2020 | Images as patch sequences for Transformers | Unified vision-language architectures, multimodal models |
+One-page lookup for every paper in the collection. Sorted by category and rough chronology within category. Use Ctrl-F to find a paper by name.
 
 ---
 
-## Language Model Papers
+## 🏗️ Architectures (9 papers)
 
-| # | Paper | Year | Key Contribution | Impact |
-|---|-------|------|------------------|--------|
-| 3 | **BERT** | 2018 | Bidirectional pre-training, masked language modeling | Google Search, NLP tasks, encoder-based models |
-| 4 | **GPT-3** | 2020 | 175B params, few-shot in-context learning | ChatGPT foundation, prompt engineering era |
-| 5 | **InstructGPT (RLHF)** | 2022 | Reinforcement learning from human feedback | ChatGPT, Claude, all modern AI assistants |
-| 14 | **Constitutional AI** | 2022 | AI self-critique guided by principles | Powers Claude, alternative to RLHF |
-| 15 | **LLaMA** | 2023 | Compute-optimal training, 13B = 175B performance | Open-source LLM revolution, Alpaca, Vicuna |
-
----
-
-## Multimodal & Vision Papers
-
-| # | Paper | Year | Key Contribution | Impact |
-|---|-------|------|------------------|--------|
-| 7 | **Stable Diffusion** | 2022 | Latent diffusion, 10-100× speedup | Democratized AI art, open-source text-to-image |
-| 8 | **CLIP** | 2021 | Vision-language contrastive learning | Zero-shot classification, text-to-image guidance |
-| 11 | **Vision Transformer** | 2020 | Transformers for image classification | Enabled GPT-4 Vision, DALL-E, multimodal AI |
+| # | Paper | Year | Key Contribution |
+|---|-------|------|------------------|
+| 63 | **[Word2Vec](../papers/architectures/63-word2vec/)** | 2013 | Dense word embeddings; king − man + woman ≈ queen |
+| 64 | **[Seq2Seq](../papers/architectures/64-seq2seq/)** | 2014 | LSTM encoder-decoder for translation |
+| 65 | **[Bahdanau Attention](../papers/architectures/65-bahdanau-attention/)** | 2014 | Invented attention; ancestor of the Transformer |
+| 66 | **[ResNet](../papers/architectures/66-resnet/)** | 2015 | Residual connections; in every Transformer block |
+| 1 | **[Attention Is All You Need](../papers/architectures/01-attention-is-all-you-need/)** | 2017 | The Transformer; self-attention replaces RNNs |
+| 11 | **[Vision Transformer (ViT)](../papers/architectures/11-vision-transformer/)** | 2020 | Treats images as patch sequences |
+| 74 | **[MAE](../papers/architectures/74-mae-masked-autoencoders/)** | 2021 | BERT-style self-supervised pretraining for vision |
+| 20 | **[Mamba](../papers/architectures/20-mamba/)** | 2023 | Selective state spaces, O(n) sequence modeling |
+| 37 | **[Mixture-of-Experts](../papers/architectures/37-mixture-of-experts/)** | 2024 | Sparse routing; behind GPT-4, DeepSeek, Llama 4 |
 
 ---
 
-## Technique & Method Papers
+## 🤖 Language Models (26 papers)
 
-| # | Paper | Year | Key Contribution | Impact |
-|---|-------|------|------------------|--------|
-| 9 | **Chain-of-Thought** | 2022 | Step-by-step reasoning prompts | Improved LLM reasoning, math, logic tasks |
-| 10 | **LoRA** | 2021 | Low-rank adaptation, 10,000× parameter reduction | Accessible fine-tuning, Stable Diffusion LoRAs |
-| 12 | **Scaling Laws** | 2020 | Predictable power laws for loss vs compute/data | Justified GPT-3/4, guided all major AI development |
-| 13 | **RAG** | 2020 | Retrieval + generation with external knowledge | Production LLM standard, reduced hallucinations |
+### Foundations & Open Source
+| # | Paper | Year | Key Contribution |
+|---|-------|------|------------------|
+| 69 | **[GPT-1](../papers/language-models/69-gpt-1/)** | 2018 | Decoder-only Transformer + pretrain/fine-tune recipe |
+| 3 | **[BERT](../papers/language-models/03-bert/)** | 2018 | Bidirectional masked language modeling |
+| 70 | **[GPT-2](../papers/language-models/70-gpt-2/)** | 2019 | 1.5B params, zero-shot task transfer |
+| 68 | **[T5](../papers/language-models/68-t5/)** | 2019 | Text-to-text framing of every NLP task |
+| 4 | **[GPT-3](../papers/language-models/04-gpt3-few-shot-learners/)** | 2020 | 175B params, few-shot in-context learning |
+| 71 | **[PaLM](../papers/language-models/71-palm/)** | 2022 | 540B dense, Pathways system, BIG-bench |
+| 15 | **[LLaMA](../papers/language-models/15-llama/)** | 2023 | 13B matches GPT-3; open-source revolution |
+| 17 | **[LLaMA 2](../papers/language-models/17-llama2/)** | 2023 | Commercial license, RLHF alignment |
+| 72 | **[Mistral 7B](../papers/language-models/72-mistral-7b/)** | 2023 | GQA + SWA; beat LLaMA-2 13B at 7B |
+| 73 | **[Mixtral 8x7B](../papers/language-models/73-mixtral/)** | 2024 | Sparse MoE open weights, 47B/13B active |
+| 33 | **[LLaMA 3.3](../papers/language-models/33-llama3.3/)** | 2024 | 70B matches 405B via distillation |
+| 27 | **[DeepSeek-V3](../papers/language-models/27-deepseek-v3/)** | 2024 | $5.76M training cost; 671B MoE |
+| 41 | **[Llama 4](../papers/language-models/41-llama4/)** | 2025 | Open multimodal MoE; 10M token context |
+| 28 | **[Qwen3](../papers/language-models/28-qwen3/)** | 2025 | Unified thinking / non-thinking modes |
 
----
+### Alignment
+| # | Paper | Year | Key Contribution |
+|---|-------|------|------------------|
+| 5 | **[InstructGPT (RLHF)](../papers/language-models/05-instructgpt-rlhf/)** | 2022 | Human preference fine-tuning enabled ChatGPT |
+| 14 | **[Constitutional AI](../papers/language-models/14-constitutional-ai/)** | 2022 | AI self-critique with written principles |
+| 19 | **[DPO](../papers/language-models/19-dpo/)** | 2023 | Preference optimization without a reward model |
+| 92 | **[Llama Guard](../papers/language-models/92-llama-guard/)** | 2023 | LLM-based safety classifier |
 
-## By Research Area
-
-### Natural Language Processing
-- **Transformers** (1) - Architecture foundation
-- **BERT** (3) - Bidirectional understanding
-- **GPT-3** (4) - Few-shot learning
-- **Scaling Laws** (12) - Performance prediction
-- **LLaMA** (15) - Efficient open models
-
-### Computer Vision
-- **GANs** (2) - Adversarial generation
-- **Diffusion Models** (6) - Denoising generation
-- **Vision Transformer** (11) - Transformer for vision
-- **Stable Diffusion** (7) - Latent diffusion
-
-### Multimodal AI
-- **CLIP** (8) - Vision-language bridge
-- **Stable Diffusion** (7) - Text-to-image
-- **Vision Transformer** (11) - Unified architecture
-
-### AI Alignment & Safety
-- **InstructGPT** (5) - RLHF alignment
-- **Constitutional AI** (14) - Principle-based alignment
-- **Chain-of-Thought** (9) - Interpretable reasoning
-
-### Efficient Training & Deployment
-- **LoRA** (10) - Efficient fine-tuning
-- **Scaling Laws** (12) - Compute optimization
-- **LLaMA** (15) - Training efficiency
-- **RAG** (13) - Knowledge efficiency
+### Frontier & Reasoning Models
+| # | Paper | Year | Key Contribution |
+|---|-------|------|------------------|
+| 36 | **[GPT-4](../papers/language-models/36-gpt4/)** | 2023 | Defined the frontier model era |
+| 30 | **[Claude 3.5 Sonnet](../papers/language-models/30-claude-3.5-sonnet/)** | 2024 | Computer use; best coding model of its era |
+| 40 | **[GPT-4o](../papers/language-models/40-gpt4o/)** | 2024 | Native omni-model: text/audio/image, 232ms voice |
+| 31 | **[OpenAI o1](../papers/language-models/31-openai-o1/)** | 2024 | Started reasoning model era; PhD-level performance |
+| 26 | **[DeepSeek-R1](../papers/language-models/26-deepseek-r1/)** | 2025 | Pure-RL reasoning, fully open source |
+| 42 | **[GPT-5](../papers/language-models/42-gpt5/)** | 2025 | Unified fast + reasoning model |
+| 43 | **[Claude 4 Family](../papers/language-models/43-claude4/)** | 2025-26 | Agentic AI leader; 80.9% SWE-bench |
+| 56 | **[Codex](../papers/language-models/56-codex/)** | 2021 | GPT-3 fine-tuned on code; Copilot foundation |
 
 ---
 
-## By Year
+## 🎨 Image Generation (12 papers)
 
-### 2014
-- **GANs** - Adversarial training framework
-
-### 2017
-- **Transformers** - Self-attention architecture
-
-### 2018
-- **BERT** - Bidirectional pre-training
-
-### 2020 (Breakthrough Year)
-- **GPT-3** - 175B parameter scaling
-- **Scaling Laws** - Mathematical AI foundations
-- **Vision Transformer** - Transformers conquer vision
-- **Diffusion Models** - Denoising generation
-- **RAG** - Retrieval-augmented generation
-
-### 2021
-- **CLIP** - Vision-language alignment
-- **LoRA** - Efficient fine-tuning
-
-### 2022 (Alignment & Practical Year)
-- **InstructGPT** - RLHF for alignment
-- **Chain-of-Thought** - Reasoning prompts
-- **Stable Diffusion** - Open text-to-image
-- **Constitutional AI** - AI feedback alignment
-
-### 2023
-- **LLaMA** - Open, efficient models
+| # | Paper | Year | Key Contribution |
+|---|-------|------|------------------|
+| 67 | **[VAE](../papers/image-generation/67-vae/)** | 2013 | Variational Autoencoders, reparameterization trick |
+| 2 | **[GANs](../papers/image-generation/02-generative-adversarial-networks/)** | 2014 | Adversarial generator vs discriminator |
+| 76 | **[VQ-VAE](../papers/image-generation/76-vq-vae/)** | 2017 | Discrete-token image representations |
+| 75 | **[DDPM](../papers/image-generation/75-ddpm/)** | 2020 | The seminal diffusion paper; beat GANs |
+| 6 | **[Diffusion (overview)](../papers/image-generation/06-diffusion-models/)** | 2020 | General diffusion theory |
+| 77 | **[VQ-GAN](../papers/image-generation/77-vq-gan/)** | 2021 | VQ-VAE + GAN losses; SD's latent space ancestor |
+| 7 | **[Stable Diffusion](../papers/image-generation/07-stable-diffusion/)** | 2022 | Latent diffusion; democratized AI art |
+| 78 | **[Imagen](../papers/image-generation/78-imagen/)** | 2022 | Frozen T5-XXL text encoder beats CLIP for prompts |
+| 80 | **[DreamBooth](../papers/image-generation/80-dreambooth/)** | 2022 | Personalize diffusion from 3-5 images |
+| 79 | **[ControlNet](../papers/image-generation/79-controlnet/)** | 2023 | Conditional control: edges, poses, depth, sketches |
+| 48 | **[DALL-E 3](../papers/image-generation/48-dalle3/)** | 2023 | Solved prompt adherence; readable text in images |
+| 44 | **[Sora / DiT](../papers/image-generation/44-sora-dit/)** | 2024 | Diffusion Transformers; spacetime patches |
 
 ---
 
-## Quick Stats
+## 🔗 Multimodal (7 papers)
 
-### Model Sizes
-| Paper | Largest Model | Key Finding |
-|-------|--------------|-------------|
-| GPT-3 | 175B params | Few-shot learning emerges |
-| BERT | 340M params | Pre-training + fine-tuning works |
-| LLaMA | 65B params | Matches 175B with better training |
-| InstructGPT | 175B params | 1.3B + RLHF > 175B base |
-| ViT | 632M params | Transformers work for vision |
-
-### Training Data
-| Paper | Dataset Size | Source |
-|-------|-------------|--------|
-| GPT-3 | 300B tokens | Web crawl, books |
-| LLaMA | 1.4T tokens | Public datasets only |
-| BERT | 3.3B words | Wikipedia, books |
-| CLIP | 400M pairs | Image-text from web |
-| Stable Diffusion | 5B images | LAION dataset |
-
-### Citations (Approximate)
-| Paper | Citations | Year | Impact |
-|-------|-----------|------|--------|
-| Transformers | 100k+ | 2017 | Most cited |
-| GANs | 50k+ | 2014 | Foundational |
-| BERT | 80k+ | 2018 | Huge NLP impact |
-| GPT-3 | 15k+ | 2020 | Recent landmark |
-| Diffusion | 10k+ | 2020 | Rapidly growing |
+| # | Paper | Year | Key Contribution |
+|---|-------|------|------------------|
+| 8 | **[CLIP](../papers/multimodal/08-clip/)** | 2021 | Vision-language contrastive pretraining |
+| 49 | **[Whisper](../papers/multimodal/49-whisper/)** | 2022 | 680K hours speech; foundation model for ASR |
+| 46 | **[LLaVA](../papers/multimodal/46-llava/)** | 2023 | Open-source blueprint: vision encoder + LLM |
+| 23 | **[GPT-4V(ision)](../papers/multimodal/23-gpt4v/)** | 2023 | GPT-4 with vision |
+| 32 | **[SAM 2](../papers/multimodal/32-sam2/)** | 2024 | Universal video segmentation; real-time |
+| 29 | **[Gemini 2.5](../papers/multimodal/29-gemini-2.5/)** | 2025 | 1M context; 3-hour video understanding |
+| 47 | **[Gemini 3](../papers/multimodal/47-gemini3/)** | 2025 | First 1500+ LMArena ELO; Deep Think mode |
 
 ---
 
-## Problem → Solution Mapping
+## ⚡ Techniques & Methods (40 papers)
 
-### Problem: Can't process long sequences in parallel
-**Solution:** Transformers (1) - Self-attention for parallel processing
+### Scaling & Efficient Training
+| # | Paper | Year | Key Contribution |
+|---|-------|------|------------------|
+| 12 | **[Scaling Laws (Kaplan)](../papers/techniques/12-scaling-laws/)** | 2020 | Predictable power laws |
+| 18 | **[Chinchilla](../papers/techniques/18-chinchilla/)** | 2022 | Equal scaling of params and tokens |
+| 10 | **[LoRA](../papers/techniques/10-lora/)** | 2021 | Low-rank adaptation; 10,000× param reduction |
+| 22 | **[QLoRA](../papers/techniques/22-qlora/)** | 2023 | 4-bit quantization + LoRA |
 
-### Problem: Need realistic image generation
-**Solutions:**
-- GANs (2) - Adversarial training
-- Diffusion (6) - Iterative denoising
-- Stable Diffusion (7) - Efficient latent space
+### Inference Efficiency
+| # | Paper | Year | Key Contribution |
+|---|-------|------|------------------|
+| 16 | **[FlashAttention](../papers/techniques/16-flash-attention/)** | 2022 | IO-aware attention, 10-20× faster |
+| 45 | **[Speculative Decoding](../papers/techniques/45-speculative-decoding/)** | 2023 | Draft + verify; 2-3× faster inference |
+| 52 | **[PagedAttention / vLLM](../papers/techniques/52-pagedattention-vllm/)** | 2023 | Virtual memory for KV cache; 24× throughput |
+| 54 | **[RoPE](../papers/techniques/54-rope-rotary-position-embedding/)** | 2021 | Rotary position embeddings, standard in modern LLMs |
 
-### Problem: Models don't understand context bidirectionally
-**Solution:** BERT (3) - Masked language modeling
+### Retrieval & Knowledge
+| # | Paper | Year | Key Contribution |
+|---|-------|------|------------------|
+| 13 | **[RAG](../papers/techniques/13-rag/)** | 2020 | Retrieval-augmented generation |
+| 60 | **[Graph RAG](../papers/techniques/60-graph-rag/)** | 2024 | Knowledge-graph augmented retrieval |
 
-### Problem: Need task-specific training for every application
-**Solution:** GPT-3 (4) - Few-shot in-context learning
+### Reasoning & Test-Time Compute
+| # | Paper | Year | Key Contribution |
+|---|-------|------|------------------|
+| 9 | **[Chain-of-Thought](../papers/techniques/09-chain-of-thought/)** | 2022 | "Let's think step by step" |
+| 85 | **[Self-Consistency](../papers/techniques/85-self-consistency/)** | 2022 | Majority vote over CoT samples |
+| 81 | **[STaR](../papers/techniques/81-star-self-taught-reasoner/)** | 2022 | Bootstrap reasoning from correct answers |
+| 25 | **[Tree of Thoughts](../papers/techniques/25-tree-of-thoughts/)** | 2023 | Tree search over reasoning paths |
+| 84 | **[Self-Refine](../papers/techniques/84-self-refine/)** | 2023 | LLM as its own critic |
+| 51 | **[Process Reward Models](../papers/techniques/51-process-reward-models/)** | 2023 | Step-by-step verification |
+| 82 | **[Quiet-STaR](../papers/techniques/82-quiet-star/)** | 2024 | Internal thoughts at every token |
+| 50 | **[Test-Time Compute](../papers/techniques/50-test-time-compute/)** | 2024 | Think harder, not bigger |
+| 34 | **[Meta-CoT](../papers/techniques/34-meta-cot/)** | 2025 | System 2 metacognitive reasoning |
+| 35 | **[rStar-Math](../papers/techniques/35-rstar-math/)** | 2025 | MCTS for math; 7B beats 70B+ |
 
-### Problem: Models are helpful but harmful
-**Solutions:**
-- InstructGPT (5) - RLHF alignment
-- Constitutional AI (14) - Principle-based self-improvement
+### RL Training & Preferences
+| # | Paper | Year | Key Contribution |
+|---|-------|------|------------------|
+| 38 | **[GRPO](../papers/techniques/38-grpo/)** | 2024 | RL training without a critic; powers R1 |
+| 39 | **[RLVR](../papers/techniques/39-rlvr/)** | 2024-25 | Verifiable rewards replace human prefs |
+| 93 | **[KTO](../papers/techniques/93-kto/)** | 2024 | Thumbs-up/down alignment (prospect theory) |
 
-### Problem: Models hallucinate facts
-**Solution:** RAG (13) - Retrieve then generate from evidence
+### Agents
+| # | Paper | Year | Key Contribution |
+|---|-------|------|------------------|
+| 21 | **[ReAct](../papers/techniques/21-react/)** | 2023 | Synergize reasoning + acting |
+| 24 | **[Toolformer](../papers/techniques/24-toolformer/)** | 2023 | Self-taught tool use |
+| 83 | **[Reflexion](../papers/techniques/83-reflexion/)** | 2023 | Verbal RL for agent loops |
+| 86 | **[Voyager](../papers/techniques/86-voyager/)** | 2023 | LLM Minecraft agent w/ skill library |
+| 58 | **[Generative Agents](../papers/techniques/58-generative-agents/)** | 2023 | Believable simulated humans |
+| 91 | **[SWE-bench](../papers/techniques/91-swe-bench/)** | 2023 | The coding-agent benchmark |
+| 59 | **[Model Context Protocol](../papers/techniques/59-model-context-protocol/)** | 2024 | Open standard for tool/data integration |
 
-### Problem: Transformers only work for text
-**Solution:** Vision Transformer (11) - Treat images as patch sequences
+### Interpretability
+| # | Paper | Year | Key Contribution |
+|---|-------|------|------------------|
+| 90 | **[Sparse Autoencoders](../papers/techniques/90-sparse-autoencoders/)** | 2024 | Monosemantic features in Claude 3 Sonnet |
 
-### Problem: Can't connect vision and language
-**Solution:** CLIP (8) - Contrastive learning on image-text pairs
-
-### Problem: Models too expensive to fine-tune
-**Solution:** LoRA (10) - Low-rank adaptation matrices
-
-### Problem: Models can't reason through complex problems
-**Solution:** Chain-of-Thought (9) - Step-by-step reasoning prompts
-
-### Problem: Don't know how much compute/data needed
-**Solution:** Scaling Laws (12) - Predictable power laws
-
-### Problem: Only big companies can build good LLMs
-**Solution:** LLaMA (15) - Smaller models + more training
+### Scientific & World-Model AI
+| # | Paper | Year | Key Contribution |
+|---|-------|------|------------------|
+| 89 | **[AlphaZero](../papers/techniques/89-alphazero/)** | 2017 | Self-play RL + MCTS; no human data |
+| 87 | **[AlphaFold 2](../papers/techniques/87-alphafold2/)** | 2021 | Solved protein folding (Nobel 2024) |
+| 97 | **[CICERO](../papers/techniques/97-cicero/)** | 2022 | Human-level Diplomacy AI |
+| 95 | **[DreamerV3](../papers/techniques/95-dreamerv3/)** | 2023 | Model-based RL mined diamonds in Minecraft |
+| 96 | **[ESM-2 / ESMFold](../papers/techniques/96-esm/)** | 2023 | Protein structure from a language model |
+| 94 | **[Genie](../papers/techniques/94-genie/)** | 2024 | Foundation world model from videos |
+| 88 | **[AlphaFold 3](../papers/techniques/88-alphafold3/)** | 2024 | Diffusion-based biomolecular interactions |
+| 61 | **[AlphaGeometry](../papers/techniques/61-alphageometry/)** | 2024 | IMO-level geometry from LM + symbolic |
+| 62 | **[AlphaEvolve](../papers/techniques/62-alphaevolve/)** | 2025 | LLM-driven algorithm discovery |
 
 ---
 
-## Key Innovations Summary
+## 📅 By Year
 
-### Self-Attention (Transformers)
-```
-Q(query) · K(key) / √d → attention weights → weighted V(values)
-Enables parallel processing, long-range dependencies
-```
+- **2013:** Word2Vec, VAE
+- **2014:** GANs, Seq2Seq, Bahdanau Attention
+- **2015:** ResNet
+- **2017:** Transformer, VQ-VAE, AlphaZero
+- **2018:** BERT, GPT-1
+- **2019:** GPT-2, T5
+- **2020:** GPT-3, ViT, DDPM, Diffusion overview, Scaling Laws, RAG
+- **2021:** CLIP, LoRA, MAE, VQ-GAN, AlphaFold 2, RoPE, Codex
+- **2022:** Transformer-era cascade — InstructGPT, Whisper, CoT, Stable Diffusion, Constitutional AI, FlashAttention, Chinchilla, Self-Consistency, STaR, PaLM, Imagen, DreamBooth, CICERO
+- **2023:** GPT-4, LLaVA, DALL-E 3, PRMs, vLLM, LLaMA 1+2, Mamba, DPO, GPT-4V, ReAct, QLoRA, Toolformer, ToT, Mistral 7B, ControlNet, Self-Refine, Reflexion, Voyager, SWE-bench, Llama Guard, DreamerV3, ESM-2, Generative Agents
+- **2024:** Mixtral, GPT-4o, Sora/DiT, GRPO, Test-Time Compute, DeepSeek-V3, o1, Claude 3.5, SAM 2, LLaMA 3.3, Quiet-STaR, KTO, AlphaFold 3, Sparse Autoencoders, Genie, MCP, Graph RAG, AlphaGeometry
+- **2025-26:** DeepSeek-R1, RLVR, Qwen3, Gemini 2.5/3, Llama 4, GPT-5, Claude 4, Meta-CoT, rStar-Math, AlphaEvolve
 
-### Adversarial Training (GANs)
-```
-Generator creates fake data
-Discriminator tries to detect fakes
-Both improve through competition
-```
+---
 
-### Masked Language Modeling (BERT)
-```
-The cat [MASK] on the mat → predict "sat"
-Learn bidirectional context
-```
+## 🎯 Problem → Solution Mapping
 
-### In-Context Learning (GPT-3)
-```
-Provide examples in prompt
-Model learns pattern without training
-Few-shot → strong performance
-```
+**Can't process long sequences in parallel** → Transformer (1)
+**Need long-range dependencies before attention** → Bahdanau Attention (65), Seq2Seq (64)
+**Need long-range dependencies cheaply** → Mamba (20), RoPE (54), FlashAttention (16)
+**Realistic image generation** → GANs (2), DDPM (75), Stable Diffusion (7), Sora (44)
+**Personalize a diffusion model** → DreamBooth (80), LoRA (10), ControlNet (79)
+**Bidirectional understanding** → BERT (3), MAE (74)
+**Few-shot task transfer** → GPT-3 (4), GPT-2 (70), in-context learning
+**Help → harmless** → InstructGPT (5), Constitutional AI (14), DPO (19), KTO (93), Llama Guard (92)
+**Hallucinations** → RAG (13), Graph RAG (60), PRMs (51)
+**Transformers for images** → ViT (11), MAE (74)
+**Connect vision and language** → CLIP (8), LLaVA (46), GPT-4V (23)
+**Fine-tune cheaply** → LoRA (10), QLoRA (22)
+**Better reasoning** → CoT (9), Self-Consistency (85), STaR (81), Quiet-STaR (82), Test-Time Compute (50), o1 (31), R1 (26)
+**Open-source frontier model** → LLaMA family (15/17/33/41), Mistral/Mixtral (72/73), DeepSeek (26/27), Qwen3 (28)
+**Coding agent** → Codex (56), SWE-bench (91), Claude 3.5 (30), Claude 4 (43)
+**Embodied agent** → Voyager (86), DreamerV3 (95), Genie (94), Generative Agents (58)
+**Discover new algorithms / science** → AlphaZero (89), AlphaFold 2/3 (87/88), AlphaGeometry (61), AlphaEvolve (62), ESM (96), CICERO (97)
+**Understand what a model is "thinking"** → Sparse Autoencoders (90)
+**Plan compute budget** → Scaling Laws (12), Chinchilla (18)
+**Serve LLMs efficiently** → vLLM (52), Speculative Decoding (45), FlashAttention (16)
 
-### RLHF (InstructGPT)
-```
-1. Supervised fine-tuning
-2. Reward model from preferences
-3. RL optimization (PPO)
-```
+---
 
-### Diffusion Process (DDPM)
-```
-Forward: Add noise gradually
-Reverse: Learn to denoise
-Generate by denoising random noise
-```
+## 📐 Key Innovations (formulas & diagrams)
 
-### Latent Diffusion (Stable Diffusion)
 ```
-Encode image to latent space (8× compression)
-Run diffusion in latent space
-Decode to pixel space
-10-100× faster than pixel diffusion
-```
-
-### Contrastive Learning (CLIP)
-```
-Match: image of cat ↔ "a cat"
-Don't match: image of cat ↔ "a dog"
-Learn alignment through contrast
-```
-
-### Low-Rank Adaptation (LoRA)
-```
-W + ΔW = W + BA
-where B, A are low-rank matrices
-10,000× fewer trainable parameters
-```
-
-### Retrieval-Augmented (RAG)
-```
-Query → Retrieve docs → Generate with context
-Knowledge in database, not just parameters
-```
-
-### Constitutional AI
-```
-1. AI critiques own output vs principle
-2. AI revises to align with principle
-3. Train on self-improvements
-```
-
-### Scaling Laws
-```
-L(N) ∝ N^(-α)  [loss vs params]
-L(D) ∝ D^(-α)  [loss vs data]
-L(C) ∝ C^(-α)  [loss vs compute]
-Predictable across 7+ orders of magnitude
+Self-Attention:     softmax(QKᵀ / √d) · V
+Residual block:     y = F(x) + x
+VAE ELBO:           E[log p(x|z)] − KL(q(z|x) ‖ p(z))
+Diffusion (DDPM):   x_{t-1} = denoise(x_t, t)
+LoRA:               W ← W + B·A   with rank(B·A) ≪ rank(W)
+RLHF (PPO):         max E[r(x,y)] − β·KL(π ‖ π_ref)
+DPO:                max log σ(β·log[π(y_w)/π_ref(y_w)] − β·log[π(y_l)/π_ref(y_l)])
+GRPO:               group-relative advantage, no critic
+Scaling Laws:       L(N) ∝ N^(−α), L(D) ∝ D^(−α), L(C) ∝ C^(−α)
+Chinchilla:         N_opt ∝ √C, D_opt ∝ √C (equal scaling)
+RoPE:               rotate Q,K by frequency-dependent angle per position
 ```
 
 ---
 
-## Reading Time Estimates
-
-| Paper | Summary Length | Reading Time |
-|-------|---------------|--------------|
-| Transformers | ~8000 words | 45-60 min |
-| GANs | ~6000 words | 30-45 min |
-| BERT | ~7000 words | 40-50 min |
-| GPT-3 | ~8000 words | 45-60 min |
-| InstructGPT | ~7500 words | 40-55 min |
-| Diffusion | ~7000 words | 40-50 min |
-| Stable Diffusion | ~7500 words | 40-55 min |
-| CLIP | ~7000 words | 40-50 min |
-| Chain-of-Thought | ~6000 words | 30-45 min |
-| LoRA | ~6500 words | 35-45 min |
-| Vision Transformer | ~8500 words | 50-65 min |
-| Scaling Laws | ~8000 words | 45-60 min |
-| RAG | ~8500 words | 50-65 min |
-| Constitutional AI | ~9000 words | 55-70 min |
-| LLaMA | ~8500 words | 50-65 min |
-| **TOTAL** | **~110k words** | **12-15 hours** |
-
----
-
-## Paper Dependencies
-
-**Read these first (foundations):**
-1. Transformers - Everything builds on this
-2. Scaling Laws - Theoretical foundation
-
-**Then language models:**
-3. BERT or GPT-3 - Encoder vs decoder approaches
-4. LLaMA - Modern efficient training
-
-**Then vision:**
-5. GANs or Diffusion - Generative approaches
-6. Vision Transformer - Transformers for images
-7. CLIP - Bridging vision and language
-
-**Then practical techniques:**
-8. LoRA - Efficient adaptation
-9. RAG - Knowledge grounding
-10. Chain-of-Thought - Better reasoning
-
-**Finally alignment:**
-11. InstructGPT - RLHF approach
-12. Constitutional AI - Alternative approach
-
-**Applied vision:**
-13. Stable Diffusion - Practical text-to-image
-
----
-
-## When to Reference Each Paper
-
-### Building a chatbot
-→ GPT-3, InstructGPT, Constitutional AI, RAG
-
-### Fine-tuning models
-→ BERT, LoRA, LLaMA
-
-### Image generation
-→ GANs, Diffusion, Stable Diffusion
-
-### Multimodal applications
-→ CLIP, Vision Transformer, Stable Diffusion
-
-### Improving reasoning
-→ Chain-of-Thought, InstructGPT
-
-### Planning compute budget
-→ Scaling Laws, LLaMA
-
-### Understanding modern AI architectures
-→ Transformers, Vision Transformer
-
-### Reducing hallucinations
-→ RAG, Constitutional AI
-
-### Zero-shot classification
-→ CLIP, GPT-3
-
-### Efficient deployment
-→ LoRA, LLaMA, RAG
-
----
-
-**Updated:** 2025-10-19
-**Total Papers:** 15
-**Total Reading Time:** 12-15 hours (summaries only)
+**Updated:** 2026-05-26
+**Total Papers:** 94
+**Estimated Reading Time (all summaries):** 80-100 hours

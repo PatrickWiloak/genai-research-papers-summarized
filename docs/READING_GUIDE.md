@@ -1,13 +1,17 @@
 # Reading Guide - Historical Significance vs Current Relevance
 
-A practical guide to understanding which papers are essential for modern AI work vs historical context.
+A practical guide to understanding which of the 94 papers are essential for modern AI work vs historical context.
+
+> Symbols: 🔥 = significance/relevance score (1-5). **CRITICAL** = read this. **HIGH** = read this if relevant to your work. **MEDIUM** = historical/specialized context.
 
 ---
 
 ## 📊 Quick Reference Matrix
 
-| Paper | Year | Historical Significance | Current Relevance | Priority | Read For |
-|-------|------|------------------------|-------------------|----------|----------|
+### Original 15 (the core)
+
+| Paper | Year | Historical | Current | Priority | Read For |
+|-------|------|------------|---------|----------|----------|
 | **Transformers** | 2017 | 🔥🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | Architecture foundation |
 | **Scaling Laws** | 2020 | 🔥🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | Theory & planning |
 | **LLaMA** | 2023 | 🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | Modern training |
@@ -22,7 +26,87 @@ A practical guide to understanding which papers are essential for modern AI work
 | **Stable Diffusion** | 2022 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥 | **HIGH** | Image generation |
 | **BERT** | 2018 | 🔥🔥🔥🔥🔥 | 🔥🔥 | **MEDIUM** | Historical context |
 | **GANs** | 2014 | 🔥🔥🔥🔥🔥 | 🔥🔥 | **MEDIUM** | Historical context |
-| **DDPM** | 2020 | 🔥🔥🔥🔥 | 🔥🔥🔥 | **MEDIUM** | Diffusion theory |
+| **DDPM** | 2020 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥 | **HIGH** | Diffusion theory |
+
+### Foundations Below the Transformer
+
+| Paper | Year | Historical | Current | Priority | Read For |
+|-------|------|------------|---------|----------|----------|
+| **Word2Vec** | 2013 | 🔥🔥🔥🔥🔥 | 🔥🔥 | **MEDIUM** | Embedding origins |
+| **VAE** | 2013 | 🔥🔥🔥🔥 | 🔥🔥🔥 | **MEDIUM** | Latent spaces, reparameterization trick |
+| **Seq2Seq** | 2014 | 🔥🔥🔥🔥🔥 | 🔥🔥 | **MEDIUM** | Encoder-decoder origin |
+| **Bahdanau Attention** | 2014 | 🔥🔥🔥🔥🔥 | 🔥🔥🔥 | **HIGH** | Attention invented |
+| **ResNet** | 2015 | 🔥🔥🔥🔥🔥 | 🔥🔥🔥🔥 | **HIGH** | Residual connections, in every Transformer |
+| **GPT-1** | 2018 | 🔥🔥🔥🔥🔥 | 🔥🔥 | **MEDIUM** | Started GPT lineage |
+| **GPT-2** | 2019 | 🔥🔥🔥🔥 | 🔥🔥 | **MEDIUM** | Zero-shot transfer |
+| **T5** | 2019 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥 | **HIGH** | Text-to-text framing |
+| **PaLM** | 2022 | 🔥🔥🔥🔥 | 🔥🔥🔥 | **MEDIUM** | Pre-Gemini Google flagship |
+
+### Open-Source Frontier
+
+| Paper | Year | Priority | Read For |
+|-------|------|----------|----------|
+| **Mistral 7B** | 2023 | **HIGH** | GQA + SWA, beat LLaMA-2 13B |
+| **Mixtral 8x7B** | 2024 | **CRITICAL** | First high-quality open MoE |
+| **DeepSeek-V3** | 2024 | **CRITICAL** | $5.76M frontier-quality training |
+| **DeepSeek-R1** | 2025 | **CRITICAL** | Open reasoning model |
+| **Qwen3** | 2025 | **CRITICAL** | Unified thinking/non-thinking |
+
+### Reasoning & Test-Time Compute
+
+| Paper | Year | Priority | Read For |
+|-------|------|----------|----------|
+| **Self-Consistency** | 2022 | **CRITICAL** | Foundation of test-time-compute |
+| **STaR** | 2022 | **HIGH** | Self-taught reasoning origin |
+| **Quiet-STaR** | 2024 | **HIGH** | Direct o1 precursor |
+| **Process Reward Models** | 2023 | **CRITICAL** | Step-level verification for reasoning |
+| **Test-Time Compute** | 2024 | **CRITICAL** | Compute-optimal reasoning scaling |
+| **o1** | 2024 | **CRITICAL** | Started reasoning era |
+| **DeepSeek-R1** | 2025 | **CRITICAL** | Open RL-trained reasoning |
+
+### Agents & Tools
+
+| Paper | Year | Priority | Read For |
+|-------|------|----------|----------|
+| **ReAct** | 2023 | **CRITICAL** | Reasoning + acting foundation |
+| **Reflexion** | 2023 | **HIGH** | Verbal RL for agents |
+| **Self-Refine** | 2023 | **HIGH** | LLM as critic |
+| **Voyager** | 2023 | **HIGH** | LLM Minecraft agent |
+| **SWE-bench** | 2023 | **CRITICAL** | The coding-agent benchmark |
+| **MCP** | 2024 | **HIGH** | Open standard for tool integration |
+
+### Image / Video Generation
+
+| Paper | Year | Priority | Read For |
+|-------|------|----------|----------|
+| **VQ-VAE** | 2017 | **HIGH** | Discrete image tokens |
+| **VQ-GAN** | 2021 | **HIGH** | SD latent space ancestor |
+| **Imagen** | 2022 | **MEDIUM** | T5 text encoder finding |
+| **DreamBooth** | 2022 | **HIGH** | Personalization |
+| **ControlNet** | 2023 | **CRITICAL** | Conditional control |
+| **Sora / DiT** | 2024 | **CRITICAL** | Diffusion Transformers; video |
+
+### Alignment & Safety
+
+| Paper | Year | Priority | Read For |
+|-------|------|----------|----------|
+| **DPO** | 2023 | **CRITICAL** | Simpler than RLHF |
+| **KTO** | 2024 | **HIGH** | Thumbs-up/down alignment |
+| **Llama Guard** | 2023 | **HIGH** | Production safety classifier |
+| **Sparse Autoencoders** | 2024 | **CRITICAL** | Production-scale interpretability |
+
+### Scientific & World-Model AI
+
+| Paper | Year | Priority | Read For |
+|-------|------|----------|----------|
+| **AlphaZero** | 2017 | **HIGH** | Self-play RL ancestor of RLVR |
+| **AlphaFold 2** | 2021 | **CRITICAL** | Solved protein folding |
+| **CICERO** | 2022 | **HIGH** | Multi-agent LLM + planning |
+| **DreamerV3** | 2023 | **HIGH** | Model-based RL |
+| **ESM-2** | 2023 | **HIGH** | Protein language model |
+| **AlphaFold 3** | 2024 | **CRITICAL** | Biomolecular complexes; drug discovery |
+| **Genie** | 2024 | **HIGH** | Foundation world model |
+| **AlphaGeometry / AlphaEvolve** | 2024-25 | **HIGH** | Discovery-engine AI |
 
 ---
 
@@ -439,9 +523,10 @@ Mark off as you complete:
 - [ ] GANs
 - [ ] DDPM
 
-**Total Progress:** ___ / 15 papers
+**Total Progress:** ___ / 15 papers (core); see Quick Reference for full 94
 
 ---
 
-**Last Updated:** 2025-10-19
+**Last Updated:** 2026-05-26
+**Total Papers in Collection:** 94
 **Next Review:** This guide will be updated as the field evolves
