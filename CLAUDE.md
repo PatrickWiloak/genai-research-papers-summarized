@@ -1,14 +1,24 @@
 # GenAI Research Papers Summarized
 
-Curated collection of 52 foundational generative AI papers with comprehensive summaries.
+Curated collection of 63 foundational generative AI papers with comprehensive summaries.
 
 ## Structure
-- `papers/` - Individual paper summaries
+- `papers/` - Individual paper summaries (one folder per paper, `summary.md` inside)
+- `papers/_TEMPLATE.md` - Template for new summaries
+- `INDEX.md` - Generated category-grouped index of every paper
+- `papers.json` / `papers.csv` - Generated machine-readable manifest
+- `scripts/build_manifest.py` - Regenerates frontmatter, manifest, INDEX.md, and mkdocs nav (stdlib only, idempotent)
+- `mkdocs.yml` + `requirements.txt` - MkDocs Material site (auto-deploys via `.github/workflows/pages.yml`)
+- `CONTRIBUTING.md` - How to add a paper + house style
 - `docs/ROADMAP.md` - Learning path for newcomers
 - `docs/READING_GUIDE.md` - Historical vs modern relevance
 - `docs/QUICK_REFERENCE.md` - Fast lookup
 - `docs/COMPARISONS.md` - Decision guides
 - `docs/GLOSSARY.md` - Term definitions
+
+## Maintenance
+- After adding or editing any `papers/**/summary.md`, run `python3 scripts/build_manifest.py` and commit the regenerated `papers.json`, `papers.csv`, `INDEX.md`, `mkdocs.yml`, and the frontmatter changes.
+- Do not hand-edit YAML frontmatter or `INDEX.md` - they are generated.
 
 ## Usage
 Educational resource - no code, just documentation. Start with ROADMAP.md for learning path.

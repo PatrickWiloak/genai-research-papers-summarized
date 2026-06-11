@@ -34,22 +34,22 @@ A structured path through the 15 papers based on your background and goals.
 **Goal:** Understand the basic architecture that powers everything
 
 **Day 1-2: Start with Transformers**
-- Read: [Transformers summary](./01-attention-is-all-you-need/summary.md)
+- Read: [Transformers summary](../papers/architectures/01-attention-is-all-you-need/summary.md)
 - Focus on: "Why This Matters" and "Core Innovation" sections
 - Skip: Mathematical formulas on first read
 - Watch: "The Illustrated Transformer" (linked in summary)
 - **Key takeaway:** Self-attention lets models process all words at once
 
 **Day 3: Understanding Language Models**
-- Read: [GPT-3 summary](./04-gpt3-few-shot-learners/summary.md)
+- Read: [GPT-3 summary](../papers/language-models/04-gpt3-few-shot-learners/summary.md)
 - Focus on: Few-shot learning, in-context learning
 - Try: Experiment with ChatGPT using few-shot examples
 - **Key takeaway:** Large models can learn from examples in prompts
 
 **Day 4-5: Why Training Matters**
-- Read: [Scaling Laws summary](./12-scaling-laws/summary.md)
+- Read: [Scaling Laws summary](../papers/techniques/12-scaling-laws/summary.md)
 - Focus on: The three scaling laws (simple version)
-- Read: [LLaMA summary](./15-llama/summary.md)
+- Read: [LLaMA summary](../papers/language-models/15-llama/summary.md)
 - **Key takeaway:** Training longer on more data > just making bigger models
 
 **Day 6-7: Review and Explore**
@@ -61,19 +61,19 @@ A structured path through the 15 papers based on your background and goals.
 **Goal:** Understand how AI creates images
 
 **Day 8-9: Basic Image Generation**
-- Read: [GANs summary](./02-generative-adversarial-networks/summary.md)
+- Read: [GANs summary](../papers/image-generation/02-generative-adversarial-networks/summary.md)
 - Focus on: Generator vs discriminator game
 - **Key takeaway:** Two models competing makes both better
 
 **Day 10-11: Modern Image Generation**
-- Read: [Diffusion Models summary](./06-diffusion-models/summary.md)
+- Read: [Diffusion Models summary](../papers/image-generation/06-diffusion-models/summary.md)
 - Focus on: Iterative denoising process
-- Read: [Stable Diffusion summary](./07-stable-diffusion/summary.md)
+- Read: [Stable Diffusion summary](../papers/image-generation/07-stable-diffusion/summary.md)
 - Try: Generate images with Stable Diffusion online demo
 - **Key takeaway:** Modern models denoise step-by-step
 
 **Day 12-13: Connecting Text and Images**
-- Read: [CLIP summary](./08-clip/summary.md)
+- Read: [CLIP summary](../papers/multimodal/08-clip/summary.md)
 - Focus on: How models learn image-text relationships
 - **Key takeaway:** Contrastive learning aligns vision and language
 
@@ -85,18 +85,18 @@ A structured path through the 15 papers based on your background and goals.
 **Goal:** Understand alignment and practical techniques
 
 **Day 15-16: Making AI Follow Instructions**
-- Read: [InstructGPT summary](./05-instructgpt-rlhf/summary.md)
+- Read: [InstructGPT summary](../papers/language-models/05-instructgpt-rlhf/summary.md)
 - Focus on: RLHF process (simplified)
 - **Key takeaway:** Human feedback shapes model behavior
 
 **Day 17-18: Practical Improvements**
-- Read: [Chain-of-Thought summary](./09-chain-of-thought/summary.md)
+- Read: [Chain-of-Thought summary](../papers/techniques/09-chain-of-thought/summary.md)
 - Try: Use "let's think step by step" in ChatGPT
-- Read: [RAG summary](./13-rag/summary.md)
+- Read: [RAG summary](../papers/techniques/13-rag/summary.md)
 - **Key takeaway:** Techniques that make models more useful
 
 **Day 19-20: Efficient Adaptation**
-- Read: [LoRA summary](./10-lora/summary.md) - Focus on "Why This Matters"
+- Read: [LoRA summary](../papers/techniques/10-lora/summary.md) - Focus on "Why This Matters"
 - **Key takeaway:** Can customize models without retraining everything
 
 **Day 21: Final Review**
@@ -490,6 +490,6 @@ Mix and match based on your specific interests:
 
 **Remember:** Everyone learns differently. Adjust the pace and depth to match your needs. The goal is understanding, not speed!
 
-**Questions?** Open an issue or check [Contributing](./CONTRIBUTING.md).
+**Questions?** Open an issue or check [Contributing](../CONTRIBUTING.md).
 
 **Last Updated:** 2025-10-19

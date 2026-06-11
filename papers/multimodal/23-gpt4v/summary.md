@@ -1,3 +1,15 @@
+---
+title: "GPT-4V(ision): System Card"
+slug: "23-gpt4v"
+number: 23
+category: "multimodal"
+authors: "OpenAI"
+published: "September 2023"
+year: 2023
+url: "https://cdn.openai.com/papers/GPTV_System_Card.pdf"
+tags: [multimodal]
+---
+
 # GPT-4V(ision): System Card
 
 **Authors:** OpenAI

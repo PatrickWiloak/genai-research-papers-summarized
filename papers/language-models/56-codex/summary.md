@@ -1,3 +1,15 @@
+---
+title: "Codex: Evaluating Large Language Models Trained on Code"
+slug: "56-codex"
+number: 56
+category: "language-models"
+authors: "Mark Chen, Jerry Tworek, Heewoo Jun, Qiming Yuan, Henrique Ponde de Oliveira Pinto, Jared Kaplan, Harri Edwards, Yuri Burda, Nicholas Joseph, Greg Brockman, et al. (OpenAI)"
+published: "July 2021"
+year: 2021
+url: "https://arxiv.org/abs/2107.03374"
+tags: [language-models]
+---
+
 # Codex: Evaluating Large Language Models Trained on Code
 
 **Authors:** Mark Chen, Jerry Tworek, Heewoo Jun, Qiming Yuan, Henrique Ponde de Oliveira Pinto, Jared Kaplan, Harri Edwards, Yuri Burda, Nicholas Joseph, Greg Brockman, et al. (OpenAI)

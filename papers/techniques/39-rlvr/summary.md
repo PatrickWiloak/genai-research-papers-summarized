@@ -1,3 +1,13 @@
+---
+title: "RLVR: Reinforcement Learning from Verifiable Rewards"
+slug: "39-rlvr"
+number: 39
+category: "techniques"
+authors: "Multiple research groups (paradigm, not a single paper)"
+year: 2024
+tags: [techniques]
+---
+
 # RLVR: Reinforcement Learning from Verifiable Rewards
 
 **Authors:** Multiple research groups (paradigm, not a single paper)

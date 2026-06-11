@@ -1,3 +1,15 @@
+---
+title: "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
+slug: "16-flash-attention"
+number: 16
+category: "techniques"
+authors: "Tri Dao, Daniel Y. Fu, Stefano Ermon, Atri Rudra, Christopher Ré (Stanford, CMU)"
+published: "May 2022 (NeurIPS 2022)"
+year: 2022
+url: "https://arxiv.org/abs/2205.14135"
+tags: [techniques]
+---
+
 # FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness
 
 **Authors:** Tri Dao, Daniel Y. Fu, Stefano Ermon, Atri Rudra, Christopher Ré (Stanford, CMU)

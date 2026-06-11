@@ -1,3 +1,15 @@
+---
+title: "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
+slug: "09-chain-of-thought"
+number: 9
+category: "techniques"
+authors: "Jason Wei, Xuezhi Wang, Dale Schuurmans, et al. (Google Research, Brain Team)"
+published: "January 2022 (NeurIPS 2022)"
+year: 2022
+url: "https://arxiv.org/abs/2201.11903"
+tags: [techniques]
+---
+
 # Chain-of-Thought Prompting Elicits Reasoning in Large Language Models
 
 **Authors:** Jason Wei, Xuezhi Wang, Dale Schuurmans, et al. (Google Research, Brain Team)

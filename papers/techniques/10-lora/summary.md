@@ -1,3 +1,15 @@
+---
+title: "LoRA: Low-Rank Adaptation of Large Language Models"
+slug: "10-lora"
+number: 10
+category: "techniques"
+authors: "Edward Hu, Yelong Shen, Phillip Wallis, et al. (Microsoft)"
+published: "June 2021 (ICLR 2022)"
+year: 2021
+url: "https://arxiv.org/abs/2106.09685"
+tags: [techniques]
+---
+
 # LoRA: Low-Rank Adaptation of Large Language Models
 
 **Authors:** Edward Hu, Yelong Shen, Phillip Wallis, et al. (Microsoft)

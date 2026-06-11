@@ -1,3 +1,15 @@
+---
+title: "Gemini 3: Google's Most Capable AI Model"
+slug: "47-gemini3"
+number: 47
+category: "multimodal"
+authors: "Google DeepMind"
+published: "December 2025"
+year: 2025
+url: "https://blog.google/products-and-platforms/products/gemini/gemini-3/"
+tags: [multimodal]
+---
+
 # Gemini 3: Google's Most Capable AI Model
 
 **Authors:** Google DeepMind

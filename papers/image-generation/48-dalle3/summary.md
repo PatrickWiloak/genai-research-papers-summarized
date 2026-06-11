@@ -1,3 +1,15 @@
+---
+title: "DALL-E 3: Improving Image Generation with Better Captions"
+slug: "48-dalle3"
+number: 48
+category: "image-generation"
+authors: "James Betker, Gabriel Goh, Li Jing, et al. (OpenAI)"
+published: "September 2023"
+year: 2023
+url: "https://cdn.openai.com/papers/dall-e-3.pdf"
+tags: [image-generation]
+---
+
 # DALL-E 3: Improving Image Generation with Better Captions
 
 **Authors:** James Betker, Gabriel Goh, Li Jing, et al. (OpenAI)

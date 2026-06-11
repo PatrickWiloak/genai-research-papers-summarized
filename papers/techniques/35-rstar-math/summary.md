@@ -1,3 +1,15 @@
+---
+title: "rStar-Math: Small LLMs Can Master Math Reasoning with Self-Evolved Deep Thinking"
+slug: "35-rstar-math"
+number: 35
+category: "techniques"
+authors: "Microsoft Research, Tsinghua University"
+published: "January 2025"
+year: 2025
+url: "https://arxiv.org/abs/2501.04519"
+tags: [techniques]
+---
+
 # rStar-Math: Small LLMs Can Master Math Reasoning with Self-Evolved Deep Thinking
 
 **Authors:** Microsoft Research, Tsinghua University

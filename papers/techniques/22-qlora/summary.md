@@ -1,3 +1,15 @@
+---
+title: "QLoRA: Efficient Finetuning of Quantized LLMs"
+slug: "22-qlora"
+number: 22
+category: "techniques"
+authors: "Tim Dettmers, Artidoro Pagnoni, et al. (University of Washington)"
+published: "May 2023 (NeurIPS 2023)"
+year: 2023
+url: "https://arxiv.org/abs/2305.14314"
+tags: [techniques]
+---
+
 # QLoRA: Efficient Finetuning of Quantized LLMs
 
 **Authors:** Tim Dettmers, Artidoro Pagnoni, et al. (University of Washington)

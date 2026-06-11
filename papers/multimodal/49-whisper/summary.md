@@ -1,3 +1,15 @@
+---
+title: "Whisper: Robust Speech Recognition via Large-Scale Weak Supervision"
+slug: "49-whisper"
+number: 49
+category: "multimodal"
+authors: "Alec Radford, Jong Wook Kim, Tao Xu, et al. (OpenAI)"
+published: "December 2022"
+year: 2022
+url: "https://arxiv.org/abs/2212.04356"
+tags: [multimodal]
+---
+
 # Whisper: Robust Speech Recognition via Large-Scale Weak Supervision
 
 **Authors:** Alec Radford, Jong Wook Kim, Tao Xu, et al. (OpenAI)

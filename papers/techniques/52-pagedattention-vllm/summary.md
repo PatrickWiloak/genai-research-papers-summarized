@@ -1,3 +1,15 @@
+---
+title: "PagedAttention: Efficient LLM Serving with vLLM"
+slug: "52-pagedattention-vllm"
+number: 52
+category: "techniques"
+authors: "Woosuk Kwon, Zhuohan Li, Sicheng Zhuang, et al. (UC Berkeley)"
+published: "September 2023 (SOSP 2023)"
+year: 2023
+url: "https://arxiv.org/abs/2309.06180"
+tags: [techniques]
+---
+
 # PagedAttention: Efficient LLM Serving with vLLM
 
 **Authors:** Woosuk Kwon, Zhuohan Li, Sicheng Zhuang, et al. (UC Berkeley)

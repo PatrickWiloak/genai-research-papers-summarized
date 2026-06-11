@@ -1,3 +1,15 @@
+---
+title: "Scaling LLM Test-Time Compute: The Theoretical Foundation for Reasoning Models"
+slug: "50-test-time-compute"
+number: 50
+category: "techniques"
+authors: "Charlie Snell, Jaehoon Lee, Kelvin Xu, Aviral Kumar (Google DeepMind)"
+published: "August 2024"
+year: 2024
+url: "https://arxiv.org/abs/2408.03314"
+tags: [techniques]
+---
+
 # Scaling LLM Test-Time Compute: The Theoretical Foundation for Reasoning Models
 
 **Authors:** Charlie Snell, Jaehoon Lee, Kelvin Xu, Aviral Kumar (Google DeepMind)

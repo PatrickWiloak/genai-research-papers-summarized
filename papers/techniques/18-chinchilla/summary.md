@@ -1,3 +1,15 @@
+---
+title: "Training Compute-Optimal Large Language Models (Chinchilla)"
+slug: "18-chinchilla"
+number: 18
+category: "techniques"
+authors: "Jordan Hoffmann, Sebastian Borgeaud, et al. (DeepMind)"
+published: "March 2022 (NeurIPS 2022)"
+year: 2022
+url: "https://arxiv.org/abs/2203.15556"
+tags: [techniques]
+---
+
 # Training Compute-Optimal Large Language Models (Chinchilla)
 
 **Authors:** Jordan Hoffmann, Sebastian Borgeaud, et al. (DeepMind)

@@ -1,3 +1,15 @@
+---
+title: "Claude 3.5 Sonnet: Computer Use and Enhanced Capabilities"
+slug: "30-claude-3.5-sonnet"
+number: 30
+category: "language-models"
+authors: "Anthropic"
+published: "October 22, 2024"
+year: 2024
+url: "https://www.anthropic.com/news/3-5-models-and-computer-use"
+tags: [language-models]
+---
+
 # Claude 3.5 Sonnet: Computer Use and Enhanced Capabilities
 
 **Authors:** Anthropic

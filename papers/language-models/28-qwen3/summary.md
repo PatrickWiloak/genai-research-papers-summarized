@@ -1,3 +1,15 @@
+---
+title: "Qwen3: Technical Report"
+slug: "28-qwen3"
+number: 28
+category: "language-models"
+authors: "Qwen Team (Alibaba Cloud)"
+published: "May 14, 2025"
+year: 2025
+url: "https://arxiv.org/abs/2505.09388"
+tags: [language-models]
+---
+
 # Qwen3: Technical Report
 
 **Authors:** Qwen Team (Alibaba Cloud)

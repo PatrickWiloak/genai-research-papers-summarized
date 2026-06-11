@@ -1,3 +1,15 @@
+---
+title: "AlphaGeometry: Solving Olympiad Geometry Without Human Demonstrations"
+slug: "61-alphageometry"
+number: 61
+category: "techniques"
+authors: "Trieu H. Trinh, Yuhuai Wu, Quoc V. Le, He He, Thang Luong (Google DeepMind, NYU)"
+published: "January 2024 (Nature, vol. 625)"
+year: 2024
+url: "https://www.nature.com/articles/s41586-023-06747-5"
+tags: [techniques]
+---
+
 # AlphaGeometry: Solving Olympiad Geometry Without Human Demonstrations
 
 **Authors:** Trieu H. Trinh, Yuhuai Wu, Quoc V. Le, He He, Thang Luong (Google DeepMind, NYU)

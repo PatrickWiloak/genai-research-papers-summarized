@@ -1,3 +1,15 @@
+---
+title: "AlphaEvolve: A Gemini-Powered Coding Agent for Designing Advanced Algorithms"
+slug: "62-alphaevolve"
+number: 62
+category: "techniques"
+authors: "Alexander Novikov, Ngan Vu, Marvin Eisenberger, et al. (Google DeepMind)"
+published: "May 2025"
+year: 2025
+url: "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+tags: [techniques]
+---
+
 # AlphaEvolve: A Gemini-Powered Coding Agent for Designing Advanced Algorithms
 
 **Authors:** Alexander Novikov, Ngan Vu, Marvin Eisenberger, et al. (Google DeepMind)

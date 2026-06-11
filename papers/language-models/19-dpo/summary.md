@@ -1,3 +1,15 @@
+---
+title: "Direct Preference Optimization (DPO): Your Language Model is Secretly a Reward Model"
+slug: "19-dpo"
+number: 19
+category: "language-models"
+authors: "Rafael Rafailov, Archit Sharma, et al. (Stanford)"
+published: "May 2023 (NeurIPS 2023)"
+year: 2023
+url: "https://arxiv.org/abs/2305.18290"
+tags: [language-models]
+---
+
 # Direct Preference Optimization (DPO): Your Language Model is Secretly a Reward Model
 
 **Authors:** Rafael Rafailov, Archit Sharma, et al. (Stanford)

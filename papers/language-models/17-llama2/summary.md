@@ -1,3 +1,15 @@
+---
+title: "LLaMA 2: Open Foundation and Fine-Tuned Chat Models"
+slug: "17-llama2"
+number: 17
+category: "language-models"
+authors: "Hugo Touvron, Louis Martin, et al. (Meta AI)"
+published: "July 2023"
+year: 2023
+url: "https://arxiv.org/abs/2307.09288"
+tags: [language-models]
+---
+
 # LLaMA 2: Open Foundation and Fine-Tuned Chat Models
 
 **Authors:** Hugo Touvron, Louis Martin, et al. (Meta AI)

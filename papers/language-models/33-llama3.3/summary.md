@@ -1,3 +1,15 @@
+---
+title: "LLaMA 3.3: Matching 405B Performance with 70B Parameters"
+slug: "33-llama3.3"
+number: 33
+category: "language-models"
+authors: "Meta AI"
+published: "December 2024"
+year: 2024
+url: "https://www.meta.ai/blog/meta-llama-3-3/"
+tags: [language-models]
+---
+
 # LLaMA 3.3: Matching 405B Performance with 70B Parameters
 
 **Authors:** Meta AI

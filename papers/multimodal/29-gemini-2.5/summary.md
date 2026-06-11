@@ -1,3 +1,15 @@
+---
+title: "Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities"
+slug: "29-gemini-2.5"
+number: 29
+category: "multimodal"
+authors: "Google DeepMind"
+published: "July 7, 2025"
+year: 2025
+url: "https://arxiv.org/abs/2507.06261"
+tags: [multimodal]
+---
+
 # Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities
 
 **Authors:** Google DeepMind

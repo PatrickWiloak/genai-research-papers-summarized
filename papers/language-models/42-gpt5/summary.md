@@ -1,3 +1,15 @@
+---
+title: "GPT-5: Unified Intelligence"
+slug: "42-gpt5"
+number: 42
+category: "language-models"
+authors: "OpenAI"
+published: "August 7, 2025"
+year: 2025
+url: "https://cdn.openai.com/gpt-5-system-card.pdf"
+tags: [language-models]
+---
+
 # GPT-5: Unified Intelligence
 
 **Authors:** OpenAI

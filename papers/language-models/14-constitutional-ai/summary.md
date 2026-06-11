@@ -1,3 +1,15 @@
+---
+title: "Constitutional AI: Harmlessness from AI Feedback"
+slug: "14-constitutional-ai"
+number: 14
+category: "language-models"
+authors: "Yuntao Bai, Saurav Kadavath, Sandipan Kundu, et al. (Anthropic)"
+published: "December 2022"
+year: 2022
+url: "https://arxiv.org/abs/2212.08073"
+tags: [language-models]
+---
+
 # Constitutional AI: Harmlessness from AI Feedback
 
 **Authors:** Yuntao Bai, Saurav Kadavath, Sandipan Kundu, et al. (Anthropic)

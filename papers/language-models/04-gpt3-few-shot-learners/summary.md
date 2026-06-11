@@ -1,3 +1,15 @@
+---
+title: "Language Models are Few-Shot Learners (GPT-3)"
+slug: "04-gpt3-few-shot-learners"
+number: 4
+category: "language-models"
+authors: "Tom B. Brown et al. (OpenAI - 31 authors total)"
+published: "May 2020 (NeurIPS 2020)"
+year: 2020
+url: "https://arxiv.org/abs/2005.14165"
+tags: [language-models]
+---
+
 # Language Models are Few-Shot Learners (GPT-3)
 
 **Authors:** Tom B. Brown et al. (OpenAI - 31 authors total)

@@ -1,3 +1,15 @@
+---
+title: "Mixtral of Experts (and the Mixture-of-Experts Architecture)"
+slug: "37-mixture-of-experts"
+number: 37
+category: "architectures"
+authors: "Albert Jiang, Alexandre Sablayrolles, et al. (Mistral AI)"
+published: "January 8, 2024"
+year: 2024
+url: "https://arxiv.org/abs/2401.04088"
+tags: [architectures]
+---
+
 # Mixtral of Experts (and the Mixture-of-Experts Architecture)
 
 **Authors:** Albert Jiang, Alexandre Sablayrolles, et al. (Mistral AI)

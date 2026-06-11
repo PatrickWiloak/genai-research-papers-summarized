@@ -1,3 +1,15 @@
+---
+title: "Llama 4: Natively Multimodal Open-Source AI"
+slug: "41-llama4"
+number: 41
+category: "language-models"
+authors: "Meta AI"
+published: "April 5, 2025"
+year: 2025
+url: "https://ai.meta.com/blog/llama-4-multimodal-intelligence/"
+tags: [language-models]
+---
+
 # Llama 4: Natively Multimodal Open-Source AI
 
 **Authors:** Meta AI

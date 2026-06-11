@@ -1,3 +1,15 @@
+---
+title: "Attention Is All You Need"
+slug: "01-attention-is-all-you-need"
+number: 1
+category: "architectures"
+authors: "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, Illia Polosukhin"
+published: "June 2017 (NeurIPS 2017)"
+year: 2017
+url: "https://arxiv.org/abs/1706.03762"
+tags: [architectures]
+---
+
 # Attention Is All You Need
 
 **Authors:** Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, Illia Polosukhin

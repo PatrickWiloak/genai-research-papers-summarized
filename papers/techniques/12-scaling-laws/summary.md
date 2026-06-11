@@ -1,3 +1,15 @@
+---
+title: "Scaling Laws for Neural Language Models"
+slug: "12-scaling-laws"
+number: 12
+category: "techniques"
+authors: "Jared Kaplan, Sam McCandlish, Tom Henighan, et al. (OpenAI)"
+published: "January 2020"
+year: 2020
+url: "https://arxiv.org/abs/2001.08361"
+tags: [techniques]
+---
+
 # Scaling Laws for Neural Language Models
 
 **Authors:** Jared Kaplan, Sam McCandlish, Tom Henighan, et al. (OpenAI)

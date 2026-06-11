@@ -1,3 +1,15 @@
+---
+title: "High-Resolution Image Synthesis with Latent Diffusion Models (Stable Diffusion)"
+slug: "07-stable-diffusion"
+number: 7
+category: "image-generation"
+authors: "Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, Björn Ommer (Ludwig Maximilian University of Munich & Runway)"
+published: "December 2021 (CVPR 2022)"
+year: 2021
+url: "https://arxiv.org/abs/2112.10752"
+tags: [image-generation]
+---
+
 # High-Resolution Image Synthesis with Latent Diffusion Models (Stable Diffusion)
 
 **Authors:** Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, Björn Ommer (Ludwig Maximilian University of Munich & Runway)

@@ -1,3 +1,15 @@
+---
+title: "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale (Vision Transformer)"
+slug: "11-vision-transformer"
+number: 11
+category: "architectures"
+authors: "Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, et al. (Google Research)"
+published: "October 2020 (ICLR 2021)"
+year: 2020
+url: "https://arxiv.org/abs/2010.11929"
+tags: [architectures]
+---
+
 # An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale (Vision Transformer)
 
 **Authors:** Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, et al. (Google Research)

@@ -1,3 +1,15 @@
+---
+title: "DeepSeek-V3 Technical Report"
+slug: "27-deepseek-v3"
+number: 27
+category: "language-models"
+authors: "DeepSeek-AI"
+published: "December 27, 2024"
+year: 2024
+url: "https://arxiv.org/abs/2412.19437"
+tags: [language-models]
+---
+
 # DeepSeek-V3 Technical Report
 
 **Authors:** DeepSeek-AI

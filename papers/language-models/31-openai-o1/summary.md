@@ -1,3 +1,15 @@
+---
+title: "OpenAI o1: Learning to Reason with Reinforcement Learning"
+slug: "31-openai-o1"
+number: 31
+category: "language-models"
+authors: "OpenAI"
+published: "September 12, 2024"
+year: 2024
+url: "https://openai.com/index/learning-to-reason-with-llms/"
+tags: [language-models]
+---
+
 # OpenAI o1: Learning to Reason with Reinforcement Learning
 
 **Authors:** OpenAI

@@ -1,3 +1,15 @@
+---
+title: "GPT-4o: The First Omni Model"
+slug: "40-gpt4o"
+number: 40
+category: "language-models"
+authors: "OpenAI"
+published: "May 13, 2024"
+year: 2024
+url: "https://cdn.openai.com/gpt-4o-system-card.pdf"
+tags: [language-models]
+---
+
 # GPT-4o: The First Omni Model
 
 **Authors:** OpenAI

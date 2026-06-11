@@ -1,0 +1,5 @@
+# Tooling for building the documentation site.
+# Install with:  pip install -r requirements.txt
+# Then preview:  mkdocs serve
+# The manifest generator (scripts/build_manifest.py) needs no dependencies.
+mkdocs-material>=9.5

@@ -1,3 +1,15 @@
+---
+title: "Sora and Diffusion Transformers (DiT): Video Generation as World Simulation"
+slug: "44-sora-dit"
+number: 44
+category: "image-generation"
+authors: "William Peebles, Saining Xie (DiT); OpenAI (Sora)"
+published: "DiT: December 2022; Sora: February 2024"
+year: 2022
+url: "https://arxiv.org/abs/2212.09748"
+tags: [image-generation]
+---
+
 # Sora and Diffusion Transformers (DiT): Video Generation as World Simulation
 
 **Authors:** William Peebles, Saining Xie (DiT); OpenAI (Sora)

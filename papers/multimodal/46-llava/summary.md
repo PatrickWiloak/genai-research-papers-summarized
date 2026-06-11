@@ -1,3 +1,15 @@
+---
+title: "LLaVA: Visual Instruction Tuning"
+slug: "46-llava"
+number: 46
+category: "multimodal"
+authors: "Haotian Liu, Chunyuan Li, Qingyang Wu, Yong Jae Lee"
+published: "April 2023 (NeurIPS 2023 Oral)"
+year: 2023
+url: "https://arxiv.org/abs/2304.08485"
+tags: [multimodal]
+---
+
 # LLaVA: Visual Instruction Tuning
 
 **Authors:** Haotian Liu, Chunyuan Li, Qingyang Wu, Yong Jae Lee

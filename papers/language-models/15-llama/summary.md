@@ -1,3 +1,15 @@
+---
+title: "LLaMA: Open and Efficient Foundation Language Models"
+slug: "15-llama"
+number: 15
+category: "language-models"
+authors: "Hugo Touvron, Thibaut Lavril, Gautier Izacard, et al. (Meta AI)"
+published: "February 2023"
+year: 2023
+url: "https://arxiv.org/abs/2302.13971"
+tags: [language-models]
+---
+
 # LLaMA: Open and Efficient Foundation Language Models
 
 **Authors:** Hugo Touvron, Thibaut Lavril, Gautier Izacard, et al. (Meta AI)

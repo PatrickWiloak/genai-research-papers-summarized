@@ -1,3 +1,15 @@
+---
+title: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (RAG)"
+slug: "13-rag"
+number: 13
+category: "techniques"
+authors: "Patrick Lewis, Ethan Perez, Aleksandra Piktus, et al. (Facebook AI Research, UCL, NYU)"
+published: "May 2020 (NeurIPS 2020)"
+year: 2020
+url: "https://arxiv.org/abs/2005.11401"
+tags: [techniques]
+---
+
 # Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (RAG)
 
 **Authors:** Patrick Lewis, Ethan Perez, Aleksandra Piktus, et al. (Facebook AI Research, UCL, NYU)

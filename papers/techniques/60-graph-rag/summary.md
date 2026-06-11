@@ -1,3 +1,15 @@
+---
+title: "GraphRAG: From Local to Global - A Graph RAG Approach to Query-Focused Summarization"
+slug: "60-graph-rag"
+number: 60
+category: "techniques"
+authors: "Darren Edge, Ha Trinh, Newman Cheng, Joshua Bradley, Alex Chao, Apurva Mody, Steven Truitt, Jonathan Larson (Microsoft Research)"
+published: "April 2024"
+year: 2024
+url: "https://arxiv.org/abs/2404.16130"
+tags: [techniques]
+---
+
 # GraphRAG: From Local to Global - A Graph RAG Approach to Query-Focused Summarization
 
 **Authors:** Darren Edge, Ha Trinh, Newman Cheng, Joshua Bradley, Alex Chao, Apurva Mody, Steven Truitt, Jonathan Larson (Microsoft Research)

@@ -1,3 +1,15 @@
+---
+title: "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
+slug: "03-bert"
+number: 3
+category: "language-models"
+authors: "Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova (Google AI Language)"
+published: "October 2018 (NAACL 2019)"
+year: 2018
+url: "https://arxiv.org/abs/1810.04805"
+tags: [language-models]
+---
+
 # BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
 
 **Authors:** Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova (Google AI Language)

@@ -1,3 +1,15 @@
+---
+title: "RoFormer: Enhanced Transformer with Rotary Position Embedding (RoPE)"
+slug: "54-rope-rotary-position-embedding"
+number: 54
+category: "techniques"
+authors: "Jianlin Su, Yu Lu, Shengfeng Pan, Bo Wen, Yunfeng Liu (Zhuiyi Technology)"
+published: "April 2021 (revised through 2023)"
+year: 2021
+url: "https://arxiv.org/abs/2104.09864"
+tags: [techniques]
+---
+
 # RoFormer: Enhanced Transformer with Rotary Position Embedding (RoPE)
 
 **Authors:** Jianlin Su, Yu Lu, Shengfeng Pan, Bo Wen, Yunfeng Liu (Zhuiyi Technology)

@@ -1,3 +1,15 @@
+---
+title: "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning"
+slug: "26-deepseek-r1"
+number: 26
+category: "language-models"
+authors: "DeepSeek-AI"
+published: "January 20, 2025"
+year: 2025
+url: "https://arxiv.org/abs/2501.12948"
+tags: [language-models]
+---
+
 # DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning
 
 **Authors:** DeepSeek-AI

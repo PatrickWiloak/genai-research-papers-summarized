@@ -1,3 +1,15 @@
+---
+title: "Let's Verify Step by Step: Process Reward Models"
+slug: "51-process-reward-models"
+number: 51
+category: "techniques"
+authors: "Hunter Lightman, Vineet Kosaraju, Yura Burda, et al. (OpenAI)"
+published: "May 2023 (ICLR 2024 Oral)"
+year: 2023
+url: "https://arxiv.org/abs/2305.20050"
+tags: [techniques]
+---
+
 # Let's Verify Step by Step: Process Reward Models
 
 **Authors:** Hunter Lightman, Vineet Kosaraju, Yura Burda, et al. (OpenAI)

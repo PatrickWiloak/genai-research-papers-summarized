@@ -1,3 +1,15 @@
+---
+title: "ReAct: Synergizing Reasoning and Acting in Language Models"
+slug: "21-react"
+number: 21
+category: "techniques"
+authors: "Shunyu Yao, Jeffrey Zhao, Dian Yu, et al. (Google Research, Princeton)"
+published: "October 2022 (ICLR 2023)"
+year: 2022
+url: "https://arxiv.org/abs/2210.03629"
+tags: [techniques]
+---
+
 # ReAct: Synergizing Reasoning and Acting in Language Models
 
 **Authors:** Shunyu Yao, Jeffrey Zhao, Dian Yu, et al. (Google Research, Princeton)

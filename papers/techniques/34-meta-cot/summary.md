@@ -1,3 +1,15 @@
+---
+title: "Meta Chain-of-Thought: Towards System 2 Reasoning in LLMs"
+slug: "34-meta-cot"
+number: 34
+category: "techniques"
+authors: "Multiple research teams"
+published: "January 2025"
+year: 2025
+url: "https://arxiv.org/abs/2501.04682"
+tags: [techniques]
+---
+
 # Meta Chain-of-Thought: Towards System 2 Reasoning in LLMs
 
 **Authors:** Multiple research teams

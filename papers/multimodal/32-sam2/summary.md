@@ -1,3 +1,15 @@
+---
+title: "SAM 2: Segment Anything in Images and Videos"
+slug: "32-sam2"
+number: 32
+category: "multimodal"
+authors: "Meta AI (FAIR)"
+published: "August 2024"
+year: 2024
+url: "https://arxiv.org/abs/2408.00714"
+tags: [multimodal]
+---
+
 # SAM 2: Segment Anything in Images and Videos
 
 **Authors:** Meta AI (FAIR)

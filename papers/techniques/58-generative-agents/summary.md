@@ -1,3 +1,15 @@
+---
+title: "Generative Agents: Interactive Simulacra of Human Behavior"
+slug: "58-generative-agents"
+number: 58
+category: "techniques"
+authors: "Joon Sung Park, Joseph C. O'Brien, Carrie J. Cai, Meredith Ringel Morris, Percy Liang, Michael S. Bernstein (Stanford University, Google Research)"
+published: "April 2023 (UIST 2023 Best Paper)"
+year: 2023
+url: "https://arxiv.org/abs/2304.03442"
+tags: [techniques]
+---
+
 # Generative Agents: Interactive Simulacra of Human Behavior
 
 **Authors:** Joon Sung Park, Joseph C. O'Brien, Carrie J. Cai, Meredith Ringel Morris, Percy Liang, Michael S. Bernstein (Stanford University, Google Research)

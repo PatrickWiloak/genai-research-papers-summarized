@@ -1,3 +1,15 @@
+---
+title: "GPT-4 Technical Report"
+slug: "36-gpt4"
+number: 36
+category: "language-models"
+authors: "OpenAI"
+published: "March 14, 2023"
+year: 2023
+url: "https://arxiv.org/abs/2303.08774"
+tags: [language-models]
+---
+
 # GPT-4 Technical Report
 
 **Authors:** OpenAI

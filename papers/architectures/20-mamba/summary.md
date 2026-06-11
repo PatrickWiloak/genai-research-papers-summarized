@@ -1,3 +1,15 @@
+---
+title: "Mamba: Linear-Time Sequence Modeling with Selective State Spaces"
+slug: "20-mamba"
+number: 20
+category: "architectures"
+authors: "Albert Gu, Tri Dao (Carnegie Mellon, Princeton)"
+published: "December 2023"
+year: 2023
+url: "https://arxiv.org/abs/2312.00752"
+tags: [architectures]
+---
+
 # Mamba: Linear-Time Sequence Modeling with Selective State Spaces
 
 **Authors:** Albert Gu, Tri Dao (Carnegie Mellon, Princeton)

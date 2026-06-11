@@ -1,3 +1,15 @@
+---
+title: "Speculative Decoding: Fast Inference from Transformers"
+slug: "45-speculative-decoding"
+number: 45
+category: "techniques"
+authors: "Yaniv Leviathan, Matan Kalman, Yossi Matias (Google Research)"
+published: "November 2022 (ICML 2023)"
+year: 2022
+url: "https://arxiv.org/abs/2211.17192"
+tags: [techniques]
+---
+
 # Speculative Decoding: Fast Inference from Transformers
 
 **Authors:** Yaniv Leviathan, Matan Kalman, Yossi Matias (Google Research)

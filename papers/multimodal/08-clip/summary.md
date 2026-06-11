@@ -1,3 +1,15 @@
+---
+title: "Learning Transferable Visual Models From Natural Language Supervision (CLIP)"
+slug: "08-clip"
+number: 8
+category: "multimodal"
+authors: "Alec Radford, Jong Wook Kim, Chris Hallacy, et al. (OpenAI)"
+published: "February 2021 (ICML 2021)"
+year: 2021
+url: "https://arxiv.org/abs/2103.00020"
+tags: [multimodal]
+---
+
 # Learning Transferable Visual Models From Natural Language Supervision (CLIP)
 
 **Authors:** Alec Radford, Jong Wook Kim, Chris Hallacy, et al. (OpenAI)

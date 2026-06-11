@@ -1,3 +1,15 @@
+---
+title: "Training Language Models to Follow Instructions with Human Feedback (InstructGPT)"
+slug: "05-instructgpt-rlhf"
+number: 5
+category: "language-models"
+authors: "Long Ouyang, Jeff Wu, Xu Jiang, et al. (OpenAI)"
+published: "March 2022"
+year: 2022
+url: "https://arxiv.org/abs/2203.02155"
+tags: [language-models]
+---
+
 # Training Language Models to Follow Instructions with Human Feedback (InstructGPT)
 
 **Authors:** Long Ouyang, Jeff Wu, Xu Jiang, et al. (OpenAI)

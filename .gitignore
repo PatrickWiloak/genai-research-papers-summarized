@@ -5,3 +5,8 @@ __pycache__/
 .vscode/
 .idea/
 graphify-out/
+
+# MkDocs: generated docs tree (site-build/) and rendered output (site/, _site/)
+/site-build/
+/site/
+/_site/
