@@ -407,3 +407,13 @@ Input: [CLS] Barack Obama was born in Hawaii [SEP]
   year={2018}
 }
 ```
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Language Models are Few-Shot Learners (GPT-3)](../../language-models/04-gpt3-few-shot-learners/summary.md)
+
+<!-- related:end -->

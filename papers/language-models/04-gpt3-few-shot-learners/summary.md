@@ -486,3 +486,19 @@ One of the first major AI papers to include extensive discussion of risks:
   year={2020}
 }
 ```
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](../../language-models/03-bert/summary.md)
+- [Training Language Models to Follow Instructions with Human Feedback (InstructGPT)](../../language-models/05-instructgpt-rlhf/summary.md)
+- [Scaling Laws for Neural Language Models](../../techniques/12-scaling-laws/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [Codex: Evaluating Large Language Models Trained on Code](../../language-models/56-codex/summary.md)
+- [Language Models are Unsupervised Multitask Learners (GPT-2)](../../language-models/64-gpt2/summary.md)
+- [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer (T5)](../../language-models/65-t5/summary.md)
+
+<!-- related:end -->

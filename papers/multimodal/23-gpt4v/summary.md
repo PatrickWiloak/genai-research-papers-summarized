@@ -777,3 +777,17 @@ Plus text tokens as usual
 **Modern Status (2024/2025):** GPT-4V is still among the best vision-language models, though Gemini 1.5 and Claude 3 Opus are competitive. Multimodal is now table stakes for frontier models. GPT-4V showed the way.
 
 **The Impact:** Every AI assistant is now expected to handle images. GPT-4V made that the new normal.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Training Language Models to Follow Instructions with Human Feedback (InstructGPT)](../../language-models/05-instructgpt-rlhf/summary.md)
+- [Learning Transferable Visual Models From Natural Language Supervision (CLIP)](../../multimodal/08-clip/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [GPT-5: Unified Intelligence](../../language-models/42-gpt5/summary.md)
+- [LLaVA: Visual Instruction Tuning](../../multimodal/46-llava/summary.md)
+
+<!-- related:end -->

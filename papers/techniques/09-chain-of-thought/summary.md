@@ -645,3 +645,15 @@ Bad: We begin by considering the first number, which is 3.
   year={2022}
 }
 ```
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Language Models are Few-Shot Learners (GPT-3)](../../language-models/04-gpt3-few-shot-learners/summary.md)
+- [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](../../techniques/25-tree-of-thoughts/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+
+<!-- related:end -->

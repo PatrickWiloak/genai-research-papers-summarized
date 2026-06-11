@@ -229,3 +229,19 @@ Output Probabilities
   year={2017}
 }
 ```
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](../../language-models/03-bert/summary.md)
+- [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale (Vision Transformer)](../../architectures/11-vision-transformer/summary.md)
+- [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](../../techniques/16-flash-attention/summary.md)
+- [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](../../architectures/20-mamba/summary.md)
+- [DALL-E 3: Improving Image Generation with Better Captions](../../image-generation/48-dalle3/summary.md)
+- [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer (T5)](../../language-models/65-t5/summary.md)
+- [Highly Accurate Protein Structure Prediction with AlphaFold (AlphaFold 2)](../../techniques/68-alphafold/summary.md)
+
+<!-- related:end -->

@@ -361,3 +361,19 @@ Best practice: Use ALL of them in sequence
 **Legacy:** Proved that reasoning emerges from correctness optimization
 
 **Modern Status (March 2026):** RLVR is now a standard training stage alongside pre-training, SFT, and RLHF. Every serious reasoning model uses some form of RLVR. The paradigm continues to evolve with better algorithms (Dr. GRPO), richer reward signals (process rewards), and broader task coverage.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Training Language Models to Follow Instructions with Human Feedback (InstructGPT)](../../language-models/05-instructgpt-rlhf/summary.md)
+- [Direct Preference Optimization (DPO): Your Language Model is Secretly a Reward Model](../../language-models/19-dpo/summary.md)
+- [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](../../language-models/26-deepseek-r1/summary.md)
+- [Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities](../../multimodal/29-gemini-2.5/summary.md)
+- [OpenAI o1: Learning to Reason with Reinforcement Learning](../../language-models/31-openai-o1/summary.md)
+- [GRPO: Group Relative Policy Optimization](../../techniques/38-grpo/summary.md)
+- [Proximal Policy Optimization Algorithms (PPO)](../../techniques/63-ppo/summary.md)
+
+<!-- related:end -->

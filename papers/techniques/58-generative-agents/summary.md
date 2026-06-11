@@ -834,3 +834,17 @@ underlying causal mechanisms of human behavior.
 **Legacy:** Turned "LLM agent" from a research curiosity into a software category
 
 **Modern Status (April 2026):** Generative Agents remains the most-cited paper in the LLM agent literature. Its memory-retrieve-reflect-plan loop is now the default architecture across CrewAI, AutoGen, LangGraph, and Letta. The original code release sparked dozens of open-source replications. Project Sid scaled the approach to 1000+ agents in Minecraft, demonstrating civilizational dynamics. Commercial game studios (Inworld, Convai, Replica) productized the architecture for NPC dialog. The paper's core claim - that long-running believable agents require external memory and reflection, not just bigger models - has held up as context windows grew to 1M+ tokens. Memory architecture still matters, because attention dilution and retrieval precision are problems that scale alone doesn't solve.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Language Models are Few-Shot Learners (GPT-3)](../../language-models/04-gpt3-few-shot-learners/summary.md)
+- [Training Language Models to Follow Instructions with Human Feedback (InstructGPT)](../../language-models/05-instructgpt-rlhf/summary.md)
+- [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (RAG)](../../techniques/13-rag/summary.md)
+- [Constitutional AI: Harmlessness from AI Feedback](../../language-models/14-constitutional-ai/summary.md)
+- [ReAct: Synergizing Reasoning and Acting in Language Models](../../techniques/21-react/summary.md)
+
+<!-- related:end -->

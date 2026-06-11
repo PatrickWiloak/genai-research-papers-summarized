@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check relative Markdown links
+        run: python3 scripts/check_links.py
+
+      - name: Generated files are up to date
+        run: |
+          python3 scripts/build_manifest.py
+          python3 scripts/add_cross_links.py
+          python3 scripts/build_manifest.py
+          if ! git diff --quiet; then
+            echo "::error::Generated content is stale. Run scripts/build_manifest.py + scripts/add_cross_links.py + scripts/build_manifest.py and commit the result."
+            git --no-pager diff --stat
+            exit 1
+          fi
+          echo "Manifest, INDEX.md, mkdocs.yml, frontmatter, and cross-links are in sync."

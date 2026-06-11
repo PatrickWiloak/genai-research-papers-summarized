@@ -598,3 +598,20 @@ from flash_attn import flash_attn_func
 **Published:** February 2023
 **Impact Factor:** 2,000+ citations (in <2 years!)
 **Legacy:** Democratized LLMs, validated scaling laws, sparked open-source AI revolution, proved smaller well-trained models can compete with giants.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Language Models are Few-Shot Learners (GPT-3)](../../language-models/04-gpt3-few-shot-learners/summary.md)
+- [Training Language Models to Follow Instructions with Human Feedback (InstructGPT)](../../language-models/05-instructgpt-rlhf/summary.md)
+- [Scaling Laws for Neural Language Models](../../techniques/12-scaling-laws/summary.md)
+- [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (RAG)](../../techniques/13-rag/summary.md)
+- [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](../../techniques/16-flash-attention/summary.md)
+- [LLaMA 2: Open Foundation and Fine-Tuned Chat Models](../../language-models/17-llama2/summary.md)
+- [Training Compute-Optimal Large Language Models (Chinchilla)](../../techniques/18-chinchilla/summary.md)
+- [RoFormer: Enhanced Transformer with Rotary Position Embedding (RoPE)](../../techniques/54-rope-rotary-position-embedding/summary.md)
+
+<!-- related:end -->

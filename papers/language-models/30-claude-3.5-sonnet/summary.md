@@ -343,3 +343,15 @@ Computer use:
 **Published:** October 22, 2024
 **Impact:** 🔥🔥🔥🔥🔥 **CRITICAL** - Enabled computer-controlling AI
 **Adoption:** Widespread in agentic applications
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](../../language-models/26-deepseek-r1/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [GPT-4o: The First Omni Model](../../language-models/40-gpt4o/summary.md)
+
+<!-- related:end -->

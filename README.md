@@ -1,8 +1,8 @@
 # Foundational Generative AI Research Papers - Summarized
 
-A curated collection of the **63 most influential papers** that shaped modern generative AI, with comprehensive summaries designed to make cutting-edge research accessible to everyone.
+A curated collection of the **68 most influential papers** that shaped modern generative AI, with comprehensive summaries designed to make cutting-edge research accessible to everyone.
 
-[![Papers](https://img.shields.io/badge/Papers-63-blue.svg)](./papers/)
+[![Papers](https://img.shields.io/badge/Papers-68-blue.svg)](./papers/)
 [![Guides](https://img.shields.io/badge/Guides-6-green.svg)](./docs/)
 [![License](https://img.shields.io/badge/License-CC_BY_4.0-orange.svg)](./LICENSE)
 [![Updated](https://img.shields.io/badge/Updated-June_2026-green.svg)](./README.md)
@@ -12,7 +12,7 @@ A curated collection of the **63 most influential papers** that shaped modern ge
 ## 🚀 Quick Start
 
 **New to AI?** Start with the [Learning Roadmap](./docs/ROADMAP.md)
-**Want the full list?** See the [Paper Index](./INDEX.md) - all 63 papers grouped by category
+**Want the full list?** See the [Paper Index](./INDEX.md) - all 68 papers grouped by category
 **Want to browse visually?** See [BROWSE.md](./BROWSE.md) for table/grid view
 **Not sure what to read?** Check the [Reading Guide](./docs/READING_GUIDE.md) - Historical vs Modern relevance
 **Need quick lookup?** See the [Quick Reference](./docs/QUICK_REFERENCE.md)
@@ -481,7 +481,7 @@ Focus on "Why This Matters" sections + [Comparisons Guide](./docs/COMPARISONS.md
 
 | Category | Count | Total Reading Time |
 |----------|-------|-------------------|
-| **Papers** | 63 | 55-65 hours |
+| **Papers** | 68 | 58-70 hours |
 | **Words** | 390,000+ | - |
 | **Guides** | 6 | 3-4 hours |
 | **Terms Explained** | 250+ | - |
@@ -490,11 +490,12 @@ Focus on "Why This Matters" sections + [Comparisons Guide](./docs/COMPARISONS.md
 _This distribution is generated from [`papers.json`](./papers.json) - see [INDEX.md](./INDEX.md) for the full clickable list._
 
 - 2013: 2 papers (Word2Vec, VAE)
-- 2014: 2 papers (GANs, Seq2Seq)
+- 2014: 3 papers (GANs, Seq2Seq, Bahdanau Attention)
 - 2017: 2 papers (Transformers, PPO)
 - 2018: 1 paper (BERT)
+- 2019: 2 papers (GPT-2, T5)
 - 2020: 5 papers (GPT-3, DDPM, ViT, Scaling Laws, RAG)
-- 2021: 5 papers (Stable Diffusion, CLIP, LoRA, RoPE, Codex)
+- 2021: 7 papers (Stable Diffusion, CLIP, LoRA, RoPE, Codex, Switch Transformer, AlphaFold)
 - 2022: 9 papers (InstructGPT, Chain-of-Thought, Constitutional AI, FlashAttention, Chinchilla, ReAct, DiT/Sora, Speculative Decoding, Whisper)
 - 2023: 14 papers (LLaMA, LLaMA 2, DPO, Mamba, QLoRA, GPT-4V, Toolformer, Tree of Thoughts, GPT-4, LLaVA, DALL-E 3, Process Reward Models, PagedAttention/vLLM, Generative Agents)
 - 2024: 13 papers (DeepSeek-V3, Claude 3.5 Sonnet, o1, SAM 2, LLaMA 3.3, Mixtral/MoE, GRPO, RLVR, GPT-4o, Test-Time Compute, MCP, GraphRAG, AlphaGeometry)
@@ -602,7 +603,7 @@ Gratitude to the researchers who created these foundational works:
 ---
 
 **Last Updated:** 2026-06-10
-**Papers:** 63 foundational works (2013-2026)
+**Papers:** 68 foundational works (2013-2026)
 **Total Content:** 390,000+ words
 **Includes:** Roots (Word2Vec, Seq2Seq, VAE, PPO) through the latest breakthroughs of early 2026 (GPT-5, Claude 4, Llama 4, GRPO, RLVR, and more)
 **Repository:** [github.com/PatrickWiloak/genai-research-papers-summarized](https://github.com/PatrickWiloak/genai-research-papers-summarized)

@@ -655,3 +655,16 @@ for batch in dataloader:
   year={2021}
 }
 ```
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Language Models are Few-Shot Learners (GPT-3)](../../language-models/04-gpt3-few-shot-learners/summary.md)
+- [High-Resolution Image Synthesis with Latent Diffusion Models (Stable Diffusion)](../../image-generation/07-stable-diffusion/summary.md)
+- [QLoRA: Efficient Finetuning of Quantized LLMs](../../techniques/22-qlora/summary.md)
+- [Language Models are Unsupervised Multitask Learners (GPT-2)](../../language-models/64-gpt2/summary.md)
+
+<!-- related:end -->

@@ -779,3 +779,16 @@ def execute_api_safe(api_call):
 **Legacy:** Proved self-supervised learning works for tool use
 
 **Modern Status (2024/2025):** The principles of Toolformer (self-supervised tool learning, loss-based filtering) are likely used in training modern AI assistants, though with more sophisticated implementations in GPT-4 and Claude.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Language Models are Few-Shot Learners (GPT-3)](../../language-models/04-gpt3-few-shot-learners/summary.md)
+- [Training Language Models to Follow Instructions with Human Feedback (InstructGPT)](../../language-models/05-instructgpt-rlhf/summary.md)
+- [ReAct: Synergizing Reasoning and Acting in Language Models](../../techniques/21-react/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+
+<!-- related:end -->

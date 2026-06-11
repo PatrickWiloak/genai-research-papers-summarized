@@ -669,3 +669,20 @@ human-interesting theorems. AlphaGeometry's proofs sometimes feel
 **Current Relevance:** Foundational - the neuro-symbolic + synthetic-data + verifier recipe
 
 **Modern Status (April 2026):** AlphaGeometry's neuro-symbolic recipe has become the dominant paradigm for AI reasoning. AlphaProof's silver-medal result at IMO 2024 was matched and exceeded by GPT-5 and Gemini 2.5 systems on IMO 2025 (gold-level, multiple labs). The autoformalization + Lean verification approach pioneered here now drives a thriving ecosystem of formal math tools, with mathlib growing 3x in size and major mathematicians (Tao, Buzzard, Scholze) actively integrating AI assistants into their workflow. The pattern - propose with an LM, verify with a formal system, train on verified successes - is the foundation of modern reasoning models including o3, Claude Sonnet 4.5, and Gemini 2.5 Deep Think.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](../../language-models/26-deepseek-r1/summary.md)
+- [Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities](../../multimodal/29-gemini-2.5/summary.md)
+- [OpenAI o1: Learning to Reason with Reinforcement Learning](../../language-models/31-openai-o1/summary.md)
+- [rStar-Math: Small LLMs Can Master Math Reasoning with Self-Evolved Deep Thinking](../../techniques/35-rstar-math/summary.md)
+- [RLVR: Reinforcement Learning from Verifiable Rewards](../../techniques/39-rlvr/summary.md)
+- [GPT-5: Unified Intelligence](../../language-models/42-gpt5/summary.md)
+- [Let's Verify Step by Step: Process Reward Models](../../techniques/51-process-reward-models/summary.md)
+- [PagedAttention: Efficient LLM Serving with vLLM](../../techniques/52-pagedattention-vllm/summary.md)
+
+<!-- related:end -->

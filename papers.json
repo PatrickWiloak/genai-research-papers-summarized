@@ -1,5 +1,5 @@
 {
-  "count": 63,
+  "count": 68,
   "categories": [
     "architectures",
     "language-models",
@@ -700,6 +700,61 @@
       "year": 2017,
       "url": "https://arxiv.org/abs/1707.06347",
       "path": "papers/techniques/63-ppo/summary.md"
+    },
+    {
+      "number": 64,
+      "title": "Language Models are Unsupervised Multitask Learners (GPT-2)",
+      "slug": "64-gpt2",
+      "category": "language-models",
+      "authors": "Alec Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei, Ilya Sutskever (OpenAI)",
+      "published": "February 2019",
+      "year": 2019,
+      "url": "https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf",
+      "path": "papers/language-models/64-gpt2/summary.md"
+    },
+    {
+      "number": 65,
+      "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer (T5)",
+      "slug": "65-t5",
+      "category": "language-models",
+      "authors": "Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang, Michael Matena, Yanqi Zhou, Wei Li, Peter J. Liu (Google)",
+      "published": "October 2019 (JMLR 2020)",
+      "year": 2019,
+      "url": "https://arxiv.org/abs/1910.10683",
+      "path": "papers/language-models/65-t5/summary.md"
+    },
+    {
+      "number": 66,
+      "title": "Neural Machine Translation by Jointly Learning to Align and Translate (Bahdanau Attention)",
+      "slug": "66-bahdanau-attention",
+      "category": "architectures",
+      "authors": "Dzmitry Bahdanau, Kyunghyun Cho, Yoshua Bengio",
+      "published": "September 2014 (ICLR 2015)",
+      "year": 2014,
+      "url": "https://arxiv.org/abs/1409.0473",
+      "path": "papers/architectures/66-bahdanau-attention/summary.md"
+    },
+    {
+      "number": 67,
+      "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+      "slug": "67-switch-transformer",
+      "category": "architectures",
+      "authors": "William Fedus, Barret Zoph, Noam Shazeer (Google)",
+      "published": "January 2021 (JMLR 2022)",
+      "year": 2021,
+      "url": "https://arxiv.org/abs/2101.03961",
+      "path": "papers/architectures/67-switch-transformer/summary.md"
+    },
+    {
+      "number": 68,
+      "title": "Highly Accurate Protein Structure Prediction with AlphaFold (AlphaFold 2)",
+      "slug": "68-alphafold",
+      "category": "techniques",
+      "authors": "John Jumper, Richard Evans, Alexander Pritzel, Tim Green, Michael Figurnov, Olaf Ronneberger, Kathryn Tunyasuvunakool, Russ Bates, Augustin Zidek, Anna Potapenko, Alex Bridgland, Clemens Meyer, Simon A. A. Kohl, Andrew J. Ballard, Andrew Cowie, Bernardino Romera-Paredes, Stanislav Nikolov, Rishub Jain, Jonas Adler, Trevor Back, Stig Petersen, David Reiman, Ellen Clancy, Michal Zielinski, Martin Steinegger, Michalina Pacholska, Tamas Berghammer, Sebastian Bodenstein, David Silver, Oriol Vinyals, Andrew W. Senior, Koray Kavukcuoglu, Pushmeet Kohli, Demis Hassabis (DeepMind)",
+      "published": "2021 (Nature, volume 596)",
+      "year": 2021,
+      "url": "https://www.nature.com/articles/s41586-021-03819-2",
+      "path": "papers/techniques/68-alphafold/summary.md"
     }
   ]
 }

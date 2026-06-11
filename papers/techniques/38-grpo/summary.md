@@ -401,3 +401,18 @@ trainer.train()
 **Legacy:** Made RL training for LLMs practical and accessible
 
 **Modern Status (March 2026):** GRPO has become the dominant RL algorithm for training reasoning models. Nearly every open-source reasoning model uses GRPO or a variant. Dr. GRPO and other improvements continue to refine the approach.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Training Language Models to Follow Instructions with Human Feedback (InstructGPT)](../../language-models/05-instructgpt-rlhf/summary.md)
+- [Direct Preference Optimization (DPO): Your Language Model is Secretly a Reward Model](../../language-models/19-dpo/summary.md)
+- [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](../../language-models/26-deepseek-r1/summary.md)
+- [OpenAI o1: Learning to Reason with Reinforcement Learning](../../language-models/31-openai-o1/summary.md)
+- [RLVR: Reinforcement Learning from Verifiable Rewards](../../techniques/39-rlvr/summary.md)
+- [Proximal Policy Optimization Algorithms (PPO)](../../techniques/63-ppo/summary.md)
+
+<!-- related:end -->

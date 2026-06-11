@@ -375,3 +375,17 @@ Quality > quantity
 **Published:** September 12, 2024
 **Impact:** 🔥🔥🔥🔥🔥 **CRITICAL** - Started reasoning model era
 **Legacy:** Inspired entire category of AI models
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](../../language-models/26-deepseek-r1/summary.md)
+- [Qwen3: Technical Report](../../language-models/28-qwen3/summary.md)
+- [Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities](../../multimodal/29-gemini-2.5/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [GPT-4o: The First Omni Model](../../language-models/40-gpt4o/summary.md)
+
+<!-- related:end -->

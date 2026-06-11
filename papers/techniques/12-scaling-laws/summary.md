@@ -440,3 +440,16 @@ optimal_tokens = k4 * (C ** 0.50)
 **Published:** January 2020
 **Impact Factor:** 2,000+ citations
 **Legacy:** Transformed AI from empirical tinkering to predictable science, enabling the era of foundation models.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Attention Is All You Need](../../architectures/01-attention-is-all-you-need/summary.md)
+- [Language Models are Few-Shot Learners (GPT-3)](../../language-models/04-gpt3-few-shot-learners/summary.md)
+- [Training Compute-Optimal Large Language Models (Chinchilla)](../../techniques/18-chinchilla/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+
+<!-- related:end -->

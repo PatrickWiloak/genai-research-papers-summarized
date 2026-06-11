@@ -374,3 +374,18 @@ Struggles with complex multi-step visual reasoning
 **Legacy:** Democratized multimodal AI, made it accessible to everyone
 
 **Modern Status (March 2026):** The LLaVA architecture pattern (vision encoder + projection + LLM) remains the dominant approach for open-source multimodal models. LLaVA-OneVision and LLaVA-Video extend the concept to unified vision understanding. The original paper has over 5,000 citations.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Language Models are Few-Shot Learners (GPT-3)](../../language-models/04-gpt3-few-shot-learners/summary.md)
+- [Learning Transferable Visual Models From Natural Language Supervision (CLIP)](../../multimodal/08-clip/summary.md)
+- [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](../../techniques/09-chain-of-thought/summary.md)
+- [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale (Vision Transformer)](../../architectures/11-vision-transformer/summary.md)
+- [GPT-4V(ision): System Card](../../multimodal/23-gpt4v/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+
+<!-- related:end -->

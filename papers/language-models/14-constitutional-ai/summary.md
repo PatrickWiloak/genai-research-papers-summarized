@@ -664,3 +664,14 @@ Note: Full Constitutional AI requires significant compute and proprietary models
 7. Compare the assistant's responses and determine which is less likely to be objectionable or harmful to sensitive users.
 
 (Full constitution includes 16 harmlessness principles + 12 helpfulness principles)
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Training Language Models to Follow Instructions with Human Feedback (InstructGPT)](../../language-models/05-instructgpt-rlhf/summary.md)
+- [Proximal Policy Optimization Algorithms (PPO)](../../techniques/63-ppo/summary.md)
+
+<!-- related:end -->

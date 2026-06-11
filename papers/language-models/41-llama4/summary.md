@@ -385,3 +385,17 @@ Limited compared to Gemini's video capabilities
 **Legacy:** Brought MoE architecture and native multimodality to open source
 
 **Modern Status (March 2026):** Llama 4 Scout and Maverick are widely deployed, particularly for long-context use cases. The 10M token context window remains industry-leading. Meta is expected to release additional Llama 4 variants including a larger "Behemoth" model.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [DeepSeek-V3 Technical Report](../../language-models/27-deepseek-v3/summary.md)
+- [LLaMA 3.3: Matching 405B Performance with 70B Parameters](../../language-models/33-llama3.3/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [Mixtral of Experts (and the Mixture-of-Experts Architecture)](../../architectures/37-mixture-of-experts/summary.md)
+- [GPT-4o: The First Omni Model](../../language-models/40-gpt4o/summary.md)
+
+<!-- related:end -->

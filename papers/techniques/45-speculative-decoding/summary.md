@@ -408,3 +408,14 @@ Worst case: No speedup (but never slower!)
 **Legacy:** Proved you can speed up generation without sacrificing quality
 
 **Modern Status (March 2026):** Speculative decoding and its variants (Medusa, Eagle, self-speculation) are standard in every production LLM serving system. Research continues on improving draft model quality, tree-based speculation, and hardware-aware optimization.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [PagedAttention: Efficient LLM Serving with vLLM](../../techniques/52-pagedattention-vllm/summary.md)
+
+<!-- related:end -->

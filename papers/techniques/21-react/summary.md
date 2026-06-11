@@ -708,3 +708,15 @@ Attempt 2: [uses reflection to do better]
 **Legacy:** Enabled the shift from passive LLMs to active AI agents
 
 **Modern Status (2024/2025):** ReAct is the standard agent architecture. Enhanced by function calling APIs and better planning, but core loop remains the same.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](../../techniques/09-chain-of-thought/summary.md)
+- [Toolformer: Language Models Can Teach Themselves to Use Tools](../../techniques/24-toolformer/summary.md)
+- [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](../../techniques/25-tree-of-thoughts/summary.md)
+
+<!-- related:end -->

@@ -691,3 +691,16 @@ tool versioning, deprecation warnings) is still informal.
 **Legacy:** Made tool integration a configuration step rather than an engineering project, unlocking the multi-vendor agent ecosystem
 
 **Modern Status (April 2026):** MCP is the de facto standard for AI tool integration. The 2025 spec revisions added Streamable HTTP transport, OAuth 2.1 for remote servers, and elicitation primitives for richer host-server interaction. Thousands of community servers exist; a signed server registry is in active development. Every major model vendor (Anthropic, OpenAI, Google, Microsoft, Meta) ships first-party MCP support. The protocol's success has prompted comparisons to TCP/IP and HTTP - boring, ubiquitous infrastructure that future work simply assumes.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (RAG)](../../techniques/13-rag/summary.md)
+- [ReAct: Synergizing Reasoning and Acting in Language Models](../../techniques/21-react/summary.md)
+- [Toolformer: Language Models Can Teach Themselves to Use Tools](../../techniques/24-toolformer/summary.md)
+- [Claude 4 Family: The Agentic AI Leader](../../language-models/43-claude4/summary.md)
+
+<!-- related:end -->

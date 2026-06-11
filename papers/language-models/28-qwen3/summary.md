@@ -432,3 +432,20 @@ correlation between X and Y, accounting for confounding variables"
 **Impact:** 🔥🔥🔥🔥🔥 **CRITICAL** - Unified thinking/non-thinking paradigm
 **Adoption:** Massive in open-source community
 **Current Relevance:** Leading open-source model (October 2025)
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](../../language-models/26-deepseek-r1/summary.md)
+- [DeepSeek-V3 Technical Report](../../language-models/27-deepseek-v3/summary.md)
+- [Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities](../../multimodal/29-gemini-2.5/summary.md)
+- [Claude 3.5 Sonnet: Computer Use and Enhanced Capabilities](../../language-models/30-claude-3.5-sonnet/summary.md)
+- [OpenAI o1: Learning to Reason with Reinforcement Learning](../../language-models/31-openai-o1/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [Mixtral of Experts (and the Mixture-of-Experts Architecture)](../../architectures/37-mixture-of-experts/summary.md)
+- [GPT-4o: The First Omni Model](../../language-models/40-gpt4o/summary.md)
+
+<!-- related:end -->

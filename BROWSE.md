@@ -1,6 +1,6 @@
 # Browse All Papers - Quick Reference
 
-A visual grid view of the papers for quick browsing. For the complete, always-current list of all 63 papers, see the generated [Paper Index](./INDEX.md). **Looking for a learning path?** See the [README](./README.md) for numbered reading orders.
+A visual grid view of the papers for quick browsing. For the complete, always-current list of all 68 papers, see the generated [Paper Index](./INDEX.md). **Looking for a learning path?** See the [README](./README.md) for numbered reading orders.
 
 ---
 

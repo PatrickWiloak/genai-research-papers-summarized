@@ -68,6 +68,8 @@ nav:
           - "Mamba: Linear-Time Sequence Modeling with Selective State Spaces": papers/architectures/20-mamba/summary.md
           - "Mixtral of Experts (and the Mixture-of-Experts Architecture)": papers/architectures/37-mixture-of-experts/summary.md
           - "Sequence to Sequence Learning with Neural Networks (Seq2Seq)": papers/architectures/55-seq2seq/summary.md
+          - "Neural Machine Translation by Jointly Learning to Align and Translate (Bahdanau Attention)": papers/architectures/66-bahdanau-attention/summary.md
+          - "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity": papers/architectures/67-switch-transformer/summary.md
       - Language Models:
           - "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding": papers/language-models/03-bert/summary.md
           - "Language Models are Few-Shot Learners (GPT-3)": papers/language-models/04-gpt3-few-shot-learners/summary.md
@@ -88,6 +90,8 @@ nav:
           - "GPT-5: Unified Intelligence": papers/language-models/42-gpt5/summary.md
           - "Claude 4 Family: The Agentic AI Leader": papers/language-models/43-claude4/summary.md
           - "Codex: Evaluating Large Language Models Trained on Code": papers/language-models/56-codex/summary.md
+          - "Language Models are Unsupervised Multitask Learners (GPT-2)": papers/language-models/64-gpt2/summary.md
+          - "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer (T5)": papers/language-models/65-t5/summary.md
       - Image & Video Generation:
           - "Generative Adversarial Networks (GANs)": papers/image-generation/02-generative-adversarial-networks/summary.md
           - "Denoising Diffusion Probabilistic Models (DDPM)": papers/image-generation/06-diffusion-models/summary.md
@@ -130,4 +134,5 @@ nav:
           - "AlphaGeometry: Solving Olympiad Geometry Without Human Demonstrations": papers/techniques/61-alphageometry/summary.md
           - "AlphaEvolve: A Gemini-Powered Coding Agent for Designing Advanced Algorithms": papers/techniques/62-alphaevolve/summary.md
           - "Proximal Policy Optimization Algorithms (PPO)": papers/techniques/63-ppo/summary.md
+          - "Highly Accurate Protein Structure Prediction with AlphaFold (AlphaFold 2)": papers/techniques/68-alphafold/summary.md
   - Contributing: CONTRIBUTING.md

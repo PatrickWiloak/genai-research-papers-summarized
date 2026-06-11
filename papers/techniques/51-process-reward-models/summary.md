@@ -444,3 +444,17 @@ Ongoing challenge in reward model research
 **Legacy:** Proved process supervision beats outcome supervision
 
 **Modern Status (March 2026):** Process reward models are a core component of every reasoning model. The insight from this paper - that step-level verification dramatically outperforms outcome-level verification - has been validated at scale by o1, R1, and their successors. Automated PRM training (using stronger models to generate step labels) has largely replaced human annotation, making the approach scalable. PRM800K remains widely used for research.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](../../language-models/26-deepseek-r1/summary.md)
+- [OpenAI o1: Learning to Reason with Reinforcement Learning](../../language-models/31-openai-o1/summary.md)
+- [GRPO: Group Relative Policy Optimization](../../techniques/38-grpo/summary.md)
+- [RLVR: Reinforcement Learning from Verifiable Rewards](../../techniques/39-rlvr/summary.md)
+- [Scaling LLM Test-Time Compute: The Theoretical Foundation for Reasoning Models](../../techniques/50-test-time-compute/summary.md)
+
+<!-- related:end -->

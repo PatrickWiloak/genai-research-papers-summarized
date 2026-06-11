@@ -483,3 +483,14 @@ Long recordings need careful chunking strategy
 **Legacy:** Proved foundation model approach works for audio, democratized ASR
 
 **Modern Status (March 2026):** Whisper Large-v3 remains the standard open-source speech recognition model. It powers transcription in countless applications and informed the audio capabilities of GPT-4o. Faster-whisper and distilled variants make it practical for real-time use. Despite newer models emerging, Whisper's combination of quality, language coverage, and accessibility keeps it dominant.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [GPT-4o: The First Omni Model](../../language-models/40-gpt4o/summary.md)
+
+<!-- related:end -->

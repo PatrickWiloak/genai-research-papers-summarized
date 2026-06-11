@@ -393,3 +393,17 @@ class VisionTransformer:
 **Published:** October 2020
 **Impact Factor:** 10,000+ citations (as of 2025)
 **Legacy:** Made Transformers the dominant architecture in computer vision, enabling the multimodal AI revolution.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Attention Is All You Need](../../architectures/01-attention-is-all-you-need/summary.md)
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](../../language-models/03-bert/summary.md)
+- [Learning Transferable Visual Models From Natural Language Supervision (CLIP)](../../multimodal/08-clip/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [DALL-E 3: Improving Image Generation with Better Captions](../../image-generation/48-dalle3/summary.md)
+
+<!-- related:end -->

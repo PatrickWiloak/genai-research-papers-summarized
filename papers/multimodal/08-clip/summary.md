@@ -693,3 +693,16 @@ Generalizing beyond training distribution.
   organization={PMLR}
 }
 ```
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [High-Resolution Image Synthesis with Latent Diffusion Models (Stable Diffusion)](../../image-generation/07-stable-diffusion/summary.md)
+- [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale (Vision Transformer)](../../architectures/11-vision-transformer/summary.md)
+- [DALL-E 3: Improving Image Generation with Better Captions](../../image-generation/48-dalle3/summary.md)
+- [Language Models are Unsupervised Multitask Learners (GPT-2)](../../language-models/64-gpt2/summary.md)
+
+<!-- related:end -->

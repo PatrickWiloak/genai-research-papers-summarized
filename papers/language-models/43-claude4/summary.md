@@ -491,3 +491,18 @@ Sonnet is more cost-effective but less capable
 **Legacy:** Proved agentic AI works in production, not just demos
 
 **Modern Status (March 2026):** Claude Opus 4.6 is the latest, with improved sustained agentic capabilities and 1M token context in beta. Anthropic continues to lead on coding (SWE-bench) and agentic tasks while competitors close the gap. Claude Code has become one of the most popular developer tools in the AI era.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Constitutional AI: Harmlessness from AI Feedback](../../language-models/14-constitutional-ai/summary.md)
+- [Claude 3.5 Sonnet: Computer Use and Enhanced Capabilities](../../language-models/30-claude-3.5-sonnet/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [GPT-4o: The First Omni Model](../../language-models/40-gpt4o/summary.md)
+- [GPT-5: Unified Intelligence](../../language-models/42-gpt5/summary.md)
+- [Gemini 3: Google's Most Capable AI Model](../../multimodal/47-gemini3/summary.md)
+
+<!-- related:end -->

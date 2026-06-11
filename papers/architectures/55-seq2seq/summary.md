@@ -203,3 +203,15 @@ The model learns translation implicitly. Before attention, there was no way to i
   year={2014}
 }
 ```
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Attention Is All You Need](../../architectures/01-attention-is-all-you-need/summary.md)
+- [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer (T5)](../../language-models/65-t5/summary.md)
+- [Neural Machine Translation by Jointly Learning to Align and Translate (Bahdanau Attention)](../../architectures/66-bahdanau-attention/summary.md)
+
+<!-- related:end -->

@@ -637,3 +637,20 @@ Small models (1.5B) achieve GPT-4 level reasoning
 **Legacy:** Proved advanced AI doesn't require massive budgets
 
 **Modern Status (October 2025):** DeepSeek-R1 remains the gold standard for open-source reasoning models. Sparked a wave of innovation in RL-based training and efficient model development. The 2025 "ChatGPT moment" for reasoning AI.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Training Language Models to Follow Instructions with Human Feedback (InstructGPT)](../../language-models/05-instructgpt-rlhf/summary.md)
+- [DeepSeek-V3 Technical Report](../../language-models/27-deepseek-v3/summary.md)
+- [Qwen3: Technical Report](../../language-models/28-qwen3/summary.md)
+- [Claude 3.5 Sonnet: Computer Use and Enhanced Capabilities](../../language-models/30-claude-3.5-sonnet/summary.md)
+- [OpenAI o1: Learning to Reason with Reinforcement Learning](../../language-models/31-openai-o1/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [Mixtral of Experts (and the Mixture-of-Experts Architecture)](../../architectures/37-mixture-of-experts/summary.md)
+- [GRPO: Group Relative Policy Optimization](../../techniques/38-grpo/summary.md)
+
+<!-- related:end -->

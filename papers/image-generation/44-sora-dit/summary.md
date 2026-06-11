@@ -402,3 +402,15 @@ Much more expensive than image generation
 **Legacy:** Proved Transformers + Diffusion is the winning combination
 
 **Modern Status (March 2026):** DiT has replaced U-Net in virtually all modern diffusion models. Sora has competition from Runway Gen-3, Google Veo 2, and open-source alternatives, but the DiT architecture it popularized remains dominant. AI video quality continues to improve rapidly.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [High-Resolution Image Synthesis with Latent Diffusion Models (Stable Diffusion)](../../image-generation/07-stable-diffusion/summary.md)
+- [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale (Vision Transformer)](../../architectures/11-vision-transformer/summary.md)
+- [Scaling Laws for Neural Language Models](../../techniques/12-scaling-laws/summary.md)
+
+<!-- related:end -->

@@ -397,3 +397,18 @@ Users can override, but default routing isn't perfect
 **Legacy:** Merged reasoning and general intelligence into one system
 
 **Modern Status (March 2026):** GPT-5 remains OpenAI's flagship, with GPT-5.2 and GPT-5.4 incremental updates. It faces strong competition from Claude Opus 4.5/4.6 (leading in coding/agentic tasks) and Gemini 3 (leading in multimodal). The unified fast/thinking architecture has been widely adopted.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities](../../multimodal/29-gemini-2.5/summary.md)
+- [Claude 3.5 Sonnet: Computer Use and Enhanced Capabilities](../../language-models/30-claude-3.5-sonnet/summary.md)
+- [OpenAI o1: Learning to Reason with Reinforcement Learning](../../language-models/31-openai-o1/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [GPT-4o: The First Omni Model](../../language-models/40-gpt4o/summary.md)
+- [Gemini 3: Google's Most Capable AI Model](../../multimodal/47-gemini3/summary.md)
+
+<!-- related:end -->

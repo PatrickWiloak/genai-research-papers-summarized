@@ -545,3 +545,14 @@ print(result["source_documents"])
 **Published:** May 2020
 **Impact Factor:** 2,500+ citations
 **Legacy:** Made LLMs practical for knowledge-intensive applications, became standard pattern for production AI systems.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](../../language-models/03-bert/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+
+<!-- related:end -->

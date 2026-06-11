@@ -398,3 +398,20 @@ Audio transcription not perfect
 **Legacy:** Made native multimodal the standard, proved voice AI could feel human
 
 **Modern Status (March 2026):** GPT-4o has been succeeded by GPT-4.1 and GPT-5, but the "omni" approach it pioneered is now the norm. Every major model is natively multimodal. GPT-4o mini remains widely used as a cost-effective option.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Language Models are Few-Shot Learners (GPT-3)](../../language-models/04-gpt3-few-shot-learners/summary.md)
+- [Learning Transferable Visual Models From Natural Language Supervision (CLIP)](../../multimodal/08-clip/summary.md)
+- [GPT-4V(ision): System Card](../../multimodal/23-gpt4v/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [Llama 4: Natively Multimodal Open-Source AI](../../language-models/41-llama4/summary.md)
+- [GPT-5: Unified Intelligence](../../language-models/42-gpt5/summary.md)
+- [LLaVA: Visual Instruction Tuning](../../multimodal/46-llava/summary.md)
+- [Whisper: Robust Speech Recognition via Large-Scale Weak Supervision](../../multimodal/49-whisper/summary.md)
+
+<!-- related:end -->

@@ -472,3 +472,14 @@ Best for persistent serving, not one-off inference
 **Legacy:** Applied OS virtual memory concepts to AI, enabling the LLM API economy
 
 **Modern Status (March 2026):** vLLM remains the dominant open-source LLM serving framework with 40K+ GitHub stars. PagedAttention's core ideas have been adopted by competing frameworks (SGLang, TensorRT-LLM) and influenced proprietary serving systems at OpenAI, Google, and Anthropic. The framework continues active development with support for newer features like speculative decoding, multi-modal serving, and disaggregated inference.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](../../techniques/16-flash-attention/summary.md)
+- [Speculative Decoding: Fast Inference from Transformers](../../techniques/45-speculative-decoding/summary.md)
+
+<!-- related:end -->

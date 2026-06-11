@@ -659,3 +659,20 @@ Still can hallucinate, especially on:
 **Legacy:** Proved integrated multimodal reasoning works
 
 **Modern Status (October 2025):** Gemini 2.5 Pro remains the most capable general-purpose AI model, particularly for multimodal and long-context tasks. Deep Think mode competes with o1/DeepSeek-R1 while maintaining multimodal capabilities. The 1M context window and 3-hour video understanding are unmatched in the industry.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](../../techniques/09-chain-of-thought/summary.md)
+- [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](../../language-models/26-deepseek-r1/summary.md)
+- [Qwen3: Technical Report](../../language-models/28-qwen3/summary.md)
+- [Claude 3.5 Sonnet: Computer Use and Enhanced Capabilities](../../language-models/30-claude-3.5-sonnet/summary.md)
+- [OpenAI o1: Learning to Reason with Reinforcement Learning](../../language-models/31-openai-o1/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [Mixtral of Experts (and the Mixture-of-Experts Architecture)](../../architectures/37-mixture-of-experts/summary.md)
+- [GPT-4o: The First Omni Model](../../language-models/40-gpt4o/summary.md)
+
+<!-- related:end -->

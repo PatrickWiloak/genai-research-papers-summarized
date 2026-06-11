@@ -647,3 +647,17 @@ Negative: "blurry, low quality, deformed, ugly, bad anatomy"
   year={2022}
 }
 ```
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Learning Transferable Visual Models From Natural Language Supervision (CLIP)](../../multimodal/08-clip/summary.md)
+- [LoRA: Low-Rank Adaptation of Large Language Models](../../techniques/10-lora/summary.md)
+- [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale (Vision Transformer)](../../architectures/11-vision-transformer/summary.md)
+- [DALL-E 3: Improving Image Generation with Better Captions](../../image-generation/48-dalle3/summary.md)
+- [Auto-Encoding Variational Bayes (VAE)](../../image-generation/57-vae/summary.md)
+
+<!-- related:end -->

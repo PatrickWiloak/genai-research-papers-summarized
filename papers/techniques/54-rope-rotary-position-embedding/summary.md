@@ -714,3 +714,20 @@ RoPE retrofits require at least continue-pretraining.
 **Legacy:** Made long-context LLMs possible through clean math, no parameters, and natural extension paths
 
 **Modern Status (April 2026):** RoPE is the unquestioned default position encoding for new LLM architectures. Every major open-source model family (LLaMA, Mistral, Qwen, DeepSeek, Gemma, Phi) ships with RoPE, and the long-context arms race (now reaching 1M-10M tokens) is built entirely on RoPE-based extensions like YaRN and LongRoPE. Active research continues into theta-scaling laws, per-layer RoPE tuning, and combining RoPE with newer architectures like state-space models and linear attention variants.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Attention Is All You Need](../../architectures/01-attention-is-all-you-need/summary.md)
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](../../language-models/03-bert/summary.md)
+- [LLaMA: Open and Efficient Foundation Language Models](../../language-models/15-llama/summary.md)
+- [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](../../techniques/16-flash-attention/summary.md)
+- [DeepSeek-V3 Technical Report](../../language-models/27-deepseek-v3/summary.md)
+- [Qwen3: Technical Report](../../language-models/28-qwen3/summary.md)
+- [OpenAI o1: Learning to Reason with Reinforcement Learning](../../language-models/31-openai-o1/summary.md)
+- [Mixtral of Experts (and the Mixture-of-Experts Architecture)](../../architectures/37-mixture-of-experts/summary.md)
+
+<!-- related:end -->

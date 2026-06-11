@@ -664,3 +664,14 @@ Agentic Coding Frameworks:
 **Legacy:** Spawned GitHub Copilot, the entire coding-agent industry, and the SWE-Bench lineage
 
 **Modern Status (April 2026):** HumanEval scores have saturated above 90% on frontier models, but the benchmark and metric Codex introduced remain the entry point for every new code model. The field has moved on to repo-level benchmarks (SWE-Bench Verified, LiveCodeBench) and agentic evaluations, but those are direct extensions of Codex's "functional tests as ground truth" philosophy. GitHub Copilot, the original Codex product, has grown into a multi-hundred-million-dollar business and seeded an entire generation of coding tools (Cursor, Windsurf, Claude Code, Aider, Cline). The original Codex models were deprecated by OpenAI in March 2023, but their conceptual descendants now write a meaningful fraction of all new code committed to GitHub.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Language Models are Few-Shot Learners (GPT-3)](../../language-models/04-gpt3-few-shot-learners/summary.md)
+- [Qwen3: Technical Report](../../language-models/28-qwen3/summary.md)
+
+<!-- related:end -->

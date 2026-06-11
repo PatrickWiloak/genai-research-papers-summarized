@@ -478,3 +478,20 @@ class TransformerBlock(nn.Module):
 **Legacy:** Made long-context AI practically feasible
 
 **Current Status (2024/2025):** FlashAttention 2 is the default for all new models. FlashAttention 3 in development for even longer contexts.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](../../language-models/03-bert/summary.md)
+- [Language Models are Few-Shot Learners (GPT-3)](../../language-models/04-gpt3-few-shot-learners/summary.md)
+- [High-Resolution Image Synthesis with Latent Diffusion Models (Stable Diffusion)](../../image-generation/07-stable-diffusion/summary.md)
+- [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (RAG)](../../techniques/13-rag/summary.md)
+- [LLaMA 2: Open Foundation and Fine-Tuned Chat Models](../../language-models/17-llama2/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [PagedAttention: Efficient LLM Serving with vLLM](../../techniques/52-pagedattention-vllm/summary.md)
+- [Language Models are Unsupervised Multitask Learners (GPT-2)](../../language-models/64-gpt2/summary.md)
+
+<!-- related:end -->

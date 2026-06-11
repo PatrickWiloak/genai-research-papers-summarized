@@ -755,3 +755,15 @@ Defensibility comes from:
 **Legacy:** Likely to be remembered as the moment AI started contributing original mathematics and algorithms back to humanity, not just consuming them.
 
 **Modern Status (April 2026):** Open-source reimplementations have appeared (OpenEvolve and others) and the AlphaEvolve recipe has become a standard pattern: frontier LLM + diff-based mutation + programmable evaluator + population-level evolution. Several hyperscalers have launched internal versions targeting their own infrastructure problems. The biggest open question remains how to extend the approach to domains without cheap evaluators - which is, ultimately, most of science.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](../../techniques/16-flash-attention/summary.md)
+- [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](../../techniques/25-tree-of-thoughts/summary.md)
+- [AlphaGeometry: Solving Olympiad Geometry Without Human Demonstrations](../../techniques/61-alphageometry/summary.md)
+
+<!-- related:end -->

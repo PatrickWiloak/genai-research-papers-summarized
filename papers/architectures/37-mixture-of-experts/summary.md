@@ -403,3 +403,18 @@ print(response.choices[0].message.content)
 **Legacy:** Proved sparse models beat dense models, changed how the industry builds LLMs
 
 **Modern Status (March 2026):** Mixtral 8x7B is no longer the state of the art, but MoE has become the standard architecture. DeepSeek-V3 (256 experts), Llama 4 (128 experts), and others all build on the foundation Mixtral established for the open-source community.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Language Models are Few-Shot Learners (GPT-3)](../../language-models/04-gpt3-few-shot-learners/summary.md)
+- [LLaMA 2: Open Foundation and Fine-Tuned Chat Models](../../language-models/17-llama2/summary.md)
+- [DeepSeek-V3 Technical Report](../../language-models/27-deepseek-v3/summary.md)
+- [Qwen3: Technical Report](../../language-models/28-qwen3/summary.md)
+- [Llama 4: Natively Multimodal Open-Source AI](../../language-models/41-llama4/summary.md)
+- [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](../../architectures/67-switch-transformer/summary.md)
+
+<!-- related:end -->

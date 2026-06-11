@@ -697,3 +697,15 @@ is an active research problem.
 **Legacy:** Established that LLMs can build their own retrieval indexes (graphs and summaries), shifting RAG from a pure embedding problem to a structured-knowledge problem
 
 **Modern Status (early 2026):** GraphRAG is now one of three canonical RAG patterns alongside vector RAG and long-context "stuffing." Production systems typically route queries between them. The Microsoft repo continues active development; LazyGraphRAG is the recommended variant for cost-sensitive deployments. The broader lesson - that the LLM itself is the most flexible index-builder - has propagated into agentic retrieval, memory systems, and structured-output pipelines across the field.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (RAG)](../../techniques/13-rag/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [PagedAttention: Efficient LLM Serving with vLLM](../../techniques/52-pagedattention-vllm/summary.md)
+
+<!-- related:end -->

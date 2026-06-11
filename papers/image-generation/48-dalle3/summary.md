@@ -404,3 +404,14 @@ The "better captions" insight has been widely adopted
 **Legacy:** Proved data quality is the bottleneck, not model architecture
 
 **Modern Status (March 2026):** DALL-E 3 has been superseded by newer models (including OpenAI's own updates), but its core insight - that better training captions dramatically improve image generation - has been adopted universally. Every modern image generator now uses synthetic re-captioning.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [High-Resolution Image Synthesis with Latent Diffusion Models (Stable Diffusion)](../../image-generation/07-stable-diffusion/summary.md)
+- [Learning Transferable Visual Models From Natural Language Supervision (CLIP)](../../multimodal/08-clip/summary.md)
+
+<!-- related:end -->

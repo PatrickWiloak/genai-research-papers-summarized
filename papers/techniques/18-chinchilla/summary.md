@@ -293,3 +293,17 @@ B ≈ 410.7
 **Citations:** 2000+
 **Current Relevance:** Every major LLM uses these insights
 **Legacy:** Changed AI from "bigger models" to "better training"
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Language Models are Few-Shot Learners (GPT-3)](../../language-models/04-gpt3-few-shot-learners/summary.md)
+- [Scaling Laws for Neural Language Models](../../techniques/12-scaling-laws/summary.md)
+- [LLaMA: Open and Efficient Foundation Language Models](../../language-models/15-llama/summary.md)
+- [LLaMA 2: Open Foundation and Fine-Tuned Chat Models](../../language-models/17-llama2/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+
+<!-- related:end -->

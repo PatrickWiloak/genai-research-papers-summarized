@@ -330,3 +330,18 @@ PPO (2017) -- same stability, first-order simplicity
   year={2017}
 }
 ```
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Training Language Models to Follow Instructions with Human Feedback (InstructGPT)](../../language-models/05-instructgpt-rlhf/summary.md)
+- [Direct Preference Optimization (DPO): Your Language Model is Secretly a Reward Model](../../language-models/19-dpo/summary.md)
+- [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](../../language-models/26-deepseek-r1/summary.md)
+- [GRPO: Group Relative Policy Optimization](../../techniques/38-grpo/summary.md)
+- [RLVR: Reinforcement Learning from Verifiable Rewards](../../techniques/39-rlvr/summary.md)
+- [Let's Verify Step by Step: Process Reward Models](../../techniques/51-process-reward-models/summary.md)
+
+<!-- related:end -->

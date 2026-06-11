@@ -853,3 +853,16 @@ def evaluate_cached(state, thought):
 **Legacy:** Showed LLMs can do deliberate search, not just greedy generation
 
 **Modern Status (2024/2025):** Active research area. Not yet mainstream due to cost, but important for problems where CoT fails. May be used internally in frontier models.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](../../techniques/09-chain-of-thought/summary.md)
+- [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (RAG)](../../techniques/13-rag/summary.md)
+- [ReAct: Synergizing Reasoning and Acting in Language Models](../../techniques/21-react/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+
+<!-- related:end -->

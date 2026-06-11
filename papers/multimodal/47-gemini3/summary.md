@@ -354,3 +354,17 @@ Regulatory constraints in some markets
 **Legacy:** Proved Google could match and exceed OpenAI/Anthropic
 
 **Modern Status (March 2026):** Gemini 3 Pro tops LMArena and leads multimodal benchmarks. Gemini 3.1 Pro has been released with incremental improvements. The three-way race between Google, OpenAI, and Anthropic continues, with each leading in different domains.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities](../../multimodal/29-gemini-2.5/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [GPT-4o: The First Omni Model](../../language-models/40-gpt4o/summary.md)
+- [GPT-5: Unified Intelligence](../../language-models/42-gpt5/summary.md)
+- [Claude 4 Family: The Agentic AI Leader](../../language-models/43-claude4/summary.md)
+
+<!-- related:end -->

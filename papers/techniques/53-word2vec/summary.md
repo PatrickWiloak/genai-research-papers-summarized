@@ -299,3 +299,13 @@ Word2Vec produces one fixed vector per word regardless of context. "Bank" gets a
   year={2013}
 }
 ```
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](../../language-models/03-bert/summary.md)
+
+<!-- related:end -->

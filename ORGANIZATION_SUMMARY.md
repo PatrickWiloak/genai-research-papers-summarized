@@ -118,7 +118,7 @@ genai-research-papers-summarized/
 → Navigate `papers/` folders by category
 
 **Contribute**
-→ Read [docs/CONTRIBUTING.md](./docs/CONTRIBUTING.md)
+→ Read [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ## 📊 Statistics
 

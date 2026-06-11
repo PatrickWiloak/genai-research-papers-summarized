@@ -276,3 +276,13 @@ def meta_cot_solve(problem):
 
 **Published:** January 2025
 **Impact:** 🔥🔥🔥 **MEDIUM** - Advancing reasoning capabilities
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](../../techniques/09-chain-of-thought/summary.md)
+
+<!-- related:end -->

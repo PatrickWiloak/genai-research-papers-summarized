@@ -296,3 +296,16 @@ Good for its size, but not SOTA
 
 **Published:** January 2025
 **Impact:** 🔥🔥🔥 **MEDIUM** - Small model reasoning breakthrough
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](../../language-models/26-deepseek-r1/summary.md)
+- [Qwen3: Technical Report](../../language-models/28-qwen3/summary.md)
+- [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [Let's Verify Step by Step: Process Reward Models](../../techniques/51-process-reward-models/summary.md)
+
+<!-- related:end -->

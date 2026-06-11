@@ -730,3 +730,14 @@ if time_mamba < time_transformer:
 **Modern Status (2024/2025):** Active research area. Mamba-2 improves on original. Hybrid models (Jamba) combining Mamba + Attention showing promise. Not yet mainstream but serious contender for long-context applications.
 
 **The Question:** Will Mamba replace Transformers? Too early to tell, but it's the first architecture since 2017 that has a real shot.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Scaling Laws for Neural Language Models](../../techniques/12-scaling-laws/summary.md)
+- [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](../../techniques/16-flash-attention/summary.md)
+
+<!-- related:end -->

@@ -397,3 +397,20 @@ Addressed later with GPT-4o
 **Legacy:** The model that made the world take AI seriously
 
 **Modern Status (March 2026):** GPT-4 has been superseded by GPT-4o, GPT-4.1, and GPT-5, but its impact is permanent. It set the standard for what a frontier model should be capable of and launched the era of AI as a serious professional tool.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Language Models are Few-Shot Learners (GPT-3)](../../language-models/04-gpt3-few-shot-learners/summary.md)
+- [Training Language Models to Follow Instructions with Human Feedback (InstructGPT)](../../language-models/05-instructgpt-rlhf/summary.md)
+- [LLaMA 2: Open Foundation and Fine-Tuned Chat Models](../../language-models/17-llama2/summary.md)
+- [GPT-4V(ision): System Card](../../multimodal/23-gpt4v/summary.md)
+- [DeepSeek-V3 Technical Report](../../language-models/27-deepseek-v3/summary.md)
+- [Mixtral of Experts (and the Mixture-of-Experts Architecture)](../../architectures/37-mixture-of-experts/summary.md)
+- [GPT-4o: The First Omni Model](../../language-models/40-gpt4o/summary.md)
+- [GPT-5: Unified Intelligence](../../language-models/42-gpt5/summary.md)
+
+<!-- related:end -->

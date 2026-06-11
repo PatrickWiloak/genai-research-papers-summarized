@@ -393,3 +393,18 @@ Best for low-volume, high-value queries
 **Legacy:** Shifted AI from "train bigger" to "think harder"
 
 **Modern Status (March 2026):** Test-time compute scaling is now the dominant paradigm in frontier AI. Every major lab offers reasoning/thinking modes that implement the ideas from this paper. The compute-optimal strategies described here directly inform how o1, R1, Gemini Deep Think, and Claude's extended thinking allocate inference compute. The paper's prediction - that small models thinking longer can match large models - has been validated repeatedly in practice.
+
+<!-- related:start -->
+
+---
+
+## Related in This Collection
+
+- [Attention Is All You Need](../../architectures/01-attention-is-all-you-need/summary.md)
+- [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](../../techniques/09-chain-of-thought/summary.md)
+- [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](../../language-models/26-deepseek-r1/summary.md)
+- [OpenAI o1: Learning to Reason with Reinforcement Learning](../../language-models/31-openai-o1/summary.md)
+- [GRPO: Group Relative Policy Optimization](../../techniques/38-grpo/summary.md)
+- [RLVR: Reinforcement Learning from Verifiable Rewards](../../techniques/39-rlvr/summary.md)
+
+<!-- related:end -->
