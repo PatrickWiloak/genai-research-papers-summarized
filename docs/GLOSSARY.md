@@ -23,6 +23,12 @@ Small neural network modules inserted between layers for efficient fine-tuning.
 - **Advantage:** Only train adapter weights, not full model
 - **Paper:** LoRA
 
+### Advantage Estimation / GAE (Generalized Advantage Estimation)
+Measure of how much better an action is compared to the average action in a given state, used to reduce variance in policy gradient training.
+- **GAE:** Generalized Advantage Estimation smooths advantage estimates across multiple time steps
+- **Used in:** PPO (and RLHF pipelines) to stabilize reward signal
+- **Paper:** PPO
+
 ### Adversarial Training
 Training where two models compete (generator vs discriminator).
 - **Key idea:** Competition drives both to improve
@@ -133,6 +139,12 @@ Model that learns vision-language alignment through contrastive learning.
 - **Training:** Match image-text pairs, separate mismatches
 - **Uses:** Zero-shot classification, text-to-image guidance
 
+### Clipped Surrogate Objective
+The PPO loss function that prevents policy updates from straying too far from the previous policy.
+- **How it works:** Clips the probability ratio between new and old policy to stay within a small range (e.g., [0.8, 1.2])
+- **Benefit:** Avoids destructively large updates while still improving the policy
+- **Paper:** PPO
+
 ### Conditioning
 Providing additional input to guide model output.
 - **Examples:** Text for image generation, class label for generation
@@ -150,6 +162,12 @@ Maximum number of tokens the model can process at once.
 - **Examples:** GPT-3 (2048), GPT-4 (32k-128k), BERT (512)
 - **Limitation:** Quadratic attention cost
 - **Solutions:** Sparse attention, sliding window, retrieval
+
+### Context Vector / Fixed-length Bottleneck
+A single vector produced by a Seq2Seq encoder that the decoder uses to generate the entire output sequence.
+- **Problem:** Compressing a long sentence into one vector loses information - this is the bottleneck Bahdanau Attention was designed to solve
+- **Used in:** Original Seq2Seq models before attention was added
+- **Paper:** Seq2Seq, Bahdanau Attention
 
 ### Contrastive Learning
 Learning by contrasting positive and negative examples.
@@ -213,6 +231,12 @@ Randomly dropping connections during training to prevent overfitting.
 
 ## E
 
+### ELBO (Evidence Lower Bound)
+The training objective for Variational Autoencoders - a lower bound on the log-likelihood of the data.
+- **Two parts:** Reconstruction loss (how well the decoder recovers input) + KL divergence penalty (keeps latent distribution close to a standard normal)
+- **Maximizing ELBO** indirectly maximizes data likelihood while keeping the latent space well-behaved
+- **Paper:** VAE
+
 ### Embedding
 Dense vector representation of discrete objects (words, images, etc.).
 - **Example:** "cat" → [0.2, -0.5, 0.1, ..., 0.3] (dim 768)
@@ -225,6 +249,12 @@ Part of model that processes input into representations.
 - **Papers:** BERT (encoder-only), Transformers (encoder-decoder)
 - **Components:** Self-attention, FFN, layer norm
 
+### Encoder-Decoder Architecture
+A model design where one component (encoder) reads the input into a representation and another (decoder) generates the output from it.
+- **Examples:** Original Transformers for translation, T5 for text-to-text tasks, Seq2Seq models
+- **Contrast:** Encoder-only (BERT) or decoder-only (GPT) architectures
+- **Papers:** Transformers, Seq2Seq, T5
+
 ### Epoch
 One complete pass through entire training dataset.
 - **Example:** 10 epochs = seeing every example 10 times
@@ -235,6 +265,18 @@ Measures of model performance.
 - **Language:** Perplexity, BLEU, ROUGE, accuracy
 - **Vision:** FID, Inception Score, accuracy
 - **Alignment:** Human preferences, safety benchmarks
+
+### Evoformer
+The core neural network block in AlphaFold 2 that jointly processes sequence and structure information.
+- **Inputs:** Multiple sequence alignment (MSA) and pairwise distance representations
+- **Key idea:** Iteratively refines both sequence and 3D geometry representations together
+- **Paper:** AlphaFold
+
+### Expert Parallelism
+A distributed training and inference strategy where different experts in a Mixture-of-Experts model run on different hardware devices.
+- **Benefit:** Enables very large models by spreading experts across GPUs/TPUs without each device needing the full model
+- **Challenge:** Requires efficient routing and communication between devices
+- **Paper:** Switch Transformer
 
 ---
 
@@ -356,6 +398,12 @@ Compressed representation space.
 - **Benefits:** Smaller, semantically meaningful
 - **Papers:** Stable Diffusion (VAE latent space)
 
+### Latent Variable Model
+A probabilistic model that explains observed data through hidden (latent) variables that are never directly observed.
+- **Example:** A VAE assumes each image is generated from a compact latent code drawn from a distribution
+- **Key idea:** Learning the distribution over latent variables allows generating new data by sampling
+- **Paper:** VAE
+
 ### Layer Normalization
 Normalizing across features for each example.
 - **Used in:** Transformers (instead of batch norm)
@@ -408,9 +456,21 @@ Processing multiple types of data (text, images, audio).
 - **Papers:** CLIP (text-image), Stable Diffusion (text-to-image)
 - **Challenge:** Aligning different modalities
 
+### Multiple Sequence Alignment / MSA
+A table that lines up the same protein sequence from many different organisms to reveal conserved and co-evolving positions.
+- **Why it matters:** Positions that co-evolve often correspond to amino acids that are physically close in 3D space
+- **Used in:** AlphaFold's Evoformer to infer structural constraints from evolutionary data
+- **Paper:** AlphaFold
+
 ---
 
 ## N
+
+### Negative Sampling
+A training efficiency trick that avoids computing probabilities over the entire vocabulary by contrasting a target word against a small set of randomly sampled "noise" words.
+- **Why needed:** Softmax over a 100k-word vocabulary is expensive; negative sampling reduces it to a few binary classifications
+- **Used in:** Word2Vec training (both Skip-gram and CBOW)
+- **Paper:** Word2Vec
 
 ### Neural Network
 Computational model inspired by biological neurons.
@@ -463,11 +523,23 @@ Measure of how surprised model is by test data.
 - **Lower is better:** Less surprised = better model
 - **Papers:** Common metric for language models
 
+### Policy Gradient
+A family of reinforcement learning algorithms that directly optimize the parameters of a policy by following the gradient of expected reward.
+- **Key idea:** Actions that led to high reward get higher probability; actions that led to low reward get lower probability
+- **Challenge:** High variance gradients - techniques like GAE and PPO's clipping stabilize training
+- **Papers:** PPO, InstructGPT
+
 ### Positional Encoding
 Adding position information to token embeddings.
 - **Why needed:** Attention has no inherent order sense
 - **Types:** Sinusoidal (Transformers), learned, RoPE (LLaMA)
 - **Papers:** Transformers, ViT, LLaMA
+
+### PPO (Proximal Policy Optimization)
+Reinforcement learning algorithm that constrains how much the policy changes in each update.
+- **Used in:** RLHF for aligning language models
+- **Papers:** InstructGPT, Constitutional AI
+- **Benefit:** Stable policy updates via clipped surrogate objective; avoids catastrophic policy collapse
 
 ### Pre-training
 Initial training on large general dataset.
@@ -481,11 +553,11 @@ Input text given to language model.
 - **Engineering:** Crafting prompts for best results
 - **Papers:** GPT-3 (popularized prompting)
 
-### PPO (Proximal Policy Optimization)
-Reinforcement learning algorithm.
-- **Used in:** RLHF for aligning language models
-- **Papers:** InstructGPT, Constitutional AI
-- **Benefit:** Stable policy updates
+### Protein Structure Prediction
+The computational problem of determining a protein's 3D shape from its amino acid sequence.
+- **Why it matters:** A protein's shape determines its function; solving this was a 50-year grand challenge in biology
+- **AlphaFold:** Achieved near-experimental accuracy in 2020, effectively solving the problem
+- **Paper:** AlphaFold
 
 ---
 
@@ -527,6 +599,12 @@ Activation function: f(x) = max(0, x)
 - **Simple:** Just zero out negatives
 - **Variants:** LeakyReLU, GeLU, SwiGLU
 - **Papers:** Used in many models
+
+### Reparameterization Trick
+A mathematical technique that allows gradients to flow through a sampling operation in a VAE by re-expressing a random sample as a deterministic function of noise.
+- **Formula:** z = mu + sigma * epsilon, where epsilon ~ N(0,1)
+- **Why needed:** You can't backpropagate through a stochastic sample directly; this reformulation makes it differentiable
+- **Paper:** VAE
 
 ### Residual Connection
 Shortcut that adds input to output of layer.
@@ -581,11 +659,35 @@ Model that maps input sequence to output sequence.
 - **Examples:** Translation, summarization
 - **Papers:** Original Transformers
 
+### Skip-gram and CBOW (Continuous Bag of Words)
+The two training objectives introduced by Word2Vec for learning word embeddings.
+- **Skip-gram:** Given a center word, predict its surrounding context words - works well for rare words
+- **CBOW:** Given surrounding context words, predict the center word - faster to train
+- **Paper:** Word2Vec
+
+### Soft Alignment / Additive Attention (Bahdanau Attention)
+An attention mechanism that dynamically computes a weighted sum over all encoder hidden states for each decoder step, rather than using a single fixed context vector.
+- **Key idea:** The decoder "softly" aligns to different parts of the input at each output step - related to the general Attention Mechanism entry
+- **Formula:** Context = sum of alpha_i * h_i, where alpha_i are learned alignment weights
+- **Paper:** Bahdanau Attention (introduced); generalized in Transformers
+
 ### Softmax
 Converts logits to probability distribution.
 - **Formula:** softmax(x_i) = exp(x_i) / Σ exp(x_j)
 - **Properties:** Outputs sum to 1, all between 0-1
 - **Used in:** Attention, output layers
+
+### Span Corruption
+The T5 pretraining objective where random spans of consecutive tokens are masked and replaced with a single sentinel token, and the model must predict the missing spans.
+- **Contrast:** BERT masks individual tokens; T5 masks contiguous spans
+- **Benefit:** More efficient than token-level masking - the model sees more context per training step
+- **Paper:** T5
+
+### Sparse Mixture-of-Experts / Top-1 Routing
+An architecture where each input token is routed to only one (or a few) expert feed-forward networks instead of passing through all of them.
+- **Top-1 routing:** Each token picks the single highest-scoring expert; most experts are idle for any given token
+- **Benefit:** Massive model capacity with only a fraction of the compute cost per token - see also Mixture-of-Experts
+- **Paper:** Switch Transformer
 
 ### Stable Diffusion
 Efficient diffusion in latent space.
@@ -616,6 +718,12 @@ Parameter controlling randomness in sampling.
 - **Zero:** Greedy decoding (always most likely)
 - **Papers:** All generative models
 
+### Text-to-Text Framework
+T5's unified approach where every NLP task is cast as a string-in, string-out problem.
+- **Example:** "translate English to French: Hello" → "Bonjour"; "summarize: [article]" → "[summary]"
+- **Benefit:** A single model architecture and training objective handles classification, translation, summarization, and QA
+- **Paper:** T5
+
 ### Token
 Basic unit of text for models.
 - **Examples:** Word, subword, character
@@ -629,17 +737,17 @@ Breaking text into tokens.
 - **Example:** "unhappiness" → ["un", "happiness"]
 - **Papers:** All language models
 
-### Transformer
-Architecture based on self-attention.
-- **Paper:** #1 Attention Is All You Need
-- **Components:** Self-attention, FFN, layer norm, residual
-- **Impact:** Replaced RNNs, now dominant architecture
-
 ### Transfer Learning
 Applying knowledge from one task to another.
 - **Example:** Pre-train on Wikipedia, fine-tune for medical QA
 - **Papers:** BERT (paradigm), GPT-3, all modern models
 - **Benefit:** Less data needed for downstream tasks
+
+### Transformer
+Architecture based on self-attention.
+- **Paper:** #1 Attention Is All You Need
+- **Components:** Self-attention, FFN, layer norm, residual
+- **Impact:** Replaced RNNs, now dominant architecture
 
 ---
 
@@ -682,6 +790,12 @@ Regularization that penalizes large weights.
 - **Also called:** L2 regularization
 - **Formula:** Loss = Task Loss + λ||W||²
 - **Benefit:** Prevents overfitting
+
+### Word Embedding / Distributed Representation
+A dense, low-dimensional vector that represents a word's meaning, where similar words have similar vectors.
+- **Key property:** Captures semantic relationships - "king" - "man" + "woman" ~= "queen"
+- **Contrast:** Older one-hot encodings are high-dimensional and capture no similarity
+- **Paper:** Word2Vec (popularized); used as input layer in virtually all subsequent NLP models
 
 ---
 

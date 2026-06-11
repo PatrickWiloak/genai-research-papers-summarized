@@ -7,7 +7,7 @@ authors: "OpenAI"
 published: "September 2023"
 year: 2023
 url: "https://cdn.openai.com/papers/GPTV_System_Card.pdf"
-tags: [multimodal]
+tags: ["multimodal", "vision"]
 ---
 
 # GPT-4V(ision): System Card

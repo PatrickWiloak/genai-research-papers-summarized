@@ -7,7 +7,7 @@ authors: "Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, Björ
 published: "December 2021 (CVPR 2022)"
 year: 2021
 url: "https://arxiv.org/abs/2112.10752"
-tags: [image-generation]
+tags: ["image-generation", "diffusion", "efficiency"]
 ---
 
 # High-Resolution Image Synthesis with Latent Diffusion Models (Stable Diffusion)

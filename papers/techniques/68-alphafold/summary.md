@@ -7,7 +7,7 @@ authors: "John Jumper, Richard Evans, Alexander Pritzel, Tim Green, Michael Figu
 published: "2021 (Nature, volume 596)"
 year: 2021
 url: "https://www.nature.com/articles/s41586-021-03819-2"
-tags: [techniques]
+tags: ["science", "attention"]
 ---
 
 # Highly Accurate Protein Structure Prediction with AlphaFold (AlphaFold 2)

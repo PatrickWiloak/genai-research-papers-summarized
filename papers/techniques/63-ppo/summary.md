@@ -7,7 +7,7 @@ authors: "John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Radford, Oleg Kli
 published: "July 2017"
 year: 2017
 url: "https://arxiv.org/abs/1707.06347"
-tags: [techniques]
+tags: ["reinforcement-learning", "alignment"]
 ---
 
 # Proximal Policy Optimization Algorithms (PPO)

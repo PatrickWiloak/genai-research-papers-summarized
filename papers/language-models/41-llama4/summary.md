@@ -7,7 +7,7 @@ authors: "Meta AI"
 published: "April 5, 2025"
 year: 2025
 url: "https://ai.meta.com/blog/llama-4-multimodal-intelligence/"
-tags: [language-models]
+tags: ["language-model", "moe", "multimodal"]
 ---
 
 # Llama 4: Natively Multimodal Open-Source AI

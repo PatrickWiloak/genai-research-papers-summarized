@@ -7,7 +7,7 @@ authors: "Trieu H. Trinh, Yuhuai Wu, Quoc V. Le, He He, Thang Luong (Google Deep
 published: "January 2024 (Nature, vol. 625)"
 year: 2024
 url: "https://www.nature.com/articles/s41586-023-06747-5"
-tags: [techniques]
+tags: ["reasoning", "science"]
 ---
 
 # AlphaGeometry: Solving Olympiad Geometry Without Human Demonstrations

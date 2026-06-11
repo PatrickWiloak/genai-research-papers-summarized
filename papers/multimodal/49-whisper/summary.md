@@ -7,7 +7,7 @@ authors: "Alec Radford, Jong Wook Kim, Tao Xu, et al. (OpenAI)"
 published: "December 2022"
 year: 2022
 url: "https://arxiv.org/abs/2212.04356"
-tags: [multimodal]
+tags: ["audio"]
 ---
 
 # Whisper: Robust Speech Recognition via Large-Scale Weak Supervision

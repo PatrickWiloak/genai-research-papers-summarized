@@ -7,7 +7,7 @@ authors: "Albert Gu, Tri Dao (Carnegie Mellon, Princeton)"
 published: "December 2023"
 year: 2023
 url: "https://arxiv.org/abs/2312.00752"
-tags: [architectures]
+tags: ["architecture", "state-space", "efficiency", "long-context"]
 ---
 
 # Mamba: Linear-Time Sequence Modeling with Selective State Spaces

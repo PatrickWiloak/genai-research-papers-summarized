@@ -5,7 +5,7 @@ number: 39
 category: "techniques"
 authors: "Multiple research groups (paradigm, not a single paper)"
 year: 2024
-tags: [techniques]
+tags: ["reinforcement-learning", "reasoning"]
 ---
 
 # RLVR: Reinforcement Learning from Verifiable Rewards

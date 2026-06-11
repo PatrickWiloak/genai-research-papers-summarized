@@ -7,7 +7,7 @@ authors: "Meta AI (FAIR)"
 published: "August 2024"
 year: 2024
 url: "https://arxiv.org/abs/2408.00714"
-tags: [multimodal]
+tags: ["vision"]
 ---
 
 # SAM 2: Segment Anything in Images and Videos

@@ -7,7 +7,7 @@ authors: "Albert Jiang, Alexandre Sablayrolles, et al. (Mistral AI)"
 published: "January 8, 2024"
 year: 2024
 url: "https://arxiv.org/abs/2401.04088"
-tags: [architectures]
+tags: ["moe", "architecture", "efficiency"]
 ---
 
 # Mixtral of Experts (and the Mixture-of-Experts Architecture)

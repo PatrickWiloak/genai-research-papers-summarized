@@ -7,7 +7,7 @@ authors: "James Betker, Gabriel Goh, Li Jing, et al. (OpenAI)"
 published: "September 2023"
 year: 2023
 url: "https://cdn.openai.com/papers/dall-e-3.pdf"
-tags: [image-generation]
+tags: ["image-generation", "diffusion"]
 ---
 
 # DALL-E 3: Improving Image Generation with Better Captions

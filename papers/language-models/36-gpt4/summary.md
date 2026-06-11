@@ -7,7 +7,7 @@ authors: "OpenAI"
 published: "March 14, 2023"
 year: 2023
 url: "https://arxiv.org/abs/2303.08774"
-tags: [language-models]
+tags: ["language-model", "multimodal"]
 ---
 
 # GPT-4 Technical Report

@@ -7,7 +7,7 @@ authors: "Alec Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei, Ilya 
 published: "February 2019"
 year: 2019
 url: "https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf"
-tags: [language-models]
+tags: ["language-model", "scaling", "pretraining"]
 ---
 
 # Language Models are Unsupervised Multitask Learners (GPT-2)

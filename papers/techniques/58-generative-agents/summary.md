@@ -7,7 +7,7 @@ authors: "Joon Sung Park, Joseph C. O'Brien, Carrie J. Cai, Meredith Ringel Morr
 published: "April 2023 (UIST 2023 Best Paper)"
 year: 2023
 url: "https://arxiv.org/abs/2304.03442"
-tags: [techniques]
+tags: ["agents"]
 ---
 
 # Generative Agents: Interactive Simulacra of Human Behavior

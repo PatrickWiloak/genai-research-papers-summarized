@@ -11,6 +11,8 @@ Detailed side-by-side comparisons of related papers to understand trade-offs and
 4. [Image Generation](#image-generation)
 5. [Efficiency Techniques](#efficiency-techniques)
 6. [Evolution Over Time](#evolution-over-time)
+7. [Technique Combinations](#technique-combinations)
+8. [When to Use Which Paper's Techniques](#when-to-use-which-papers-techniques)
 
 ---
 
@@ -34,6 +36,28 @@ Detailed side-by-side comparisons of related papers to understand trade-offs and
 - **BERT**: Classification, entity recognition, semantic search
 - **GPT**: Text generation, chatbots, creative writing
 - **T5**: Translation, summarization, structured generation
+
+---
+
+### Seq2Seq Progression: RNN to Attention to Transformer
+
+The encoder-decoder idea predates the Transformer by several years. Understanding the lineage clarifies why each component was invented.
+
+| Aspect | Seq2Seq / LSTM (2014) | + Bahdanau Attention (2014) | Transformer (2017) |
+|--------|-----------------------|-----------------------------|--------------------|
+| **Paper** | [Sutskever et al.](../papers/architectures/55-seq2seq/summary.md) | [Bahdanau et al.](../papers/architectures/66-bahdanau-attention/summary.md) | Vaswani et al. |
+| **Encoder** | LSTM (sequential) | LSTM (sequential) | Self-attention (parallel) |
+| **Decoder** | LSTM + fixed context vector | LSTM + dynamic context | Self-attention + cross-attention |
+| **Bottleneck** | Single fixed vector | None - all encoder states used | None |
+| **Long-range deps** | Poor (vanishing gradients) | Better | Excellent (O(1) path length) |
+| **Parallelism** | Sequential only | Sequential only | Fully parallel |
+| **Alignment** | Implicit / none | Explicit soft alignment | Multi-head attention |
+| **Translation quality** | Baseline | +3-4 BLEU | State-of-the-art |
+
+**The key insight chain:**
+1. Seq2Seq: "Compress input to a vector, then decode" - works but bottleneck hurts long sentences
+2. Bahdanau attention: "Let the decoder look back at every encoder state, weighted by relevance" - solved the bottleneck
+3. Transformer: "What if attention is the whole model?" - removed RNNs entirely, enabling parallelism
 
 ---
 
@@ -64,10 +88,27 @@ Detailed side-by-side comparisons of related papers to understand trade-offs and
 | Approach | Papers | Method | Pros | Cons |
 |----------|--------|--------|------|------|
 | **Masked Modeling** | BERT | Mask tokens, predict them | Bidirectional context | Can't generate naturally |
-| **Autoregressive** | GPT-3, LLaMA | Predict next token | Natural generation | Only sees left context |
+| **Autoregressive** | GPT-2, GPT-3, LLaMA | Predict next token | Natural generation | Only sees left context |
 | **Contrastive** | CLIP | Match positive pairs | Learn alignments | Needs paired data |
 | **Denoising** | Diffusion, DDPM | Remove noise iteratively | High quality | Slow generation |
 | **Adversarial** | GANs | Generator vs discriminator | Fast generation | Training instability |
+| **Text-to-Text** | [T5](../papers/language-models/65-t5/summary.md) | Unify all tasks as seq-to-seq | One model for all tasks | More complex fine-tuning |
+
+---
+
+### GPT Scaling Progression
+
+| Aspect | GPT-2 (2019) | GPT-3 (2020) | GPT-3.5 (2022) | GPT-4 (2023) |
+|--------|--------------|--------------|-----------------|--------------|
+| **Paper** | [Radford et al.](../papers/language-models/64-gpt2/summary.md) | Brown et al. | - | - |
+| **Params** | 1.5B | 175B | ~175B (est.) | Unknown |
+| **Training Tokens** | ~40B | ~300B | ~300B + RLHF | Unknown |
+| **Key Innovation** | Zero-shot tasks | Few-shot learning | RLHF alignment | Multimodal + reasoning |
+| **Release** | Staged (safety concerns) | API only | ChatGPT base | API + ChatGPT |
+| **MMLU** | - | 43.9% | ~70% | 86.4% |
+| **GSM8k** | - | 17% | 57% | 92% |
+
+**The GPT-2 moment:** OpenAI staged the release because they feared misuse - the first time a language model was considered too capable to release freely. GPT-2 was the proof that scale alone enables emergent zero-shot behavior.
 
 ---
 
@@ -113,22 +154,24 @@ Detailed side-by-side comparisons of related papers to understand trade-offs and
 
 ## Alignment Methods
 
-### RLHF vs Constitutional AI
+### RLHF vs Constitutional AI vs DPO vs GRPO
 
-| Aspect | InstructGPT (RLHF) | Constitutional AI |
-|--------|-------------------|-------------------|
-| **Human Labels** | 10,000+ comparisons | ~100 (for helpfulness only) |
-| **Data Source** | Human preferences | AI self-critique |
-| **Transparency** | Opaque (implicit values) | Transparent (written principles) |
-| **Cost** | $50k-$100k | $1k-$5k |
-| **Iteration Speed** | Weeks (recollect data) | Days (update principles) |
-| **Consistency** | Variable (human annotators differ) | High (AI consistent) |
-| **Best For** | Helpfulness | Harmlessness |
-| **Scalability** | Limited by human bandwidth | High (AI scales) |
-| **Bias** | Reflects annotator biases | Reflects principle writers' biases |
-| **Training Stages** | SFT → Reward Model → PPO | SL-CAI → RL-CAI |
+| Aspect | RLHF / InstructGPT | Constitutional AI | DPO | GRPO |
+|--------|--------------------|-------------------|-----|------|
+| **RL optimizer** | [PPO](../papers/techniques/63-ppo/summary.md) | PPO | None (direct) | Group relative policy opt. |
+| **Human Labels** | 10,000+ comparisons | ~100 (helpfulness only) | Preference pairs | Reward signal (verifiable) |
+| **Data Source** | Human preferences | AI self-critique | Human/AI preferences | Outcome correctness |
+| **Reward Model** | Separate RM trained | AI-based RM | Implicit (closed-form) | Relative group scores |
+| **Transparency** | Opaque (implicit values) | Transparent (principles) | Moderate | High (rule-based rewards) |
+| **Cost** | $50k-$100k | $1k-$5k | Lower than RLHF | Lower than RLHF |
+| **Stability** | Moderate (PPO sensitive) | Moderate | High | High |
+| **Best For** | General helpfulness | Harmlessness | Efficient preference learning | Math/reasoning tasks |
+| **Scalability** | Limited by human bandwidth | High (AI scales) | High | High |
+| **Used By** | ChatGPT, InstructGPT | Claude | Many open models | DeepSeek-R1, reasoning models |
 
-**Stage-by-Stage:**
+**PPO's role:** PPO ([Schulman et al. 2017](../papers/techniques/63-ppo/summary.md)) is the RL backbone of classic RLHF. It clips policy updates to prevent catastrophic reward hacking - the "proximal" constraint keeps the fine-tuned model close to the base model. DPO and GRPO emerged partly to sidestep PPO's complexity and hyperparameter sensitivity.
+
+**Stage-by-Stage (RLHF vs Constitutional AI):**
 
 | Stage | RLHF | Constitutional AI |
 |-------|------|-------------------|
@@ -151,27 +194,31 @@ Detailed side-by-side comparisons of related papers to understand trade-offs and
 
 ## Image Generation
 
-### GANs vs Diffusion vs Latent Diffusion
+### VAE vs GAN vs Diffusion vs Latent Diffusion
 
-| Aspect | GANs | Diffusion (DDPM) | Stable Diffusion |
-|--------|------|------------------|------------------|
-| **Training** | Adversarial (unstable) | Stable denoising | Stable (in latent space) |
-| **Generation Speed** | Fast (1 pass) | Slow (50-1000 steps) | Medium (50 steps, but smaller) |
-| **Quality** | Good | Excellent | Excellent |
-| **Diversity** | Lower (mode collapse) | Higher | Higher |
-| **Control** | Harder | Moderate | Easy (text conditioning) |
-| **Memory** | Moderate | High (pixel space) | Lower (latent space) |
-| **Training Data** | Can work with less | Needs more | Needs more |
-| **Compute (Train)** | Moderate | High | Moderate |
-| **Compute (Inference)** | Low | Very high | Medium |
-| **Text-to-Image** | Harder to integrate | Moderate | Native support |
+| Aspect | [VAE](../papers/image-generation/57-vae/summary.md) (2013) | GANs (2014) | Diffusion / DDPM (2020) | Stable Diffusion (2022) |
+|--------|------------------------------------------------------------|-------------|--------------------------|-------------------------|
+| **Training** | Stable (ELBO) | Adversarial (unstable) | Stable denoising | Stable (in latent space) |
+| **Generation Speed** | Fast (1 pass) | Fast (1 pass) | Slow (50-1000 steps) | Medium (50 steps, smaller) |
+| **Quality** | Moderate (blurry) | Good (sharp) | Excellent | Excellent |
+| **Diversity** | High | Lower (mode collapse) | Higher | Higher |
+| **Latent Space** | Structured, interpolatable | Unstructured | None (pixel-space noise) | Structured (VAE encoder) |
+| **Control** | Smooth interpolation | Harder | Moderate | Easy (text conditioning) |
+| **Memory** | Low | Moderate | High (pixel space) | Lower (latent space) |
+| **Compute (Inference)** | Low | Low | Very high | Medium |
+| **Text-to-Image** | Hard | Hard | Moderate | Native support |
+| **Key Weakness** | Blurry outputs | Training instability | Very slow | Still needs many steps |
 
-**Evolution:**
-1. **GANs (2014)**: First high-quality generation, but unstable training
-2. **DDPM (2020)**: Better quality and diversity, but very slow
-3. **Stable Diffusion (2022)**: Best of both - quality + speed via latent space
+**The generative model lineage:**
+1. **VAE (2013)**: First principled probabilistic generative model - structured latent space but blurry outputs due to pixel-wise reconstruction loss
+2. **GANs (2014)**: Sharp images via adversarial training, but mode collapse and instability
+3. **DDPM (2020)**: Beat both on quality and diversity, sacrificed speed
+4. **Stable Diffusion (2022)**: Runs diffusion in VAE's latent space - borrows VAE's compression to make diffusion tractable
+
+**VAE's lasting contribution:** Even though VAEs lost the image quality race to GANs and diffusion, the VAE encoder/decoder is the latent space backbone of Stable Diffusion.
 
 **Use Cases:**
+- **VAE**: Structured generation, interpolation, anomaly detection, latent representations
 - **GANs**: Real-time applications, style transfer (when speed matters)
 - **DDPM**: Research, highest quality needs
 - **Stable Diffusion**: Production text-to-image, balance of quality and speed
@@ -195,6 +242,28 @@ Detailed side-by-side comparisons of related papers to understand trade-offs and
 ---
 
 ## Efficiency Techniques
+
+### Mixture of Experts: Dense vs Sparse Routing
+
+| Aspect | Dense Transformer | [Switch Transformer](../papers/architectures/67-switch-transformer/summary.md) (top-1) | Mixtral (top-2) |
+|--------|-------------------|----------------------------------------------------------------------------------------|-----------------|
+| **Routing** | All params active | Top-1 expert per token | Top-2 experts per token |
+| **Active Params** | 100% | ~1/N (N = num experts) | ~2/N |
+| **Total Params** | Baseline | 4-8× more | 4-8× more |
+| **Compute/Token** | Baseline | Same as smaller dense model | Slightly more than Switch |
+| **Training Stability** | High | Lower (load balancing needed) | Higher than Switch |
+| **Expert Utilization** | N/A | Uneven without aux loss | More balanced |
+| **Quality vs Compute** | Good | 7× more compute-efficient (Switch paper) | Better quality than top-1 |
+| **Communication Cost** | Low | High (all-to-all expert routing) | High |
+| **Examples** | GPT-3, LLaMA | Switch-Base/Large | Mixtral 8×7B, 8×22B |
+
+**The MoE trade-off:** Sparse MoE gives near-dense-model quality at a fraction of the FLOPs per token, but at the cost of much larger total parameter counts, complex routing, and communication overhead across devices.
+
+**Top-1 vs top-2 routing:**
+- **Switch (top-1)**: Simpler, lower compute, but each token sees only one expert - higher variance
+- **Mixtral (top-2)**: Each token mixes two experts - more stable, better quality, slightly more compute
+
+---
 
 ### Fine-Tuning Methods
 
@@ -262,11 +331,30 @@ Prompting (task-specific instructions)
 
 ## Evolution Over Time
 
+### Word Embeddings: Static vs Contextual
+
+| Aspect | [Word2Vec](../papers/techniques/53-word2vec/summary.md) (2013) | GloVe (2014) | ELMo (2018) | BERT (2018) |
+|--------|----------------------------------------------------------------|--------------|-------------|-------------|
+| **Embedding type** | Static (1 vector per word) | Static (1 vector per word) | Contextual (BiLSTM) | Contextual (Transformer) |
+| **"Bank" the word** | Same vector always | Same vector always | Different by sentence | Different by sentence |
+| **Training** | Skip-gram / CBOW | Co-occurrence matrix | Language model (BiLSTM) | Masked language modeling |
+| **Params** | Small (vocab × dim) | Small (vocab × dim) | Medium (LSTM layers) | Large (110M+) |
+| **Inference Speed** | Lookup (instant) | Lookup (instant) | Forward pass (moderate) | Forward pass (slower) |
+| **Polysemy handling** | None | None | Partial | Full |
+| **Sentence context** | No | No | Full sentence (BiLSTM) | Full sentence (Transformer) |
+| **Downstream tasks** | Feature input to model | Feature input to model | Feature input or fine-tune | Fine-tune end-to-end |
+| **Still used?** | Yes (fast, no GPU needed) | Yes (NLP basics) | Largely replaced | Yes (or its successors) |
+
+**The key shift:** Word2Vec proved that dense vector representations capture semantic relationships (king - man + woman = queen). BERT proved those representations should be contextual - the same word needs a different embedding depending on its sentence. This shift from static to contextual embeddings is the foundation of modern NLP.
+
+---
+
 ### Language Model Performance (on Common Benchmarks)
 
 | Model (Year) | Params | MMLU | HellaSwag | GSM8k | HumanEval |
 |--------------|--------|------|-----------|-------|-----------|
 | BERT (2018) | 340M | - | 78% | - | - |
+| [GPT-2](../papers/language-models/64-gpt2/summary.md) (2019) | 1.5B | - | ~70% | - | - |
 | GPT-3 (2020) | 175B | 43.9% | 78.9% | 17% | - |
 | GPT-3.5 (2022) | ? | ~70% | ~95% | 57% | 48% |
 | LLaMA-65B (2023) | 65B | 63.4% | 84.2% | 50.9% | 23% |
@@ -311,6 +399,23 @@ Prompting (task-specific instructions)
 
 ---
 
+### Transformers Beyond Language
+
+The Transformer architecture generalized far beyond NLP. These applications use the same attention mechanism but on fundamentally different sequence types.
+
+| Domain | Model (Year) | Sequence Type | Key Adaptation | Impact |
+|--------|--------------|---------------|----------------|--------|
+| NLP | BERT / GPT (2018-20) | Tokens | None - native domain | State-of-the-art on all NLP tasks |
+| Vision | ViT (2020) | Image patches | Flatten patches as tokens | Matches CNN at scale |
+| Images (gen.) | Stable Diffusion (2022) | Latent patches | Cross-attention for text conditioning | Best text-to-image |
+| Protein structure | [AlphaFold 2](../papers/techniques/68-alphafold/summary.md) (2021) | Amino acid residues | Evoformer + structure module (triangle attention) | Solved 50-year protein folding problem |
+| Code | Codex / GPT-4 (2021+) | Code tokens | Fine-tuned on code corpora | Near-human code generation |
+| Audio | Whisper (2022) | Spectrogram patches | Conv frontend + Transformer | Robust multilingual ASR |
+
+**AlphaFold 2's significance in this context:** It demonstrated that the core insight of attention - letting every element attend to every other element - applies to non-linguistic structure prediction. Amino acid residues attending to each other to infer 3D spatial relationships is conceptually identical to tokens attending to each other to infer semantic relationships. AlphaFold 2 effectively closed the protein structure prediction problem (GDT > 90 on CASP14), a benchmark that had resisted 50 years of computational biology.
+
+---
+
 ## Technique Combinations
 
 ### What Works Well Together
@@ -323,6 +428,10 @@ Prompting (task-specific instructions)
 | **ViT + Diffusion** | High-quality generation | Modern text-to-image models |
 | **RAG + Chain-of-Thought** | Grounded reasoning | Retrieve facts, reason step-by-step |
 | **LLaMA + LoRA** | Accessible fine-tuning | Most popular open-source combo |
+| **VAE + Diffusion** | Efficient image generation | Stable Diffusion's latent space backbone |
+| **Seq2Seq + Attention** | Translation / summarization | Pre-Transformer NMT (still used in constrained settings) |
+| **PPO + Reward Model** | RLHF fine-tuning | InstructGPT, ChatGPT alignment |
+| **Switch MoE + Decoder** | Scalable generation | Mixtral - dense quality at sparse compute |
 
 ---
 
@@ -375,31 +484,44 @@ Prompting (task-specific instructions)
 - Factual, grounded → RAG
 - With reasoning → Chain-of-Thought
 - Specific style → Fine-tuning + LoRA
+- Translation or structured output → T5 (encoder-decoder)
 
 **Need to understand text?**
 - Classification → BERT
 - Semantic search → BERT / CLIP (for images)
 - Q&A → BERT + RAG
+- Simple/fast embeddings (no GPU) → Word2Vec / GloVe
 
 **Need to generate images?**
 - Artistic, text-to-image → Stable Diffusion
 - Fast, real-time → GANs
 - Highest quality → DDPM
+- Structured latent space / interpolation → VAE
 - With vision-language → CLIP + Diffusion
 
 **Need to align model?**
-- General alignment → RLHF (InstructGPT)
+- General alignment → RLHF / PPO (InstructGPT)
 - Safety focus → Constitutional AI
-- Both → Hybrid approach
+- Efficient preference learning → DPO
+- Math / verifiable reasoning → GRPO
+- Both helpfulness and safety → Hybrid approach
 
 **Need to adapt model?**
 - Full resources → Fine-tuning
 - Limited resources → LoRA
 - No training → RAG or Prompting
 
+**Need to scale efficiently?**
+- More params, same compute/token → Mixture of Experts (Switch / Mixtral)
+
 **Planning a project?**
 - Estimate resources → Scaling Laws
 - Choose model size → Scaling Laws + LLaMA lessons
+
+**Applying Transformers outside NLP?**
+- Protein structure → AlphaFold 2
+- Images → ViT
+- Code → Codex / GPT-4
 
 ---
 
@@ -407,12 +529,14 @@ Prompting (task-specific instructions)
 
 1. **Scaling isn't everything** - LLaMA proved training matters more than size
 2. **Hybrid is best** - Combine RLHF + Constitutional AI, RAG + fine-tuning
-3. **Efficiency advances** - LoRA makes fine-tuning accessible, Stable Diffusion makes diffusion practical
+3. **Efficiency advances** - LoRA makes fine-tuning accessible, Stable Diffusion makes diffusion practical, MoE makes scale affordable
 4. **Open vs closed** - Open models (LLaMA) spawned more innovation than closed (GPT-3)
-5. **Architecture consolidation** - Transformers won for both text and vision
-6. **Alignment evolution** - From RLHF to Constitutional AI (more scalable)
+5. **Architecture consolidation** - Transformers won for text, vision, protein structure, and more
+6. **Alignment evolution** - From RLHF/PPO to DPO to GRPO (each iteration simpler or more targeted)
 7. **Knowledge grounding** - RAG reduces hallucination better than any architecture change
+8. **Embeddings matured** - Static (Word2Vec) to contextual (ELMo) to Transformer-based (BERT) over ~5 years
+9. **Seq2Seq lineage** - Every encoder-decoder model (T5, Stable Diffusion decoder, etc.) inherits from Sutskever 2014 via Bahdanau attention
 
 ---
 
-**Last Updated:** 2025-10-19
+**Last Updated:** 2026-06-10

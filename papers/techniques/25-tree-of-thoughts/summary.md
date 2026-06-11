@@ -7,7 +7,7 @@ authors: "Shunyu Yao, Dian Yu, Jeffrey Zhao, et al. (Princeton, Google DeepMind)
 published: "May 2023 (NeurIPS 2023)"
 year: 2023
 url: "https://arxiv.org/abs/2305.10601"
-tags: [techniques]
+tags: ["reasoning"]
 ---
 
 # Tree of Thoughts: Deliberate Problem Solving with Large Language Models

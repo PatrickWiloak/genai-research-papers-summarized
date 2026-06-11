@@ -7,7 +7,7 @@ authors: "Meta AI"
 published: "December 2024"
 year: 2024
 url: "https://www.meta.ai/blog/meta-llama-3-3/"
-tags: [language-models]
+tags: ["language-model", "efficiency"]
 ---
 
 # LLaMA 3.3: Matching 405B Performance with 70B Parameters

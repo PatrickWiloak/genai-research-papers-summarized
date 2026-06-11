@@ -7,7 +7,7 @@ authors: "OpenAI"
 published: "September 12, 2024"
 year: 2024
 url: "https://openai.com/index/learning-to-reason-with-llms/"
-tags: [language-models]
+tags: ["reasoning", "test-time-compute"]
 ---
 
 # OpenAI o1: Learning to Reason with Reinforcement Learning

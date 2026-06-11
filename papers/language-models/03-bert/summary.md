@@ -7,7 +7,7 @@ authors: "Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova (Google A
 published: "October 2018 (NAACL 2019)"
 year: 2018
 url: "https://arxiv.org/abs/1810.04805"
-tags: [language-models]
+tags: ["language-model", "pretraining"]
 ---
 
 # BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding

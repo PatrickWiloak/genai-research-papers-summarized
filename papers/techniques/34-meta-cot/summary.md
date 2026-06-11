@@ -7,7 +7,7 @@ authors: "Multiple research teams"
 published: "January 2025"
 year: 2025
 url: "https://arxiv.org/abs/2501.04682"
-tags: [techniques]
+tags: ["reasoning", "chain-of-thought"]
 ---
 
 # Meta Chain-of-Thought: Towards System 2 Reasoning in LLMs

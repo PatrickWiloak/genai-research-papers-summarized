@@ -7,7 +7,7 @@ authors: "Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang
 published: "October 2019 (JMLR 2020)"
 year: 2019
 url: "https://arxiv.org/abs/1910.10683"
-tags: [language-models]
+tags: ["language-model", "architecture", "pretraining"]
 ---
 
 # Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer (T5)

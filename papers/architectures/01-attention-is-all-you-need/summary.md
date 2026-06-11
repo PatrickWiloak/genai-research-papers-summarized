@@ -7,7 +7,7 @@ authors: "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jone
 published: "June 2017 (NeurIPS 2017)"
 year: 2017
 url: "https://arxiv.org/abs/1706.03762"
-tags: [architectures]
+tags: ["transformers", "attention", "architecture"]
 ---
 
 # Attention Is All You Need

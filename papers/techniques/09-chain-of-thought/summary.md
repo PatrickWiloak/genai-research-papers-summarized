@@ -7,7 +7,7 @@ authors: "Jason Wei, Xuezhi Wang, Dale Schuurmans, et al. (Google Research, Brai
 published: "January 2022 (NeurIPS 2022)"
 year: 2022
 url: "https://arxiv.org/abs/2201.11903"
-tags: [techniques]
+tags: ["reasoning", "chain-of-thought"]
 ---
 
 # Chain-of-Thought Prompting Elicits Reasoning in Large Language Models

@@ -7,7 +7,7 @@ authors: "Edward Hu, Yelong Shen, Phillip Wallis, et al. (Microsoft)"
 published: "June 2021 (ICLR 2022)"
 year: 2021
 url: "https://arxiv.org/abs/2106.09685"
-tags: [techniques]
+tags: ["efficiency", "fine-tuning"]
 ---
 
 # LoRA: Low-Rank Adaptation of Large Language Models

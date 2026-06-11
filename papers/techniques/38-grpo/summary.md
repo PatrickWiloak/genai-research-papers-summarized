@@ -7,7 +7,7 @@ authors: "Zhihong Shao, Peiyi Wang, et al. (DeepSeek-AI)"
 published: "February 5, 2024 (in DeepSeekMath paper)"
 year: 2024
 url: "https://arxiv.org/abs/2402.03300"
-tags: [techniques]
+tags: ["reinforcement-learning", "alignment"]
 ---
 
 # GRPO: Group Relative Policy Optimization

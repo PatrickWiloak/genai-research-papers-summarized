@@ -7,7 +7,7 @@ authors: "Tomas Mikolov, Kai Chen, Greg Corrado, Jeffrey Dean (Google)"
 published: "January 2013 (arXiv); companion paper \"Distributed Representations of Words and Phrases and their Compositionality\" at NeurIPS 2013"
 year: 2013
 url: "https://arxiv.org/abs/1301.3781"
-tags: [techniques]
+tags: ["embeddings"]
 ---
 
 # Efficient Estimation of Word Representations in Vector Space (Word2Vec)

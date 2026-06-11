@@ -7,7 +7,7 @@ authors: "Jianlin Su, Yu Lu, Shengfeng Pan, Bo Wen, Yunfeng Liu (Zhuiyi Technolo
 published: "April 2021 (revised through 2023)"
 year: 2021
 url: "https://arxiv.org/abs/2104.09864"
-tags: [techniques]
+tags: ["position-encoding", "attention"]
 ---
 
 # RoFormer: Enhanced Transformer with Rotary Position Embedding (RoPE)

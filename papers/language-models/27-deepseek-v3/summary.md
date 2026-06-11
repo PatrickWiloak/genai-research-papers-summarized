@@ -7,7 +7,7 @@ authors: "DeepSeek-AI"
 published: "December 27, 2024"
 year: 2024
 url: "https://arxiv.org/abs/2412.19437"
-tags: [language-models]
+tags: ["language-model", "moe", "efficiency"]
 ---
 
 # DeepSeek-V3 Technical Report

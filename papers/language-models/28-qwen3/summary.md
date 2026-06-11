@@ -7,7 +7,7 @@ authors: "Qwen Team (Alibaba Cloud)"
 published: "May 14, 2025"
 year: 2025
 url: "https://arxiv.org/abs/2505.09388"
-tags: [language-models]
+tags: ["language-model", "reasoning"]
 ---
 
 # Qwen3: Technical Report

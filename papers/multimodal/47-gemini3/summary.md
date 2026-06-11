@@ -7,7 +7,7 @@ authors: "Google DeepMind"
 published: "December 2025"
 year: 2025
 url: "https://blog.google/products-and-platforms/products/gemini/gemini-3/"
-tags: [multimodal]
+tags: ["multimodal"]
 ---
 
 # Gemini 3: Google's Most Capable AI Model

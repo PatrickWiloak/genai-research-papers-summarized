@@ -55,6 +55,7 @@ nav:
   - Home: README.md
   - Browse: BROWSE.md
   - Index: INDEX.md
+  - By Topic: TAGS.md
   - Guides:
       - Learning Roadmap: docs/ROADMAP.md
       - Reading Guide: docs/READING_GUIDE.md

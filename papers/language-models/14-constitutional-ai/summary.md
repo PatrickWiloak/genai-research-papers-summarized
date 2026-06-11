@@ -7,7 +7,7 @@ authors: "Yuntao Bai, Saurav Kadavath, Sandipan Kundu, et al. (Anthropic)"
 published: "December 2022"
 year: 2022
 url: "https://arxiv.org/abs/2212.08073"
-tags: [language-models]
+tags: ["alignment", "safety"]
 ---
 
 # Constitutional AI: Harmlessness from AI Feedback

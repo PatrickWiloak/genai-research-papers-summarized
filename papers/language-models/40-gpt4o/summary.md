@@ -7,7 +7,7 @@ authors: "OpenAI"
 published: "May 13, 2024"
 year: 2024
 url: "https://cdn.openai.com/gpt-4o-system-card.pdf"
-tags: [language-models]
+tags: ["multimodal", "audio", "vision"]
 ---
 
 # GPT-4o: The First Omni Model

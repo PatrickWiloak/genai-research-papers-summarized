@@ -7,7 +7,7 @@ authors: "Microsoft Research, Tsinghua University"
 published: "January 2025"
 year: 2025
 url: "https://arxiv.org/abs/2501.04519"
-tags: [techniques]
+tags: ["reasoning"]
 ---
 
 # rStar-Math: Small LLMs Can Master Math Reasoning with Self-Evolved Deep Thinking

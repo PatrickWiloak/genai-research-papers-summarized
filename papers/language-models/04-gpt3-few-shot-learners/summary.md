@@ -7,7 +7,7 @@ authors: "Tom B. Brown et al. (OpenAI - 31 authors total)"
 published: "May 2020 (NeurIPS 2020)"
 year: 2020
 url: "https://arxiv.org/abs/2005.14165"
-tags: [language-models]
+tags: ["language-model", "scaling", "pretraining"]
 ---
 
 # Language Models are Few-Shot Learners (GPT-3)

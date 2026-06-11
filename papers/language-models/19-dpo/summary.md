@@ -7,7 +7,7 @@ authors: "Rafael Rafailov, Archit Sharma, et al. (Stanford)"
 published: "May 2023 (NeurIPS 2023)"
 year: 2023
 url: "https://arxiv.org/abs/2305.18290"
-tags: [language-models]
+tags: ["alignment", "preference-optimization"]
 ---
 
 # Direct Preference Optimization (DPO): Your Language Model is Secretly a Reward Model

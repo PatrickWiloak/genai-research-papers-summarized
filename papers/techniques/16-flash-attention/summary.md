@@ -7,7 +7,7 @@ authors: "Tri Dao, Daniel Y. Fu, Stefano Ermon, Atri Rudra, Christopher Ré (Sta
 published: "May 2022 (NeurIPS 2022)"
 year: 2022
 url: "https://arxiv.org/abs/2205.14135"
-tags: [techniques]
+tags: ["efficiency", "attention", "inference-optimization"]
 ---
 
 # FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness

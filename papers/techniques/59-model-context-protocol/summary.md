@@ -7,7 +7,7 @@ authors: "Anthropic"
 published: "November 25, 2024"
 year: 2024
 url: "https://www.anthropic.com/news/model-context-protocol"
-tags: [techniques]
+tags: ["agents", "tool-use"]
 ---
 
 # Model Context Protocol (MCP): An Open Standard for AI Tool Integration

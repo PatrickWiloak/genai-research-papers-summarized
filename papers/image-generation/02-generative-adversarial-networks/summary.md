@@ -7,7 +7,7 @@ authors: "Ian Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-
 published: "June 2014 (NeurIPS 2014)"
 year: 2014
 url: "https://arxiv.org/abs/1406.2661"
-tags: [image-generation]
+tags: ["image-generation", "gan"]
 ---
 
 # Generative Adversarial Networks (GANs)

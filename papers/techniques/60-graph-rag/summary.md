@@ -7,7 +7,7 @@ authors: "Darren Edge, Ha Trinh, Newman Cheng, Joshua Bradley, Alex Chao, Apurva
 published: "April 2024"
 year: 2024
 url: "https://arxiv.org/abs/2404.16130"
-tags: [techniques]
+tags: ["retrieval"]
 ---
 
 # GraphRAG: From Local to Global - A Graph RAG Approach to Query-Focused Summarization

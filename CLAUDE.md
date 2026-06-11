@@ -28,7 +28,7 @@ Curated collection of 68 foundational generative AI papers with comprehensive su
   ```
 - CI (`.github/workflows/ci.yml`) fails if these generated outputs are stale or if any relative link is broken, so run them before pushing.
 - Do not hand-edit YAML frontmatter, `INDEX.md`, or the `<!-- related:* -->` footers - they are generated.
-- When adding a new paper, give it the next number (currently up to 68) and add its aliases to the `ALIASES` map in `scripts/add_cross_links.py` so other papers can link to it.
+- When adding a new paper, give it the next number (currently up to 68), add its aliases to the `ALIASES` map in `scripts/add_cross_links.py` (so other papers can link to it), and add its topic tags to the `TOPICS` map in `scripts/build_manifest.py` (so it appears in `TAGS.md` and gets `tags:` frontmatter).
 
 ## Usage
 Educational resource - no code, just documentation. Start with ROADMAP.md for learning path.

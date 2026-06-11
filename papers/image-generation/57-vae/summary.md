@@ -7,7 +7,7 @@ authors: "Diederik P. Kingma, Max Welling"
 published: "December 2013 (arXiv); ICLR 2014"
 year: 2013
 url: "https://arxiv.org/abs/1312.6114"
-tags: [image-generation]
+tags: ["image-generation", "vae"]
 ---
 
 # Auto-Encoding Variational Bayes (VAE)

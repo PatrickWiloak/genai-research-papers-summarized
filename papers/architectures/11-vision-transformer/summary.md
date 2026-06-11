@@ -7,7 +7,7 @@ authors: "Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, et al. (Google 
 published: "October 2020 (ICLR 2021)"
 year: 2020
 url: "https://arxiv.org/abs/2010.11929"
-tags: [architectures]
+tags: ["vision", "transformers", "architecture"]
 ---
 
 # An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale (Vision Transformer)

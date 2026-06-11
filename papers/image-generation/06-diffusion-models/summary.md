@@ -7,7 +7,7 @@ authors: "Jonathan Ho, Ajay Jain, Pieter Abbeel (UC Berkeley)"
 published: "June 2020 (NeurIPS 2020)"
 year: 2020
 url: "https://arxiv.org/abs/2006.11239"
-tags: [image-generation]
+tags: ["image-generation", "diffusion"]
 ---
 
 # Denoising Diffusion Probabilistic Models (DDPM)

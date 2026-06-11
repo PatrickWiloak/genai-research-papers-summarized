@@ -38,12 +38,16 @@ only - no code to build, just clear writing about influential papers.
 `scripts/build_manifest.py` is the single source of truth for metadata. It is
 idempotent - safe to run any time. On each run it:
 
-- (re)writes YAML frontmatter on every `summary.md` from the header block,
+- (re)writes YAML frontmatter (including topic `tags:`) on every `summary.md`,
 - regenerates `papers.json` and `papers.csv` (machine-readable manifests),
-- regenerates `INDEX.md` (the browse index), and
-- regenerates `mkdocs.yml` (the site navigation).
+- regenerates `INDEX.md` (category browse index) and `TAGS.md` (topic browse index),
+- regenerates `mkdocs.yml` (the site navigation), and
+- assembles the git-ignored `site-build/` tree the site is built from.
 
-It uses only the Python standard library, so no install is needed.
+A companion script, `scripts/add_cross_links.py`, regenerates the "Related in
+This Collection" footers. When you add a paper, also add an entry to the
+`TOPICS` map in `build_manifest.py` and the `ALIASES` map in
+`add_cross_links.py`. Both scripts use only the Python standard library.
 
 ## Previewing the site locally
 

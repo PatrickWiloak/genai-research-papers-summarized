@@ -7,7 +7,7 @@ authors: "Tim Dettmers, Artidoro Pagnoni, et al. (University of Washington)"
 published: "May 2023 (NeurIPS 2023)"
 year: 2023
 url: "https://arxiv.org/abs/2305.14314"
-tags: [techniques]
+tags: ["efficiency", "fine-tuning", "quantization"]
 ---
 
 # QLoRA: Efficient Finetuning of Quantized LLMs

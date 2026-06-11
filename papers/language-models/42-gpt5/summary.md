@@ -7,7 +7,7 @@ authors: "OpenAI"
 published: "August 7, 2025"
 year: 2025
 url: "https://cdn.openai.com/gpt-5-system-card.pdf"
-tags: [language-models]
+tags: ["language-model", "reasoning"]
 ---
 
 # GPT-5: Unified Intelligence

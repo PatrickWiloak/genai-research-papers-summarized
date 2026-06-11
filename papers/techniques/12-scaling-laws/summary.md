@@ -7,7 +7,7 @@ authors: "Jared Kaplan, Sam McCandlish, Tom Henighan, et al. (OpenAI)"
 published: "January 2020"
 year: 2020
 url: "https://arxiv.org/abs/2001.08361"
-tags: [techniques]
+tags: ["scaling"]
 ---
 
 # Scaling Laws for Neural Language Models

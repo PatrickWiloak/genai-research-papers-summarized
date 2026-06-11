@@ -1,6 +1,6 @@
 # Quick Reference Guide - All Papers at a Glance
 
-A one-page overview of all 15 foundational GenAI papers for quick lookup.
+A one-page overview of all 24 foundational GenAI papers for quick lookup.
 
 ---
 
@@ -12,6 +12,9 @@ A one-page overview of all 15 foundational GenAI papers for quick lookup.
 | 2 | **GANs** | 2014 | Generator-discriminator adversarial training | Launched generative modeling, deepfakes, image synthesis |
 | 6 | **Diffusion Models (DDPM)** | 2020 | Iterative denoising process | Alternative to GANs, foundation for DALL-E 2, Midjourney |
 | 11 | **Vision Transformer (ViT)** | 2020 | Images as patch sequences for Transformers | Unified vision-language architectures, multimodal models |
+| 55 | **Seq2Seq** | 2014 | LSTM encoder-decoder for sequence transduction | Established the encoder-decoder paradigm for NLP |
+| 66 | **Bahdanau Attention** | 2014 | Soft alignment between encoder and decoder states | The original attention mechanism; precursor to Transformers |
+| 67 | **Switch Transformer** | 2021 | Sparse MoE with top-1 routing; trillion-parameter scale | Showed MoE scales efficiently; influenced GPT-4 MoE design |
 
 ---
 
@@ -24,6 +27,8 @@ A one-page overview of all 15 foundational GenAI papers for quick lookup.
 | 5 | **InstructGPT (RLHF)** | 2022 | Reinforcement learning from human feedback | ChatGPT, Claude, all modern AI assistants |
 | 14 | **Constitutional AI** | 2022 | AI self-critique guided by principles | Powers Claude, alternative to RLHF |
 | 15 | **LLaMA** | 2023 | Compute-optimal training, 13B = 175B performance | Open-source LLM revolution, Alpaca, Vicuna |
+| 64 | **GPT-2** | 2019 | Unsupervised language model; zero-shot task transfer | Proved scale enables transfer; set the stage for GPT-3 |
+| 65 | **T5** | 2019 | Unified text-to-text framework; C4 dataset | Standardized NLP as text-in/text-out; influenced Flan, mT5 |
 
 ---
 
@@ -34,6 +39,7 @@ A one-page overview of all 15 foundational GenAI papers for quick lookup.
 | 7 | **Stable Diffusion** | 2022 | Latent diffusion, 10-100× speedup | Democratized AI art, open-source text-to-image |
 | 8 | **CLIP** | 2021 | Vision-language contrastive learning | Zero-shot classification, text-to-image guidance |
 | 11 | **Vision Transformer** | 2020 | Transformers for image classification | Enabled GPT-4 Vision, DALL-E, multimodal AI |
+| 57 | **VAE** | 2013 | Latent-variable generative model; ELBO + reparameterization | Foundation for latent-space generation; enables Stable Diffusion's encoder |
 
 ---
 
@@ -45,6 +51,9 @@ A one-page overview of all 15 foundational GenAI papers for quick lookup.
 | 10 | **LoRA** | 2021 | Low-rank adaptation, 10,000× parameter reduction | Accessible fine-tuning, Stable Diffusion LoRAs |
 | 12 | **Scaling Laws** | 2020 | Predictable power laws for loss vs compute/data | Justified GPT-3/4, guided all major AI development |
 | 13 | **RAG** | 2020 | Retrieval + generation with external knowledge | Production LLM standard, reduced hallucinations |
+| 53 | **Word2Vec** | 2013 | Dense word embeddings via Skip-gram/CBOW | Foundation of NLP representations; enabled semantic similarity |
+| 63 | **PPO** | 2017 | Clipped surrogate objective for stable RL policy updates | The RL algorithm inside RLHF; used by InstructGPT and ChatGPT |
+| 68 | **AlphaFold 2** | 2021 | Transformer-based protein structure prediction | Solved a 50-year biology grand challenge; transformers beyond language |
 
 ---
 
@@ -56,12 +65,18 @@ A one-page overview of all 15 foundational GenAI papers for quick lookup.
 - **GPT-3** (4) - Few-shot learning
 - **Scaling Laws** (12) - Performance prediction
 - **LLaMA** (15) - Efficient open models
+- **Word2Vec** (53) - Dense word embeddings
+- **Seq2Seq** (55) - Encoder-decoder sequence modeling
+- **GPT-2** (64) - Zero-shot transfer at scale
+- **T5** (65) - Unified text-to-text framework
+- **Bahdanau Attention** (66) - Original attention mechanism
 
 ### Computer Vision
 - **GANs** (2) - Adversarial generation
 - **Diffusion Models** (6) - Denoising generation
 - **Vision Transformer** (11) - Transformer for vision
 - **Stable Diffusion** (7) - Latent diffusion
+- **VAE** (57) - Latent-variable generative modeling
 
 ### Multimodal AI
 - **CLIP** (8) - Vision-language bridge
@@ -72,25 +87,41 @@ A one-page overview of all 15 foundational GenAI papers for quick lookup.
 - **InstructGPT** (5) - RLHF alignment
 - **Constitutional AI** (14) - Principle-based alignment
 - **Chain-of-Thought** (9) - Interpretable reasoning
+- **PPO** (63) - RL algorithm underpinning RLHF
 
 ### Efficient Training & Deployment
 - **LoRA** (10) - Efficient fine-tuning
 - **Scaling Laws** (12) - Compute optimization
 - **LLaMA** (15) - Training efficiency
 - **RAG** (13) - Knowledge efficiency
+- **Switch Transformer** (67) - Sparse MoE for trillion-parameter efficiency
+
+### Biology & Science
+- **AlphaFold 2** (68) - Protein structure prediction with transformers
 
 ---
 
 ## By Year
 
+### 2013
+- **Word2Vec** - Dense word embeddings; foundation of NLP representations
+- **VAE** - Latent-variable generative model; ELBO + reparameterization trick
+
 ### 2014
 - **GANs** - Adversarial training framework
+- **Seq2Seq** - LSTM encoder-decoder; established encoder-decoder paradigm
+- **Bahdanau Attention** - Original soft-alignment attention mechanism
 
 ### 2017
 - **Transformers** - Self-attention architecture
+- **PPO** - Clipped surrogate objective; the RL algorithm inside RLHF
 
 ### 2018
 - **BERT** - Bidirectional pre-training
+
+### 2019
+- **GPT-2** - Zero-shot task transfer at scale
+- **T5** - Unified text-to-text framework; C4 dataset
 
 ### 2020 (Breakthrough Year)
 - **GPT-3** - 175B parameter scaling
@@ -102,6 +133,8 @@ A one-page overview of all 15 foundational GenAI papers for quick lookup.
 ### 2021
 - **CLIP** - Vision-language alignment
 - **LoRA** - Efficient fine-tuning
+- **Switch Transformer** - Sparse MoE with top-1 routing; trillion-parameter scale
+- **AlphaFold 2** - Protein structure prediction; transformers beyond language
 
 ### 2022 (Alignment & Practical Year)
 - **InstructGPT** - RLHF for alignment
@@ -363,6 +396,6 @@ Predictable across 7+ orders of magnitude
 
 ---
 
-**Updated:** 2025-10-19
-**Total Papers:** 15
-**Total Reading Time:** 12-15 hours (summaries only)
+**Updated:** 2026-06-10
+**Total Papers:** 24
+**Total Reading Time:** 15-20 hours (summaries only)

@@ -7,7 +7,7 @@ authors: "Dzmitry Bahdanau, Kyunghyun Cho, Yoshua Bengio"
 published: "September 2014 (ICLR 2015)"
 year: 2014
 url: "https://arxiv.org/abs/1409.0473"
-tags: [architectures]
+tags: ["attention", "architecture"]
 ---
 
 # Neural Machine Translation by Jointly Learning to Align and Translate (Bahdanau Attention)

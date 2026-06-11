@@ -7,7 +7,7 @@ authors: "Timo Schick, Jane Dwivedi-Yu, et al. (Meta AI Research)"
 published: "February 2023"
 year: 2023
 url: "https://arxiv.org/abs/2302.04761"
-tags: [techniques]
+tags: ["agents", "tool-use"]
 ---
 
 # Toolformer: Language Models Can Teach Themselves to Use Tools

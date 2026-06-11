@@ -7,7 +7,7 @@ authors: "Anthropic"
 published: "Claude 4 (June 2025), Opus 4.1 (August 2025), Sonnet 4.5 (September 2025), Opus 4.5 (November 2025), Opus 4.6 (February 2026)"
 year: 2025
 url: "https://www.anthropic.com/news/claude-4"
-tags: [language-models]
+tags: ["language-model", "agents"]
 ---
 
 # Claude 4 Family: The Agentic AI Leader

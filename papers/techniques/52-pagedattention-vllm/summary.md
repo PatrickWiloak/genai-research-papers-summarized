@@ -7,7 +7,7 @@ authors: "Woosuk Kwon, Zhuohan Li, Sicheng Zhuang, et al. (UC Berkeley)"
 published: "September 2023 (SOSP 2023)"
 year: 2023
 url: "https://arxiv.org/abs/2309.06180"
-tags: [techniques]
+tags: ["efficiency", "inference-optimization"]
 ---
 
 # PagedAttention: Efficient LLM Serving with vLLM

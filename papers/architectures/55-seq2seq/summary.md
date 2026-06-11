@@ -7,7 +7,7 @@ authors: "Ilya Sutskever, Oriol Vinyals, Quoc V. Le (Google)"
 published: "September 2014 (NeurIPS 2014)"
 year: 2014
 url: "https://arxiv.org/abs/1409.3215"
-tags: [architectures]
+tags: ["architecture"]
 ---
 
 # Sequence to Sequence Learning with Neural Networks (Seq2Seq)

@@ -7,7 +7,7 @@ authors: "Patrick Lewis, Ethan Perez, Aleksandra Piktus, et al. (Facebook AI Res
 published: "May 2020 (NeurIPS 2020)"
 year: 2020
 url: "https://arxiv.org/abs/2005.11401"
-tags: [techniques]
+tags: ["retrieval"]
 ---
 
 # Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (RAG)

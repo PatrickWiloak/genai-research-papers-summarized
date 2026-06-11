@@ -42,6 +42,80 @@ CATEGORY_TITLES = {
     "techniques": "Techniques & Methods",
 }
 
+# Curated topic tags per slug (a controlled vocabulary, kebab-case). These
+# power the `tags:` frontmatter and the generated TAGS.md tag-filtered index.
+# A paper with no entry falls back to its category as a single tag.
+TOPICS: dict[str, list[str]] = {
+    "01-attention-is-all-you-need": ["transformers", "attention", "architecture"],
+    "02-generative-adversarial-networks": ["image-generation", "gan"],
+    "03-bert": ["language-model", "pretraining"],
+    "04-gpt3-few-shot-learners": ["language-model", "scaling", "pretraining"],
+    "05-instructgpt-rlhf": ["alignment", "rlhf", "instruction-tuning"],
+    "06-diffusion-models": ["image-generation", "diffusion"],
+    "07-stable-diffusion": ["image-generation", "diffusion", "efficiency"],
+    "08-clip": ["multimodal", "vision"],
+    "09-chain-of-thought": ["reasoning", "chain-of-thought"],
+    "10-lora": ["efficiency", "fine-tuning"],
+    "11-vision-transformer": ["vision", "transformers", "architecture"],
+    "12-scaling-laws": ["scaling"],
+    "13-rag": ["retrieval"],
+    "14-constitutional-ai": ["alignment", "safety"],
+    "15-llama": ["language-model", "pretraining"],
+    "16-flash-attention": ["efficiency", "attention", "inference-optimization"],
+    "17-llama2": ["language-model", "alignment", "rlhf"],
+    "18-chinchilla": ["scaling"],
+    "19-dpo": ["alignment", "preference-optimization"],
+    "20-mamba": ["architecture", "state-space", "efficiency", "long-context"],
+    "21-react": ["agents", "tool-use", "reasoning"],
+    "22-qlora": ["efficiency", "fine-tuning", "quantization"],
+    "23-gpt4v": ["multimodal", "vision"],
+    "24-toolformer": ["agents", "tool-use"],
+    "25-tree-of-thoughts": ["reasoning"],
+    "26-deepseek-r1": ["reasoning", "reinforcement-learning"],
+    "27-deepseek-v3": ["language-model", "moe", "efficiency"],
+    "28-qwen3": ["language-model", "reasoning"],
+    "29-gemini-2.5": ["multimodal", "long-context"],
+    "30-claude-3.5-sonnet": ["language-model", "agents"],
+    "31-openai-o1": ["reasoning", "test-time-compute"],
+    "32-sam2": ["vision"],
+    "33-llama3.3": ["language-model", "efficiency"],
+    "34-meta-cot": ["reasoning", "chain-of-thought"],
+    "35-rstar-math": ["reasoning"],
+    "36-gpt4": ["language-model", "multimodal"],
+    "37-mixture-of-experts": ["moe", "architecture", "efficiency"],
+    "38-grpo": ["reinforcement-learning", "alignment"],
+    "39-rlvr": ["reinforcement-learning", "reasoning"],
+    "40-gpt4o": ["multimodal", "audio", "vision"],
+    "41-llama4": ["language-model", "moe", "multimodal"],
+    "42-gpt5": ["language-model", "reasoning"],
+    "43-claude4": ["language-model", "agents"],
+    "44-sora-dit": ["video-generation", "diffusion"],
+    "45-speculative-decoding": ["efficiency", "inference-optimization"],
+    "46-llava": ["multimodal", "vision", "instruction-tuning"],
+    "47-gemini3": ["multimodal"],
+    "48-dalle3": ["image-generation", "diffusion"],
+    "49-whisper": ["audio"],
+    "50-test-time-compute": ["reasoning", "test-time-compute", "scaling"],
+    "51-process-reward-models": ["reasoning", "alignment"],
+    "52-pagedattention-vllm": ["efficiency", "inference-optimization"],
+    "53-word2vec": ["embeddings"],
+    "54-rope-rotary-position-embedding": ["position-encoding", "attention"],
+    "55-seq2seq": ["architecture"],
+    "56-codex": ["code", "language-model"],
+    "57-vae": ["image-generation", "vae"],
+    "58-generative-agents": ["agents"],
+    "59-model-context-protocol": ["agents", "tool-use"],
+    "60-graph-rag": ["retrieval"],
+    "61-alphageometry": ["reasoning", "science"],
+    "62-alphaevolve": ["agents", "science", "code"],
+    "63-ppo": ["reinforcement-learning", "alignment"],
+    "64-gpt2": ["language-model", "scaling", "pretraining"],
+    "65-t5": ["language-model", "architecture", "pretraining"],
+    "66-bahdanau-attention": ["attention", "architecture"],
+    "67-switch-transformer": ["moe", "architecture", "scaling"],
+    "68-alphafold": ["science", "attention"],
+}
+
 FRONTMATTER_RE = re.compile(r"^---\s*\n.*?\n---\s*\n", re.DOTALL)
 TITLE_RE = re.compile(r"^#\s+(.+?)\s*$", re.MULTILINE)
 AUTHORS_RE = re.compile(
@@ -124,6 +198,7 @@ def parse_summary(path: Path) -> dict:
         "published": published,
         "year": year,
         "url": pick_url(block),
+        "topics": TOPICS.get(slug, [category]),
         "path": str(path.relative_to(ROOT)).replace("\\", "/"),
         "_file": path,
         "_body": body,
@@ -148,7 +223,8 @@ def build_frontmatter(p: dict) -> str:
         lines.append(f"year: {p['year']}")
     if p["url"]:
         lines.append(f"url: {s(p['url'])}")
-    lines.append(f"tags: [{p['category']}]")
+    tags = ", ".join(s(t) for t in p["topics"])
+    lines.append(f"tags: [{tags}]")
     lines.append("---")
     return "\n".join(lines) + "\n\n"
 
@@ -165,8 +241,10 @@ def write_frontmatter(papers: list[dict]) -> int:
 
 
 def public_record(p: dict) -> dict:
-    return {k: p[k] for k in
-            ("number", "title", "slug", "category", "authors", "published", "year", "url", "path")}
+    rec = {k: p[k] for k in
+           ("number", "title", "slug", "category", "authors", "published", "year", "url", "path")}
+    rec["topics"] = p["topics"]
+    return rec
 
 
 def write_json(papers: list[dict]) -> None:
@@ -181,12 +259,14 @@ def write_json(papers: list[dict]) -> None:
 
 
 def write_csv(papers: list[dict]) -> None:
-    cols = ["number", "category", "title", "authors", "year", "published", "url", "path"]
+    cols = ["number", "category", "title", "authors", "year", "published", "topics", "url", "path"]
     with (ROOT / "papers.csv").open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
         w.writeheader()
         for p in papers:
-            w.writerow(public_record(p))
+            row = public_record(p)
+            row["topics"] = ";".join(row["topics"])
+            w.writerow(row)
 
 
 def write_index(papers: list[dict]) -> None:
@@ -213,6 +293,37 @@ def write_index(papers: list[dict]) -> None:
             lines.append(f"| {num} | {link} | {year} | {src} |")
         lines.append("")
     (ROOT / "INDEX.md").write_text("\n".join(lines), encoding="utf-8")
+
+
+def write_tags(papers: list[dict]) -> None:
+    """Generate TAGS.md: a tag-filtered index grouping papers by topic."""
+    tag_to_papers: dict[str, list[dict]] = {}
+    for p in papers:
+        for t in p["topics"]:
+            tag_to_papers.setdefault(t, []).append(p)
+
+    total_tags = len(tag_to_papers)
+    lines = [
+        "# Browse by Topic",
+        "",
+        f"All **{len(papers)}** papers grouped by **{total_tags}** topic tags. "
+        "A paper appears under each of its tags. Generated by "
+        "`scripts/build_manifest.py` - do not edit by hand.",
+        "",
+        "**Jump to:** " + " · ".join(
+            f"[{t}](#{t})" for t in sorted(tag_to_papers)),
+        "",
+    ]
+    for tag in sorted(tag_to_papers):
+        group = sorted(tag_to_papers[tag], key=lambda q: q["number"] or 0)
+        lines.append(f"## {tag}")
+        lines.append("")
+        for p in group:
+            num = f"{p['number']:02d} " if p["number"] is not None else ""
+            year = f" ({p['year']})" if p["year"] else ""
+            lines.append(f"- {num}[{p['title']}]({p['path']}){year}")
+        lines.append("")
+    (ROOT / "TAGS.md").write_text("\n".join(lines), encoding="utf-8")
 
 
 MKDOCS_HEADER = """\
@@ -284,7 +395,7 @@ def build_site_tree(papers: list[dict]) -> None:
     site.mkdir()
 
     # Markdown pages plus the data/license files the README and pages link to.
-    for name in ("README.md", "BROWSE.md", "INDEX.md", "CONTRIBUTING.md",
+    for name in ("README.md", "BROWSE.md", "INDEX.md", "TAGS.md", "CONTRIBUTING.md",
                  "papers.json", "papers.csv", "LICENSE"):
         src = ROOT / name
         if src.exists():
@@ -311,6 +422,7 @@ def write_mkdocs(papers: list[dict]) -> None:
     nav.append("  - Home: README.md")
     nav.append("  - Browse: BROWSE.md")
     nav.append("  - Index: INDEX.md")
+    nav.append("  - By Topic: TAGS.md")
     nav.append("  - Guides:")
     nav.append("      - Learning Roadmap: docs/ROADMAP.md")
     nav.append("      - Reading Guide: docs/READING_GUIDE.md")
@@ -341,6 +453,7 @@ def main() -> None:
     write_json(papers)
     write_csv(papers)
     write_index(papers)
+    write_tags(papers)
     write_mkdocs(papers)
     build_site_tree(papers)
 
@@ -352,7 +465,7 @@ def main() -> None:
         print(f"WARN no source URL parsed: {', '.join(missing_url)}")
     if missing_year:
         print(f"WARN no year parsed: {', '.join(missing_year)}")
-    print("Wrote papers.json, papers.csv, INDEX.md, mkdocs.yml, site-build/")
+    print("Wrote papers.json, papers.csv, INDEX.md, TAGS.md, mkdocs.yml, site-build/")
 
 
 if __name__ == "__main__":

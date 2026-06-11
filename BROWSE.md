@@ -10,7 +10,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 <tr>
 <td width="33%">
 
-**[Attention Is All You Need](./papers/architectures/01-attention-is-all-you-need/)** (2017)
+**[Attention Is All You Need](./papers/architectures/01-attention-is-all-you-need/summary.md)** (2017)
 - 🔥 **CRITICAL** - Foundation of everything
 - Introduced Transformer architecture
 - Self-attention mechanism
@@ -19,7 +19,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="33%">
 
-**[Vision Transformer (ViT)](./papers/architectures/11-vision-transformer/)** (2020)
+**[Vision Transformer (ViT)](./papers/architectures/11-vision-transformer/summary.md)** (2020)
 - ⭐ **HIGH** - Transformers for computer vision
 - Images as patch sequences
 - Enables multimodal models
@@ -28,7 +28,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="33%">
 
-**[Mamba](./papers/architectures/20-mamba/)** (2023)
+**[Mamba](./papers/architectures/20-mamba/summary.md)** (2023)
 - 🔥 **CRITICAL** - First viable Transformer alternative
 - Linear-time sequence modeling (O(n) vs O(n²))
 - Selective state spaces
@@ -46,7 +46,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 <tr>
 <td width="33%">
 
-**[BERT](./papers/language-models/03-bert/)** (2018)
+**[BERT](./papers/language-models/03-bert/summary.md)** (2018)
 - 📚 **HISTORICAL** - Pre-training revolution
 - Bidirectional pre-training
 - Masked language modeling
@@ -55,7 +55,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="33%">
 
-**[GPT-3](./papers/language-models/04-gpt3-few-shot-learners/)** (2020)
+**[GPT-3](./papers/language-models/04-gpt3-few-shot-learners/summary.md)** (2020)
 - ⭐ **HIGH** - Few-shot learning paradigm
 - 175B parameters
 - Foundation for ChatGPT
@@ -64,7 +64,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="33%">
 
-**[InstructGPT (RLHF)](./papers/language-models/05-instructgpt-rlhf/)** (2022)
+**[InstructGPT (RLHF)](./papers/language-models/05-instructgpt-rlhf/summary.md)** (2022)
 - 🔥 **CRITICAL** - Human preference learning
 - Enabled ChatGPT
 - RLHF methodology
@@ -75,7 +75,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 <tr>
 <td width="33%">
 
-**[Constitutional AI](./papers/language-models/14-constitutional-ai/)** (2022)
+**[Constitutional AI](./papers/language-models/14-constitutional-ai/summary.md)** (2022)
 - ⭐ **HIGH** - Alternative to RLHF
 - AI self-critique via principles
 - Powers Claude
@@ -84,7 +84,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="33%">
 
-**[LLaMA](./papers/language-models/15-llama/)** (2023)
+**[LLaMA](./papers/language-models/15-llama/summary.md)** (2023)
 - 🔥 **CRITICAL** - Compute-optimal training
 - 13B matches GPT-3 175B
 - Open weights
@@ -93,7 +93,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="33%">
 
-**[LLaMA 2](./papers/language-models/17-llama2/)** (2023)
+**[LLaMA 2](./papers/language-models/17-llama2/summary.md)** (2023)
 - 🔥 **CRITICAL** - Production-ready open model
 - Commercial license
 - RLHF alignment
@@ -104,7 +104,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 <tr>
 <td width="33%">
 
-**[DPO](./papers/language-models/19-dpo/)** (2023)
+**[DPO](./papers/language-models/19-dpo/summary.md)** (2023)
 - 🔥 **CRITICAL** - Simpler than RLHF
 - Direct preference optimization
 - No reward model needed
@@ -113,7 +113,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="33%">
 
-**[DeepSeek-R1](./papers/language-models/26-deepseek-r1/)** (2025)
+**[DeepSeek-R1](./papers/language-models/26-deepseek-r1/summary.md)** (2025)
 - 🔥 **CRITICAL** - Pure RL reasoning
 - Matches OpenAI o1
 - Fully open source
@@ -122,7 +122,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="33%">
 
-**[DeepSeek-V3](./papers/language-models/27-deepseek-v3/)** (2024)
+**[DeepSeek-V3](./papers/language-models/27-deepseek-v3/summary.md)** (2024)
 - 🔥 **CRITICAL** - $5.76M training cost
 - 671B MoE architecture
 - Matches GPT-4 efficiency
@@ -133,7 +133,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 <tr>
 <td width="33%">
 
-**[Qwen3](./papers/language-models/28-qwen3/)** (2025)
+**[Qwen3](./papers/language-models/28-qwen3/summary.md)** (2025)
 - 🔥 **CRITICAL** - Unified thinking/non-thinking
 - Adaptive reasoning modes
 - Best of both worlds
@@ -142,7 +142,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="33%">
 
-**[Claude 3.5 Sonnet](./papers/language-models/30-claude-3.5-sonnet/)** (2024)
+**[Claude 3.5 Sonnet](./papers/language-models/30-claude-3.5-sonnet/summary.md)** (2024)
 - 🔥 **CRITICAL** - Computer use capability
 - Best coding model (49% SWE-Bench)
 - AI controls computers
@@ -151,7 +151,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="33%">
 
-**[OpenAI o1](./papers/language-models/31-openai-o1/)** (2024)
+**[OpenAI o1](./papers/language-models/31-openai-o1/summary.md)** (2024)
 - 🔥 **CRITICAL** - Started reasoning model era
 - PhD-level performance
 - RL for reasoning
@@ -162,7 +162,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 <tr>
 <td width="33%">
 
-**[LLaMA 3.3](./papers/language-models/33-llama3.3/)** (2024)
+**[LLaMA 3.3](./papers/language-models/33-llama3.3/summary.md)** (2024)
 - 🔥 **HIGH** - Distillation breakthrough
 - 70B matches 405B performance
 - Knowledge transfer success
@@ -180,7 +180,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 <tr>
 <td width="33%">
 
-**[GANs](./papers/image-generation/02-generative-adversarial-networks/)** (2014)
+**[GANs](./papers/image-generation/02-generative-adversarial-networks/summary.md)** (2014)
 - 📚 **HISTORICAL** - Generative modeling origins
 - Adversarial training
 - Generator vs discriminator
@@ -189,7 +189,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="33%">
 
-**[Diffusion Models (DDPM)](./papers/image-generation/06-diffusion-models/)** (2020)
+**[Diffusion Models (DDPM)](./papers/image-generation/06-diffusion-models/summary.md)** (2020)
 - 📖 **THEORY** - Diffusion foundations
 - Iterative denoising
 - Better than GANs
@@ -198,7 +198,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="33%">
 
-**[Stable Diffusion](./papers/image-generation/07-stable-diffusion/)** (2022)
+**[Stable Diffusion](./papers/image-generation/07-stable-diffusion/summary.md)** (2022)
 - ⭐ **HIGH** - Practical implementation
 - Latent space diffusion (10-100× faster)
 - Open-source, democratized AI art
@@ -216,7 +216,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 <tr>
 <td width="50%">
 
-**[CLIP](./papers/multimodal/08-clip/)** (2021)
+**[CLIP](./papers/multimodal/08-clip/summary.md)** (2021)
 - ⭐ **HIGH** - Vision-language bridge
 - Vision-language contrastive learning
 - Zero-shot image classification
@@ -226,7 +226,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="50%">
 
-**[GPT-4V(ision)](./papers/multimodal/23-gpt4v/)** (2023)
+**[GPT-4V(ision)](./papers/multimodal/23-gpt4v/summary.md)** (2023)
 - 🔥 **CRITICAL** - Multimodal frontier model
 - GPT-4 with vision capabilities
 - State-of-the-art VQA and OCR
@@ -238,7 +238,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 <tr>
 <td width="50%">
 
-**[Gemini 2.5](./papers/multimodal/29-gemini-2.5/)** (2025)
+**[Gemini 2.5](./papers/multimodal/29-gemini-2.5/summary.md)** (2025)
 - 🔥 **CRITICAL** - Most advanced multimodal AI
 - Native multimodal (text, image, audio, video)
 - 1M context, 3-hour video understanding
@@ -248,7 +248,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="50%">
 
-**[SAM 2](./papers/multimodal/32-sam2/)** (2024)
+**[SAM 2](./papers/multimodal/32-sam2/summary.md)** (2024)
 - 🔥 **HIGH** - Universal video segmentation
 - 44 FPS real-time performance
 - Zero-shot generalization
@@ -267,7 +267,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 <tr>
 <td width="33%">
 
-**[Chain-of-Thought](./papers/techniques/09-chain-of-thought/)** (2022)
+**[Chain-of-Thought](./papers/techniques/09-chain-of-thought/summary.md)** (2022)
 - 🔥 **CRITICAL** - Reasoning breakthrough
 - Step-by-step reasoning prompts
 - "Let's think step by step"
@@ -277,7 +277,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="33%">
 
-**[LoRA](./papers/techniques/10-lora/)** (2021)
+**[LoRA](./papers/techniques/10-lora/summary.md)** (2021)
 - 🔥 **CRITICAL** - Efficient fine-tuning
 - Low-rank adaptation
 - 10,000× fewer trainable parameters
@@ -287,7 +287,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="33%">
 
-**[Scaling Laws](./papers/techniques/12-scaling-laws/)** (2020)
+**[Scaling Laws](./papers/techniques/12-scaling-laws/summary.md)** (2020)
 - 🔥 **CRITICAL** - Predictive theory
 - Predictable power laws
 - Guides compute allocation
@@ -299,7 +299,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 <tr>
 <td width="33%">
 
-**[RAG](./papers/techniques/13-rag/)** (2020)
+**[RAG](./papers/techniques/13-rag/summary.md)** (2020)
 - 🔥 **CRITICAL** - Production standard
 - Retrieval-augmented generation
 - Reduces hallucinations
@@ -309,7 +309,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="33%">
 
-**[FlashAttention](./papers/techniques/16-flash-attention/)** (2022)
+**[FlashAttention](./papers/techniques/16-flash-attention/summary.md)** (2022)
 - 🔥 **CRITICAL** - IO-aware attention
 - 10-20× faster than standard attention
 - Enables 64k+ context lengths
@@ -319,7 +319,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="33%">
 
-**[Chinchilla](./papers/techniques/18-chinchilla/)** (2022)
+**[Chinchilla](./papers/techniques/18-chinchilla/summary.md)** (2022)
 - 🔥 **CRITICAL** - Rewrote scaling laws
 - Equal scaling of params and tokens
 - Proved GPT-3 was undertrained 4×
@@ -331,7 +331,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 <tr>
 <td width="33%">
 
-**[ReAct](./papers/techniques/21-react/)** (2023)
+**[ReAct](./papers/techniques/21-react/summary.md)** (2023)
 - 🔥 **CRITICAL** - AI agents foundation
 - Synergizing reasoning and acting
 - Interleaves thought and action
@@ -341,7 +341,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="33%">
 
-**[QLoRA](./papers/techniques/22-qlora/)** (2023)
+**[QLoRA](./papers/techniques/22-qlora/summary.md)** (2023)
 - 🔥 **CRITICAL** - Efficient fine-tuning at scale
 - 4-bit quantization + LoRA
 - Fine-tune 65B on consumer GPU
@@ -351,7 +351,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="33%">
 
-**[Toolformer](./papers/techniques/24-toolformer/)** (2023)
+**[Toolformer](./papers/techniques/24-toolformer/summary.md)** (2023)
 - ⭐ **HIGH** - Self-taught tool use
 - LLMs learn to use tools automatically
 - No manual annotations needed
@@ -363,7 +363,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 <tr>
 <td width="33%">
 
-**[Tree of Thoughts](./papers/techniques/25-tree-of-thoughts/)** (2023)
+**[Tree of Thoughts](./papers/techniques/25-tree-of-thoughts/summary.md)** (2023)
 - ⭐ **HIGH** - Advanced reasoning
 - Tree search over reasoning paths
 - Deliberate problem solving
@@ -373,7 +373,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="33%">
 
-**[Meta-CoT](./papers/techniques/34-meta-cot/)** (2025)
+**[Meta-CoT](./papers/techniques/34-meta-cot/summary.md)** (2025)
 - 🔥 **HIGH** - System 2 reasoning
 - Metacognitive strategies
 - Deliberate problem-solving
@@ -383,7 +383,7 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 </td>
 <td width="33%">
 
-**[rStar-Math](./papers/techniques/35-rstar-math/)** (2025)
+**[rStar-Math](./papers/techniques/35-rstar-math/summary.md)** (2025)
 - 🔥 **HIGH** - Small models rival large ones
 - MCTS for math reasoning
 - 7B model beats 70B+ competitors

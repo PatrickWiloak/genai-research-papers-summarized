@@ -7,7 +7,7 @@ authors: "Mark Chen, Jerry Tworek, Heewoo Jun, Qiming Yuan, Henrique Ponde de Ol
 published: "July 2021"
 year: 2021
 url: "https://arxiv.org/abs/2107.03374"
-tags: [language-models]
+tags: ["code", "language-model"]
 ---
 
 # Codex: Evaluating Large Language Models Trained on Code

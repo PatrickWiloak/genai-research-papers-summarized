@@ -7,7 +7,7 @@ authors: "Long Ouyang, Jeff Wu, Xu Jiang, et al. (OpenAI)"
 published: "March 2022"
 year: 2022
 url: "https://arxiv.org/abs/2203.02155"
-tags: [language-models]
+tags: ["alignment", "rlhf", "instruction-tuning"]
 ---
 
 # Training Language Models to Follow Instructions with Human Feedback (InstructGPT)

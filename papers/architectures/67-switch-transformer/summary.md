@@ -7,7 +7,7 @@ authors: "William Fedus, Barret Zoph, Noam Shazeer (Google)"
 published: "January 2021 (JMLR 2022)"
 year: 2021
 url: "https://arxiv.org/abs/2101.03961"
-tags: [architectures]
+tags: ["moe", "architecture", "scaling"]
 ---
 
 # Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity

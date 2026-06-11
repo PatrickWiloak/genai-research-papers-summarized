@@ -7,7 +7,7 @@ authors: "Hugo Touvron, Louis Martin, et al. (Meta AI)"
 published: "July 2023"
 year: 2023
 url: "https://arxiv.org/abs/2307.09288"
-tags: [language-models]
+tags: ["language-model", "alignment", "rlhf"]
 ---
 
 # LLaMA 2: Open Foundation and Fine-Tuned Chat Models

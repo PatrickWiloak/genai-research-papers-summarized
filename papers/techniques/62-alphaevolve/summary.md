@@ -7,7 +7,7 @@ authors: "Alexander Novikov, Ngan Vu, Marvin Eisenberger, et al. (Google DeepMin
 published: "May 2025"
 year: 2025
 url: "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
-tags: [techniques]
+tags: ["agents", "science", "code"]
 ---
 
 # AlphaEvolve: A Gemini-Powered Coding Agent for Designing Advanced Algorithms

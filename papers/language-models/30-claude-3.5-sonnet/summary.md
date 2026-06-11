@@ -7,7 +7,7 @@ authors: "Anthropic"
 published: "October 22, 2024"
 year: 2024
 url: "https://www.anthropic.com/news/3-5-models-and-computer-use"
-tags: [language-models]
+tags: ["language-model", "agents"]
 ---
 
 # Claude 3.5 Sonnet: Computer Use and Enhanced Capabilities
