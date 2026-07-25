@@ -17,7 +17,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SKIP_DIRS = {"site-build", "site", "_site", "graphify-out", "node_modules",
+SKIP_DIRS = {"site-build", "site", "_site", "node_modules",
              ".git", ".github", "venv", "__pycache__"}
 
 FENCE_RE = re.compile(r"```.*?```", re.DOTALL)
