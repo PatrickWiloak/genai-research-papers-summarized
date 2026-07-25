@@ -4,7 +4,6 @@ __pycache__/
 *.swp
 .vscode/
 .idea/
-graphify-out/
 
 # MkDocs: generated docs tree (site-build/) and rendered output (site/, _site/)
 /site-build/
