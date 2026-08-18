@@ -864,5 +864,6 @@ def evaluate_cached(state, thought):
 - [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (RAG)](../../techniques/13-rag/summary.md)
 - [ReAct: Synergizing Reasoning and Acting in Language Models](../../techniques/21-react/summary.md)
 - [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [Self-Consistency Improves Chain of Thought Reasoning in Language Models](../../techniques/77-self-consistency/summary.md)
 
 <!-- related:end -->

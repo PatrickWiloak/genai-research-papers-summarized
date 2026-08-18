@@ -362,5 +362,6 @@ T5's influence runs through nearly every major model family that followed:
 - [Mixtral of Experts (and the Mixture-of-Experts Architecture)](../../architectures/37-mixture-of-experts/summary.md)
 - [Speculative Decoding: Fast Inference from Transformers](../../techniques/45-speculative-decoding/summary.md)
 - [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](../../architectures/67-switch-transformer/summary.md)
+- [FLAN: Finetuned Language Models Are Zero-Shot Learners (Instruction Tuning)](../../techniques/80-flan/summary.md)
 
 <!-- related:end -->

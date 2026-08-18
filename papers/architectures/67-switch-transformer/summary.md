@@ -252,5 +252,7 @@ Switch Transformers established the template that later MoE LLMs refined and dep
 - [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
 - [Mixtral of Experts (and the Mixture-of-Experts Architecture)](../../architectures/37-mixture-of-experts/summary.md)
 - [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer (T5)](../../language-models/65-t5/summary.md)
+- [Deep Residual Learning for Image Recognition (ResNet)](../../architectures/73-resnet/summary.md)
+- [ZeRO and Megatron-LM: How Trillion-Parameter Models Are Actually Trained](../../techniques/76-zero-megatron/summary.md)
 
 <!-- related:end -->

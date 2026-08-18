@@ -765,5 +765,6 @@ Defensibility comes from:
 - [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](../../techniques/16-flash-attention/summary.md)
 - [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](../../techniques/25-tree-of-thoughts/summary.md)
 - [AlphaGeometry: Solving Olympiad Geometry Without Human Demonstrations](../../techniques/61-alphageometry/summary.md)
+- [Reflexion: Language Agents with Verbal Reinforcement Learning](../../techniques/78-reflexion/summary.md)
 
 <!-- related:end -->

@@ -51,6 +51,29 @@ markdown_extensions:
 plugins:
   - search
 
+copyright: >-
+  Built by <a href="https://patrickwiloak.com">Patrick Wiloak</a> at
+  <a href="https://noblerworks.com/">Nobler Works</a>. Practice what you read at
+  <a href="https://gitgood.dev">gitGood.dev</a>. Summaries CC BY 4.0.
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/PatrickWiloak/genai-research-papers-summarized
+      name: This repository on GitHub
+    - icon: fontawesome/solid/graduation-cap
+      link: https://gitgood.dev
+      name: gitGood.dev - practice and certification prep
+    - icon: fontawesome/solid/globe
+      link: https://noblerworks.com/
+      name: Nobler Works
+    - icon: fontawesome/brands/youtube
+      link: https://youtube.com/@patrickwiloak
+      name: Patrick Wiloak on YouTube
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/patricklukewilson/
+      name: Patrick Wiloak on LinkedIn
+
 nav:
   - Home: README.md
   - Browse: BROWSE.md
@@ -62,6 +85,7 @@ nav:
       - Quick Reference: docs/QUICK_REFERENCE.md
       - Comparisons: docs/COMPARISONS.md
       - Glossary: docs/GLOSSARY.md
+      - Coverage & Gaps: docs/GAPS.md
   - Papers:
       - Architectures:
           - "Attention Is All You Need": papers/architectures/01-attention-is-all-you-need/summary.md
@@ -71,6 +95,9 @@ nav:
           - "Sequence to Sequence Learning with Neural Networks (Seq2Seq)": papers/architectures/55-seq2seq/summary.md
           - "Neural Machine Translation by Jointly Learning to Align and Translate (Bahdanau Attention)": papers/architectures/66-bahdanau-attention/summary.md
           - "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity": papers/architectures/67-switch-transformer/summary.md
+          - "Deep Residual Learning for Image Recognition (ResNet)": papers/architectures/73-resnet/summary.md
+          - "U-Net: Convolutional Networks for Biomedical Image Segmentation": papers/architectures/74-unet/summary.md
+          - "GQA: Grouped-Query Attention (and Multi-Query Attention)": papers/architectures/75-grouped-query-attention/summary.md
       - Language Models:
           - "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding": papers/language-models/03-bert/summary.md
           - "Language Models are Few-Shot Learners (GPT-3)": papers/language-models/04-gpt3-few-shot-learners/summary.md
@@ -100,6 +127,10 @@ nav:
           - "Sora and Diffusion Transformers (DiT): Video Generation as World Simulation": papers/image-generation/44-sora-dit/summary.md
           - "DALL-E 3: Improving Image Generation with Better Captions": papers/image-generation/48-dalle3/summary.md
           - "Auto-Encoding Variational Bayes (VAE)": papers/image-generation/57-vae/summary.md
+          - "Classifier-Free Diffusion Guidance": papers/image-generation/69-classifier-free-guidance/summary.md
+          - "Denoising Diffusion Implicit Models (DDIM)": papers/image-generation/70-ddim/summary.md
+          - "ControlNet: Adding Conditional Control to Text-to-Image Diffusion Models": papers/image-generation/71-controlnet/summary.md
+          - "Flow Matching and Rectified Flow: The New Default for Image Generation (Stable Diffusion 3)": papers/image-generation/72-flow-matching-sd3/summary.md
       - Multimodal:
           - "Learning Transferable Visual Models From Natural Language Supervision (CLIP)": papers/multimodal/08-clip/summary.md
           - "GPT-4V(ision): System Card": papers/multimodal/23-gpt4v/summary.md
@@ -136,4 +167,16 @@ nav:
           - "AlphaEvolve: A Gemini-Powered Coding Agent for Designing Advanced Algorithms": papers/techniques/62-alphaevolve/summary.md
           - "Proximal Policy Optimization Algorithms (PPO)": papers/techniques/63-ppo/summary.md
           - "Highly Accurate Protein Structure Prediction with AlphaFold (AlphaFold 2)": papers/techniques/68-alphafold/summary.md
+          - "ZeRO and Megatron-LM: How Trillion-Parameter Models Are Actually Trained": papers/techniques/76-zero-megatron/summary.md
+          - "Self-Consistency Improves Chain of Thought Reasoning in Language Models": papers/techniques/77-self-consistency/summary.md
+          - "Reflexion: Language Agents with Verbal Reinforcement Learning": papers/techniques/78-reflexion/summary.md
+          - "Self-Instruct: Aligning Language Models with Self-Generated Instructions": papers/techniques/79-self-instruct/summary.md
+          - "FLAN: Finetuned Language Models Are Zero-Shot Learners (Instruction Tuning)": papers/techniques/80-flan/summary.md
+          - "Emergent Abilities of Large Language Models (and the Mirage Rebuttal)": papers/techniques/81-emergent-abilities/summary.md
+          - "Sparse Autoencoders and Monosemanticity: Reading the Features Inside a Model": papers/techniques/82-sparse-autoencoders/summary.md
+          - "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training": papers/techniques/83-sleeper-agents/summary.md
+          - "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?": papers/techniques/84-swe-bench/summary.md
+          - "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena": papers/techniques/85-llm-as-judge/summary.md
+          - "GPTQ and AWQ: Post-Training Quantization for Large Language Models": papers/techniques/86-gptq-awq-quantization/summary.md
+          - "Dense Passage Retrieval, ColBERT, and Sentence-BERT: The Retrieval Half of RAG": papers/techniques/87-dense-retrieval/summary.md
   - Contributing: CONTRIBUTING.md

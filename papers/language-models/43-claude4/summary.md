@@ -504,5 +504,6 @@ Sonnet is more cost-effective but less capable
 - [GPT-4o: The First Omni Model](../../language-models/40-gpt4o/summary.md)
 - [GPT-5: Unified Intelligence](../../language-models/42-gpt5/summary.md)
 - [Gemini 3: Google's Most Capable AI Model](../../multimodal/47-gemini3/summary.md)
+- [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](../../techniques/84-swe-bench/summary.md)
 
 <!-- related:end -->

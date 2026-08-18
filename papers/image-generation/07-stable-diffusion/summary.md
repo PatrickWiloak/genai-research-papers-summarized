@@ -659,5 +659,8 @@ Negative: "blurry, low quality, deformed, ugly, bad anatomy"
 - [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale (Vision Transformer)](../../architectures/11-vision-transformer/summary.md)
 - [DALL-E 3: Improving Image Generation with Better Captions](../../image-generation/48-dalle3/summary.md)
 - [Auto-Encoding Variational Bayes (VAE)](../../image-generation/57-vae/summary.md)
+- [Classifier-Free Diffusion Guidance](../../image-generation/69-classifier-free-guidance/summary.md)
+- [Denoising Diffusion Implicit Models (DDIM)](../../image-generation/70-ddim/summary.md)
+- [ControlNet: Adding Conditional Control to Text-to-Image Diffusion Models](../../image-generation/71-controlnet/summary.md)
 
 <!-- related:end -->

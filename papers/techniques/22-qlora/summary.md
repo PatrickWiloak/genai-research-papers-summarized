@@ -247,5 +247,6 @@ The broader effect was structural: QLoRA made it economically viable for small t
 - [LoRA: Low-Rank Adaptation of Large Language Models](../../techniques/10-lora/summary.md)
 - [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
 - [LLaVA: Visual Instruction Tuning](../../multimodal/46-llava/summary.md)
+- [GPTQ and AWQ: Post-Training Quantization for Large Language Models](../../techniques/86-gptq-awq-quantization/summary.md)
 
 <!-- related:end -->

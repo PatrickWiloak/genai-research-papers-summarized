@@ -704,5 +704,6 @@ Generalizing beyond training distribution.
 - [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale (Vision Transformer)](../../architectures/11-vision-transformer/summary.md)
 - [DALL-E 3: Improving Image Generation with Better Captions](../../image-generation/48-dalle3/summary.md)
 - [Language Models are Unsupervised Multitask Learners (GPT-2)](../../language-models/64-gpt2/summary.md)
+- [Deep Residual Learning for Image Recognition (ResNet)](../../architectures/73-resnet/summary.md)
 
 <!-- related:end -->

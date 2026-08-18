@@ -481,5 +481,6 @@ Best for persistent serving, not one-off inference
 
 - [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](../../techniques/16-flash-attention/summary.md)
 - [Speculative Decoding: Fast Inference from Transformers](../../techniques/45-speculative-decoding/summary.md)
+- [GQA: Grouped-Query Attention (and Multi-Query Attention)](../../architectures/75-grouped-query-attention/summary.md)
 
 <!-- related:end -->

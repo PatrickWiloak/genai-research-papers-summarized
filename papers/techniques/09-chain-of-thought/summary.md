@@ -655,5 +655,6 @@ Bad: We begin by considering the first number, which is 3.
 - [Language Models are Few-Shot Learners (GPT-3)](../../language-models/04-gpt3-few-shot-learners/summary.md)
 - [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](../../techniques/25-tree-of-thoughts/summary.md)
 - [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [Self-Consistency Improves Chain of Thought Reasoning in Language Models](../../techniques/77-self-consistency/summary.md)
 
 <!-- related:end -->

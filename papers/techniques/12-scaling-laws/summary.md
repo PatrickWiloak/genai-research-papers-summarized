@@ -451,5 +451,6 @@ optimal_tokens = k4 * (C ** 0.50)
 - [Language Models are Few-Shot Learners (GPT-3)](../../language-models/04-gpt3-few-shot-learners/summary.md)
 - [Training Compute-Optimal Large Language Models (Chinchilla)](../../techniques/18-chinchilla/summary.md)
 - [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [Emergent Abilities of Large Language Models (and the Mirage Rebuttal)](../../techniques/81-emergent-abilities/summary.md)
 
 <!-- related:end -->

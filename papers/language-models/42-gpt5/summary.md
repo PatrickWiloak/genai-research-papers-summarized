@@ -410,5 +410,6 @@ Users can override, but default routing isn't perfect
 - [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
 - [GPT-4o: The First Omni Model](../../language-models/40-gpt4o/summary.md)
 - [Gemini 3: Google's Most Capable AI Model](../../multimodal/47-gemini3/summary.md)
+- [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](../../techniques/84-swe-bench/summary.md)
 
 <!-- related:end -->

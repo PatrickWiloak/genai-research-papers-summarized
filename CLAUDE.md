@@ -1,7 +1,7 @@
 # GenAI Research Papers Summarized
 
 ## Overview
-Curated collection of 68 foundational generative AI papers with comprehensive summaries.
+Curated collection of 87 foundational generative AI papers with comprehensive summaries.
 Docs-only educational resource (no application code) - markdown summaries plus a stdlib
 Python regeneration pipeline that builds the index, manifests, and an MkDocs Material site.
 
@@ -21,6 +21,8 @@ Python regeneration pipeline that builds the index, manifests, and an MkDocs Mat
 - `docs/QUICK_REFERENCE.md` - Fast lookup
 - `docs/COMPARISONS.md` - Decision guides
 - `docs/GLOSSARY.md` - Term definitions
+- `docs/GAPS.md` - Coverage map + queued papers (update when adding or spotting a gap)
+- `assets/brand/` - Banner images used by the README promo block (mirrored into `site-build/` by the build script)
 
 ## Purpose / Usage
 - Educational resource - no code, just documentation. Start with `docs/ROADMAP.md` for the learning path.
@@ -35,4 +37,4 @@ Python regeneration pipeline that builds the index, manifests, and an MkDocs Mat
   ```
 - CI (`.github/workflows/ci.yml`) fails if these generated outputs are stale or if any relative link is broken, so run them before pushing.
 - Do not hand-edit YAML frontmatter, `INDEX.md`, or the `<!-- related:* -->` footers - they are generated.
-- When adding a new paper, give it the next number (currently up to 68), add its aliases to the `ALIASES` map in `scripts/add_cross_links.py` (so other papers can link to it), and add its topic tags to the `TOPICS` map in `scripts/build_manifest.py` (so it appears in `TAGS.md` and gets `tags:` frontmatter).
+- When adding a new paper, give it the next number (currently up to 87), add its aliases to the `ALIASES` map in `scripts/add_cross_links.py` (so other papers can link to it), and add its topic tags to the `TOPICS` map in `scripts/build_manifest.py` (so it appears in `TAGS.md` and gets `tags:` frontmatter).

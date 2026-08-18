@@ -353,5 +353,6 @@ Computer use:
 - [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](../../language-models/26-deepseek-r1/summary.md)
 - [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
 - [GPT-4o: The First Omni Model](../../language-models/40-gpt4o/summary.md)
+- [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](../../techniques/84-swe-bench/summary.md)
 
 <!-- related:end -->

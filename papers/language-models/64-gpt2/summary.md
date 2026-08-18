@@ -254,5 +254,6 @@ This was among the first times an AI lab publicly wrestled with dual-use concern
 - [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](../../techniques/16-flash-attention/summary.md)
 - [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
 - [GPT-4o: The First Omni Model](../../language-models/40-gpt4o/summary.md)
+- [FLAN: Finetuned Language Models Are Zero-Shot Learners (Instruction Tuning)](../../techniques/80-flan/summary.md)
 
 <!-- related:end -->

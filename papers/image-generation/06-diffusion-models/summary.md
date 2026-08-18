@@ -539,5 +539,9 @@ Can view reverse process as solving differential equation.
 - [High-Resolution Image Synthesis with Latent Diffusion Models (Stable Diffusion)](../../image-generation/07-stable-diffusion/summary.md)
 - [DALL-E 3: Improving Image Generation with Better Captions](../../image-generation/48-dalle3/summary.md)
 - [Auto-Encoding Variational Bayes (VAE)](../../image-generation/57-vae/summary.md)
+- [Classifier-Free Diffusion Guidance](../../image-generation/69-classifier-free-guidance/summary.md)
+- [Denoising Diffusion Implicit Models (DDIM)](../../image-generation/70-ddim/summary.md)
+- [Deep Residual Learning for Image Recognition (ResNet)](../../architectures/73-resnet/summary.md)
+- [U-Net: Convolutional Networks for Biomedical Image Segmentation](../../architectures/74-unet/summary.md)
 
 <!-- related:end -->

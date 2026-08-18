@@ -673,5 +673,7 @@ Agentic Coding Frameworks:
 
 - [Language Models are Few-Shot Learners (GPT-3)](../../language-models/04-gpt3-few-shot-learners/summary.md)
 - [Qwen3: Technical Report](../../language-models/28-qwen3/summary.md)
+- [Reflexion: Language Agents with Verbal Reinforcement Learning](../../techniques/78-reflexion/summary.md)
+- [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](../../techniques/84-swe-bench/summary.md)
 
 <!-- related:end -->
