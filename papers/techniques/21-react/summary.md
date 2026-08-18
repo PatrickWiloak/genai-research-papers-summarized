@@ -718,5 +718,6 @@ Attempt 2: [uses reflection to do better]
 - [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](../../techniques/09-chain-of-thought/summary.md)
 - [Toolformer: Language Models Can Teach Themselves to Use Tools](../../techniques/24-toolformer/summary.md)
 - [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](../../techniques/25-tree-of-thoughts/summary.md)
+- [Reflexion: Language Agents with Verbal Reinforcement Learning](../../techniques/78-reflexion/summary.md)
 
 <!-- related:end -->

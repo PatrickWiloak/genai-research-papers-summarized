@@ -1,5 +1,5 @@
 {
-  "count": 68,
+  "count": 87,
   "categories": [
     "architectures",
     "language-models",
@@ -1035,6 +1035,318 @@
       "topics": [
         "science",
         "attention"
+      ]
+    },
+    {
+      "number": 69,
+      "title": "Classifier-Free Diffusion Guidance",
+      "slug": "69-classifier-free-guidance",
+      "category": "image-generation",
+      "authors": "Jonathan Ho, Tim Salimans (Google Research, Brain Team)",
+      "published": "December 2021 (NeurIPS 2021 Workshop on Deep Generative Models); arXiv July 2022",
+      "year": 2021,
+      "url": "https://arxiv.org/abs/2207.12598",
+      "path": "papers/image-generation/69-classifier-free-guidance/summary.md",
+      "topics": [
+        "image-generation",
+        "diffusion",
+        "guidance"
+      ]
+    },
+    {
+      "number": 70,
+      "title": "Denoising Diffusion Implicit Models (DDIM)",
+      "slug": "70-ddim",
+      "category": "image-generation",
+      "authors": "Jiaming Song, Chenlin Meng, Stefano Ermon (Stanford University)",
+      "published": "October 2020 (ICLR 2021)",
+      "year": 2020,
+      "url": "https://arxiv.org/abs/2010.02502",
+      "path": "papers/image-generation/70-ddim/summary.md",
+      "topics": [
+        "image-generation",
+        "diffusion",
+        "sampling",
+        "inference-optimization"
+      ]
+    },
+    {
+      "number": 71,
+      "title": "ControlNet: Adding Conditional Control to Text-to-Image Diffusion Models",
+      "slug": "71-controlnet",
+      "category": "image-generation",
+      "authors": "Lvmin Zhang, Anyi Rao, Maneesh Agrawala (Stanford University)",
+      "published": "February 2023 (ICCV 2023, Marr Prize / Best Paper)",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2302.05543",
+      "path": "papers/image-generation/71-controlnet/summary.md",
+      "topics": [
+        "image-generation",
+        "diffusion",
+        "controllable-generation",
+        "fine-tuning"
+      ]
+    },
+    {
+      "number": 72,
+      "title": "Flow Matching and Rectified Flow: The New Default for Image Generation (Stable Diffusion 3)",
+      "slug": "72-flow-matching-sd3",
+      "category": "image-generation",
+      "authors": "Yaron Lipman, Ricky T. Q. Chen, Heli Ben-Hamu, Maximilian Nickel, Matt Le (Meta AI) - Flow Matching; Xingchao Liu, Chengyue Gong, Qiang Liu (UT Austin) - Rectified Flow; Patrick Esser, Sumith Kulal, Andreas Blattmann, Rahim Entezari, Jonas Muller et al. (Stability AI) - Stable Diffusion 3",
+      "published": "October 2022 (Flow Matching, ICLR 2023); September 2022 (Rectified Flow, ICLR 2023); March 2024 (Stable Diffusion 3, ICML 2024)",
+      "year": 2022,
+      "url": "https://arxiv.org/abs/2210.02747",
+      "path": "papers/image-generation/72-flow-matching-sd3/summary.md",
+      "topics": [
+        "image-generation",
+        "diffusion",
+        "flow-matching",
+        "architecture"
+      ]
+    },
+    {
+      "number": 73,
+      "title": "Deep Residual Learning for Image Recognition (ResNet)",
+      "slug": "73-resnet",
+      "category": "architectures",
+      "authors": "Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun (Microsoft Research)",
+      "published": "December 2015 (CVPR 2016, Best Paper Award)",
+      "year": 2015,
+      "url": "https://arxiv.org/abs/1512.03385",
+      "path": "papers/architectures/73-resnet/summary.md",
+      "topics": [
+        "architecture",
+        "vision",
+        "computer-vision"
+      ]
+    },
+    {
+      "number": 74,
+      "title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+      "slug": "74-unet",
+      "category": "architectures",
+      "authors": "Olaf Ronneberger, Philipp Fischer, Thomas Brox (University of Freiburg)",
+      "published": "May 2015 (MICCAI 2015)",
+      "year": 2015,
+      "url": "https://arxiv.org/abs/1505.04597",
+      "path": "papers/architectures/74-unet/summary.md",
+      "topics": [
+        "architecture",
+        "vision",
+        "computer-vision",
+        "diffusion"
+      ]
+    },
+    {
+      "number": 75,
+      "title": "GQA: Grouped-Query Attention (and Multi-Query Attention)",
+      "slug": "75-grouped-query-attention",
+      "category": "architectures",
+      "authors": "Joshua Ainslie, James Lee-Thorp, Michiel de Jong, Yury Zemlyanskiy, Federico Lebron, Sumit Sanghai (Google Research) - GQA; Noam Shazeer (Google) - Multi-Query Attention",
+      "published": "May 2023 (GQA, EMNLP 2023); November 2019 (MQA)",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2305.13245",
+      "path": "papers/architectures/75-grouped-query-attention/summary.md",
+      "topics": [
+        "attention",
+        "architecture",
+        "efficiency",
+        "inference-optimization"
+      ]
+    },
+    {
+      "number": 76,
+      "title": "ZeRO and Megatron-LM: How Trillion-Parameter Models Are Actually Trained",
+      "slug": "76-zero-megatron",
+      "category": "techniques",
+      "authors": "Samyam Rajbhandari, Jeff Rasley, Olatunji Ruwase, Yuxiong He (Microsoft) - ZeRO; Mohammad Shoeybi, Mostofa Patwary, Raul Puri, Patrick LeGresley, Jared Casper, Bryan Catanzaro (NVIDIA) - Megatron-LM",
+      "published": "October 2019 (ZeRO, SC 2020); September 2019 (Megatron-LM)",
+      "year": 2019,
+      "url": "https://arxiv.org/abs/1910.02054",
+      "path": "papers/techniques/76-zero-megatron/summary.md",
+      "topics": [
+        "distributed-training",
+        "systems",
+        "scaling",
+        "efficiency"
+      ]
+    },
+    {
+      "number": 77,
+      "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+      "slug": "77-self-consistency",
+      "category": "techniques",
+      "authors": "Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le, Ed Chi, Sharan Narang, Aakanksha Chowdhery, Denny Zhou (Google Research, Brain Team)",
+      "published": "March 2022 (ICLR 2023)",
+      "year": 2022,
+      "url": "https://arxiv.org/abs/2203.11171",
+      "path": "papers/techniques/77-self-consistency/summary.md",
+      "topics": [
+        "reasoning",
+        "chain-of-thought",
+        "test-time-compute",
+        "prompting"
+      ]
+    },
+    {
+      "number": 78,
+      "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+      "slug": "78-reflexion",
+      "category": "techniques",
+      "authors": "Noah Shinn, Federico Cassano, Edward Berman, Ashwin Gopinath, Karthik Narasimhan, Shunyu Yao (Northeastern University, MIT, Princeton University)",
+      "published": "March 2023 (NeurIPS 2023)",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2303.11366",
+      "path": "papers/techniques/78-reflexion/summary.md",
+      "topics": [
+        "agents",
+        "reasoning",
+        "tool-use",
+        "prompting"
+      ]
+    },
+    {
+      "number": 79,
+      "title": "Self-Instruct: Aligning Language Models with Self-Generated Instructions",
+      "slug": "79-self-instruct",
+      "category": "techniques",
+      "authors": "Yizhong Wang, Yeganeh Kordi, Swaroop Mishra, Alisa Liu, Noah A. Smith, Daniel Khashabi, Hannaneh Hajishirzi (University of Washington, Tehran Polytechnic, Arizona State University, Johns Hopkins University, Allen Institute for AI)",
+      "published": "December 2022 (ACL 2023)",
+      "year": 2022,
+      "url": "https://arxiv.org/abs/2212.10560",
+      "path": "papers/techniques/79-self-instruct/summary.md",
+      "topics": [
+        "instruction-tuning",
+        "synthetic-data",
+        "alignment"
+      ]
+    },
+    {
+      "number": 80,
+      "title": "FLAN: Finetuned Language Models Are Zero-Shot Learners (Instruction Tuning)",
+      "slug": "80-flan",
+      "category": "techniques",
+      "authors": "Jason Wei, Maarten Bosma, Vincent Y. Zhao, Kelvin Guu, Adams Wei Yu, Brian Lester, Nan Du, Andrew M. Dai, Quoc V. Le (Google Research); scaling follow-up by Hyung Won Chung, Le Hou, Shayne Longpre et al.",
+      "published": "September 2021 (ICLR 2022); Scaling Instruction-Finetuned Language Models, October 2022",
+      "year": 2021,
+      "url": "https://arxiv.org/abs/2109.01652",
+      "path": "papers/techniques/80-flan/summary.md",
+      "topics": [
+        "instruction-tuning",
+        "pretraining",
+        "scaling"
+      ]
+    },
+    {
+      "number": 81,
+      "title": "Emergent Abilities of Large Language Models (and the Mirage Rebuttal)",
+      "slug": "81-emergent-abilities",
+      "category": "techniques",
+      "authors": "Jason Wei, Yi Tay, Rishi Bommasani, Colin Raffel, Barret Zoph, Sebastian Borgeaud, Dani Yogatama, Maarten Bosma, Denny Zhou, Donald Metzler, Ed H. Chi, Tatsunori Hashimoto, Oriol Vinyals, Percy Liang, Jeff Dean, William Fedus (Google Research, Stanford, UNC Chapel Hill, DeepMind); rebuttal by Rylan Schaeffer, Brando Miranda, Sanmi Koyejo (Stanford)",
+      "published": "June 2022 (TMLR 2022); rebuttal April 2023 (NeurIPS 2023, Outstanding Paper)",
+      "year": 2022,
+      "url": "https://arxiv.org/abs/2206.07682",
+      "path": "papers/techniques/81-emergent-abilities/summary.md",
+      "topics": [
+        "scaling",
+        "evaluation",
+        "reasoning"
+      ]
+    },
+    {
+      "number": 82,
+      "title": "Sparse Autoencoders and Monosemanticity: Reading the Features Inside a Model",
+      "slug": "82-sparse-autoencoders",
+      "category": "techniques",
+      "authors": "Trenton Bricken, Adly Templeton, Joshua Batson, Brian Chen, Adam Jermyn, Tom Conerly, Nick Turner, Cem Anil, Carson Denison, Amanda Askell, Chris Olah et al. (Anthropic); superposition groundwork by Nelson Elhage, Tristan Hume, Catherine Olsson et al. (Anthropic); scaling work by Leo Gao et al. (OpenAI)",
+      "published": "May 2024 (Scaling Monosemanticity, Claude 3 Sonnet); earlier: September 2022 (Toy Models of Superposition), October 2023 (Towards Monosemanticity); concurrent: June 2024 (OpenAI, Scaling and Evaluating Sparse Autoencoders)",
+      "year": 2024,
+      "url": "https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html",
+      "path": "papers/techniques/82-sparse-autoencoders/summary.md",
+      "topics": [
+        "interpretability",
+        "safety"
+      ]
+    },
+    {
+      "number": 83,
+      "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+      "slug": "83-sleeper-agents",
+      "category": "techniques",
+      "authors": "Evan Hubinger, Carson Denison, Jesse Mu, Mike Lambert, Meg Tong, Monte MacDiarmid, Tamera Lanham, Daniel M. Ziegler, Tim Maxwell, Newton Cheng, Adam Jermyn, Amanda Askell, Ansh Radhakrishnan, Cem Anil, David Duvenaud, Deep Ganguli, Fazl Barez, Jack Clark, Kamal Ndousse, Nicholas Schiefer, Ethan Perez et al. (Anthropic)",
+      "published": "January 2024",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2401.05566",
+      "path": "papers/techniques/83-sleeper-agents/summary.md",
+      "topics": [
+        "safety",
+        "alignment",
+        "interpretability"
+      ]
+    },
+    {
+      "number": 84,
+      "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+      "slug": "84-swe-bench",
+      "category": "techniques",
+      "authors": "Carlos E. Jimenez, John Yang, Alexander Wettig, Shunyu Yao, Kexin Pei, Ofir Press, Karthik Narasimhan (Princeton University, University of Chicago)",
+      "published": "October 2023 (ICLR 2024)",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2310.06770",
+      "path": "papers/techniques/84-swe-bench/summary.md",
+      "topics": [
+        "evaluation",
+        "benchmarks",
+        "agents",
+        "code"
+      ]
+    },
+    {
+      "number": 85,
+      "title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+      "slug": "85-llm-as-judge",
+      "category": "techniques",
+      "authors": "Lianmin Zheng, Wei-Lin Chiang, Ying Sheng, Siyuan Zhuang, Zhanghao Wu, Yonghao Zhuang, Zi Lin, Zhuohan Li, Dacheng Li, Eric P. Xing, Hao Zhang, Joseph E. Gonzalez, Ion Stoica (UC Berkeley, UCSD, CMU, Stanford, MBZUAI)",
+      "published": "June 2023 (NeurIPS 2023 Datasets and Benchmarks Track)",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2306.05685",
+      "path": "papers/techniques/85-llm-as-judge/summary.md",
+      "topics": [
+        "evaluation",
+        "benchmarks",
+        "alignment"
+      ]
+    },
+    {
+      "number": 86,
+      "title": "GPTQ and AWQ: Post-Training Quantization for Large Language Models",
+      "slug": "86-gptq-awq-quantization",
+      "category": "techniques",
+      "authors": "Elias Frantar, Saleh Ashkboos, Torsten Hoefler, Dan Alistarh (IST Austria, ETH Zurich, Neural Magic) - GPTQ; Ji Lin, Jiaming Tang, Haotian Tang, Shang Yang, Xingyu Dang, Chuang Gan, Song Han (MIT, SJTU, MIT-IBM Watson AI Lab) - AWQ",
+      "published": "October 2022 (GPTQ, ICLR 2023); June 2023 (AWQ, MLSys 2024 Best Paper)",
+      "year": 2022,
+      "url": "https://arxiv.org/abs/2210.17323",
+      "path": "papers/techniques/86-gptq-awq-quantization/summary.md",
+      "topics": [
+        "quantization",
+        "efficiency",
+        "inference-optimization"
+      ]
+    },
+    {
+      "number": 87,
+      "title": "Dense Passage Retrieval, ColBERT, and Sentence-BERT: The Retrieval Half of RAG",
+      "slug": "87-dense-retrieval",
+      "category": "techniques",
+      "authors": "Vladimir Karpukhin, Barlas Oguz, Sewon Min, Patrick Lewis, Ledell Wu, Sergey Edunov, Danqi Chen, Wen-tau Yih (Facebook AI, University of Washington, Princeton) - DPR; Omar Khattab, Matei Zaharia (Stanford) - ColBERT; Nils Reimers, Iryna Gurevych (TU Darmstadt) - Sentence-BERT",
+      "published": "April 2020 (DPR, EMNLP 2020); April 2020 (ColBERT, SIGIR 2020); August 2019 (Sentence-BERT, EMNLP 2019)",
+      "year": 2020,
+      "url": "https://arxiv.org/abs/2004.04906",
+      "path": "papers/techniques/87-dense-retrieval/summary.md",
+      "topics": [
+        "retrieval",
+        "embeddings",
+        "search"
       ]
     }
   ]

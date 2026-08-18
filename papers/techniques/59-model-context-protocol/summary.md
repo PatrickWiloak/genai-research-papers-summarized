@@ -702,5 +702,6 @@ tool versioning, deprecation warnings) is still informal.
 - [ReAct: Synergizing Reasoning and Acting in Language Models](../../techniques/21-react/summary.md)
 - [Toolformer: Language Models Can Teach Themselves to Use Tools](../../techniques/24-toolformer/summary.md)
 - [Claude 4 Family: The Agentic AI Leader](../../language-models/43-claude4/summary.md)
+- [Reflexion: Language Agents with Verbal Reinforcement Learning](../../techniques/78-reflexion/summary.md)
 
 <!-- related:end -->

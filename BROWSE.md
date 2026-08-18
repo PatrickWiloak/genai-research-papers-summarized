@@ -1,6 +1,6 @@
 # Browse All Papers - Quick Reference
 
-A visual grid view of the papers for quick browsing. For the complete, always-current list of all 68 papers, see the generated [Paper Index](./INDEX.md). **Looking for a learning path?** See the [README](./README.md) for numbered reading orders.
+A visual grid view for quick browsing. This page is **hand-curated highlights**, not the full library - it shows 54 of the 87 summaries with a relevance badge and a three-line pitch each. For the complete, always-current list, see the generated [Paper Index](./INDEX.md) or browse [by topic tag](./TAGS.md). **Looking for a learning path?** See the [README](./README.md) for numbered reading orders. **Wondering what is not here yet?** See [Coverage & Gaps](./docs/GAPS.md).
 
 ---
 
@@ -396,30 +396,242 @@ A visual grid view of the papers for quick browsing. For the complete, always-cu
 
 ---
 
+
+---
+
+## 🆕 Recently Added
+
+Nineteen summaries added in the August 2026 batch, filling the collection's clearest gaps:
+the modern diffusion pipeline, the architecture and systems layer under every large model,
+and the interpretability, safety, and evaluation work that had no entry at all.
+
+<table>
+<tr>
+<td width="33%">
+
+**[Classifier-Free Guidance](./papers/image-generation/69-classifier-free-guidance/summary.md)** (2021)
+- 🔥 **CRITICAL** - The "CFG scale" slider
+- Two predictions, one difference vector
+- Also how negative prompts work
+- [Paper](https://arxiv.org/abs/2207.12598)
+
+</td>
+<td width="33%">
+
+**[DDIM](./papers/image-generation/70-ddim/summary.md)** (2020)
+- 🔥 **CRITICAL** - 1,000 steps down to 20
+- Deterministic sampling, no retraining
+- Basis of diffusion image editing
+- [Paper](https://arxiv.org/abs/2010.02502)
+
+</td>
+<td width="33%">
+
+**[ControlNet](./papers/image-generation/71-controlnet/summary.md)** (2023)
+- 🔥 **CRITICAL** - Edges, depth, pose control
+- Zero convolutions, base model frozen
+- ICCV 2023 best paper
+- [Paper](https://arxiv.org/abs/2302.05543)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Flow Matching / SD3](./papers/image-generation/72-flow-matching-sd3/summary.md)** (2022-2024)
+- 🔥 **CRITICAL** - What replaced diffusion
+- Straight noise-to-image paths
+- Powers SD3, SD3.5 and Flux
+- [Paper](https://arxiv.org/abs/2403.03206)
+
+</td>
+<td width="33%">
+
+**[ResNet](./papers/architectures/73-resnet/summary.md)** (2015)
+- 🔥 **CRITICAL** - Residual connections
+- `x + f(x)` is in every Transformer
+- Most-cited deep learning paper
+- [Paper](https://arxiv.org/abs/1512.03385)
+
+</td>
+<td width="33%">
+
+**[U-Net](./papers/architectures/74-unet/summary.md)** (2015)
+- ⭐ **HIGH** - Encoder-decoder + skips
+- The denoiser inside diffusion models
+- Trained on 30 images, won its challenge
+- [Paper](https://arxiv.org/abs/1505.04597)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Grouped-Query Attention](./papers/architectures/75-grouped-query-attention/summary.md)** (2023)
+- 🔥 **CRITICAL** - 8x smaller KV cache
+- In Llama 2/3/4, Mistral, Qwen, Gemma
+- Why long context is affordable
+- [Paper](https://arxiv.org/abs/2305.13245)
+
+</td>
+<td width="33%">
+
+**[ZeRO & Megatron-LM](./papers/techniques/76-zero-megatron/summary.md)** (2019)
+- 🔥 **CRITICAL** - 3D parallelism
+- The systems layer under every big run
+- DeepSpeed, FSDP, tensor parallelism
+- [Paper](https://arxiv.org/abs/1910.02054)
+
+</td>
+<td width="33%">
+
+**[Self-Consistency](./papers/techniques/77-self-consistency/summary.md)** (2022)
+- 🔥 **CRITICAL** - Sample N, majority vote
+- +17.9 points on GSM8K over greedy CoT
+- Inference compute buys accuracy
+- [Paper](https://arxiv.org/abs/2203.11171)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Reflexion](./papers/techniques/78-reflexion/summary.md)** (2023)
+- 🔥 **CRITICAL** - Agents learn from failure
+- Verbal reflection, no weight updates
+- The retry loop every coding agent runs
+- [Paper](https://arxiv.org/abs/2303.11366)
+
+</td>
+<td width="33%">
+
+**[Self-Instruct](./papers/techniques/79-self-instruct/summary.md)** (2022)
+- 🔥 **CRITICAL** - 52K instructions from 175
+- Made instruction data free; led to Alpaca
+- Why post-training data is synthetic now
+- [Paper](https://arxiv.org/abs/2212.10560)
+
+</td>
+<td width="33%">
+
+**[FLAN](./papers/techniques/80-flan/summary.md)** (2021)
+- 🔥 **CRITICAL** - Invented instruction tuning
+- Beat GPT-3 175B on 20 of 25 benchmarks
+- The middle stage of the modern pipeline
+- [Paper](https://arxiv.org/abs/2109.01652)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Emergent Abilities](./papers/techniques/81-emergent-abilities/summary.md)** (2022-2023)
+- ⭐ **HIGH** - Do capabilities jump at scale?
+- Paired with the "Mirage" rebuttal
+- Why exact-match alone misleads
+- [Paper](https://arxiv.org/abs/2206.07682)
+
+</td>
+<td width="33%">
+
+**[Sparse Autoencoders](./papers/techniques/82-sparse-autoencoders/summary.md)** (2022-2024)
+- 🔥 **CRITICAL** - Reading a model's concepts
+- Millions of features from Claude 3 Sonnet
+- Steering works: "Golden Gate Claude"
+- [Paper](https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html)
+
+</td>
+<td width="33%">
+
+**[Sleeper Agents](./papers/techniques/83-sleeper-agents/summary.md)** (2024)
+- 🔥 **CRITICAL** - Backdoors survive safety training
+- SFT, RLHF and adversarial training all failed
+- Adversarial training hid the trigger better
+- [Paper](https://arxiv.org/abs/2401.05566)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[SWE-bench](./papers/techniques/84-swe-bench/summary.md)** (2023)
+- 🔥 **CRITICAL** - Real GitHub issues, real tests
+- ~2% resolved in 2023, ~70-80% in 2025
+- The coding-agent headline metric
+- [Paper](https://arxiv.org/abs/2310.06770)
+
+</td>
+<td width="33%">
+
+**[LLM-as-a-Judge](./papers/techniques/85-llm-as-judge/summary.md)** (2023)
+- 🔥 **CRITICAL** - Model-graded evaluation
+- ~80% agreement with humans, plus the biases
+- Created Chatbot Arena Elo
+- [Paper](https://arxiv.org/abs/2306.05685)
+
+</td>
+<td width="33%">
+
+**[GPTQ & AWQ](./papers/techniques/86-gptq-awq-quantization/summary.md)** (2022-2023)
+- 🔥 **CRITICAL** - 4-bit post-training quantization
+- 70B from ~140 GB to ~35 GB
+- Why local inference exists
+- [Paper](https://arxiv.org/abs/2306.00978)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Dense Retrieval](./papers/techniques/87-dense-retrieval/summary.md)** (2019-2020)
+- 🔥 **CRITICAL** - DPR, ColBERT, Sentence-BERT
+- The retriever every RAG system runs on
+- Where RAG actually fails, and the fixes
+- [Paper](https://arxiv.org/abs/2004.04906)
+
+</td>
+<td width="33%">
+</td>
+<td width="33%">
+</td>
+</tr>
+</table>
+
+---
+
 ## 📊 Quick Stats
 
-| Category | Count |
-|----------|-------|
-| **Total Papers** | 35 |
-| **Foundational Architectures** | 3 |
-| **Language Models** | 13 |
-| **Image Generation** | 3 |
-| **Multimodal** | 4 |
-| **Techniques & Methods** | 12 |
+Counts for the **whole collection** (this page shows a curated subset of it):
+
+| Category | Papers in collection | Cards on this page |
+|----------|----------------------|--------------------|
+| **Foundational Architectures** | 10 | 6 |
+| **Language Models** | 21 | 13 |
+| **Image & Video Generation** | 10 | 7 |
+| **Multimodal** | 7 | 4 |
+| **Techniques & Methods** | 39 | 24 |
+| **Total** | **87** | **54** |
+
+The authoritative counts live in [`papers.json`](./papers.json) and are regenerated by
+`scripts/build_manifest.py`; the table above is checked against it when the collection changes.
 
 ---
 
 ## 🔍 Filter by Badge
 
-- 🔥 **CRITICAL** (27 papers) - Essential foundational papers
-- ⭐ **HIGH** (6 papers) - Important papers with significant impact
-- 📚 **HISTORICAL** (2 papers) - Important historical context
-- 📖 **THEORY** (1 paper) - Theoretical foundations
+Badges on this page (relevance ratings are editorial, not from the papers):
+
+- 🔥 **CRITICAL** (38 cards) - Essential foundational papers
+- ⭐ **HIGH** (13 cards) - Important papers with significant impact
+- 📚 **HISTORICAL** (2 cards) - Important historical context
+- 📖 **THEORY** (1 card) - Theoretical foundations
 
 ---
 
 **Want a structured learning path?** → [README.md](./README.md)
 
-**Need detailed summaries?** → Browse the `/papers` directory
+**Want every paper, not just the highlights?** → [INDEX.md](./INDEX.md) · [TAGS.md](./TAGS.md)
 
-**Total Reading Time:** 30-38 hours | **Words:** 220,000+
+**Wondering what is missing?** → [docs/GAPS.md](./docs/GAPS.md)
+
+**Total Reading Time (full collection):** 75-90 hours | **Words:** 460,000+

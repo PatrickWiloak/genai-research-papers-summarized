@@ -114,6 +114,25 @@ TOPICS: dict[str, list[str]] = {
     "66-bahdanau-attention": ["attention", "architecture"],
     "67-switch-transformer": ["moe", "architecture", "scaling"],
     "68-alphafold": ["science", "attention"],
+    "69-classifier-free-guidance": ["image-generation", "diffusion", "guidance"],
+    "70-ddim": ["image-generation", "diffusion", "sampling", "inference-optimization"],
+    "71-controlnet": ["image-generation", "diffusion", "controllable-generation", "fine-tuning"],
+    "72-flow-matching-sd3": ["image-generation", "diffusion", "flow-matching", "architecture"],
+    "73-resnet": ["architecture", "vision", "computer-vision"],
+    "74-unet": ["architecture", "vision", "computer-vision", "diffusion"],
+    "75-grouped-query-attention": ["attention", "architecture", "efficiency", "inference-optimization"],
+    "76-zero-megatron": ["distributed-training", "systems", "scaling", "efficiency"],
+    "77-self-consistency": ["reasoning", "chain-of-thought", "test-time-compute", "prompting"],
+    "78-reflexion": ["agents", "reasoning", "tool-use", "prompting"],
+    "79-self-instruct": ["instruction-tuning", "synthetic-data", "alignment"],
+    "80-flan": ["instruction-tuning", "pretraining", "scaling"],
+    "81-emergent-abilities": ["scaling", "evaluation", "reasoning"],
+    "82-sparse-autoencoders": ["interpretability", "safety"],
+    "83-sleeper-agents": ["safety", "alignment", "interpretability"],
+    "84-swe-bench": ["evaluation", "benchmarks", "agents", "code"],
+    "85-llm-as-judge": ["evaluation", "benchmarks", "alignment"],
+    "86-gptq-awq-quantization": ["quantization", "efficiency", "inference-optimization"],
+    "87-dense-retrieval": ["retrieval", "embeddings", "search"],
 }
 
 FRONTMATTER_RE = re.compile(r"^---\s*\n.*?\n---\s*\n", re.DOTALL)
@@ -379,6 +398,29 @@ markdown_extensions:
 
 plugins:
   - search
+
+copyright: >-
+  Built by <a href="https://patrickwiloak.com">Patrick Wiloak</a> at
+  <a href="https://noblerworks.com/">Nobler Works</a>. Practice what you read at
+  <a href="https://gitgood.dev">gitGood.dev</a>. Summaries CC BY 4.0.
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/PatrickWiloak/genai-research-papers-summarized
+      name: This repository on GitHub
+    - icon: fontawesome/solid/graduation-cap
+      link: https://gitgood.dev
+      name: gitGood.dev - practice and certification prep
+    - icon: fontawesome/solid/globe
+      link: https://noblerworks.com/
+      name: Nobler Works
+    - icon: fontawesome/brands/youtube
+      link: https://youtube.com/@patrickwiloak
+      name: Patrick Wiloak on YouTube
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/patricklukewilson/
+      name: Patrick Wiloak on LinkedIn
 """
 
 
@@ -405,6 +447,12 @@ def build_site_tree(papers: list[dict]) -> None:
     if docs_src.exists():
         shutil.copytree(docs_src, site / "docs")
 
+    # Brand images referenced by the README's header block. MkDocs only serves
+    # files under docs_dir, so they have to be mirrored in at the same path.
+    assets_src = ROOT / "assets"
+    if assets_src.exists():
+        shutil.copytree(assets_src, site / "assets")
+
     template = PAPERS_DIR / "_TEMPLATE.md"
     if template.exists():
         (site / "papers").mkdir(parents=True, exist_ok=True)
@@ -429,6 +477,7 @@ def write_mkdocs(papers: list[dict]) -> None:
     nav.append("      - Quick Reference: docs/QUICK_REFERENCE.md")
     nav.append("      - Comparisons: docs/COMPARISONS.md")
     nav.append("      - Glossary: docs/GLOSSARY.md")
+    nav.append("      - Coverage & Gaps: docs/GAPS.md")
     nav.append("  - Papers:")
     for cat in CATEGORY_ORDER:
         group = [p for p in papers if p["category"] == cat]

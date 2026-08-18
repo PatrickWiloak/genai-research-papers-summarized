@@ -405,5 +405,6 @@ class VisionTransformer:
 - [Learning Transferable Visual Models From Natural Language Supervision (CLIP)](../../multimodal/08-clip/summary.md)
 - [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
 - [DALL-E 3: Improving Image Generation with Better Captions](../../image-generation/48-dalle3/summary.md)
+- [Deep Residual Learning for Image Recognition (ResNet)](../../architectures/73-resnet/summary.md)
 
 <!-- related:end -->

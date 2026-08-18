@@ -554,5 +554,6 @@ print(result["source_documents"])
 
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](../../language-models/03-bert/summary.md)
 - [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [Dense Passage Retrieval, ColBERT, and Sentence-BERT: The Retrieval Half of RAG](../../techniques/87-dense-retrieval/summary.md)
 
 <!-- related:end -->

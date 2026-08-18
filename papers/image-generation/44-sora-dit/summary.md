@@ -412,5 +412,6 @@ Much more expensive than image generation
 - [High-Resolution Image Synthesis with Latent Diffusion Models (Stable Diffusion)](../../image-generation/07-stable-diffusion/summary.md)
 - [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale (Vision Transformer)](../../architectures/11-vision-transformer/summary.md)
 - [Scaling Laws for Neural Language Models](../../techniques/12-scaling-laws/summary.md)
+- [U-Net: Convolutional Networks for Biomedical Image Segmentation](../../architectures/74-unet/summary.md)
 
 <!-- related:end -->

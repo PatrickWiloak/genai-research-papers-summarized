@@ -1,24 +1,77 @@
+<!-- markdown="1" lets the documentation site render the markdown inside this
+     centered block. GitHub ignores the attribute, so rendering there is unchanged. -->
+<div align="center" markdown="1">
+
+<a href="https://noblerworks.com/"><img src="https://raw.githubusercontent.com/Noblerworks/IRONSIGHT/main/nobler-works-banner.JPG" alt="Nobler Works" width="240"></a>
+
+### Built by [Patrick Wiloak](https://patrickwiloak.com) at [Nobler Works](https://noblerworks.com/)
+
+We build custom software and products at Nobler Works. Open source projects and research libraries like this one are our way of giving back - we're nothing without the community that supports us.<br>
+If you need custom software built, [get in touch](https://noblerworks.com/).
+
+[![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=googlechrome&logoColor=white)](https://noblerworks.com/)
+[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/Nobler_Works)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@NoblerWorks)
+[![TikTok](https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@noblerworks)
+[![Threads](https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white)](https://www.threads.com/@noblerworks)
+
+---
+
+<a href="https://gitgood.dev"><img src="./assets/brand/gitgood-banner.png" alt="gitGood.dev - practice questions, coding challenges, system design and cloud certification practice exams for engineers, data, security, DevOps and product technologists" width="280"></a>
+
+### 🚀 Read the papers here. Prove you understood them there.
+
+**[gitGood.dev](https://gitgood.dev) is our flagship tech training platform - train for the role, not just the interview.**
+
+Built for **every kind of technologist**, across 21 role-targeted learning paths - including machine learning and AI engineering, data science, and data engineering. This repo gives you the theory. gitGood gives you the reps, and tells you whether you actually know it.
+
+[![Start 10 days free](https://img.shields.io/badge/Start%2010%20Days%20Free-000000?style=for-the-badge&logo=rocket&logoColor=white)](https://gitgood.dev)
+
+**$5/month** or **$40/year** after the trial. Free tier needs no card: 20 practice questions, the free coding challenges, streaks, achievements, and the job board.
+
+<details class="promo" markdown="1">
+<summary>What's inside gitGood.dev</summary>
+
+**Roles** - backend, frontend, full-stack and mobile development, SRE and DevOps, platform engineering, cloud and solutions architecture, security engineering, machine learning and AI engineering, data science, data analytics, data engineering, QA and SDET, engineering management, product management, TPM, and new grads breaking into tech.
+
+**Cloud certification practice exams** - 13 banks and 608 original scenario-style questions (never brain dumps), with per-domain scoring and a timed exam simulator: AWS Cloud Practitioner CLF-C02, Solutions Architect Associate SAA-C03 and Developer Associate DVA-C02; Azure AZ-900, AZ-104, AZ-305 and AI-900; Google Cloud Digital Leader and Associate Cloud Engineer; Kubernetes CKA and CKAD; CompTIA Security+; HashiCorp Terraform Associate.
+
+**Everything else** - 1,950+ practice questions across 34 categories · coding challenges with real sandboxed execution in JavaScript, Python and TypeScript · a 45-problem SQL playground · 32 system design walkthroughs including LLM inference and RAG · behavioral and STAR interview prep · curated interview packs for 39 companies · AI mock interviews · AI resume reviews · salary negotiation coaching · a live tech job-market pulse and job board.
+
+</details>
+
+---
+
+### 📚 Also from Nobler Works
+
+**[Cloud, Data, AI & Security - Zero to Hero](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero)** - the practitioner companion to this repo. 148 certification study guides across 27 providers, hands-on builds (RAG, MCP agents, vLLM, evals, LoRA), and plain-English concept pages. These summaries explain *why* the techniques work; that repo walks you through *building* with them.
+
+</div>
+
+---
+
 # Foundational Generative AI Research Papers - Summarized
 
-A curated collection of the **68 most influential papers** that shaped modern generative AI, with comprehensive summaries designed to make cutting-edge research accessible to everyone.
+A curated collection of the **87 most influential papers** that shaped modern generative AI, with comprehensive summaries designed to make cutting-edge research accessible to everyone.
 
-[![Papers](https://img.shields.io/badge/Papers-68-blue.svg)](./INDEX.md)
-[![Guides](https://img.shields.io/badge/Guides-6-green.svg)](./docs/ROADMAP.md)
+[![Papers](https://img.shields.io/badge/Papers-87-blue.svg)](./INDEX.md)
+[![Guides](https://img.shields.io/badge/Guides-7-green.svg)](./docs/ROADMAP.md)
 [![License](https://img.shields.io/badge/License-CC_BY_4.0-orange.svg)](./LICENSE)
-[![Updated](https://img.shields.io/badge/Updated-June_2026-green.svg)](./README.md)
+[![Updated](https://img.shields.io/badge/Updated-August_2026-green.svg)](./README.md)
 
 ---
 
 ## 🚀 Quick Start
 
 **New to AI?** Start with the [Learning Roadmap](./docs/ROADMAP.md)
-**Want the full list?** See the [Paper Index](./INDEX.md) - all 68 papers grouped by category
+**Want the full list?** See the [Paper Index](./INDEX.md) - all 87 papers grouped by category
 **Exploring a topic?** Browse [by topic tag](./TAGS.md) (reasoning, RLHF, efficiency, agents, multimodal, ...)
 **Want to browse visually?** See [BROWSE.md](./BROWSE.md) for table/grid view
 **Not sure what to read?** Check the [Reading Guide](./docs/READING_GUIDE.md) - Historical vs Modern relevance
 **Need quick lookup?** See the [Quick Reference](./docs/QUICK_REFERENCE.md)
 **Building something?** Read [Comparisons](./docs/COMPARISONS.md) for decision guides
 **Confused by terms?** Browse the [Glossary](./docs/GLOSSARY.md)
+**Wondering what is missing?** See [Coverage & Gaps](./docs/GAPS.md) - what this collection covers and what is queued next
 
 ---
 
@@ -30,8 +83,9 @@ A curated collection of the **68 most influential papers** that shaped modern ge
 - 📖 **[Quick Reference](./docs/QUICK_REFERENCE.md)** - One-page overview of the papers
 - 🔍 **[Comparisons](./docs/COMPARISONS.md)** - Side-by-side analysis and trade-offs
 - 📚 **[Glossary](./docs/GLOSSARY.md)** - 150+ key terms explained
+- 🧭 **[Coverage & Gaps](./docs/GAPS.md)** - what the collection covers, and the papers queued to be added next
 - 🗂️ **[Paper Index](./INDEX.md)** - Complete category-grouped list (generated)
-- 🏷️ **[Browse by Topic](./TAGS.md)** - Tag-filtered index across 37 topics (generated)
+- 🏷️ **[Browse by Topic](./TAGS.md)** - Tag-filtered index across 45 topics (generated)
 
 ### Data & Tooling
 - 🧾 **[papers.json](./papers.json)** / **[papers.csv](./papers.csv)** - machine-readable manifest of every paper
@@ -46,63 +100,115 @@ A curated collection of the **68 most influential papers** that shaped modern ge
 ```
 genai-research-papers-summarized/
 ├── README.md                          # You are here
-├── docs/                              # All guides and documentation
+├── INDEX.md / BROWSE.md / TAGS.md     # Generated indexes (category, grid, topic tag)
+├── papers.json / papers.csv           # Generated machine-readable manifest
+├── docs/                              # Guides
 │   ├── ROADMAP.md                     # Learning paths
+│   ├── READING_GUIDE.md               # Historical vs modern relevance
 │   ├── QUICK_REFERENCE.md             # Quick lookup
 │   ├── COMPARISONS.md                 # Decision guides
-│   └── GLOSSARY.md                    # Term definitions
-├── papers/                            # All paper summaries organized by category
-│   ├── architectures/                 # Foundational architectures
-│   │   ├── 01-attention-is-all-you-need/
-│   │   ├── 11-vision-transformer/
-│   │   ├── 20-mamba/
-│   │   └── 37-mixture-of-experts/
-│   ├── language-models/               # LLM papers
-│   │   ├── 03-bert/
-│   │   ├── 04-gpt3-few-shot-learners/
-│   │   ├── 05-instructgpt-rlhf/
-│   │   ├── 14-constitutional-ai/
-│   │   ├── 15-llama/
-│   │   ├── 17-llama2/
-│   │   ├── 19-dpo/
-│   │   ├── 36-gpt4/
-│   │   ├── 40-gpt4o/
-│   │   ├── 41-llama4/
-│   │   ├── 42-gpt5/
-│   │   └── 43-claude4/
-│   ├── image-generation/              # Image generation papers
-│   │   ├── 02-generative-adversarial-networks/
-│   │   ├── 06-diffusion-models/
-│   │   ├── 07-stable-diffusion/
-│   │   ├── 44-sora-dit/
-│   │   └── 48-dalle3/
-│   ├── multimodal/                    # Cross-modal papers
-│   │   ├── 08-clip/
-│   │   ├── 23-gpt4v/
-│   │   ├── 46-llava/
-│   │   ├── 47-gemini3/
-│   │   └── 49-whisper/
-│   └── techniques/                    # Methods and techniques
-│       ├── 09-chain-of-thought/
-│       ├── 10-lora/
-│       ├── 12-scaling-laws/
-│       ├── 13-rag/
-│       ├── 16-flash-attention/
-│       ├── 18-chinchilla/
-│       ├── 21-react/
-│       ├── 22-qlora/
-│       ├── 24-toolformer/
-│       ├── 25-tree-of-thoughts/
-│       ├── 38-grpo/
-│       ├── 39-rlvr/
-│       ├── 45-speculative-decoding/
-│       ├── 50-test-time-compute/
-│       ├── 51-process-reward-models/
-│       └── 52-pagedattention-vllm/
-└── resources/                         # Additional resources
-    ├── images/                        # Diagrams and visualizations
-    └── notebooks/                     # Jupyter notebooks
+│   ├── GLOSSARY.md                    # Term definitions
+│   └── GAPS.md                        # Coverage map + what is queued next
+├── scripts/                           # Stdlib-only regeneration pipeline
+│   ├── build_manifest.py              # Frontmatter, manifest, INDEX, TAGS, mkdocs nav
+│   ├── add_cross_links.py             # "Related in This Collection" footers
+│   └── check_links.py                 # Relative-link validation (CI gate)
+├── assets/brand/                      # Banner images used by this README
+└── papers/                            # All summaries, grouped by category
+    ├── architectures/         # Foundational architectures (10)
+    │   ├── 01-attention-is-all-you-need/
+    │   ├── 11-vision-transformer/
+    │   ├── 20-mamba/
+    │   ├── 37-mixture-of-experts/
+    │   ├── 55-seq2seq/
+    │   ├── 66-bahdanau-attention/
+    │   ├── 67-switch-transformer/
+    │   ├── 73-resnet/
+    │   ├── 74-unet/
+    │   └── 75-grouped-query-attention/
+    ├── language-models/       # LLM papers (21)
+    │   ├── 03-bert/
+    │   ├── 04-gpt3-few-shot-learners/
+    │   ├── 05-instructgpt-rlhf/
+    │   ├── 14-constitutional-ai/
+    │   ├── 15-llama/
+    │   ├── 17-llama2/
+    │   ├── 19-dpo/
+    │   ├── 26-deepseek-r1/
+    │   ├── 27-deepseek-v3/
+    │   ├── 28-qwen3/
+    │   ├── 30-claude-3.5-sonnet/
+    │   ├── 31-openai-o1/
+    │   ├── 33-llama3.3/
+    │   ├── 36-gpt4/
+    │   ├── 40-gpt4o/
+    │   ├── 41-llama4/
+    │   ├── 42-gpt5/
+    │   ├── 43-claude4/
+    │   ├── 56-codex/
+    │   ├── 64-gpt2/
+    │   └── 65-t5/
+    ├── image-generation/      # Image & video generation (10)
+    │   ├── 02-generative-adversarial-networks/
+    │   ├── 06-diffusion-models/
+    │   ├── 07-stable-diffusion/
+    │   ├── 44-sora-dit/
+    │   ├── 48-dalle3/
+    │   ├── 57-vae/
+    │   ├── 69-classifier-free-guidance/
+    │   ├── 70-ddim/
+    │   ├── 71-controlnet/
+    │   └── 72-flow-matching-sd3/
+    ├── multimodal/            # Cross-modal papers (7)
+    │   ├── 08-clip/
+    │   ├── 23-gpt4v/
+    │   ├── 29-gemini-2.5/
+    │   ├── 32-sam2/
+    │   ├── 46-llava/
+    │   ├── 47-gemini3/
+    │   └── 49-whisper/
+    └── techniques/            # Methods, systems, safety & evaluation (39)
+        ├── 09-chain-of-thought/
+        ├── 10-lora/
+        ├── 12-scaling-laws/
+        ├── 13-rag/
+        ├── 16-flash-attention/
+        ├── 18-chinchilla/
+        ├── 21-react/
+        ├── 22-qlora/
+        ├── 24-toolformer/
+        ├── 25-tree-of-thoughts/
+        ├── 34-meta-cot/
+        ├── 35-rstar-math/
+        ├── 38-grpo/
+        ├── 39-rlvr/
+        ├── 45-speculative-decoding/
+        ├── 50-test-time-compute/
+        ├── 51-process-reward-models/
+        ├── 52-pagedattention-vllm/
+        ├── 53-word2vec/
+        ├── 54-rope-rotary-position-embedding/
+        ├── 58-generative-agents/
+        ├── 59-model-context-protocol/
+        ├── 60-graph-rag/
+        ├── 61-alphageometry/
+        ├── 62-alphaevolve/
+        ├── 63-ppo/
+        ├── 68-alphafold/
+        ├── 76-zero-megatron/
+        ├── 77-self-consistency/
+        ├── 78-reflexion/
+        ├── 79-self-instruct/
+        ├── 80-flan/
+        ├── 81-emergent-abilities/
+        ├── 82-sparse-autoencoders/
+        ├── 83-sleeper-agents/
+        ├── 84-swe-bench/
+        ├── 85-llm-as-judge/
+        ├── 86-gptq-awq-quantization/
+        └── 87-dense-retrieval/
 ```
+
 
 ---
 
@@ -136,6 +242,26 @@ genai-research-papers-summarized/
 - Sparse routing, expert specialization
 - Now used by DeepSeek-V3, Llama 4, Qwen3
 - [Paper](https://arxiv.org/abs/2401.04088)
+
+**5. The Part Every Model Inherits:** [ResNet](./papers/architectures/73-resnet/summary.md) (2015)
+- 🔥 **CRITICAL** - Residual connections made depth possible
+- `x + f(x)` is inside every Transformer block ever trained
+- 152 layers when 20 was the limit; most-cited paper in deep learning
+- [Paper](https://arxiv.org/abs/1512.03385)
+
+**6. The Diffusion Backbone:** [U-Net](./papers/architectures/74-unet/summary.md) (2015)
+- ⭐ **HIGH** - Encoder-decoder with skip connections
+- Denoiser inside DDPM, Stable Diffusion, DALL-E 2, Imagen
+- Written for microscopy; became the image-generation workhorse
+- [Paper](https://arxiv.org/abs/1505.04597)
+
+**7. The KV-Cache Fix:** [Grouped-Query Attention](./papers/architectures/75-grouped-query-attention/summary.md) (2023)
+- 🔥 **CRITICAL** - 8x smaller KV cache, near-zero quality cost
+- In Llama 2/3/4, Mistral, Mixtral, Qwen, Gemma
+- Why long context and local inference are affordable
+- [Paper](https://arxiv.org/abs/2305.13245)
+
+_Also in this category:_ [Seq2Seq](./papers/architectures/55-seq2seq/summary.md) (2014), [Bahdanau Attention](./papers/architectures/66-bahdanau-attention/summary.md) (2014), [Switch Transformers](./papers/architectures/67-switch-transformer/summary.md) (2021). See [INDEX.md](./INDEX.md) for the complete list.
 
 ### 🤖 Language Models
 **Recommended Reading Order:** Evolution → Frontier → Alignment → Open Source → Reasoning → Unified
@@ -280,6 +406,32 @@ genai-research-papers-summarized/
 - Spacetime patches enable flexible video generation
 - [DiT Paper](https://arxiv.org/abs/2212.09748) | [Sora Report](https://openai.com/index/video-generation-models-as-world-simulators/)
 
+**6. The Prompt-Following Trick:** [Classifier-Free Guidance](./papers/image-generation/69-classifier-free-guidance/summary.md) (2021-2022)
+- 🔥 **CRITICAL** - The "CFG scale" slider in every image tool
+- Two predictions, one difference vector, prompts finally obeyed
+- Also the mechanism behind negative prompts
+- [Paper](https://arxiv.org/abs/2207.12598)
+
+**7. The Speed Fix:** [DDIM](./papers/image-generation/70-ddim/summary.md) (2020)
+- 🔥 **CRITICAL** - 1,000 sampling steps down to 20, no retraining
+- Deterministic sampling; the basis of image editing and inversion
+- Ancestor of every sampler in your image UI
+- [Paper](https://arxiv.org/abs/2010.02502)
+
+**8. Structural Control:** [ControlNet](./papers/image-generation/71-controlnet/summary.md) (2023)
+- 🔥 **CRITICAL** - Edges, depth, pose, scribbles as conditioning
+- Zero convolutions: add capability without breaking the base model
+- ICCV 2023 best paper; turned image generation into a production tool
+- [Paper](https://arxiv.org/abs/2302.05543)
+
+**9. What Replaced Diffusion:** [Flow Matching / Rectified Flow (SD3)](./papers/image-generation/72-flow-matching-sd3/summary.md) (2022-2024)
+- 🔥 **CRITICAL** - The current training objective for frontier image and video models
+- Straight noise-to-image paths, fewer steps, simpler objective
+- Powers Stable Diffusion 3/3.5 and Flux; MMDiT fixed text rendering
+- [Flow Matching](https://arxiv.org/abs/2210.02747) | [SD3](https://arxiv.org/abs/2403.03206)
+
+_Also in this category:_ [VAE](./papers/image-generation/57-vae/summary.md) (2013).
+
 ### 🔗 Multimodal
 **Recommended Reading Order:** Vision-language bridge → Practical multimodal → Next-gen unified AI
 
@@ -385,6 +537,12 @@ genai-research-papers-summarized/
 - Step-by-step reasoning prompts, "Let's think step by step"
 - [Paper](https://arxiv.org/abs/2201.11903)
 
+**7b.** [Self-Consistency](./papers/techniques/77-self-consistency/summary.md) (2022)
+- 🔥 **CRITICAL** - Sample several chains, take the majority vote
+- +17.9 points on GSM8K over greedy chain-of-thought
+- First demonstration that inference compute buys accuracy
+- [Paper](https://arxiv.org/abs/2203.11171)
+
 **8.** [Tree of Thoughts](./papers/techniques/25-tree-of-thoughts/summary.md) (2023)
 - ⭐ **HIGH** - Advanced reasoning
 - Tree search over reasoning paths, 18× better than CoT
@@ -438,6 +596,84 @@ genai-research-papers-summarized/
 - LLMs learn to use tools automatically, inspired ChatGPT function calling
 - [Paper](https://arxiv.org/abs/2302.04761)
 
+**13.** [Reflexion](./papers/techniques/78-reflexion/summary.md) (2023)
+- 🔥 **CRITICAL** - Agents that learn from their own failures
+- Verbal self-reflection stored in memory, no gradient updates
+- The act -> test -> reflect -> retry loop every coding agent runs
+- [Paper](https://arxiv.org/abs/2303.11366)
+
+#### **Training Infrastructure (How Big Models Are Actually Trained)**
+
+**14.** [ZeRO and Megatron-LM](./papers/techniques/76-zero-megatron/summary.md) (2019)
+- 🔥 **CRITICAL** - The systems layer under every large training run
+- Data, tensor, and pipeline parallelism (3D parallelism); DeepSpeed and FSDP
+- Removed the single-GPU ceiling on model size
+- [ZeRO](https://arxiv.org/abs/1910.02054) | [Megatron-LM](https://arxiv.org/abs/1909.08053)
+
+**15.** [GPTQ and AWQ](./papers/techniques/86-gptq-awq-quantization/summary.md) (2022-2023)
+- 🔥 **CRITICAL** - 4-bit post-training quantization
+- 70B model from ~140 GB to ~35 GB, no retraining
+- Why local inference (Ollama, llama.cpp, LM Studio) exists
+- [GPTQ](https://arxiv.org/abs/2210.17323) | [AWQ](https://arxiv.org/abs/2306.00978)
+
+#### **Instruction Tuning & Synthetic Data**
+
+**16.** [FLAN](./papers/techniques/80-flan/summary.md) (2021)
+- 🔥 **CRITICAL** - Invented instruction tuning
+- Zero-shot beat GPT-3 175B on 20 of 25 benchmarks
+- The middle stage of pretrain -> instruction-tune -> align
+- [Paper](https://arxiv.org/abs/2109.01652)
+
+**17.** [Self-Instruct](./papers/techniques/79-self-instruct/summary.md) (2022)
+- 🔥 **CRITICAL** - 52K instructions from 175 human seeds
+- Made instruction data free; enabled Alpaca and the open fine-tuning wave
+- Why most post-training data is now synthetic
+- [Paper](https://arxiv.org/abs/2212.10560)
+
+#### **Retrieval Foundations (The Other Half of RAG)**
+
+**18.** [Dense Retrieval: DPR, ColBERT, Sentence-BERT](./papers/techniques/87-dense-retrieval/summary.md) (2019-2020)
+- 🔥 **CRITICAL** - The retriever every RAG system runs on
+- Bi-encoders, cross-encoder reranking, late interaction, hybrid search
+- Where RAG systems actually fail, and how to fix them
+- [DPR](https://arxiv.org/abs/2004.04906) | [ColBERT](https://arxiv.org/abs/2004.12832)
+
+#### **Evaluation (How We Know Any of This Works)**
+
+**19.** [SWE-bench](./papers/techniques/84-swe-bench/summary.md) (2023)
+- 🔥 **CRITICAL** - Real GitHub issues, graded by the project's own tests
+- Went from ~2% resolved in 2023 to ~70-80% in 2025
+- The headline number in every coding-model announcement
+- [Paper](https://arxiv.org/abs/2310.06770)
+
+**20.** [LLM-as-a-Judge / Chatbot Arena](./papers/techniques/85-llm-as-judge/summary.md) (2023)
+- 🔥 **CRITICAL** - Model-graded evaluation, validated against humans
+- ~80% agreement with human preference, plus the biases to correct for
+- Created Chatbot Arena Elo; now also generates training data
+- [Paper](https://arxiv.org/abs/2306.05685)
+
+**21.** [Emergent Abilities (and the Mirage rebuttal)](./papers/techniques/81-emergent-abilities/summary.md) (2022-2023)
+- ⭐ **HIGH** - Do capabilities appear suddenly at scale?
+- The rebuttal: sharp curves are often a metric artifact
+- Why you should never report exact-match alone
+- [Emergence](https://arxiv.org/abs/2206.07682) | [Mirage](https://arxiv.org/abs/2304.15004)
+
+#### **Safety & Interpretability**
+
+**22.** [Sparse Autoencoders & Monosemanticity](./papers/techniques/82-sparse-autoencoders/summary.md) (2022-2024)
+- 🔥 **CRITICAL** - Reading the concepts inside a frontier model
+- Millions of interpretable features from Claude 3 Sonnet; steering works
+- The most credible progress on interpretability to date
+- [Scaling Monosemanticity](https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html)
+
+**23.** [Sleeper Agents](./papers/techniques/83-sleeper-agents/summary.md) (2024)
+- 🔥 **CRITICAL** - Backdoors survive the entire safety stack
+- SFT, RLHF, and adversarial training all failed to remove them
+- Adversarial training taught models to hide the trigger better
+- [Paper](https://arxiv.org/abs/2401.05566)
+
+_Also in this category:_ [Word2Vec](./papers/techniques/53-word2vec/summary.md), [RoPE](./papers/techniques/54-rope-rotary-position-embedding/summary.md), [PPO](./papers/techniques/63-ppo/summary.md), [Generative Agents](./papers/techniques/58-generative-agents/summary.md), [MCP](./papers/techniques/59-model-context-protocol/summary.md), [GraphRAG](./papers/techniques/60-graph-rag/summary.md), [AlphaGeometry](./papers/techniques/61-alphageometry/summary.md), [AlphaEvolve](./papers/techniques/62-alphaevolve/summary.md), [AlphaFold](./papers/techniques/68-alphafold/summary.md).
+
 ---
 
 ## 🎯 Learning Paths
@@ -483,9 +719,9 @@ Focus on "Why This Matters" sections + [Comparisons Guide](./docs/COMPARISONS.md
 
 | Category | Count | Total Reading Time |
 |----------|-------|-------------------|
-| **Papers** | 68 | 58-70 hours |
-| **Words** | 390,000+ | - |
-| **Guides** | 6 | 3-4 hours |
+| **Papers** | 87 | 75-90 hours |
+| **Words** | 460,000+ | - |
+| **Guides** | 7 | 3-5 hours |
 | **Terms Explained** | 250+ | - |
 
 ### By Year
@@ -493,14 +729,15 @@ _This distribution is generated from [`papers.json`](./papers.json) - see [INDEX
 
 - 2013: 2 papers (Word2Vec, VAE)
 - 2014: 3 papers (GANs, Seq2Seq, Bahdanau Attention)
+- 2015: 2 papers (ResNet, U-Net)
 - 2017: 2 papers (Transformers, PPO)
 - 2018: 1 paper (BERT)
-- 2019: 2 papers (GPT-2, T5)
-- 2020: 5 papers (GPT-3, DDPM, ViT, Scaling Laws, RAG)
-- 2021: 7 papers (Stable Diffusion, CLIP, LoRA, RoPE, Codex, Switch Transformer, AlphaFold)
-- 2022: 9 papers (InstructGPT, Chain-of-Thought, Constitutional AI, FlashAttention, Chinchilla, ReAct, DiT/Sora, Speculative Decoding, Whisper)
-- 2023: 14 papers (LLaMA, LLaMA 2, DPO, Mamba, QLoRA, GPT-4V, Toolformer, Tree of Thoughts, GPT-4, LLaVA, DALL-E 3, Process Reward Models, PagedAttention/vLLM, Generative Agents)
-- 2024: 13 papers (DeepSeek-V3, Claude 3.5 Sonnet, o1, SAM 2, LLaMA 3.3, Mixtral/MoE, GRPO, RLVR, GPT-4o, Test-Time Compute, MCP, GraphRAG, AlphaGeometry)
+- 2019: 3 papers (GPT-2, T5, ZeRO/Megatron-LM)
+- 2020: 7 papers (GPT-3, DDPM, ViT, Scaling Laws, RAG, DDIM, Dense Retrieval)
+- 2021: 9 papers (Stable Diffusion, CLIP, LoRA, RoPE, Codex, Switch Transformer, AlphaFold, Classifier-Free Guidance, FLAN)
+- 2022: 14 papers (InstructGPT, Chain-of-Thought, Constitutional AI, FlashAttention, Chinchilla, ReAct, DiT/Sora, Speculative Decoding, Whisper, Flow Matching/SD3, Self-Consistency, Self-Instruct, Emergent Abilities, GPTQ/AWQ)
+- 2023: 19 papers (LLaMA, LLaMA 2, DPO, Mamba, QLoRA, GPT-4V, Toolformer, Tree of Thoughts, GPT-4, LLaVA, DALL-E 3, Process Reward Models, PagedAttention/vLLM, Generative Agents, ControlNet, GQA, Reflexion, SWE-bench, LLM-as-a-Judge)
+- 2024: 15 papers (DeepSeek-V3, Claude 3.5 Sonnet, o1, SAM 2, LLaMA 3.3, Mixtral/MoE, GRPO, RLVR, GPT-4o, Test-Time Compute, MCP, GraphRAG, AlphaGeometry, Sparse Autoencoders, Sleeper Agents)
 - 2025: 10 papers (DeepSeek-R1, Qwen3, Gemini 2.5, Meta-CoT, rStar-Math, Llama 4, GPT-5, Claude 4, Gemini 3, AlphaEvolve)
 
 ---
@@ -604,8 +841,8 @@ Gratitude to the researchers who created these foundational works:
 
 ---
 
-**Last Updated:** 2026-06-10
-**Papers:** 68 foundational works (2013-2026)
-**Total Content:** 390,000+ words
+**Last Updated:** 2026-08-18
+**Papers:** 87 foundational works (2013-2026)
+**Total Content:** 460,000+ words
 **Includes:** Roots (Word2Vec, Seq2Seq, VAE, PPO) through the latest breakthroughs of early 2026 (GPT-5, Claude 4, Llama 4, GRPO, RLVR, and more)
 **Repository:** [github.com/PatrickWiloak/genai-research-papers-summarized](https://github.com/PatrickWiloak/genai-research-papers-summarized)

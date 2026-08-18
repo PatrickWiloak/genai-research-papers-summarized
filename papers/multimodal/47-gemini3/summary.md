@@ -366,5 +366,6 @@ Regulatory constraints in some markets
 - [GPT-4o: The First Omni Model](../../language-models/40-gpt4o/summary.md)
 - [GPT-5: Unified Intelligence](../../language-models/42-gpt5/summary.md)
 - [Claude 4 Family: The Agentic AI Leader](../../language-models/43-claude4/summary.md)
+- [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](../../techniques/84-swe-bench/summary.md)
 
 <!-- related:end -->

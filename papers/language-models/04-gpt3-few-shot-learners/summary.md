@@ -500,5 +500,6 @@ One of the first major AI papers to include extensive discussion of risks:
 - [Codex: Evaluating Large Language Models Trained on Code](../../language-models/56-codex/summary.md)
 - [Language Models are Unsupervised Multitask Learners (GPT-2)](../../language-models/64-gpt2/summary.md)
 - [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer (T5)](../../language-models/65-t5/summary.md)
+- [Emergent Abilities of Large Language Models (and the Mirage Rebuttal)](../../techniques/81-emergent-abilities/summary.md)
 
 <!-- related:end -->

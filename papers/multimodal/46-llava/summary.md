@@ -387,5 +387,6 @@ Struggles with complex multi-step visual reasoning
 - [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale (Vision Transformer)](../../architectures/11-vision-transformer/summary.md)
 - [GPT-4V(ision): System Card](../../multimodal/23-gpt4v/summary.md)
 - [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [FLAN: Finetuned Language Models Are Zero-Shot Learners (Instruction Tuning)](../../techniques/80-flan/summary.md)
 
 <!-- related:end -->
