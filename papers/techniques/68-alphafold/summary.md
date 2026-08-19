@@ -242,5 +242,6 @@ The architecture evolution from AlphaFold 2 to 3 mirrors broader ML trends: from
 
 - [Attention Is All You Need](../../architectures/01-attention-is-all-you-need/summary.md)
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](../../language-models/03-bert/summary.md)
+- [Accurate Structure Prediction of Biomolecular Interactions with AlphaFold 3](../../techniques/101-alphafold3/summary.md)
 
 <!-- related:end -->

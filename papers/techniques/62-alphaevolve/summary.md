@@ -766,5 +766,7 @@ Defensibility comes from:
 - [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](../../techniques/25-tree-of-thoughts/summary.md)
 - [AlphaGeometry: Solving Olympiad Geometry Without Human Demonstrations](../../techniques/61-alphageometry/summary.md)
 - [Reflexion: Language Agents with Verbal Reinforcement Learning](../../techniques/78-reflexion/summary.md)
+- [Self-Refine: Iterative Refinement with Self-Feedback](../../techniques/99-self-refine/summary.md)
+- [Voyager: An Open-Ended Embodied Agent with Large Language Models](../../techniques/100-voyager/summary.md)
 
 <!-- related:end -->

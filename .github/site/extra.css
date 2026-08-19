@@ -1,0 +1,577 @@
+/* Site-only styling. Nothing here affects how the markdown reads on GitHub.
+   Loaded via `extra_css` in mkdocs.yml and staged by scripts/build_manifest.py
+   into site-build/assets/site/extra.css. */
+
+/* ------------------------------------------------------------------ */
+/* Palette - near-black + one accent                                   */
+/* ------------------------------------------------------------------ */
+
+/* mkdocs.yml sets `primary: custom` and `accent: custom`, which makes Material
+   skip its built-in colour palettes and emit no colour rules of its own. Every
+   value below is therefore the single source of truth for the site's colour.
+
+   Structure is shared with cloud-data-ai-security-zero-to-hero so the two sites
+   read as siblings: pure #000000 page in dark mode, slate-on-white in light,
+   cards that sit on the page colour and separate with a 1px border, and a
+   hover of accent border + accent-tinted shadow + 2px lift at 200ms.
+
+   The accent is what tells them apart. That site carries gitGood's green; this
+   one is amber - the colour of a highlighter over a printed paper, which is the
+   thing this collection actually is. */
+
+:root {
+  --nw-radius:       0.4rem;  /* 8px at Material's 20px root */
+  --nw-radius-lg:    0.6rem;  /* 12px */
+}
+
+/* ---- Light ---- */
+[data-md-color-scheme="default"] {
+  --nw-accent:            #d97706;
+  --nw-accent-text:       #b45309;               /* darkened for contrast on white */
+  --nw-accent-dark:       #b45309;
+  --nw-accent-glow:       rgba(217, 119, 6, 0.3);
+  --nw-accent-glow-faint: rgba(217, 119, 6, 0.12);
+  --nw-accent-border:     rgba(217, 119, 6, 0.4);
+  --nw-border:            #e2e8f0;
+  --nw-border-hover:      #cbd5e1;
+  --nw-surface:           #f1f5f9;               /* inputs, kbd - never cards */
+  --nw-btn-2nd-bg:        rgba(15, 23, 42, 0.08);
+  --nw-btn-2nd-bg-hover:  rgba(15, 23, 42, 0.16);
+
+  --md-primary-fg-color:          #000000;
+  --md-primary-fg-color--light:   #2e2e2e;
+  --md-primary-fg-color--dark:    #000000;
+  --md-primary-bg-color:          #ffffff;
+  --md-primary-bg-color--light:   rgba(255, 255, 255, 0.7);
+
+  --md-accent-fg-color:           var(--nw-accent-dark);
+  --md-accent-fg-color--transparent: rgba(217, 119, 6, 0.1);
+  --md-accent-bg-color:           #ffffff;
+  --md-accent-bg-color--light:    rgba(255, 255, 255, 0.7);
+
+  --md-default-bg-color:          #ffffff;
+  --md-default-fg-color:          #0f172a;
+  --md-default-fg-color--light:   rgba(15, 23, 42, 0.62);
+  --md-default-fg-color--lighter: rgba(15, 23, 42, 0.32);
+  --md-default-fg-color--lightest:rgba(15, 23, 42, 0.07);
+
+  --md-typeset-a-color:           var(--nw-accent-text);
+  --md-code-bg-color:             #f4f4f4;
+  --md-code-fg-color:             #1a1a1a;
+  --md-footer-bg-color:           #000000;
+  --md-footer-bg-color--dark:     #000000;
+}
+
+/* ---- Dark ---- */
+[data-md-color-scheme="slate"] {
+  /* Material derives slate's greys from a hue. Zero it out so the dark scheme
+     is neutral black rather than its default blue-grey. */
+  --md-hue: 0;
+
+  --nw-accent:            #f59e0b;
+  --nw-accent-text:       #fbbf24;
+  --nw-accent-dark:       #d97706;
+  --nw-accent-glow:       rgba(245, 158, 11, 0.5);
+  --nw-accent-glow-faint: rgba(245, 158, 11, 0.2);
+  --nw-accent-border:     rgba(245, 158, 11, 0.4);
+  --nw-border:            rgba(255, 255, 255, 0.1);
+  --nw-border-hover:      rgba(255, 255, 255, 0.2);
+  --nw-surface:           #111111;
+  --nw-btn-2nd-bg:        rgba(255, 255, 255, 0.1);
+  --nw-btn-2nd-bg-hover:  rgba(255, 255, 255, 0.2);
+
+  --md-primary-fg-color:          #000000;
+  --md-primary-fg-color--light:   #2e2e2e;
+  --md-primary-fg-color--dark:    #000000;
+  --md-primary-bg-color:          #ffffff;
+  --md-primary-bg-color--light:   rgba(255, 255, 255, 0.7);
+
+  --md-accent-fg-color:           #fcd34d;
+  --md-accent-fg-color--transparent: rgba(245, 158, 11, 0.1);
+  --md-accent-bg-color:           #000000;
+  --md-accent-bg-color--light:    rgba(0, 0, 0, 0.7);
+
+  /* Slate derives these from --md-hue; set them outright so no warm cast
+     survives at the low saturation Material uses. True #000000, not a
+     near-black: the gitGood banner on the landing page is flattened PNG on pure
+     black, so anything lighter frames it in a visible rectangle. */
+  --md-default-bg-color:          #000000;
+  --md-default-bg-color--light:   #0d0d0d;
+  --md-default-bg-color--lighter: #1a1a1a;
+  --md-default-bg-color--lightest:#262626;
+  --md-default-fg-color:          rgba(255, 255, 255, 0.92);
+  --md-default-fg-color--light:   rgba(255, 255, 255, 0.62);
+  --md-default-fg-color--lighter: rgba(255, 255, 255, 0.32);
+  --md-default-fg-color--lightest:rgba(255, 255, 255, 0.07);
+
+  --md-typeset-a-color:           var(--nw-accent-text);
+  --md-code-bg-color:             #111111;
+  --md-code-fg-color:             #e6e6e6;
+  --md-footer-bg-color:           #000000;
+  --md-footer-bg-color--dark:     #000000;
+}
+
+/* The header is black and, in dark mode, so is the page behind it. Without an
+   edge the two merge into one field and the header stops reading as a bar. */
+[data-md-color-scheme="slate"] .md-header,
+[data-md-color-scheme="slate"] .md-tabs {
+  border-bottom: 1px solid var(--nw-border);
+}
+
+/* The truncated repo slug + star/fork widget top-right is the single most
+   GitHub element on the page. Hiding it keeps repo_url (the edit links need
+   it) while the footer social icons carry the GitHub link. */
+.md-header__source {
+  display: none;
+}
+
+/* Links carry the accent; underline appears on hover for the non-colour
+   signal. Chrome links (nav, header, footer) keep Material's own colours. */
+.md-typeset a:hover,
+.md-typeset a:focus {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--nw-accent);
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Typography                                                          */
+/* ------------------------------------------------------------------ */
+
+/* Material dims h1 to --light and sets headings at weight 300. Full-strength
+   bold headings are what stop the page reading as a washed-out docs template. */
+.md-typeset h1 {
+  color: var(--md-default-fg-color);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset h2 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 2em;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+}
+
+/* kbd: surface fill, hairline border, mono, no 3D bevel. */
+.md-typeset kbd {
+  background-color: var(--nw-surface);
+  border: 1px solid var(--nw-border);
+  border-radius: 0.2rem;
+  box-shadow: none;
+  color: var(--md-default-fg-color);
+  vertical-align: baseline;
+}
+
+/* Every summary opens with an authors/published/paper-link block directly under
+   the h1. It is metadata, not prose - let it recede so the reader's eye lands on
+   "Why This Matters" instead. */
+.md-typeset h1 + p > strong:first-child {
+  color: var(--md-default-fg-color--light);
+}
+
+/* ------------------------------------------------------------------ */
+/* Buttons                                                             */
+/* ------------------------------------------------------------------ */
+
+/* Secondary: translucent foreground fill, no border. This also fixes the
+   dark-mode case where Material's outlined buttons draw black-on-black from
+   --md-primary-fg-color. */
+.md-typeset .md-button {
+  background-color: var(--nw-btn-2nd-bg);
+  border: none;
+  border-radius: var(--nw-radius);
+  color: var(--md-default-fg-color);
+  font-weight: 600;
+  margin: 0 0.4rem 0.5rem 0;
+  padding: 0.5em 1.4em;
+  transition: background-color 150ms, color 150ms, box-shadow 200ms,
+    transform 200ms;
+}
+
+.md-typeset .md-button:hover,
+.md-typeset .md-button:focus {
+  background-color: var(--nw-btn-2nd-bg-hover);
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+}
+
+/* Primary: accent fill, black text (amber is too light to carry white at
+   WCAG AA), accent glow that deepens on hover. */
+.md-typeset .md-button--primary {
+  background-color: var(--nw-accent);
+  box-shadow: 0 10px 15px -3px var(--nw-accent-glow-faint);
+  color: #000000;
+  font-weight: 700;
+}
+
+.md-typeset .md-button--primary:hover,
+.md-typeset .md-button--primary:focus {
+  background-color: var(--nw-accent-dark);
+  box-shadow: 0 10px 15px -3px var(--nw-accent-glow);
+  color: #000000;
+}
+
+[data-md-color-scheme="default"] .md-typeset .md-button--primary,
+[data-md-color-scheme="default"] .md-typeset .md-button--primary:hover {
+  color: #ffffff;
+}
+
+/* ------------------------------------------------------------------ */
+/* Layout                                                              */
+/* ------------------------------------------------------------------ */
+
+/* The comparison guides lean on wide tables (model-vs-model, technique
+   trade-offs). Material's default 61rem content column truncates them into a
+   scrollbar on desktop, so give the content area more room. */
+.md-grid {
+  max-width: 78rem;
+}
+
+.md-typeset__table {
+  min-width: 100%;
+}
+
+.md-typeset table:not([class]) {
+  display: table;
+  font-size: 0.72rem;
+}
+
+.md-typeset table:not([class]) th {
+  white-space: nowrap;
+}
+
+/* Thin accent-tinted scrollbars. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--nw-accent-glow-faint) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--nw-accent-glow-faint);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--nw-accent-glow);
+}
+
+/* ------------------------------------------------------------------ */
+/* Diagrams and figures                                                */
+/* ------------------------------------------------------------------ */
+
+/* Summaries draw their architecture diagrams as ASCII inside fenced blocks.
+   Stop the long ones wrapping - a wrapped ASCII diagram is unreadable. */
+.md-typeset pre > code {
+  white-space: pre;
+}
+
+.md-typeset .mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 1.2em 0;
+}
+
+.md-typeset img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ------------------------------------------------------------------ */
+/* Navigation                                                          */
+/* ------------------------------------------------------------------ */
+
+/* Paper titles in the nav are full academic titles and run long. Let them wrap
+   at a smaller size rather than truncate. */
+.md-nav__item .md-nav__item .md-nav__link {
+  font-size: 0.68rem;
+  line-height: 1.35;
+}
+
+/* Headings across the repo lead with emoji, which pymdownx renders as inline
+   SVGs. In prose they are fine; stacked down a sidebar they turn the nav into a
+   column of mismatched icons and push the text out of alignment. */
+.md-nav .twemoji,
+.md-nav__link .twemoji {
+  display: none;
+}
+
+/* The page's own contents sit inside the left sidebar under the active page.
+   Set them apart from the site tree above so the two are not read as one list. */
+.md-nav--secondary > .md-nav__title {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  opacity: 0.6;
+  padding-top: 0.4rem;
+}
+
+.md-nav--secondary {
+  border-left: 1px solid var(--nw-border);
+  margin-left: 0.3rem;
+  padding-left: 0.4rem;
+}
+
+.md-nav__link--active {
+  color: var(--nw-accent-text);
+  font-weight: 700;
+}
+
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link,
+.md-nav--primary .md-nav__item--section > .md-nav__link {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.md-nav--primary > .md-nav__list > .md-nav__item--section {
+  margin-top: 1.1rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* Landing page                                                        */
+/* ------------------------------------------------------------------ */
+
+/* Styles for the site-only home page staged from .github/site/home.md. Every
+   rule is scoped to a class that only appears on that page. */
+
+.md-typeset .home-hero {
+  text-align: center;
+  padding-top: 0.8rem;
+}
+
+@keyframes home-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.md-typeset .home-hero > * {
+  animation: home-fade-up 0.6s ease-out backwards;
+}
+
+.md-typeset .home-hero > *:nth-child(1) { animation-delay: 0.05s; }
+.md-typeset .home-hero > *:nth-child(2) { animation-delay: 0.15s; }
+.md-typeset .home-hero > *:nth-child(3) { animation-delay: 0.25s; }
+.md-typeset .home-hero > *:nth-child(4) { animation-delay: 0.35s; }
+.md-typeset .home-hero > *:nth-child(5) { animation-delay: 0.45s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset .home-hero > * {
+    animation: none;
+  }
+}
+
+.md-typeset .home-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  max-width: 24em;
+  margin: 0.4rem auto 0.6rem;
+}
+
+.md-typeset .home-intro {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 500;
+  max-width: 36rem;
+  margin: 0 auto 0.5rem;
+}
+
+.md-typeset .home-sub {
+  color: var(--md-default-fg-color--light);
+  max-width: 36rem;
+  margin: 0 auto 1.4rem;
+}
+
+.md-typeset .home-hero .md-button {
+  margin: 0 0.25rem 0.5rem;
+}
+
+/* The counts strip. Written as a markdown list so the numbers stay editable in
+   home.md; the list markers and stacking are undone here. */
+.md-typeset .stat-strip ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 2.2rem;
+  list-style: none;
+  margin: 1.6rem 0 1rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--nw-border);
+  border-bottom: 1px solid var(--nw-border);
+}
+
+.md-typeset .stat-strip li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.3rem 0;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .stat-strip li strong {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-transform: none;
+  color: var(--md-default-fg-color);
+}
+
+/* Accent eyebrow above a section heading. */
+.md-typeset .home-kicker {
+  color: var(--nw-accent-text);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 2.4rem 0 0;
+}
+
+.md-typeset .home-kicker + h2 {
+  margin-top: 0.2em;
+}
+
+/* Material ships .grid.cards. Page-colour background, 1px hairline border,
+   12px radius, and the hover shared with the sibling site. */
+.md-typeset .grid.cards > ul > li {
+  background-color: var(--md-default-bg-color);
+  border: 1px solid var(--nw-border);
+  border-radius: var(--nw-radius-lg);
+  padding: 1rem 1.1rem;
+  transition: border-color 200ms, box-shadow 200ms, transform 200ms;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--nw-accent-border);
+  box-shadow: 0 10px 15px -3px var(--nw-accent-glow-faint);
+  transform: translateY(-2px);
+}
+
+.md-typeset .grid.cards > ul > li > hr {
+  margin: 0.6rem 0;
+}
+
+/* Material lays cards out with auto-fit, which at this site's 78rem content
+   width fits three across - leaving the fourth card stranded on its own row.
+   There are exactly four entry points and they are peers, so pin two columns
+   once there is room for them and let the mobile stack take over below that. */
+@media screen and (min-width: 60em) {
+  /* The grid lives on the wrapping div - Material sets `display: contents` on
+     the inner ul, so the columns must be declared here, not on the list. */
+  .md-typeset .grid.cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.md-typeset .grid.cards .twemoji.lg {
+  color: var(--nw-accent-text);
+}
+
+/* Two columns of one-line links. CSS columns rather than grid so the list stays
+   a plain markdown list in the source. */
+.md-typeset .home-links ul {
+  columns: 2;
+  column-gap: 2.5rem;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.md-typeset .home-links li {
+  break-inside: avoid;
+  margin-bottom: 0.45rem;
+  font-size: 0.74rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .home-links li a {
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset .home-links li a:hover {
+  color: var(--nw-accent-text);
+}
+
+/* Category chips on the landing page - the five paper groups, scannable
+   without becoming another table. Same hover verbs as the cards, scaled down. */
+.md-typeset .cat-grid ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.md-typeset .cat-grid li {
+  margin: 0;
+}
+
+.md-typeset .cat-grid a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--nw-border);
+  border-radius: var(--nw-radius);
+  font-size: 0.7rem;
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+  transition: border-color 200ms, box-shadow 200ms, transform 200ms;
+}
+
+.md-typeset .cat-grid a:hover {
+  border-color: var(--nw-accent-border);
+  box-shadow: 0 4px 8px -2px var(--nw-accent-glow-faint);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.md-typeset .cat-grid .n {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--nw-accent-text);
+}
+
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .home-title {
+    font-size: 1.8rem;
+  }
+
+  .md-typeset .home-links ul {
+    columns: 1;
+  }
+
+  .md-typeset .stat-strip ul {
+    gap: 0 1.4rem;
+  }
+}

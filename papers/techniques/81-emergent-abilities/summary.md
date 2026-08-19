@@ -195,5 +195,6 @@ GPT-4's technical report demonstrated that some capabilities can be predicted fr
 - [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
 - [FLAN: Finetuned Language Models Are Zero-Shot Learners (Instruction Tuning)](../../techniques/80-flan/summary.md)
 - [Sparse Autoencoders and Monosemanticity: Reading the Features Inside a Model](../../techniques/82-sparse-autoencoders/summary.md)
+- [PaLM: Scaling Language Modeling with Pathways](../../language-models/94-palm/summary.md)
 
 <!-- related:end -->

@@ -847,5 +847,6 @@ underlying causal mechanisms of human behavior.
 - [Constitutional AI: Harmlessness from AI Feedback](../../language-models/14-constitutional-ai/summary.md)
 - [ReAct: Synergizing Reasoning and Acting in Language Models](../../techniques/21-react/summary.md)
 - [Reflexion: Language Agents with Verbal Reinforcement Learning](../../techniques/78-reflexion/summary.md)
+- [Voyager: An Open-Ended Embodied Agent with Large Language Models](../../techniques/100-voyager/summary.md)
 
 <!-- related:end -->

@@ -305,5 +305,6 @@ B ≈ 410.7
 - [LLaMA: Open and Efficient Foundation Language Models](../../language-models/15-llama/summary.md)
 - [LLaMA 2: Open Foundation and Fine-Tuned Chat Models](../../language-models/17-llama2/summary.md)
 - [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
+- [PaLM: Scaling Language Modeling with Pathways](../../language-models/94-palm/summary.md)
 
 <!-- related:end -->

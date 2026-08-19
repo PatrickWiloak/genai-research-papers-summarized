@@ -179,5 +179,6 @@ Holding out entire clusters is the methodological core. It is what makes the res
 - [Direct Preference Optimization (DPO): Your Language Model is Secretly a Reward Model](../../language-models/19-dpo/summary.md)
 - [Qwen3: Technical Report](../../language-models/28-qwen3/summary.md)
 - [Self-Instruct: Aligning Language Models with Self-Generated Instructions](../../techniques/79-self-instruct/summary.md)
+- [PaLM: Scaling Language Modeling with Pathways](../../language-models/94-palm/summary.md)
 
 <!-- related:end -->

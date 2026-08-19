@@ -416,5 +416,6 @@ print(response.choices[0].message.content)
 - [Qwen3: Technical Report](../../language-models/28-qwen3/summary.md)
 - [Llama 4: Natively Multimodal Open-Source AI](../../language-models/41-llama4/summary.md)
 - [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](../../architectures/67-switch-transformer/summary.md)
+- [Mistral 7B](../../language-models/95-mistral-7b/summary.md)
 
 <!-- related:end -->

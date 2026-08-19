@@ -52,9 +52,9 @@ Built for **every kind of technologist**, across 21 role-targeted learning paths
 
 # Foundational Generative AI Research Papers - Summarized
 
-A curated collection of the **87 most influential papers** that shaped modern generative AI, with comprehensive summaries designed to make cutting-edge research accessible to everyone.
+A curated collection of the **107 most influential papers** that shaped modern generative AI, with comprehensive summaries designed to make cutting-edge research accessible to everyone.
 
-[![Papers](https://img.shields.io/badge/Papers-87-blue.svg)](./INDEX.md)
+[![Papers](https://img.shields.io/badge/Papers-107-blue.svg)](./INDEX.md)
 [![Guides](https://img.shields.io/badge/Guides-7-green.svg)](./docs/ROADMAP.md)
 [![License](https://img.shields.io/badge/License-CC_BY_4.0-orange.svg)](./LICENSE)
 [![Updated](https://img.shields.io/badge/Updated-August_2026-green.svg)](./README.md)
@@ -64,7 +64,7 @@ A curated collection of the **87 most influential papers** that shaped modern ge
 ## 🚀 Quick Start
 
 **New to AI?** Start with the [Learning Roadmap](./docs/ROADMAP.md)
-**Want the full list?** See the [Paper Index](./INDEX.md) - all 87 papers grouped by category
+**Want the full list?** See the [Paper Index](./INDEX.md) - all 107 papers grouped by category
 **Exploring a topic?** Browse [by topic tag](./TAGS.md) (reasoning, RLHF, efficiency, agents, multimodal, ...)
 **Want to browse visually?** See [BROWSE.md](./BROWSE.md) for table/grid view
 **Not sure what to read?** Check the [Reading Guide](./docs/READING_GUIDE.md) - Historical vs Modern relevance
@@ -90,7 +90,7 @@ A curated collection of the **87 most influential papers** that shaped modern ge
 ### Data & Tooling
 - 🧾 **[papers.json](./papers.json)** / **[papers.csv](./papers.csv)** - machine-readable manifest of every paper
 - 🛠️ **[scripts/build_manifest.py](./scripts/build_manifest.py)** - regenerates frontmatter, the manifest, `INDEX.md`, and the site nav
-- 🌐 **Docs site** - run `pip install -r requirements.txt && mkdocs serve` for a searchable browsable version (auto-deploys to GitHub Pages on push)
+- 🌐 **Docs site** - read it all at **[patrickwiloak.github.io/genai-research-papers-summarized](https://patrickwiloak.github.io/genai-research-papers-summarized/)** - searchable, dark mode, no signup. See [CONTRIBUTING.md](./CONTRIBUTING.md#previewing-the-site-locally) to build it locally.
 - 🤝 **[CONTRIBUTING.md](./CONTRIBUTING.md)** - how to add a paper, house style, and the build workflow
 
 ---
@@ -102,6 +102,8 @@ genai-research-papers-summarized/
 ├── README.md                          # You are here
 ├── INDEX.md / BROWSE.md / TAGS.md     # Generated indexes (category, grid, topic tag)
 ├── papers.json / papers.csv           # Generated machine-readable manifest
+├── mkdocs.yml                         # Hand-maintained site config (theme, palette); no nav
+├── requirements.txt                   # Pinned docs toolchain
 ├── docs/                              # Guides
 │   ├── ROADMAP.md                     # Learning paths
 │   ├── READING_GUIDE.md               # Historical vs modern relevance
@@ -110,105 +112,22 @@ genai-research-papers-summarized/
 │   ├── GLOSSARY.md                    # Term definitions
 │   └── GAPS.md                        # Coverage map + what is queued next
 ├── scripts/                           # Stdlib-only regeneration pipeline
-│   ├── build_manifest.py              # Frontmatter, manifest, INDEX, TAGS, mkdocs nav
+│   ├── build_manifest.py              # Frontmatter, manifest, INDEX, TAGS, site nav + tree
 │   ├── add_cross_links.py             # "Related in This Collection" footers
 │   └── check_links.py                 # Relative-link validation (CI gate)
+├── .github/site/                      # Site-only chrome (landing page + stylesheet)
 ├── assets/brand/                      # Banner images used by this README
-└── papers/                            # All summaries, grouped by category
-    ├── architectures/         # Foundational architectures (10)
-    │   ├── 01-attention-is-all-you-need/
-    │   ├── 11-vision-transformer/
-    │   ├── 20-mamba/
-    │   ├── 37-mixture-of-experts/
-    │   ├── 55-seq2seq/
-    │   ├── 66-bahdanau-attention/
-    │   ├── 67-switch-transformer/
-    │   ├── 73-resnet/
-    │   ├── 74-unet/
-    │   └── 75-grouped-query-attention/
-    ├── language-models/       # LLM papers (21)
-    │   ├── 03-bert/
-    │   ├── 04-gpt3-few-shot-learners/
-    │   ├── 05-instructgpt-rlhf/
-    │   ├── 14-constitutional-ai/
-    │   ├── 15-llama/
-    │   ├── 17-llama2/
-    │   ├── 19-dpo/
-    │   ├── 26-deepseek-r1/
-    │   ├── 27-deepseek-v3/
-    │   ├── 28-qwen3/
-    │   ├── 30-claude-3.5-sonnet/
-    │   ├── 31-openai-o1/
-    │   ├── 33-llama3.3/
-    │   ├── 36-gpt4/
-    │   ├── 40-gpt4o/
-    │   ├── 41-llama4/
-    │   ├── 42-gpt5/
-    │   ├── 43-claude4/
-    │   ├── 56-codex/
-    │   ├── 64-gpt2/
-    │   └── 65-t5/
-    ├── image-generation/      # Image & video generation (10)
-    │   ├── 02-generative-adversarial-networks/
-    │   ├── 06-diffusion-models/
-    │   ├── 07-stable-diffusion/
-    │   ├── 44-sora-dit/
-    │   ├── 48-dalle3/
-    │   ├── 57-vae/
-    │   ├── 69-classifier-free-guidance/
-    │   ├── 70-ddim/
-    │   ├── 71-controlnet/
-    │   └── 72-flow-matching-sd3/
-    ├── multimodal/            # Cross-modal papers (7)
-    │   ├── 08-clip/
-    │   ├── 23-gpt4v/
-    │   ├── 29-gemini-2.5/
-    │   ├── 32-sam2/
-    │   ├── 46-llava/
-    │   ├── 47-gemini3/
-    │   └── 49-whisper/
-    └── techniques/            # Methods, systems, safety & evaluation (39)
-        ├── 09-chain-of-thought/
-        ├── 10-lora/
-        ├── 12-scaling-laws/
-        ├── 13-rag/
-        ├── 16-flash-attention/
-        ├── 18-chinchilla/
-        ├── 21-react/
-        ├── 22-qlora/
-        ├── 24-toolformer/
-        ├── 25-tree-of-thoughts/
-        ├── 34-meta-cot/
-        ├── 35-rstar-math/
-        ├── 38-grpo/
-        ├── 39-rlvr/
-        ├── 45-speculative-decoding/
-        ├── 50-test-time-compute/
-        ├── 51-process-reward-models/
-        ├── 52-pagedattention-vllm/
-        ├── 53-word2vec/
-        ├── 54-rope-rotary-position-embedding/
-        ├── 58-generative-agents/
-        ├── 59-model-context-protocol/
-        ├── 60-graph-rag/
-        ├── 61-alphageometry/
-        ├── 62-alphaevolve/
-        ├── 63-ppo/
-        ├── 68-alphafold/
-        ├── 76-zero-megatron/
-        ├── 77-self-consistency/
-        ├── 78-reflexion/
-        ├── 79-self-instruct/
-        ├── 80-flan/
-        ├── 81-emergent-abilities/
-        ├── 82-sparse-autoencoders/
-        ├── 83-sleeper-agents/
-        ├── 84-swe-bench/
-        ├── 85-llm-as-judge/
-        ├── 86-gptq-awq-quantization/
-        └── 87-dense-retrieval/
+└── papers/                            # All 107 summaries, grouped by category
+    ├── architectures/       # Foundational architectures (11)
+    ├── language-models/     # Language models (25)
+    ├── image-generation/    # Image & video generation (14)
+    ├── multimodal/          # Multimodal (7)
+    └── techniques/          # Techniques & methods (50)
 ```
 
+Each paper is its own directory holding a single `summary.md`, numbered in the
+order it entered the collection. For the full list with titles, authors, and
+years, see the generated [Paper Index](./INDEX.md) - it never goes stale.
 
 ---
 
@@ -261,7 +180,7 @@ genai-research-papers-summarized/
 - Why long context and local inference are affordable
 - [Paper](https://arxiv.org/abs/2305.13245)
 
-_Also in this category:_ [Seq2Seq](./papers/architectures/55-seq2seq/summary.md) (2014), [Bahdanau Attention](./papers/architectures/66-bahdanau-attention/summary.md) (2014), [Switch Transformers](./papers/architectures/67-switch-transformer/summary.md) (2021). See [INDEX.md](./INDEX.md) for the complete list.
+_Also in this category:_ [Seq2Seq](./papers/architectures/55-seq2seq/summary.md) (2014), [Bahdanau Attention](./papers/architectures/66-bahdanau-attention/summary.md) (2014), [Switch Transformers](./papers/architectures/67-switch-transformer/summary.md) (2021), [Masked Autoencoders (MAE)](./papers/architectures/88-mae/summary.md) (2021). See [INDEX.md](./INDEX.md) for the complete list.
 
 ### 🤖 Language Models
 **Recommended Reading Order:** Evolution → Frontier → Alignment → Open Source → Reasoning → Unified
@@ -375,6 +294,8 @@ _Also in this category:_ [Seq2Seq](./papers/architectures/55-seq2seq/summary.md)
 - Multi-agent orchestration, extended thinking
 - [Announcement](https://www.anthropic.com/news/claude-4)
 
+_Also in this category:_ [GPT-1](./papers/language-models/93-gpt1/summary.md) (2018) - where generative pre-training started, [PaLM](./papers/language-models/94-palm/summary.md) (2022), [Mistral 7B](./papers/language-models/95-mistral-7b/summary.md) (2023), [Llama Guard](./papers/language-models/96-llama-guard/summary.md) (2023). See [INDEX.md](./INDEX.md) for the complete list.
+
 ### 🎨 Image Generation
 **Recommended Reading Order:** GANs (historical) → Diffusion theory → Practical implementation
 
@@ -430,7 +351,7 @@ _Also in this category:_ [Seq2Seq](./papers/architectures/55-seq2seq/summary.md)
 - Powers Stable Diffusion 3/3.5 and Flux; MMDiT fixed text rendering
 - [Flow Matching](https://arxiv.org/abs/2210.02747) | [SD3](https://arxiv.org/abs/2403.03206)
 
-_Also in this category:_ [VAE](./papers/image-generation/57-vae/summary.md) (2013).
+_Also in this category:_ [VAE](./papers/image-generation/57-vae/summary.md) (2013), [VQ-VAE](./papers/image-generation/89-vq-vae/summary.md) (2017), [VQ-GAN](./papers/image-generation/90-vq-gan/summary.md) (2020), [Imagen](./papers/image-generation/91-imagen/summary.md) (2022), [DreamBooth](./papers/image-generation/92-dreambooth/summary.md) (2022).
 
 ### 🔗 Multimodal
 **Recommended Reading Order:** Vision-language bridge → Practical multimodal → Next-gen unified AI
@@ -674,6 +595,14 @@ _Also in this category:_ [VAE](./papers/image-generation/57-vae/summary.md) (201
 
 _Also in this category:_ [Word2Vec](./papers/techniques/53-word2vec/summary.md), [RoPE](./papers/techniques/54-rope-rotary-position-embedding/summary.md), [PPO](./papers/techniques/63-ppo/summary.md), [Generative Agents](./papers/techniques/58-generative-agents/summary.md), [MCP](./papers/techniques/59-model-context-protocol/summary.md), [GraphRAG](./papers/techniques/60-graph-rag/summary.md), [AlphaGeometry](./papers/techniques/61-alphageometry/summary.md), [AlphaEvolve](./papers/techniques/62-alphaevolve/summary.md), [AlphaFold](./papers/techniques/68-alphafold/summary.md).
 
+**Models that teach themselves to reason:** [STaR](./papers/techniques/97-star/summary.md) (2022), [Quiet-STaR](./papers/techniques/98-quiet-star/summary.md) (2024), [Self-Refine](./papers/techniques/99-self-refine/summary.md) (2023) - bootstrap rationales, think before speaking, and revise your own output.
+
+**Agents and world models:** [Voyager](./papers/techniques/100-voyager/summary.md) (2023), [Genie](./papers/techniques/104-genie/summary.md) (2024), [DreamerV3](./papers/techniques/105-dreamerv3/summary.md) (2023) - an agent that writes its own skills, and two models that learn an environment well enough to imagine it.
+
+**Alignment beyond preference pairs:** [KTO](./papers/techniques/103-kto/summary.md) (2024) - align on plain thumbs-up/thumbs-down instead of ranked pairs.
+
+**AI on hard science and hard games:** [AlphaFold 3](./papers/techniques/101-alphafold3/summary.md) (2024), [ESM-2 / ESMFold](./papers/techniques/106-esm/summary.md) (2023), [AlphaZero](./papers/techniques/102-alphazero/summary.md) (2017), [CICERO](./papers/techniques/107-cicero/summary.md) (2022) - structure prediction, protein language models, self-play from zero, and negotiation in natural language.
+
 ---
 
 ## 🎯 Learning Paths
@@ -719,26 +648,28 @@ Focus on "Why This Matters" sections + [Comparisons Guide](./docs/COMPARISONS.md
 
 | Category | Count | Total Reading Time |
 |----------|-------|-------------------|
-| **Papers** | 87 | 75-90 hours |
-| **Words** | 460,000+ | - |
-| **Guides** | 7 | 3-5 hours |
+| **Papers** | 107 | 25-30 hours |
+| **Words** | 219,000+ | - |
+| **Guides** | 6 | 3-5 hours |
 | **Terms Explained** | 250+ | - |
 
 ### By Year
-_This distribution is generated from [`papers.json`](./papers.json) - see [INDEX.md](./INDEX.md) for the full clickable list._
+_Generated from [`papers.json`](./papers.json) - see [INDEX.md](./INDEX.md) for the full clickable list._
 
-- 2013: 2 papers (Word2Vec, VAE)
-- 2014: 3 papers (GANs, Seq2Seq, Bahdanau Attention)
-- 2015: 2 papers (ResNet, U-Net)
-- 2017: 2 papers (Transformers, PPO)
-- 2018: 1 paper (BERT)
-- 2019: 3 papers (GPT-2, T5, ZeRO/Megatron-LM)
-- 2020: 7 papers (GPT-3, DDPM, ViT, Scaling Laws, RAG, DDIM, Dense Retrieval)
-- 2021: 9 papers (Stable Diffusion, CLIP, LoRA, RoPE, Codex, Switch Transformer, AlphaFold, Classifier-Free Guidance, FLAN)
-- 2022: 14 papers (InstructGPT, Chain-of-Thought, Constitutional AI, FlashAttention, Chinchilla, ReAct, DiT/Sora, Speculative Decoding, Whisper, Flow Matching/SD3, Self-Consistency, Self-Instruct, Emergent Abilities, GPTQ/AWQ)
-- 2023: 19 papers (LLaMA, LLaMA 2, DPO, Mamba, QLoRA, GPT-4V, Toolformer, Tree of Thoughts, GPT-4, LLaVA, DALL-E 3, Process Reward Models, PagedAttention/vLLM, Generative Agents, ControlNet, GQA, Reflexion, SWE-bench, LLM-as-a-Judge)
-- 2024: 15 papers (DeepSeek-V3, Claude 3.5 Sonnet, o1, SAM 2, LLaMA 3.3, Mixtral/MoE, GRPO, RLVR, GPT-4o, Test-Time Compute, MCP, GraphRAG, AlphaGeometry, Sparse Autoencoders, Sleeper Agents)
-- 2025: 10 papers (DeepSeek-R1, Qwen3, Gemini 2.5, Meta-CoT, rStar-Math, Llama 4, GPT-5, Claude 4, Gemini 3, AlphaEvolve)
+<!-- byyear:start -->
+- **2013:** 2 papers
+- **2014:** 3 papers
+- **2015:** 2 papers
+- **2017:** 4 papers
+- **2018:** 2 papers
+- **2019:** 3 papers
+- **2020:** 8 papers
+- **2021:** 10 papers
+- **2022:** 19 papers
+- **2023:** 25 papers
+- **2024:** 19 papers
+- **2025:** 10 papers
+<!-- byyear:end -->
 
 ---
 
@@ -842,7 +773,7 @@ Gratitude to the researchers who created these foundational works:
 ---
 
 **Last Updated:** 2026-08-18
-**Papers:** 87 foundational works (2013-2026)
+**Papers:** 107 foundational works (2013-2026)
 **Total Content:** 460,000+ words
 **Includes:** Roots (Word2Vec, Seq2Seq, VAE, PPO) through the latest breakthroughs of early 2026 (GPT-5, Claude 4, Llama 4, GRPO, RLVR, and more)
 **Repository:** [github.com/PatrickWiloak/genai-research-papers-summarized](https://github.com/PatrickWiloak/genai-research-papers-summarized)

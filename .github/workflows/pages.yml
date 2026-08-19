@@ -1,51 +1,82 @@
-name: Deploy docs site
+name: Docs site
+
+# Builds the MkDocs Material site and publishes it to GitHub Pages.
+#
+# The build job is a blocking gate on every pull request: it runs with --strict,
+# so a broken relative link, a link to an anchor that does not exist, or a page
+# that no navigation entry reaches will fail the check rather than ship a broken
+# page. Deployment only happens on main.
+#
+# One-time repo setup: Settings > Pages > Build and deployment > Source must be
+# set to "GitHub Actions". Until that is done, the deploy job fails while the
+# build job still passes.
 
 on:
   push:
     branches: [main]
-    paths:
-      - "papers/**"
-      - "docs/**"
-      - "*.md"
-      - "mkdocs.yml"
-      - "requirements.txt"
-      - ".github/workflows/pages.yml"
+  pull_request:
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
-# Allow one concurrent deployment, cancel in-progress runs of this workflow.
+# Never let two deploys race. Queue rather than cancel, so a merge to main is
+# not dropped by a later one that starts before it finishes publishing.
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
+    name: Build site
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install dependencies
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install toolchain
         run: pip install -r requirements.txt
-      - name: Regenerate manifest and nav
+
+      # build_manifest.py stages site-build/ (summaries, guides, the site-only
+      # landing page and stylesheet) and writes mkdocs.generated.yml, which is
+      # mkdocs.yml plus the generated nav. Both are git-ignored, so they are
+      # always built fresh here.
+      - name: Stage site tree and nav
         run: python3 scripts/build_manifest.py
-      - name: Build site
-        run: mkdocs build --site-dir ./_site
-      - uses: actions/upload-pages-artifact@v3
+
+      - name: Build
+        run: mkdocs build -f mkdocs.generated.yml --strict
+
+      - name: Report size
+        run: |
+          echo "### Site build" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Pages: $(find site -name '*.html' | wc -l)" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Size: $(du -sh site | cut -f1)" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload Pages artifact
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site
+          path: site
 
   deploy:
+    name: Deploy to Pages
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
+      - name: Deploy
+        id: deployment
         uses: actions/deploy-pages@v4

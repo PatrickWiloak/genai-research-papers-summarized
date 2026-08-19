@@ -231,5 +231,6 @@ The VAE framework - encode to a distribution, regularize with a prior, decode ba
 - [Generative Adversarial Networks (GANs)](../../image-generation/02-generative-adversarial-networks/summary.md)
 - [High-Resolution Image Synthesis with Latent Diffusion Models (Stable Diffusion)](../../image-generation/07-stable-diffusion/summary.md)
 - [DALL-E 3: Improving Image Generation with Better Captions](../../image-generation/48-dalle3/summary.md)
+- [Neural Discrete Representation Learning (VQ-VAE)](../../image-generation/89-vq-vae/summary.md)
 
 <!-- related:end -->

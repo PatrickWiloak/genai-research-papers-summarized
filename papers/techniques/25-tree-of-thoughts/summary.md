@@ -865,5 +865,7 @@ def evaluate_cached(state, thought):
 - [ReAct: Synergizing Reasoning and Acting in Language Models](../../techniques/21-react/summary.md)
 - [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
 - [Self-Consistency Improves Chain of Thought Reasoning in Language Models](../../techniques/77-self-consistency/summary.md)
+- [STaR: Bootstrapping Reasoning With Reasoning (Self-Taught Reasoner)](../../techniques/97-star/summary.md)
+- [Mastering Diverse Domains through World Models (DreamerV3)](../../techniques/105-dreamerv3/summary.md)
 
 <!-- related:end -->

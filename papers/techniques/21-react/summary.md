@@ -719,5 +719,6 @@ Attempt 2: [uses reflection to do better]
 - [Toolformer: Language Models Can Teach Themselves to Use Tools](../../techniques/24-toolformer/summary.md)
 - [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](../../techniques/25-tree-of-thoughts/summary.md)
 - [Reflexion: Language Agents with Verbal Reinforcement Learning](../../techniques/78-reflexion/summary.md)
+- [Voyager: An Open-Ended Embodied Agent with Large Language Models](../../techniques/100-voyager/summary.md)
 
 <!-- related:end -->

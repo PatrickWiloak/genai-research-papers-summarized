@@ -5,7 +5,12 @@ __pycache__/
 .vscode/
 .idea/
 
-# MkDocs: generated docs tree (site-build/) and rendered output (site/, _site/)
+# MkDocs: generated docs tree (site-build/), the generated config that
+# mkdocs.yml + the nav generator compose into, and rendered output.
 /site-build/
+/mkdocs.generated.yml
 /site/
 /_site/
+
+# Local docs toolchain virtualenv (see requirements.txt)
+/.venv-docs/

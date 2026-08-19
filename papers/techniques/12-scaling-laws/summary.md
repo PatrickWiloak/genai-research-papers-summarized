@@ -452,5 +452,6 @@ optimal_tokens = k4 * (C ** 0.50)
 - [Training Compute-Optimal Large Language Models (Chinchilla)](../../techniques/18-chinchilla/summary.md)
 - [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
 - [Emergent Abilities of Large Language Models (and the Mirage Rebuttal)](../../techniques/81-emergent-abilities/summary.md)
+- [PaLM: Scaling Language Modeling with Pathways](../../language-models/94-palm/summary.md)
 
 <!-- related:end -->

@@ -1,5 +1,5 @@
 {
-  "count": 87,
+  "count": 107,
   "categories": [
     "architectures",
     "language-models",
@@ -1347,6 +1347,327 @@
         "retrieval",
         "embeddings",
         "search"
+      ]
+    },
+    {
+      "number": 88,
+      "title": "Masked Autoencoders Are Scalable Vision Learners (MAE)",
+      "slug": "88-mae",
+      "category": "architectures",
+      "authors": "Kaiming He, Xinlei Chen, Saining Xie, Yanghao Li, Piotr Dollar, Ross Girshick (Facebook AI Research)",
+      "published": "November 2021 (arXiv 2111.06377), CVPR 2022",
+      "year": 2021,
+      "url": "https://arxiv.org/abs/2111.06377",
+      "path": "papers/architectures/88-mae/summary.md",
+      "topics": [
+        "vision",
+        "pretraining",
+        "self-supervised",
+        "architecture"
+      ]
+    },
+    {
+      "number": 89,
+      "title": "Neural Discrete Representation Learning (VQ-VAE)",
+      "slug": "89-vq-vae",
+      "category": "image-generation",
+      "authors": "Aaron van den Oord, Oriol Vinyals, Koray Kavukcuoglu (DeepMind)",
+      "published": "November 2017 (arXiv 1711.00937), NeurIPS 2017",
+      "year": 2017,
+      "url": "https://arxiv.org/abs/1711.00937",
+      "path": "papers/image-generation/89-vq-vae/summary.md",
+      "topics": [
+        "image-generation",
+        "vae",
+        "discrete-representation"
+      ]
+    },
+    {
+      "number": 90,
+      "title": "Taming Transformers for High-Resolution Image Synthesis (VQ-GAN)",
+      "slug": "90-vq-gan",
+      "category": "image-generation",
+      "authors": "Patrick Esser, Robin Rombach, Björn Ommer (Heidelberg University)",
+      "published": "December 2020 (CVPR 2021 oral)",
+      "year": 2020,
+      "url": "https://arxiv.org/abs/2012.09841",
+      "path": "papers/image-generation/90-vq-gan/summary.md",
+      "topics": [
+        "image-generation",
+        "gan",
+        "transformers",
+        "discrete-representation"
+      ]
+    },
+    {
+      "number": 91,
+      "title": "Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding (Imagen)",
+      "slug": "91-imagen",
+      "category": "image-generation",
+      "authors": "Chitwan Saharia, William Chan, Saurabh Saxena, Lala Li, Jay Whang, Emily Denton, Seyed Kamyar Seyed Ghasemabadi, Burcu Karagol Ayan, S. Sara Mahdavi, Rapha Gontijo Lopes, Tim Salimans, Jonathan Ho, David J. Fleet, Mohammad Norouzi (Google Research, Brain Team)",
+      "published": "May 2022 (NeurIPS 2022)",
+      "year": 2022,
+      "url": "https://arxiv.org/abs/2205.11487",
+      "path": "papers/image-generation/91-imagen/summary.md",
+      "topics": [
+        "image-generation",
+        "diffusion",
+        "text-to-image"
+      ]
+    },
+    {
+      "number": 92,
+      "title": "DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation",
+      "slug": "92-dreambooth",
+      "category": "image-generation",
+      "authors": "Nataniel Ruiz, Yuanzhen Li, Varun Jampani, Yael Pritch, Michael Rubinstein, Kfir Aberman (Google Research, Boston University)",
+      "published": "August 2022 (CVPR 2023)",
+      "year": 2022,
+      "url": "https://arxiv.org/abs/2208.12242",
+      "path": "papers/image-generation/92-dreambooth/summary.md",
+      "topics": [
+        "image-generation",
+        "diffusion",
+        "fine-tuning",
+        "controllable-generation"
+      ]
+    },
+    {
+      "number": 93,
+      "title": "Improving Language Understanding by Generative Pre-Training (GPT-1)",
+      "slug": "93-gpt1",
+      "category": "language-models",
+      "authors": "Alec Radford, Karthik Narasimhan, Tim Salimans, Ilya Sutskever (OpenAI)",
+      "published": "June 2018 (OpenAI Technical Report)",
+      "year": 2018,
+      "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf",
+      "path": "papers/language-models/93-gpt1/summary.md",
+      "topics": [
+        "language-model",
+        "pretraining",
+        "transfer-learning"
+      ]
+    },
+    {
+      "number": 94,
+      "title": "PaLM: Scaling Language Modeling with Pathways",
+      "slug": "94-palm",
+      "category": "language-models",
+      "authors": "Aakanksha Chowdhery, Sharan Narang, Jacob Devlin, et al. (Google Research) - 67 authors",
+      "published": "April 2022 (arXiv 2204.02311)",
+      "year": 2022,
+      "url": "https://arxiv.org/abs/2204.02311",
+      "path": "papers/language-models/94-palm/summary.md",
+      "topics": [
+        "language-model",
+        "scaling",
+        "pretraining"
+      ]
+    },
+    {
+      "number": 95,
+      "title": "Mistral 7B",
+      "slug": "95-mistral-7b",
+      "category": "language-models",
+      "authors": "Albert Q. Jiang, Alexandre Sablayrolles, Arthur Mensch, et al. (Mistral AI)",
+      "published": "October 2023 (arXiv 2310.06825)",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2310.06825",
+      "path": "papers/language-models/95-mistral-7b/summary.md",
+      "topics": [
+        "language-model",
+        "efficiency",
+        "attention"
+      ]
+    },
+    {
+      "number": 96,
+      "title": "Llama Guard: LLM-based Input-Output Safeguard for Human-AI Conversations",
+      "slug": "96-llama-guard",
+      "category": "language-models",
+      "authors": "Hakan Inan, Kartikeya Upasani, Jianfeng Chi, Rashi Rungta, Krithika Iyer, Yuning Mao, Michael Tontchev, Qing Hu, Brian Fuller, Davide Testuggine, Madian Khabsa (Meta GenAI / Responsible AI)",
+      "published": "December 2023",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2312.06674",
+      "path": "papers/language-models/96-llama-guard/summary.md",
+      "topics": [
+        "safety",
+        "alignment",
+        "evaluation"
+      ]
+    },
+    {
+      "number": 97,
+      "title": "STaR: Bootstrapping Reasoning With Reasoning (Self-Taught Reasoner)",
+      "slug": "97-star",
+      "category": "techniques",
+      "authors": "Eric Zelikman, Yuhuai Wu, Jesse Mu, Noah D. Goodman (Stanford University, Google Research)",
+      "published": "March 2022 (NeurIPS 2022)",
+      "year": 2022,
+      "url": "https://arxiv.org/abs/2203.14465",
+      "path": "papers/techniques/97-star/summary.md",
+      "topics": [
+        "reasoning",
+        "self-improvement",
+        "synthetic-data"
+      ]
+    },
+    {
+      "number": 98,
+      "title": "Quiet-STaR: Language Models Can Teach Themselves to Think Before Speaking",
+      "slug": "98-quiet-star",
+      "category": "techniques",
+      "authors": "Eric Zelikman, Georges Harik, Yijia Shao, Varuna Jayasiri, Nick Haber, Noah D. Goodman (Stanford University, Notbad AI)",
+      "published": "March 2024 (COLM 2024)",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2403.09629",
+      "path": "papers/techniques/98-quiet-star/summary.md",
+      "topics": [
+        "reasoning",
+        "self-improvement",
+        "pretraining"
+      ]
+    },
+    {
+      "number": 99,
+      "title": "Self-Refine: Iterative Refinement with Self-Feedback",
+      "slug": "99-self-refine",
+      "category": "techniques",
+      "authors": "Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, Shashank Gupta, Bodhisattwa Prasad Majumder, Katherine Hermann, Sean Welleck, Amir Yazdanbakhsh, Peter Clark (CMU, Allen AI, University of Washington, NVIDIA, UC San Diego, Google Research)",
+      "published": "March 2023 (NeurIPS 2023)",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2303.17651",
+      "path": "papers/techniques/99-self-refine/summary.md",
+      "topics": [
+        "reasoning",
+        "prompting",
+        "self-improvement"
+      ]
+    },
+    {
+      "number": 100,
+      "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
+      "slug": "100-voyager",
+      "category": "techniques",
+      "authors": "Guanzhi Wang, Yuqi Xie, Yunfan Jiang, Ajay Mandlekar, Chaowei Xiao, Yuke Zhu, Linxi Fan, Anima Anandkumar (NVIDIA, Caltech, UT Austin, Stanford, ASU)",
+      "published": "May 2023 (TMLR 2024)",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2305.16291",
+      "path": "papers/techniques/100-voyager/summary.md",
+      "topics": [
+        "agents",
+        "tool-use",
+        "self-improvement",
+        "code"
+      ]
+    },
+    {
+      "number": 101,
+      "title": "Accurate Structure Prediction of Biomolecular Interactions with AlphaFold 3",
+      "slug": "101-alphafold3",
+      "category": "techniques",
+      "authors": "Josh Abramson, Jonas Adler, Jack Dunger, Richard Evans, Tim Green, Alexander Pritzel, Olaf Ronneberger, Lindsay Willmore, Andrew J. Ballard, Joshua Bambrick, Sebastian W. Bodenstein, David A. Evans, Chia-Chun Hung, Michael O'Neill, David Reiman, Kathryn Tunyasuvunakool, Zachary Wu, Akvile Zemgulyte, Eirini Arvaniti, Charles Beattie, Ottavia Bertolli, Alex Bridgland, Alexey Cherepanov, Miles Congreve, Alexander I. Cowen-Rivers, Andrew Cowie, Michael Figurnov, Fabian B. Fuchs, Hannah Gladman, Rishub Jain, Yousuf A. Khan, Caroline M. R. Low, Kuba Perlin, Anna Potapenko, Pascal Savy, Sukhdeep Singh, Adrian Stecula, Ashok Thillaisundaram, Catherine Tong, Sergei Yakneen, Ellen D. Zhong, Michal Zielinski, Augustin Zidek, Victor Bapst, Pushmeet Kohli, Max Jaderberg, Demis Hassabis, John M. Jumper (DeepMind and Isomorphic Labs)",
+      "published": "May 2024 (Nature, vol. 630, pp. 493-500)",
+      "year": 2024,
+      "url": "https://www.nature.com/articles/s41586-024-07487-w",
+      "path": "papers/techniques/101-alphafold3/summary.md",
+      "topics": [
+        "science",
+        "diffusion"
+      ]
+    },
+    {
+      "number": 102,
+      "title": "Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm",
+      "slug": "102-alphazero",
+      "category": "techniques",
+      "authors": "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis (DeepMind)",
+      "published": "December 2017 (later in Science, 2018)",
+      "year": 2017,
+      "url": "https://arxiv.org/abs/1712.01815",
+      "path": "papers/techniques/102-alphazero/summary.md",
+      "topics": [
+        "reinforcement-learning",
+        "search",
+        "self-play"
+      ]
+    },
+    {
+      "number": 103,
+      "title": "KTO: Model Alignment as Prospect Theoretic Optimization",
+      "slug": "103-kto",
+      "category": "techniques",
+      "authors": "Kawin Ethayarajh, Winnie Xu, Niklas Muennighoff, Dan Jurafsky, Douwe Kiela (Stanford / Contextual AI)",
+      "published": "February 2024",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2402.01306",
+      "path": "papers/techniques/103-kto/summary.md",
+      "topics": [
+        "alignment",
+        "preference-optimization"
+      ]
+    },
+    {
+      "number": 104,
+      "title": "Genie: Generative Interactive Environments",
+      "slug": "104-genie",
+      "category": "techniques",
+      "authors": "Jake Bruce, Michael Dennis, Ashley Edwards, Jack Parker-Holder, Yuge (Jimmy) Shi, Edward Hughes, Matthew Lai, Aditi Mavalankar, Richie Steigerwald, Chris Apps, Yusuf Aytar, Sarah Bechtle, Feryal Behbahani, Stephanie Chan, Nicolas Heess, Lucy Gonzalez, Simon Osindero, Sherjil Ozair, Scott Reed, Jingwei Zhang, Konrad Zolna, Jeff Clune, Nando de Freitas, Satinder Singh, Tim Rocktaeschel (Google DeepMind)",
+      "published": "February 2024",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2402.15391",
+      "path": "papers/techniques/104-genie/summary.md",
+      "topics": [
+        "video-generation",
+        "world-models",
+        "self-supervised"
+      ]
+    },
+    {
+      "number": 105,
+      "title": "Mastering Diverse Domains through World Models (DreamerV3)",
+      "slug": "105-dreamerv3",
+      "category": "techniques",
+      "authors": "Danijar Hafner, Jurgis Pasukonis, Jimmy Ba, Timothy Lillicrap (University of Toronto / DeepMind)",
+      "published": "January 2023 (Nature, 2025 for journal version)",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2301.04104",
+      "path": "papers/techniques/105-dreamerv3/summary.md",
+      "topics": [
+        "reinforcement-learning",
+        "world-models"
+      ]
+    },
+    {
+      "number": 106,
+      "title": "Evolutionary-Scale Prediction of Atomic-Level Protein Structure with a Language Model (ESM-2 / ESMFold)",
+      "slug": "106-esm",
+      "category": "techniques",
+      "authors": "Zeming Lin, Halil Akin, Roshan Rao, Brian Hie, Zhongkai Zhu, Wenting Lu, Nikita Smetanin, Robert Verkuil, Ori Kabeli, Yaniv Shmueli, Allan dos Santos Costa, Maryam Fazel-Zarandi, Tom Sercu, Salvatore Candido, Alexander Rives (Meta AI, Fundamental AI Research)",
+      "published": "March 2023, Science vol. 379, issue 6637 (DOI: 10.1126/science.ade2574)",
+      "year": 2023,
+      "url": "https://doi.org/10.1126/science.ade2574",
+      "path": "papers/techniques/106-esm/summary.md",
+      "topics": [
+        "science",
+        "language-model",
+        "embeddings"
+      ]
+    },
+    {
+      "number": 107,
+      "title": "Human-Level Play in the Game of Diplomacy by Combining Language Models with Strategic Reasoning (CICERO)",
+      "slug": "107-cicero",
+      "category": "techniques",
+      "authors": "Meta Fundamental AI Research Diplomacy Team (FAIR), including Anton Bakhtin, Noam Brown, David Wu, Adam Lerer, Hengyuan Hu, et al.",
+      "published": "November 2022, Science vol. 378, issue 6624 (DOI: 10.1126/science.ade9097)",
+      "year": 2022,
+      "url": "https://doi.org/10.1126/science.ade9097",
+      "path": "papers/techniques/107-cicero/summary.md",
+      "topics": [
+        "agents",
+        "reinforcement-learning",
+        "reasoning"
       ]
     }
   ]

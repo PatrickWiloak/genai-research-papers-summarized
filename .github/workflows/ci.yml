@@ -28,4 +28,4 @@ jobs:
             git --no-pager diff --stat
             exit 1
           fi
-          echo "Manifest, INDEX.md, mkdocs.yml, frontmatter, and cross-links are in sync."
+          echo "Manifest, INDEX.md, TAGS.md, frontmatter, and cross-links are in sync."

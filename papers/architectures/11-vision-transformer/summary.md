@@ -406,5 +406,6 @@ class VisionTransformer:
 - [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
 - [DALL-E 3: Improving Image Generation with Better Captions](../../image-generation/48-dalle3/summary.md)
 - [Deep Residual Learning for Image Recognition (ResNet)](../../architectures/73-resnet/summary.md)
+- [Masked Autoencoders Are Scalable Vision Learners (MAE)](../../architectures/88-mae/summary.md)
 
 <!-- related:end -->

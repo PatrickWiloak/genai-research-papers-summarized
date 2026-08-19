@@ -41,8 +41,15 @@ idempotent - safe to run any time. On each run it:
 - (re)writes YAML frontmatter (including topic `tags:`) on every `summary.md`,
 - regenerates `papers.json` and `papers.csv` (machine-readable manifests),
 - regenerates `INDEX.md` (category browse index) and `TAGS.md` (topic browse index),
-- regenerates `mkdocs.yml` (the site navigation), and
-- assembles the git-ignored `site-build/` tree the site is built from.
+- writes `mkdocs.generated.yml` - the hand-maintained `mkdocs.yml` plus the
+  generated site navigation, and
+- assembles the git-ignored `site-build/` tree the site is built from,
+  including the site-only landing page and stylesheet from `.github/site/`.
+
+`mkdocs.yml` itself is hand-maintained and deliberately carries no `nav` key.
+Edit it for theme, palette, or markdown extensions; edit `write_mkdocs()` in
+`build_manifest.py` for the navigation. Both `mkdocs.generated.yml` and
+`site-build/` are git-ignored - never commit or hand-edit them.
 
 A companion script, `scripts/add_cross_links.py`, regenerates the "Related in
 This Collection" footers. When you add a paper, also add an entry to the
@@ -52,9 +59,23 @@ This Collection" footers. When you add a paper, also add an entry to the
 ## Previewing the site locally
 
 ```bash
-pip install -r requirements.txt
-mkdocs serve
+python3 -m venv .venv-docs
+.venv-docs/bin/pip install -r requirements.txt
+python3 scripts/build_manifest.py
+.venv-docs/bin/mkdocs serve -f mkdocs.generated.yml
 ```
 
-Then open http://127.0.0.1:8000. Pushing to `main` deploys to GitHub Pages
-automatically via `.github/workflows/pages.yml`.
+Then open http://127.0.0.1:8000.
+
+Before pushing anything that touches the site, run the build the way CI does:
+
+```bash
+python3 scripts/build_manifest.py
+.venv-docs/bin/mkdocs build -f mkdocs.generated.yml --strict
+```
+
+`--strict` turns every MkDocs warning into an error, so a broken relative link
+or a link to an anchor that does not exist fails the build rather than shipping
+a broken page. The same build runs as a blocking check on every pull request;
+pushing to `main` also deploys it to GitHub Pages via
+`.github/workflows/pages.yml`.
