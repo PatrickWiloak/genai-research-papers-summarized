@@ -6,16 +6,6 @@ Working task list for **genai-research-papers-summarized**. Read this at the sta
 
 ## Open
 
-### Deploy
-- [ ] 🔴 Push the site rebuild. GitHub Pages is already configured for GitHub Actions and has been
-      deploying since June 2026, but <https://patrickwiloak.github.io/genai-research-papers-summarized/>
-      still serves the old indigo, 87-paper build - the redesign and the 88-107 salvage are
-      working-tree only. Merging to `main` publishes both; no Pages setup step is needed.
-- [ ] 🟡 Delete `claude/expand-paper-collection-Rif7n` **once the salvage is committed and pushed**.
-      Its 20 unique summaries are now papers 88-107; the other 15 were duplicates or stale rewrites.
-      Until the salvage is pushed, that branch is the only published copy of those summaries, so the
-      ordering matters: push first, delete second.
-
 ### Content
 - [ ] 🟠 Work through the high-priority queue in [`docs/GAPS.md`](./docs/GAPS.md) - induction heads,
       adversarial attacks/jailbreaks, weak-to-strong generalization, long-context extension
@@ -44,6 +34,8 @@ Working task list for **genai-research-papers-summarized**. Read this at the sta
 
 ## Done
 
+- [x] ~~Ship the site rebuild and the 88-107 salvage to `main` (`a559e1e`). CI and the Docs site workflow both green; verified live at <https://patrickwiloak.github.io/genai-research-papers-summarized/> - amber palette, new landing page, 107 papers, and the salvaged summaries all serving 200~~ ✅ done 2026-08-19
+- [x] ~~Delete `claude/expand-paper-collection-Rif7n` after confirming all 20 salvaged summaries are on `origin/main`; recovery SHA `592be71` if ever needed~~ ✅ done 2026-08-19
 - [x] ~~Delete the `claude/content-gaps-ads-ylbmrr` remote branch - fully merged into `main` (zero commits ahead, zero diff); recovery SHA `aa97fa8` if ever needed~~ ✅ done 2026-08-19
 - [x] ~~Set the repo homepage to the Pages URL so GitHub links the site from the repo header~~ ✅ done 2026-08-19
 - [x] ~~Confirm GitHub Pages is already wired to GitHub Actions and deploying (it is, since June 2026) - no manual setup needed~~ ✅ done 2026-08-19
