@@ -60,7 +60,7 @@ theme:
     - content.action.edit
     - content.tooltips
   palette:
-    # Near-black plus one amber accent. `custom` opts out of Material's built-in
+    # Near-black plus one red accent. `custom` opts out of Material's built-in
     # colour palettes entirely; the actual values live in
     # .github/site/extra.css under the scheme selectors.
     # All three entries need it - the first is what renders before the palette

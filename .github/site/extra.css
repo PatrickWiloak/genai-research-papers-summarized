@@ -16,22 +16,30 @@
    hover of accent border + accent-tinted shadow + 2px lift at 200ms.
 
    The accent is what tells them apart. That site carries gitGood's green; this
-   one is amber - the colour of a highlighter over a printed paper, which is the
-   thing this collection actually is. */
+   one is red. */
 
 :root {
   --nw-radius:       0.4rem;  /* 8px at Material's 20px root */
   --nw-radius-lg:    0.6rem;  /* 12px */
+
+  /* The primary button carries white text at 16px/700, which is below the AA
+     large-text threshold (18.66px bold) and therefore needs 4.5:1. The vivid
+     dark-scheme accent #ef4444 only reaches 3.76:1 against white, so the button
+     gets its own fill rather than reusing --nw-accent: #dc2626 is 4.83:1 and
+     #b91c1c on hover is 6.47:1. Both schemes share these - a red dark enough to
+     carry white text reads the same on either background. */
+  --nw-btn-primary-bg:       #dc2626;
+  --nw-btn-primary-bg-hover: #b91c1c;
 }
 
 /* ---- Light ---- */
 [data-md-color-scheme="default"] {
-  --nw-accent:            #d97706;
-  --nw-accent-text:       #b45309;               /* darkened for contrast on white */
-  --nw-accent-dark:       #b45309;
-  --nw-accent-glow:       rgba(217, 119, 6, 0.3);
-  --nw-accent-glow-faint: rgba(217, 119, 6, 0.12);
-  --nw-accent-border:     rgba(217, 119, 6, 0.4);
+  --nw-accent:            #dc2626;
+  --nw-accent-text:       #b91c1c;               /* darkened for contrast on white */
+  --nw-accent-dark:       #991b1b;
+  --nw-accent-glow:       rgba(220, 38, 38, 0.3);
+  --nw-accent-glow-faint: rgba(220, 38, 38, 0.12);
+  --nw-accent-border:     rgba(220, 38, 38, 0.4);
   --nw-border:            #e2e8f0;
   --nw-border-hover:      #cbd5e1;
   --nw-surface:           #f1f5f9;               /* inputs, kbd - never cards */
@@ -45,7 +53,7 @@
   --md-primary-bg-color--light:   rgba(255, 255, 255, 0.7);
 
   --md-accent-fg-color:           var(--nw-accent-dark);
-  --md-accent-fg-color--transparent: rgba(217, 119, 6, 0.1);
+  --md-accent-fg-color--transparent: rgba(220, 38, 38, 0.1);
   --md-accent-bg-color:           #ffffff;
   --md-accent-bg-color--light:    rgba(255, 255, 255, 0.7);
 
@@ -68,12 +76,12 @@
      is neutral black rather than its default blue-grey. */
   --md-hue: 0;
 
-  --nw-accent:            #f59e0b;
-  --nw-accent-text:       #fbbf24;
-  --nw-accent-dark:       #d97706;
-  --nw-accent-glow:       rgba(245, 158, 11, 0.5);
-  --nw-accent-glow-faint: rgba(245, 158, 11, 0.2);
-  --nw-accent-border:     rgba(245, 158, 11, 0.4);
+  --nw-accent:            #ef4444;
+  --nw-accent-text:       #f87171;
+  --nw-accent-dark:       #dc2626;
+  --nw-accent-glow:       rgba(239, 68, 68, 0.5);
+  --nw-accent-glow-faint: rgba(239, 68, 68, 0.2);
+  --nw-accent-border:     rgba(239, 68, 68, 0.4);
   --nw-border:            rgba(255, 255, 255, 0.1);
   --nw-border-hover:      rgba(255, 255, 255, 0.2);
   --nw-surface:           #111111;
@@ -86,8 +94,8 @@
   --md-primary-bg-color:          #ffffff;
   --md-primary-bg-color--light:   rgba(255, 255, 255, 0.7);
 
-  --md-accent-fg-color:           #fcd34d;
-  --md-accent-fg-color--transparent: rgba(245, 158, 11, 0.1);
+  --md-accent-fg-color:           #fca5a5;
+  --md-accent-fg-color--transparent: rgba(239, 68, 68, 0.1);
   --md-accent-bg-color:           #000000;
   --md-accent-bg-color--light:    rgba(0, 0, 0, 0.7);
 
@@ -203,24 +211,19 @@
   text-decoration: none;
 }
 
-/* Primary: accent fill, black text (amber is too light to carry white at
-   WCAG AA), accent glow that deepens on hover. */
+/* Primary: white on a red dark enough to carry it at AA (see --nw-btn-primary-bg
+   above), with an accent glow that deepens on hover. */
 .md-typeset .md-button--primary {
-  background-color: var(--nw-accent);
+  background-color: var(--nw-btn-primary-bg);
   box-shadow: 0 10px 15px -3px var(--nw-accent-glow-faint);
-  color: #000000;
+  color: #ffffff;
   font-weight: 700;
 }
 
 .md-typeset .md-button--primary:hover,
 .md-typeset .md-button--primary:focus {
-  background-color: var(--nw-accent-dark);
+  background-color: var(--nw-btn-primary-bg-hover);
   box-shadow: 0 10px 15px -3px var(--nw-accent-glow);
-  color: #000000;
-}
-
-[data-md-color-scheme="default"] .md-typeset .md-button--primary,
-[data-md-color-scheme="default"] .md-typeset .md-button--primary:hover {
   color: #ffffff;
 }
 

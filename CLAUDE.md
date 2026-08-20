@@ -14,7 +14,7 @@ Python regeneration pipeline that builds the index, manifests, and an MkDocs Mat
 - `scripts/add_cross_links.py` - Regenerates the "Related in This Collection" footer on each summary (stdlib only, idempotent)
 - `scripts/check_links.py` - Validates relative Markdown links (used by CI)
 - `mkdocs.yml` - Hand-maintained MkDocs Material config (theme, palette, extensions). Carries **no** `nav`; the generator appends one into the git-ignored `mkdocs.generated.yml`, which is what the site builds from
-- `.github/site/extra.css` - Site-only stylesheet: near-black + amber palette, cards, landing-page styles. Staged to `site-build/assets/site/`
+- `.github/site/extra.css` - Site-only stylesheet: near-black + red palette, cards, landing-page styles. Staged to `site-build/assets/site/`
 - `.github/site/home.md` - Site-only landing page. Written over the staged `README.md` so it becomes the site root; `{{token}}` counts are filled by `render_home()` so they cannot drift
 - `requirements.txt` - Pinned docs toolchain (mkdocs-material, minify, pymdown-extensions)
 - `.github/workflows/ci.yml` - Link check + generated-content freshness gate
@@ -31,7 +31,7 @@ Python regeneration pipeline that builds the index, manifests, and an MkDocs Mat
 ## Purpose / Usage
 - Educational resource - no code, just documentation. Start with `docs/ROADMAP.md` for the learning path.
 - `INDEX.md` is the category-grouped entry point in the repo; on the site, `.github/site/home.md` is the landing page and `README.md` stays the GitHub front page.
-- The MkDocs Material site auto-deploys via `.github/workflows/pages.yml` to <https://patrickwiloak.github.io/genai-research-papers-summarized/>. It shares its near-black look with the sibling `cloud-data-ai-security-zero-to-hero` site; the amber accent is this repo's own.
+- The MkDocs Material site auto-deploys via `.github/workflows/pages.yml` to <https://patrickwiloak.github.io/genai-research-papers-summarized/>. It shares its near-black look with the sibling `cloud-data-ai-security-zero-to-hero` site; the red accent is this repo's own.
 
 ## House style / conventions
 - After adding or editing any `papers/**/summary.md`, run the regeneration pipeline and commit the result:
