@@ -51,6 +51,20 @@ Edit it for theme, palette, or markdown extensions; edit `write_mkdocs()` in
 `build_manifest.py` for the navigation. Both `mkdocs.generated.yml` and
 `site-build/` are git-ignored - never commit or hand-edit them.
 
+A separate script, `scripts/measure_sources.py`, measures how many words of
+source material the summaries stand in for. It is the only script that touches
+the network and is deliberately **not** part of the pipeline: it caches its
+results in `source_lengths.json`, which `build_manifest.py` then reads offline.
+Run it after adding papers:
+
+```bash
+python3 scripts/measure_sources.py   # needs pdftotext (poppler-utils)
+```
+
+It counts every word `pdftotext` extracts from each paper's PDF and skips
+sources with no retrievable PDF rather than estimating them, so the figure
+published on the landing page is a floor. Do not hand-edit those numbers.
+
 A companion script, `scripts/add_cross_links.py`, regenerates the "Related in
 This Collection" footers. When you add a paper, also add an entry to the
 `TOPICS` map in `build_manifest.py` and the `ALIASES` map in

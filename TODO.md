@@ -25,6 +25,11 @@ Working task list for **genai-research-papers-summarized**. Read this at the sta
       to its header block.
 
 ### Tooling
+- [ ] 🟡 15 of the 107 papers have no retrievable PDF, so they are excluded from the "1.4M words in"
+      figure on the landing page (which is therefore a floor). Nature paywalls: `68-alphafold`,
+      `61-alphageometry`, `101-alphafold3`. DOI redirects: `106-esm`, `107-cicero`. Published as web
+      pages: the Anthropic, OpenAI, Meta, Google and transformer-circuits entries. `39-rlvr` has no
+      URL at all. If any gain an open PDF, re-run `scripts/measure_sources.py`.
 - [ ] 🟡 Add a CI check that the remaining hand-maintained counts in `README.md` and `BROWSE.md`
       match `papers.json`, the way the zero-to-hero repo checks its README counts. The paper count,
       Quick Stats and the By Year block are now generated or verified, but BROWSE's "54 of 107" and

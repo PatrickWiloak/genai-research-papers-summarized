@@ -649,6 +649,7 @@ Focus on "Why This Matters" sections + [Comparisons Guide](./docs/COMPARISONS.md
 | Category | Count | Total Reading Time |
 |----------|-------|-------------------|
 | **Papers** | 107 | 25-30 hours |
+| **Source words compressed** | 1.4M+ | ~130 hours |
 | **Words** | 219,000+ | - |
 | **Guides** | 6 | 3-5 hours |
 | **Terms Explained** | 250+ | - |

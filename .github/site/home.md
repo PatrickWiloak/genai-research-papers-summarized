@@ -28,7 +28,7 @@
 
 # The papers that built generative AI, in plain language { .home-title }
 
-<p class="home-intro">{{papers}} foundational papers - Transformers to diffusion, RLHF to reasoning models - each read in full and rewritten as something you can actually finish.</p>
+<p class="home-intro">{{source_words}} words of research - Transformers to diffusion, RLHF to reasoning models - read in full and rewritten as {{summary_words}} words. <strong>About {{compression}}x shorter</strong>, and written to be finished.</p>
 
 <p class="home-sub">No maths degree assumed, no paywall, no signup. Press <kbd>/</kbd> to search all {{words}} words.</p>
 
@@ -38,14 +38,16 @@
 
 <div class="stat-strip" markdown>
 
+- **{{source_words}}** words in
+- **{{summary_words}}** words out
+- **{{compression}}x** shorter
 - **{{papers}}** papers
 - **{{years}}** years covered
-- **{{words}}** words
-- **{{topics}}** topic tags
-- **{{guides}}** guides
 - **$0** to read
 
 </div>
+
+<p class="stat-note">Source figure measured, not estimated: every word <code>pdftotext</code> extracts from {{measured_papers}} of the {{papers}} papers. The other {{unmeasured}} sit behind journal paywalls or are published as web pages with no PDF, so they are excluded - the real total is higher. <a href="https://github.com/PatrickWiloak/genai-research-papers-summarized/blob/main/scripts/measure_sources.py">See the script</a>.</p>
 
 </div>
 

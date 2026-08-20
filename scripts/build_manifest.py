@@ -479,8 +479,29 @@ def render_home(papers: list[dict]) -> str:
     # generated list pages (INDEX, TAGS, BROWSE) - counting a generated index of
     # the papers as words about the papers inflates the figure for nothing.
     # README.md's Quick Stats table reports the same definition.
-    words = sum(len(p["_body"].split()) for p in papers)
-    words += sum(len(g.read_text(encoding="utf-8").split()) for g in guides)
+    summary_words = sum(len(p["_body"].split()) for p in papers)
+    words = summary_words + sum(
+        len(g.read_text(encoding="utf-8").split()) for g in guides
+    )
+
+    # How much source material the summaries stand in for. source_lengths.json
+    # is written by scripts/measure_sources.py (the one networked script, run by
+    # hand); if it is absent or empty the tokens fall back to "-" rather than
+    # inventing a figure. The ratio is computed over MATCHED papers only - the
+    # measured papers' source words against those same papers' summary words -
+    # so it is not distorted by the papers whose PDFs could not be retrieved.
+    src_total = matched_summary = measured = 0
+    cache_path = ROOT / "source_lengths.json"
+    if cache_path.exists():
+        sources = json.loads(cache_path.read_text(encoding="utf-8")).get("sources", {})
+        for p in papers:
+            n = (sources.get(p["slug"]) or {}).get("words")
+            if not n:
+                continue
+            src_total += n
+            matched_summary += len(p["_body"].split())
+            measured += 1
+    ratio = src_total / matched_summary if matched_summary else 0
 
     # One chip per category, linking into that section of the index. The `n`
     # span is the count, styled as the accent in extra.css.
@@ -501,6 +522,11 @@ def render_home(papers: list[dict]) -> str:
     tokens = {
         "papers": f"{len(papers)}",
         "words": f"{words // 1000},000+" if words >= 1000 else str(words),
+        "summary_words": f"{summary_words // 1000},000",
+        "source_words": f"{src_total / 1_000_000:.1f}M" if src_total else "-",
+        "compression": f"{ratio:.0f}" if ratio else "-",
+        "measured_papers": f"{measured}" if measured else "-",
+        "unmeasured": f"{len(papers) - measured}" if measured else "-",
         "years": f"{max(years) - min(years) + 1}" if years else "-",
         "topics": f"{len(topics)}",
         "guides": f"{len(guides)}",

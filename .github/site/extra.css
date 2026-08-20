@@ -180,8 +180,13 @@
 
 /* Every summary opens with an authors/published/paper-link block directly under
    the h1. It is metadata, not prose - let it recede so the reader's eye lands on
-   "Why This Matters" instead. */
-.md-typeset h1 + p > strong:first-child {
+   "Why This Matters" instead.
+
+   `p:not([class])` matters: the landing page's hero paragraph is also an `h1 + p`
+   with a leading <strong>, and without the guard this rule dimmed the one phrase
+   on the site that most needs to stand out. The metadata block is plain markdown
+   and never carries a class; every styled paragraph on the landing page does. */
+.md-typeset h1 + p:not([class]) > strong:first-child {
   color: var(--md-default-fg-color--light);
 }
 
@@ -225,6 +230,36 @@
   background-color: var(--nw-btn-primary-bg-hover);
   box-shadow: 0 10px 15px -3px var(--nw-accent-glow);
   color: #ffffff;
+}
+
+/* ------------------------------------------------------------------ */
+/* Admonitions                                                         */
+/* ------------------------------------------------------------------ */
+
+/* Material hardcodes each admonition type's colour. `tip` ships teal (#00bfa5),
+   which on this site meant the one callout on the landing page - the gitGood
+   block - drew a green border and icon against an otherwise red page.
+   Retargeting it to the accent is safe here because `tip` is the only
+   admonition type used anywhere in the repo; the semantic types (warning,
+   danger) keep Material's colours if they are ever introduced. */
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-color: var(--nw-accent);
+}
+
+.md-typeset .admonition.tip > .admonition-title,
+.md-typeset details.tip > summary {
+  background-color: var(--nw-accent-glow-faint);
+}
+
+.md-typeset .admonition.tip > .admonition-title::before,
+.md-typeset details.tip > summary::before {
+  background-color: var(--nw-accent);
+}
+
+.md-typeset .admonition.tip:focus-within,
+.md-typeset details.tip:focus-within {
+  box-shadow: 0 0 0 0.2rem var(--nw-accent-glow-faint);
 }
 
 /* ------------------------------------------------------------------ */
@@ -403,6 +438,13 @@
   margin: 0 auto 0.5rem;
 }
 
+/* The compression claim is the point of the page - give it the accent rather
+   than letting it read as ordinary bold. */
+.md-typeset .home-intro strong {
+  color: var(--nw-accent-text);
+  font-weight: 800;
+}
+
 .md-typeset .home-sub {
   color: var(--md-default-fg-color--light);
   max-width: 36rem;
@@ -446,6 +488,24 @@
   line-height: 1.1;
   text-transform: none;
   color: var(--md-default-fg-color);
+}
+
+/* The method note under the counts strip. A "8x shorter" claim on a public page
+   should say how it was arrived at, but it is footnote material - small, dim,
+   and out of the way of the numbers it qualifies. */
+.md-typeset .stat-note {
+  font-size: 0.62rem;
+  line-height: 1.5;
+  color: var(--md-default-fg-color--lighter);
+  max-width: 44rem;
+  margin: -0.4rem auto 0;
+  text-align: center;
+}
+
+.md-typeset .stat-note code {
+  font-size: 0.9em;
+  background-color: transparent;
+  padding: 0;
 }
 
 /* Accent eyebrow above a section heading. */

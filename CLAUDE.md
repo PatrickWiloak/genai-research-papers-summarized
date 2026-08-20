@@ -13,6 +13,8 @@ Python regeneration pipeline that builds the index, manifests, and an MkDocs Mat
 - `scripts/build_manifest.py` - Regenerates frontmatter, manifest, INDEX.md, TAGS.md, `mkdocs.generated.yml`, and the `site-build/` tree (stdlib only, idempotent)
 - `scripts/add_cross_links.py` - Regenerates the "Related in This Collection" footer on each summary (stdlib only, idempotent)
 - `scripts/check_links.py` - Validates relative Markdown links (used by CI)
+- `scripts/measure_sources.py` - **The only networked script, and not part of the pipeline.** Fetches each paper's source PDF, counts words with `pdftotext`, and caches the result in `source_lengths.json`. Run by hand when papers are added
+- `source_lengths.json` - Committed cache of per-paper source word counts. `build_manifest.py` reads it offline to compute the landing page's compression figures, so the normal build stays stdlib-only and network-free
 - `mkdocs.yml` - Hand-maintained MkDocs Material config (theme, palette, extensions). Carries **no** `nav`; the generator appends one into the git-ignored `mkdocs.generated.yml`, which is what the site builds from
 - `.github/site/extra.css` - Site-only stylesheet: near-black + red palette, cards, landing-page styles. Staged to `site-build/assets/site/`
 - `.github/site/home.md` - Site-only landing page. Written over the staged `README.md` so it becomes the site root; `{{token}}` counts are filled by `render_home()` so they cannot drift
@@ -49,4 +51,12 @@ Python regeneration pipeline that builds the index, manifests, and an MkDocs Mat
   .venv-docs/bin/mkdocs serve -f mkdocs.generated.yml    # or: mkdocs build -f mkdocs.generated.yml --strict
   ```
   `--strict` is what CI runs: it fails on a broken link or a link to an anchor that does not exist, so run it before pushing site changes.
+- After adding a paper, refresh the source measurement so the landing page's "words in" and
+  "Nx shorter" figures stay correct (needs network + `pdftotext`; skips anything already cached):
+  ```
+  python3 scripts/measure_sources.py && python3 scripts/build_manifest.py
+  ```
+  Sources with no retrievable PDF (journal paywalls, blog-post papers) are recorded as `null`
+  and excluded, so the published total is a floor rather than an estimate. Never hand-edit the
+  numbers - the landing page says how they were measured and links to the script.
 - When adding a new paper, give it the next number (currently up to 107), add its aliases to the `ALIASES` map in `scripts/add_cross_links.py` (so other papers can link to it), and add its topic tags to the `TOPICS` map in `scripts/build_manifest.py` (so it appears in `TAGS.md` and gets `tags:` frontmatter).
