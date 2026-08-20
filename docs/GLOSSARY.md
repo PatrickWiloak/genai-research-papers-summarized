@@ -1,6 +1,6 @@
 # GenAI Glossary - Key Terms Explained
 
-Comprehensive glossary of technical terms used across the 15 foundational papers.
+Definitions for the 117 technical terms that recur across the 107 summaries in this collection.
 
 ---
 
@@ -896,6 +896,6 @@ Performing task without any examples.
 
 ---
 
-**Last Updated:** 2025-10-19
-**Terms Covered:** 150+
-**Papers Referenced:** All 15
+**Last updated:** 2026-08-20
+**Terms covered:** 117
+**Collection:** 107 papers - see [INDEX.md](../INDEX.md)

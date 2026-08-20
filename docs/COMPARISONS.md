@@ -8,11 +8,17 @@ Detailed side-by-side comparisons of related papers to understand trade-offs and
 1. [Architecture Comparisons](#architecture-comparisons)
 2. [Training Approaches](#training-approaches)
 3. [Alignment Methods](#alignment-methods)
-4. [Image Generation](#image-generation)
-5. [Efficiency Techniques](#efficiency-techniques)
-6. [Evolution Over Time](#evolution-over-time)
-7. [Technique Combinations](#technique-combinations)
-8. [When to Use Which Paper's Techniques](#when-to-use-which-papers-techniques)
+4. [Reasoning Methods](#reasoning-methods)
+5. [Image Generation](#image-generation)
+6. [Efficiency Techniques](#efficiency-techniques)
+7. [Inference and Serving](#inference-and-serving)
+8. [Retrieval and Knowledge](#retrieval-and-knowledge)
+9. [Agents and Tool Use](#agents-and-tool-use)
+10. [Evaluation](#evaluation)
+11. [Beyond Language](#beyond-language)
+12. [Evolution Over Time](#evolution-over-time)
+13. [Technique Combinations](#technique-combinations)
+14. [When to Use Which Paper's Techniques](#when-to-use-which-papers-techniques)
 
 ---
 
@@ -154,20 +160,21 @@ The encoder-decoder idea predates the Transformer by several years. Understandin
 
 ## Alignment Methods
 
-### RLHF vs Constitutional AI vs DPO vs GRPO
+### RLHF vs Constitutional AI vs DPO vs KTO vs GRPO vs RLVR
 
-| Aspect | RLHF / InstructGPT | Constitutional AI | DPO | GRPO |
-|--------|--------------------|-------------------|-----|------|
-| **RL optimizer** | [PPO](../papers/techniques/63-ppo/summary.md) | PPO | None (direct) | Group relative policy opt. |
-| **Human Labels** | 10,000+ comparisons | ~100 (helpfulness only) | Preference pairs | Reward signal (verifiable) |
-| **Data Source** | Human preferences | AI self-critique | Human/AI preferences | Outcome correctness |
-| **Reward Model** | Separate RM trained | AI-based RM | Implicit (closed-form) | Relative group scores |
-| **Transparency** | Opaque (implicit values) | Transparent (principles) | Moderate | High (rule-based rewards) |
-| **Cost** | $50k-$100k | $1k-$5k | Lower than RLHF | Lower than RLHF |
-| **Stability** | Moderate (PPO sensitive) | Moderate | High | High |
-| **Best For** | General helpfulness | Harmlessness | Efficient preference learning | Math/reasoning tasks |
-| **Scalability** | Limited by human bandwidth | High (AI scales) | High | High |
-| **Used By** | ChatGPT, InstructGPT | Claude | Many open models | DeepSeek-R1, reasoning models |
+| Aspect | RLHF / InstructGPT | Constitutional AI | [DPO](../papers/language-models/19-dpo/summary.md) | [KTO](../papers/techniques/103-kto/summary.md) | [GRPO](../papers/techniques/38-grpo/summary.md) | [RLVR](../papers/techniques/39-rlvr/summary.md) |
+|--------|--------------------|-------------------|-----|-----|------|------|
+| **RL optimizer** | [PPO](../papers/techniques/63-ppo/summary.md) | PPO | None (direct) | None (direct) | Group-relative policy opt. | Any (usually GRPO) |
+| **Critic / value model** | Yes | Yes | No | No | No | No |
+| **Reward model** | Separate RM trained | AI-based RM | Implicit (closed-form) | Implicit | Relative group scores | None - a verifier |
+| **Data needed** | 10,000+ human comparisons | ~100 written principles | Preference *pairs* | Unpaired 👍/👎 | Sampled groups + scores | Problems with checkable answers |
+| **Signal** | Human preference | AI self-critique | Human/AI preference | Binary desirability | Outcome correctness | Verified correctness |
+| **Transparency** | Opaque | Transparent (principles) | Moderate | Moderate | High | Highest - the rule is the reward |
+| **Relative cost** | Highest | Low | Low | Lowest labelling cost | Low | Low, where a verifier exists |
+| **Stability** | Moderate (PPO-sensitive) | Moderate | High | High | High | High |
+| **Best for** | General helpfulness | Harmlessness | Efficient preference learning | When pairs are impractical | Maths and reasoning | Anything auto-checkable |
+| **Limitation** | Expensive, reward hacking | Principles must be written | Needs pairs | Coarser signal | Needs sampled groups | No verifier, no method |
+| **Used by** | ChatGPT, InstructGPT | Claude | Many open models | Open fine-tunes | DeepSeek-R1 | o1, R1, reasoning models |
 
 **PPO's role:** PPO ([Schulman et al. 2017](../papers/techniques/63-ppo/summary.md)) is the RL backbone of classic RLHF. It clips policy updates to prevent catastrophic reward hacking - the "proximal" constraint keeps the fine-tuned model close to the base model. DPO and GRPO emerged partly to sidestep PPO's complexity and hyperparameter sensitivity.
 
@@ -189,6 +196,53 @@ The encoder-decoder idea predates the Transformer by several years. Understandin
 - **ChatGPT**: Primarily RLHF
 - **Claude**: Constitutional AI + some RLHF
 - **Trend**: Moving toward more Constitutional AI for scalability
+
+---
+
+## Reasoning Methods
+
+### Prompt-time vs Train-time Reasoning
+
+The field moved from *asking* a model to reason to *training* it to. These are the stops along the way.
+
+| Method | Year | Where the work happens | Extra cost | Needs labels? | Key idea |
+|--------|------|------------------------|-----------|---------------|----------|
+| [Chain-of-Thought](../papers/techniques/09-chain-of-thought/summary.md) | 2022 | Prompt | ~1 longer generation | No | Ask for intermediate steps |
+| [Self-Consistency](../papers/techniques/77-self-consistency/summary.md) | 2022 | Sampling | N generations | No | Majority vote over N chains |
+| [Tree of Thoughts](../papers/techniques/25-tree-of-thoughts/summary.md) | 2023 | Search | Many generations + search | No | Branch, evaluate, backtrack |
+| [Self-Refine](../papers/techniques/99-self-refine/summary.md) | 2023 | Iteration | 2-3x generations | No | Model critiques and rewrites itself |
+| [STaR](../papers/techniques/97-star/summary.md) | 2022 | Training | Fine-tuning rounds | Answers only | Train on rationales that got it right |
+| [Process Reward Models](../papers/techniques/51-process-reward-models/summary.md) | 2023 | Training + search | PRM training + scoring | Step-level labels | Score each step, not the answer |
+| [Quiet-STaR](../papers/techniques/98-quiet-star/summary.md) | 2024 | Training | Expensive pretraining | No | Latent rationale before every token |
+| [Test-Time Compute](../papers/techniques/50-test-time-compute/summary.md) | 2024 | Inference budget | Tunable | No | Spend inference compute optimally |
+| [RLVR](../papers/techniques/39-rlvr/summary.md) / [GRPO](../papers/techniques/38-grpo/summary.md) | 2024-25 | Training | RL run | Verifiable answers | Reward correctness, let reasoning emerge |
+
+**How to choose**
+
+- **You have an API and a problem today** → Chain-of-Thought, then Self-Consistency if accuracy
+  matters more than cost. This is the entire budget-conscious answer.
+- **Answers are checkable and you can train** → RLVR with GRPO. This is what produced
+  [DeepSeek-R1](../papers/language-models/26-deepseek-r1/summary.md).
+- **Answers are checkable but you cannot afford RL** → STaR: sample, filter by correctness,
+  fine-tune, repeat.
+- **The failure mode is a wrong intermediate step** → Process Reward Models. Outcome supervision
+  rewards lucky guesses; process supervision does not.
+- **The problem needs exploration, not a single chain** → Tree of Thoughts, or
+  [rStar-Math](../papers/techniques/35-rstar-math/summary.md) for the MCTS version.
+
+**The cost trap:** Self-Consistency at N=40 costs 40x a single answer. A reasoning model trained
+with RLVR gets similar or better accuracy in one (longer) generation. Above a certain query volume,
+training is cheaper than sampling.
+
+### Outcome vs Process Supervision
+
+| | Outcome supervision | Process supervision |
+|---|---|---|
+| **Labels** | Final answer only | Every reasoning step |
+| **Cost** | Cheap, often automatic | Expensive - [PRM800K](../papers/techniques/51-process-reward-models/summary.md) took 800k human labels |
+| **Failure mode** | Rewards right answers reached by bad reasoning | Needs a labelled domain |
+| **Best for** | Any verifiable domain, at scale | High-stakes reasoning where the chain must be sound |
+| **Used by** | [RLVR](../papers/techniques/39-rlvr/summary.md), [GRPO](../papers/techniques/38-grpo/summary.md) | [o1](../papers/language-models/31-openai-o1/summary.md)-style verification |
 
 ---
 
@@ -238,6 +292,54 @@ The encoder-decoder idea predates the Transformer by several years. Understandin
 - DDIM sampling: 50× faster than DDPM
 - Latent space: 8-10× compression
 - Distillation: Train student to match in fewer steps
+
+---
+
+### Diffusion Samplers: DDPM vs DDIM vs Flow Matching
+
+The generator quality is set by training; the *speed* is set by how you sample from it.
+
+| | [DDPM](../papers/image-generation/06-diffusion-models/summary.md) | [DDIM](../papers/image-generation/70-ddim/summary.md) | [Flow Matching / SD3](../papers/image-generation/72-flow-matching-sd3/summary.md) |
+|---|---|---|---|
+| **Year** | 2020 | 2020 | 2022-2024 |
+| **Typical steps** | 1,000 | 20-50 | 20-30, and straighter |
+| **Deterministic?** | No (stochastic) | Yes | Yes |
+| **Retraining needed** | - | None - resamples a trained DDPM | Yes, different objective |
+| **Same seed → same image** | No | Yes | Yes |
+| **Enables** | The theory | Image editing, inversion, interpolation | SD3, Flux |
+| **Read it for** | Understanding the maths | Understanding why sampling got fast | Understanding current models |
+
+**Practical read:** if you use diffusion, you are almost certainly using a DDIM-style sampler on a
+latent model. DDPM is the theory; DDIM is what made it usable; flow matching is what current
+frontier image models train with.
+
+### Conditioning and Control
+
+Four different problems that get confused with one another.
+
+| Technique | Controls | Needs training? | Data needed | Use when |
+|-----------|----------|-----------------|-------------|----------|
+| [Classifier-Free Guidance](../papers/image-generation/69-classifier-free-guidance/summary.md) | How hard the model follows the prompt | No (a sampling knob) | None | Always - this is the "CFG scale" slider |
+| [ControlNet](../papers/image-generation/71-controlnet/summary.md) | Spatial layout: pose, depth, edges | Yes, an encoder copy | Paired condition images | Composition must match a reference |
+| [DreamBooth](../papers/image-generation/92-dreambooth/summary.md) | *Which* subject appears | Yes, fine-tunes the model | 3-5 images of the subject | A specific person, pet or product |
+| [LoRA](../papers/techniques/10-lora/summary.md) | Style or subject, cheaply | Yes, low-rank adapters | Small set | You want a shareable ~10-100MB file |
+
+**These compose.** A typical production stack runs a latent model with CFG, a subject LoRA, and a
+ControlNet for pose - all at once. They are answering different questions.
+
+### Image Tokenizers: VAE vs VQ-VAE vs VQ-GAN
+
+| | [VAE](../papers/image-generation/57-vae/summary.md) | [VQ-VAE](../papers/image-generation/89-vq-vae/summary.md) | [VQ-GAN](../papers/image-generation/90-vq-gan/summary.md) |
+|---|---|---|---|
+| **Latent** | Continuous | Discrete codebook | Discrete codebook |
+| **Extra losses** | KL to a prior | Codebook + commitment | + adversarial + perceptual |
+| **Reconstruction** | Blurry | Sharper | Sharp at high resolution |
+| **Feeds** | [Stable Diffusion](../papers/image-generation/07-stable-diffusion/summary.md)'s latent space | Autoregressive priors | Transformers over image tokens |
+| **Why it matters** | Made latent diffusion possible | Made images tokenisable | Made token-based high-res synthesis work |
+
+**The through-line:** compress first, model second. Both branches - continuous latents for
+diffusion, discrete tokens for autoregressive models - come from the same insight, and both trace
+back to the VAE.
 
 ---
 
@@ -326,6 +428,137 @@ RAG (dynamic facts)
     ↓
 Prompting (task-specific instructions)
 ```
+
+---
+
+## Inference and Serving
+
+### Where the Money Goes
+
+Four techniques, four different bottlenecks. They stack.
+
+| Technique | Attacks | Typical gain | Quality cost | Needs retraining? |
+|-----------|---------|--------------|--------------|-------------------|
+| [FlashAttention](../papers/techniques/16-flash-attention/summary.md) | Attention memory traffic | Longer context, faster steps | None - exact | No |
+| [GQA](../papers/architectures/75-grouped-query-attention/summary.md) | KV-cache size | Several-fold smaller cache | Slight | Yes (architecture choice) |
+| [PagedAttention](../papers/techniques/52-pagedattention-vllm/summary.md) | KV-cache *waste* | Up to 24x throughput | None | No |
+| [Speculative Decoding](../papers/techniques/45-speculative-decoding/summary.md) | Sequential decode latency | 2-3x | None - provably identical | No (needs a draft model) |
+| [GPTQ / AWQ](../papers/techniques/86-gptq-awq-quantization/summary.md) | Weight memory | ~4x smaller at 4-bit | Small but real | No (post-training) |
+| [MoE](../papers/architectures/37-mixture-of-experts/summary.md) | Compute per token | Large capacity, small active cost | None | Yes (architecture choice) |
+
+**Order to reach for them:** if you serve someone else's model, start with vLLM (PagedAttention)
+and quantisation - no retraining, largest wins. Speculative decoding next if latency is the
+complaint. GQA and MoE are decisions made before training, not fixes afterwards.
+
+### Attention Variants
+
+| | MHA | [MQA](../papers/architectures/75-grouped-query-attention/summary.md) | [GQA](../papers/architectures/75-grouped-query-attention/summary.md) |
+|---|---|---|---|
+| **KV heads** | One per query head | One, shared by all | One per group |
+| **KV cache** | Largest | Smallest | Tunable middle |
+| **Quality** | Best | Noticeable degradation | Near-MHA |
+| **Used by** | Original Transformer | PaLM | LLaMA 2/3, [Mistral](../papers/language-models/95-mistral-7b/summary.md), most modern LLMs |
+
+### Positional Encoding
+
+| | Sinusoidal / learned absolute | [RoPE](../papers/techniques/54-rope-rotary-position-embedding/summary.md) |
+|---|---|---|
+| **Encodes** | Absolute position | Relative position, via absolute rotation |
+| **Parameters** | Learned variant adds some | None |
+| **Extrapolates beyond training length** | Poorly | Better, and extendable (NTK-aware, YaRN) |
+| **Used by** | Original Transformer, BERT, GPT-2 | Nearly every LLM since 2022 |
+
+---
+
+## Retrieval and Knowledge
+
+### Sparse vs Dense vs Late-Interaction vs Graph
+
+| | BM25 (sparse) | [DPR / Sentence-BERT](../papers/techniques/87-dense-retrieval/summary.md) | [ColBERT](../papers/techniques/87-dense-retrieval/summary.md) | [GraphRAG](../papers/techniques/60-graph-rag/summary.md) |
+|---|---|---|---|---|
+| **Matches on** | Exact terms | Meaning | Meaning, per token | Entities and relationships |
+| **Handles synonyms** | No | Yes | Yes | Yes |
+| **Handles rare terms / IDs** | Excellent | Poorly | Well | Depends on extraction |
+| **Index cost** | Low | Moderate | High (per-token vectors) | Highest - LLM extraction pass |
+| **Query cost** | Lowest | Low | Moderate | Moderate, pre-computed summaries |
+| **Answers "what are the themes?"** | No | No | No | **Yes** |
+| **Best for** | Keyword and code search | General semantic search | Precision-critical retrieval | Corpus-level questions |
+
+**The practical answer is hybrid.** Dense retrieval alone fails on product codes, error strings and
+proper nouns; BM25 alone fails on paraphrase. Most production systems run both and fuse the
+rankings. Reach for GraphRAG only when the questions are genuinely global - "what themes run
+through these 10,000 documents?" - because the indexing pass costs real money.
+
+### Grounding Strategies
+
+| | Prompting | [RAG](../papers/techniques/13-rag/summary.md) | Fine-tuning | Long context |
+|---|---|---|---|---|
+| **Knowledge updates** | Instantly | Instantly (re-index) | Retraining | Instantly |
+| **Cost per query** | Lowest | Low + retrieval | Lowest after training | High - you pay for the tokens |
+| **Cites sources** | No | Yes | No | Sometimes |
+| **Teaches new *behaviour*** | Weakly | No | **Yes** | No |
+| **Teaches new *facts*** | Small amounts | **Yes** | Unreliably | Yes, within the window |
+
+**The rule that saves the most money:** RAG for facts, fine-tuning for behaviour. Fine-tuning to
+inject knowledge is the single most common expensive mistake - it is unreliable, and the facts go
+stale the moment the model is trained.
+
+---
+
+## Agents and Tool Use
+
+| | [ReAct](../papers/techniques/21-react/summary.md) | [Reflexion](../papers/techniques/78-reflexion/summary.md) | [Generative Agents](../papers/techniques/58-generative-agents/summary.md) | [Voyager](../papers/techniques/100-voyager/summary.md) |
+|---|---|---|---|---|
+| **Year** | 2023 | 2023 | 2023 | 2023 |
+| **Core loop** | Think → act → observe | + verbal self-critique | + memory, reflection, planning | + skill library as code |
+| **Learns across episodes** | No | Yes, in episodic memory | Yes, via reflection | Yes, as reusable code |
+| **Weight updates** | None | None | None | None |
+| **Horizon** | One task | One task, retried | Days of simulated life | Open-ended |
+| **Best for** | Any tool-using agent | Tasks with a failure signal | Simulation, multi-agent social behaviour | Open-ended skill acquisition |
+
+**[Toolformer](../papers/techniques/24-toolformer/summary.md)** is the odd one out: it *trains* the
+model to call APIs rather than prompting it to. **[MCP](../papers/techniques/59-model-context-protocol/summary.md)**
+is orthogonal to all of them - it standardises how the tools are exposed, not how the agent thinks.
+
+---
+
+## Evaluation
+
+| | Static benchmarks (MMLU, HumanEval) | [LLM-as-a-Judge](../papers/techniques/85-llm-as-judge/summary.md) | Human arena (Elo) | [SWE-bench](../papers/techniques/84-swe-bench/summary.md) |
+|---|---|---|---|---|
+| **Cost** | Lowest | Low | High | Moderate (sandboxed runs) |
+| **Reproducible** | Yes | Mostly | No | Yes |
+| **Contamination risk** | **High** | Moderate | Low | Lower - real repos, held-out issues |
+| **Measures** | Knowledge, narrow skills | Preference on open tasks | Real user preference | End-to-end task completion |
+| **Known biases** | Saturation, leakage | Position, verbosity, self-preference | Popularity, presentation | Repo and language skew |
+
+**Read [Emergent Abilities](../papers/techniques/81-emergent-abilities/summary.md) alongside these.**
+Its pairing with the "Mirage" rebuttal is the clearest lesson in the collection that a metric
+choice - exact-match versus partial credit - can manufacture a discontinuity that isn't there.
+
+---
+
+## Beyond Language
+
+### Protein Structure
+
+| | [AlphaFold 2](../papers/techniques/68-alphafold/summary.md) | [ESM-2 / ESMFold](../papers/techniques/106-esm/summary.md) | [AlphaFold 3](../papers/techniques/101-alphafold3/summary.md) |
+|---|---|---|---|
+| **Year** | 2021 | 2023 | 2024 |
+| **Input** | Sequence + MSA | Single sequence | Sequences + ligands, DNA, RNA, ions |
+| **Needs MSA search** | Yes (slow) | **No** | Yes |
+| **Speed** | Baseline | Up to 60x faster | Slower, far broader |
+| **Predicts** | Single protein structure | Single protein structure | Biomolecular complexes |
+| **Trade-off** | Most accurate for single proteins | Speed and metagenomic coverage | Interactions, which is what drugs are |
+
+### Self-Play and World Models
+
+| | [AlphaZero](../papers/techniques/102-alphazero/summary.md) | [DreamerV3](../papers/techniques/105-dreamerv3/summary.md) | [Genie](../papers/techniques/104-genie/summary.md) |
+|---|---|---|---|
+| **Learns from** | Self-play, rules known | Interaction, model learned | Internet video, no actions labelled |
+| **Plans in** | Real game tree (MCTS) | Imagined latent rollouts | - (generates the world) |
+| **Output** | Superhuman play | General control across 150+ tasks | A playable environment |
+| **Relevance to LLMs** | The ancestor of self-improvement loops | Model-based planning | Foundation world models |
 
 ---
 
@@ -456,22 +689,30 @@ The Transformer architecture generalized far beyond NLP. These applications use 
 
 ## Research Impact Comparison
 
-### Citations and Influence (Approximate)
+### Influence by Descendants
 
-| Paper | Citations | Years Since | Cites/Year | Derivatives |
-|-------|-----------|-------------|------------|-------------|
-| Transformers | 100,000+ | 7 | 14,000+ | Hundreds |
-| GANs | 50,000+ | 10 | 5,000+ | 100+ |
-| BERT | 80,000+ | 6 | 13,000+ | 50+ |
-| GPT-3 | 15,000+ | 4 | 3,750+ | 20+ |
-| ResNet | 120,000+ | 9 | 13,000+ | 100+ |
-| Diffusion (DDPM) | 10,000+ | 4 | 2,500+ | 30+ |
-| CLIP | 8,000+ | 4 | 2,000+ | 40+ |
-| LLaMA | 3,000+ | 1 | 3,000+ | 500+ (forks) |
+Citation counts go stale the month you write them down, so this ranks by something more durable:
+how much of the current stack descends from the paper.
 
-**Most Influential by Citations:** ResNet, Transformers, BERT
-**Most Influential by Derivatives:** LLaMA (spawned entire ecosystem in 1 year)
-**Fastest Growing:** Scaling Laws, Constitutional AI (recent but accelerating)
+| Paper | What descends from it |
+|-------|-----------------------|
+| [Transformer](../papers/architectures/01-attention-is-all-you-need/summary.md) | Every model in this collection except the pre-2017 roots |
+| [ResNet](../papers/architectures/73-resnet/summary.md) | Residual connections in every Transformer block; the whole deep-vision era |
+| [Bahdanau Attention](../papers/architectures/66-bahdanau-attention/summary.md) | Attention itself, and therefore the Transformer |
+| [VAE](../papers/image-generation/57-vae/summary.md) | Latent diffusion, VQ-VAE, VQ-GAN - the entire compress-then-model line |
+| [U-Net](../papers/architectures/74-unet/summary.md) | The denoiser in every diffusion model until DiT |
+| [PPO](../papers/techniques/63-ppo/summary.md) | RLHF, and by reaction DPO, KTO and GRPO |
+| [LLaMA](../papers/language-models/15-llama/summary.md) | The open-weight ecosystem: Alpaca, Vicuna, Mistral, and thousands of fine-tunes |
+| [Chain-of-Thought](../papers/techniques/09-chain-of-thought/summary.md) | Self-consistency, ToT, STaR, PRMs, and every reasoning model |
+| [LoRA](../papers/techniques/10-lora/summary.md) | QLoRA, and the adapter-sharing ecosystem in both text and image |
+| [CLIP](../papers/multimodal/08-clip/summary.md) | Text conditioning in image generators; the vision tower in VLMs |
+
+**Sleeper hits** - unglamorous papers doing enormous work in production:
+[RoPE](../papers/techniques/54-rope-rotary-position-embedding/summary.md),
+[GQA](../papers/architectures/75-grouped-query-attention/summary.md),
+[FlashAttention](../papers/techniques/16-flash-attention/summary.md) and
+[PagedAttention](../papers/techniques/52-pagedattention-vllm/summary.md). None changed what models
+can do; all four changed what they cost.
 
 ---
 
@@ -493,35 +734,66 @@ The Transformer architecture generalized far beyond NLP. These applications use 
 - Simple/fast embeddings (no GPU) → Word2Vec / GloVe
 
 **Need to generate images?**
-- Artistic, text-to-image → Stable Diffusion
-- Fast, real-time → GANs
-- Highest quality → DDPM
+- Artistic, text-to-image → Stable Diffusion, or SD3 / Flux (flow matching)
+- Faster sampling from a trained model → DDIM
+- Prompt adherence → Classifier-Free Guidance (the CFG slider)
+- Control the composition → ControlNet
+- A specific subject → DreamBooth, or a LoRA
+- Video → Sora / DiT
+- Fast, real-time single pass → GANs
 - Structured latent space / interpolation → VAE
-- With vision-language → CLIP + Diffusion
 
-**Need to align model?**
-- General alignment → RLHF / PPO (InstructGPT)
-- Safety focus → Constitutional AI
+**Need better reasoning?**
+- Cheapest improvement → Chain-of-Thought
+- More accuracy, more budget → Self-Consistency
+- Needs exploration and backtracking → Tree of Thoughts
+- You can verify answers and train → RLVR + GRPO
+- Bad intermediate steps → Process Reward Models
+
+**Need to align a model?**
+- General helpfulness → RLHF / PPO (InstructGPT)
+- Safety focus → Constitutional AI, Llama Guard for moderation
 - Efficient preference learning → DPO
-- Math / verifiable reasoning → GRPO
-- Both helpfulness and safety → Hybrid approach
+- Only thumbs-up/down data → KTO
+- Maths / verifiable reasoning → GRPO + RLVR
 
-**Need to adapt model?**
+**Need to adapt a model?**
 - Full resources → Fine-tuning
-- Limited resources → LoRA
-- No training → RAG or Prompting
+- Limited resources → LoRA, or QLoRA on one GPU
+- New facts, not new behaviour → RAG (do not fine-tune for this)
+- No training at all → Prompting
 
-**Need to scale efficiently?**
-- More params, same compute/token → Mixture of Experts (Switch / Mixtral)
+**Need it cheaper or faster in production?**
+- Throughput → vLLM / PagedAttention
+- Latency → Speculative Decoding
+- Won't fit on the GPU → GPTQ / AWQ 4-bit
+- KV cache too large → GQA
+- Capacity without inference cost → Mixture of Experts
+
+**Need to retrieve over your own data?**
+- General semantic search → Dense Retrieval, hybrid with BM25
+- Precision-critical → ColBERT late interaction
+- Corpus-level "what are the themes" questions → GraphRAG
+
+**Building an agent?**
+- Core loop → ReAct
+- Learn from failures → Reflexion
+- Long-lived, accumulating skills → Voyager
+- Wiring tools to models → MCP
+- Measuring it → SWE-bench
 
 **Planning a project?**
 - Estimate resources → Scaling Laws
-- Choose model size → Scaling Laws + LLaMA lessons
+- Choose model size and token budget → Chinchilla
+- Decide train vs. think-longer → Test-Time Compute
 
-**Applying Transformers outside NLP?**
-- Protein structure → AlphaFold 2
-- Images → ViT
-- Code → Codex / GPT-4
+**Applying this outside NLP?**
+- Protein structure → AlphaFold 2, ESMFold if speed matters
+- Molecular complexes and drug binding → AlphaFold 3
+- Images → ViT, MAE for self-supervised pretraining
+- Code → Codex, and SWE-bench to evaluate
+- Games and control → AlphaZero, DreamerV3
+- Interactive worlds → Genie
 
 ---
 
@@ -536,7 +808,13 @@ The Transformer architecture generalized far beyond NLP. These applications use 
 7. **Knowledge grounding** - RAG reduces hallucination better than any architecture change
 8. **Embeddings matured** - Static (Word2Vec) to contextual (ELMo) to Transformer-based (BERT) over ~5 years
 9. **Seq2Seq lineage** - Every encoder-decoder model (T5, Stable Diffusion decoder, etc.) inherits from Sutskever 2014 via Bahdanau attention
+10. **Compute moved from training to inference** - Test-Time Compute and o1 showed a small model that thinks longer can beat a much larger one that answers immediately
+11. **Alignment kept shedding machinery** - PPO needed a reward model and a critic; DPO dropped the reward model, GRPO dropped the critic, KTO dropped paired data, RLVR dropped learned rewards entirely
+12. **Sparsity beat density** - the dense scaling line topped out at PaLM's 540B; every frontier model since activates a fraction of its parameters
+13. **Compress first, then model** - the VAE insight recurs everywhere: latent diffusion, VQ-VAE tokens, VQ-GAN, and video as spacetime patches
+14. **The cheap wins are in serving** - RoPE, GQA, FlashAttention and PagedAttention changed no capability and changed every budget
+15. **Evaluation is the weak link** - static benchmarks leak, LLM judges are biased, and metric choice alone can invent an "emergent" jump
 
 ---
 
-**Last Updated:** 2026-06-10
+**Last updated:** 2026-08-20 · Covers all 107 papers in the collection.

@@ -26,6 +26,10 @@ Method, so the published figure can be checked:
     not possible and a half-applied rule would be worse than a stated one.
   - Papers whose fetch fails are recorded with `"words": null` so the next run
     retries them and the coverage count stays honest.
+  - A few entries in the collection are paradigms rather than papers, and the
+    source they link to is a paper already counted under its own slug. Those
+    are listed in `SHARED_SOURCE` and recorded as null, so the total never
+    counts the same PDF twice.
 
 Requires `pdftotext` (poppler-utils) on PATH.
 """
@@ -49,6 +53,15 @@ CACHE = ROOT / "source_lengths.json"
 
 UA = "genai-research-papers-summarized/1.0 (+https://github.com/PatrickWiloak/genai-research-papers-summarized)"
 DELAY_SECONDS = 3.0  # be a polite citizen of arxiv.org
+
+# Slugs whose linked source is another paper that is already measured under its
+# own slug. Counting them again would inflate the published total, so they are
+# recorded as null and excluded. Keyed by slug -> the slug that owns the source.
+SHARED_SOURCE = {
+    # RLVR is a training paradigm, not a paper; it links to DeepSeek-R1, which
+    # is measured as 26-deepseek-r1.
+    "39-rlvr": "26-deepseek-r1",
+}
 
 
 def pdf_url(url: str) -> str | None:
@@ -123,6 +136,10 @@ def main() -> int:
         slug = p["slug"]
         target = pdf_url(p.get("url") or "")
         print(f"[{i}/{len(todo)}] {slug}")
+        if slug in SHARED_SOURCE:
+            print(f"    source already counted as {SHARED_SOURCE[slug]} - excluding")
+            cache[slug] = {"url": p.get("url") or "", "pdf": None, "words": None}
+            continue
         if not target:
             print("    no direct PDF for this source - skipping")
             cache[slug] = {"url": p.get("url") or "", "pdf": None, "words": None}

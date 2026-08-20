@@ -1,447 +1,264 @@
 # Reading Guide - Historical Significance vs Current Relevance
 
-A practical guide to understanding which papers are essential for modern AI work vs historical context.
+Not every important paper is a paper you still need to read. This guide separates the two: how
+much a paper *mattered* when it landed, and how much it *matters to your work today*. Where those
+two diverge, it says which way to lean and what to read instead.
+
+It is a prioritisation guide, not a catalogue. Every one of the 107 papers carries a relevance
+badge in [BROWSE.md](../BROWSE.md), a one-line contribution in
+[QUICK_REFERENCE.md](./QUICK_REFERENCE.md), and a full entry in [INDEX.md](../INDEX.md). This page
+covers the essentials plus the cases where the two axes pull apart.
 
 ---
 
-## 📊 Quick Reference Matrix
+## 📊 Priority Matrix
 
-| Paper | Year | Historical Significance | Current Relevance | Priority | Read For |
-|-------|------|------------------------|-------------------|----------|----------|
-| **Transformers** | 2017 | 🔥🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | Architecture foundation |
-| **Scaling Laws** | 2020 | 🔥🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | Theory & planning |
-| **LLaMA** | 2023 | 🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | Modern training |
-| **RAG** | 2020 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | Production apps |
-| **LoRA** | 2021 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | Fine-tuning |
-| **InstructGPT** | 2022 | 🔥🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | Alignment |
-| **Chain-of-Thought** | 2022 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | Reasoning |
-| **GPT-3** | 2020 | 🔥🔥🔥🔥🔥 | 🔥🔥🔥🔥 | **HIGH** | Few-shot learning |
-| **Constitutional AI** | 2022 | 🔥🔥🔥 | 🔥🔥🔥🔥 | **HIGH** | Alternative alignment |
-| **Vision Transformer** | 2020 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥 | **HIGH** | Multimodal foundation |
-| **CLIP** | 2021 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥 | **HIGH** | Vision-language |
-| **Stable Diffusion** | 2022 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥 | **HIGH** | Image generation |
-| **BERT** | 2018 | 🔥🔥🔥🔥🔥 | 🔥🔥 | **MEDIUM** | Historical context |
-| **GANs** | 2014 | 🔥🔥🔥🔥🔥 | 🔥🔥 | **MEDIUM** | Historical context |
-| **DDPM** | 2020 | 🔥🔥🔥🔥 | 🔥🔥🔥 | **MEDIUM** | Diffusion theory |
+**Historical** = how much it changed the field at the time. **Current** = how much you lose today
+by not having read it.
 
----
+### Foundations you cannot skip
 
-## 🎯 Priority Tiers Explained
+| Paper | Year | Historical | Current | Priority | Read For |
+|-------|------|-----------|---------|----------|----------|
+| [Transformer](../papers/architectures/01-attention-is-all-you-need/summary.md) | 2017 | 🔥🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | The architecture under everything |
+| [Scaling Laws](../papers/techniques/12-scaling-laws/summary.md) | 2020 | 🔥🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | Why compute budgets look like they do |
+| [Chinchilla](../papers/techniques/18-chinchilla/summary.md) | 2022 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | The data/parameter ratio everyone now uses |
+| [InstructGPT](../papers/language-models/05-instructgpt-rlhf/summary.md) | 2022 | 🔥🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | How a base model becomes an assistant |
+| [Chain-of-Thought](../papers/techniques/09-chain-of-thought/summary.md) | 2022 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | The root of every reasoning method |
+| [RAG](../papers/techniques/13-rag/summary.md) | 2020 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | The most-deployed LLM pattern there is |
+| [LoRA](../papers/techniques/10-lora/summary.md) | 2021 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | How fine-tuning is actually done |
+| [GPT-3](../papers/language-models/04-gpt3-few-shot-learners/summary.md) | 2020 | 🔥🔥🔥🔥🔥 | 🔥🔥🔥🔥 | **HIGH** | Where prompting replaced fine-tuning |
 
-### Tier 1: CRITICAL - Must Read (7 papers)
-**These define modern AI development in 2024/2025**
+### The modern layer (2023-2026)
 
-#### 1. Transformers (2017)
-**Historical:** Founded the entire modern AI era
-**Current:** Every major model uses this architecture
-**Why Read:** Cannot understand anything else without this
-**Skip If:** You literally never work with AI
-**Time Investment:** 1 hour
-**Key Takeaway:** Self-attention is the foundation
+These did not exist when most "essential papers" lists were written, and they are where current
+practice actually lives.
 
-#### 2. Scaling Laws (2020)
-**Historical:** Proved AI progress is predictable
-**Current:** Guides every major AI investment and model design
-**Why Read:** Understand why companies spend billions on compute
-**Skip If:** You only use APIs and don't care about economics
-**Time Investment:** 45 minutes
-**Key Takeaway:** Loss scales predictably with compute/data/params
+| Paper | Year | Historical | Current | Priority | Read For |
+|-------|------|-----------|---------|----------|----------|
+| [DeepSeek-R1](../papers/language-models/26-deepseek-r1/summary.md) | 2025 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | Reasoning training, fully disclosed |
+| [RLVR](../papers/techniques/39-rlvr/summary.md) | 2024-25 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | The signal reasoning models train on |
+| [GRPO](../papers/techniques/38-grpo/summary.md) | 2024 | 🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | RLHF without the critic model |
+| [Test-Time Compute](../papers/techniques/50-test-time-compute/summary.md) | 2024 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | Why "think longer" beats "train bigger" |
+| [Mixtral / MoE](../papers/architectures/37-mixture-of-experts/summary.md) | 2024 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | The frontier architecture default |
+| [DPO](../papers/language-models/19-dpo/summary.md) | 2023 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | Alignment without an RL loop |
+| [RoPE](../papers/techniques/54-rope-rotary-position-embedding/summary.md) | 2021 | 🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | Positions, in nearly every LLM you use |
+| [FlashAttention](../papers/techniques/16-flash-attention/summary.md) | 2022 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **CRITICAL** | Why long context is affordable |
+| [PagedAttention / vLLM](../papers/techniques/52-pagedattention-vllm/summary.md) | 2023 | 🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **HIGH** | How models are actually served |
+| [MCP](../papers/techniques/59-model-context-protocol/summary.md) | 2024 | 🔥🔥🔥 | 🔥🔥🔥🔥🔥 | **HIGH** | How tools get wired to models now |
+| [ReAct](../papers/techniques/21-react/summary.md) | 2023 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥 | **HIGH** | The agent loop, in its original form |
+| [GQA](../papers/architectures/75-grouped-query-attention/summary.md) | 2023 | 🔥🔥🔥 | 🔥🔥🔥🔥 | **HIGH** | KV-cache cost in production |
+| [GPTQ & AWQ](../papers/techniques/86-gptq-awq-quantization/summary.md) | 2022-23 | 🔥🔥🔥 | 🔥🔥🔥🔥 | **HIGH** | Why local inference is possible |
+| [Dense Retrieval](../papers/techniques/87-dense-retrieval/summary.md) | 2019-20 | 🔥🔥🔥 | 🔥🔥🔥🔥 | **HIGH** | The layer under every RAG system |
+| [SWE-bench](../papers/techniques/84-swe-bench/summary.md) | 2023 | 🔥🔥🔥 | 🔥🔥🔥🔥 | **HIGH** | What coding-agent claims mean |
+| [Sparse Autoencoders](../papers/techniques/82-sparse-autoencoders/summary.md) | 2022-24 | 🔥🔥🔥🔥 | 🔥🔥🔥🔥 | **HIGH** | The state of interpretability |
 
-#### 3. LLaMA (2023)
-**Historical:** Recent but already transformative
-**Current:** Most active open-source ecosystem (Alpaca, Vicuna, etc.)
-**Why Read:** Modern best practices for training
-**Skip If:** You only use closed models
-**Time Investment:** 1 hour
-**Key Takeaway:** Training > size, open > closed
+### Where the two axes diverge
 
-#### 4. RAG (2020)
-**Historical:** Solved the hallucination problem
-**Current:** ~80% of production LLM apps use this
-**Why Read:** Essential for building real applications
-**Skip If:** You only do research, not deployment
-**Time Investment:** 1 hour
-**Key Takeaway:** Retrieval grounds generation in facts
+Read these for understanding, not for practice. The "instead" column is what to spend the time on.
 
-#### 5. LoRA (2021)
-**Historical:** Made fine-tuning accessible
-**Current:** Standard for customizing models
-**Why Read:** If you ever fine-tune, you'll use this
-**Skip If:** You never customize models
-**Time Investment:** 45 minutes
-**Key Takeaway:** 10,000× fewer params, same quality
-
-#### 6. InstructGPT / RLHF (2022)
-**Historical:** Enabled ChatGPT
-**Current:** Powers all major AI assistants
-**Why Read:** Understand how models become helpful
-**Skip If:** You don't care about alignment
-**Time Investment:** 1 hour
-**Key Takeaway:** Human feedback shapes behavior
-
-#### 7. Chain-of-Thought (2022)
-**Historical:** Unlocked reasoning capabilities
-**Current:** Active area, getting better (Tree of Thoughts, etc.)
-**Why Read:** Dramatically improves prompt effectiveness
-**Skip If:** You only do simple tasks
-**Time Investment:** 30 minutes
-**Key Takeaway:** "Let's think step by step" works
+| Paper | Year | Historical | Current | Priority | Instead |
+|-------|------|-----------|---------|----------|---------|
+| [BERT](../papers/language-models/03-bert/summary.md) | 2018 | 🔥🔥🔥🔥🔥 | 🔥🔥 | MEDIUM | Decoder-only models; [Dense Retrieval](../papers/techniques/87-dense-retrieval/summary.md) for embeddings |
+| [GANs](../papers/image-generation/02-generative-adversarial-networks/summary.md) | 2014 | 🔥🔥🔥🔥🔥 | 🔥🔥 | MEDIUM | [Stable Diffusion](../papers/image-generation/07-stable-diffusion/summary.md), [Flow Matching](../papers/image-generation/72-flow-matching-sd3/summary.md) |
+| [Word2Vec](../papers/techniques/53-word2vec/summary.md) | 2013 | 🔥🔥🔥🔥🔥 | 🔥🔥 | MEDIUM | [Dense Retrieval](../papers/techniques/87-dense-retrieval/summary.md) |
+| [Seq2Seq](../papers/architectures/55-seq2seq/summary.md) | 2014 | 🔥🔥🔥🔥 | 🔥🔥 | MEDIUM | [Transformer](../papers/architectures/01-attention-is-all-you-need/summary.md) |
+| [GPT-1](../papers/language-models/93-gpt1/summary.md) | 2018 | 🔥🔥🔥🔥 | 🔥🔥 | MEDIUM | [GPT-3](../papers/language-models/04-gpt3-few-shot-learners/summary.md) |
+| [GPT-2](../papers/language-models/64-gpt2/summary.md) | 2019 | 🔥🔥🔥🔥 | 🔥🔥 | MEDIUM | [GPT-3](../papers/language-models/04-gpt3-few-shot-learners/summary.md) |
+| [DDPM](../papers/image-generation/06-diffusion-models/summary.md) | 2020 | 🔥🔥🔥🔥🔥 | 🔥🔥🔥 | MEDIUM | Read if you need the maths, not to use diffusion |
+| [PPO](../papers/techniques/63-ppo/summary.md) | 2017 | 🔥🔥🔥🔥🔥 | 🔥🔥🔥 | MEDIUM | [DPO](../papers/language-models/19-dpo/summary.md), [GRPO](../papers/techniques/38-grpo/summary.md) unless you implement RLHF |
+| [PaLM](../papers/language-models/94-palm/summary.md) | 2022 | 🔥🔥🔥🔥 | 🔥🔥 | MEDIUM | MoE models; dense scaling stopped here |
 
 ---
 
-### Tier 2: HIGH - Strongly Recommended (5 papers)
-**Important for comprehensive understanding**
+## 🎯 What Changed, and Why
 
-#### 8. GPT-3 (2020)
-**Historical:** 🔥🔥🔥🔥🔥 Proved scaling works, introduced few-shot
-**Current:** 🔥🔥🔥🔥 Still relevant but surpassed by GPT-4, LLaMA 2
-**Why Read:** Understand the paradigm shift to prompting
-**Skip If:** You've used ChatGPT and get the concept
-**Time Investment:** 1 hour
-**Modern Alternative:** Just read LLaMA (covers similar ground)
+The three cases readers ask about most.
 
-#### 9. Constitutional AI (2022)
-**Historical:** 🔥🔥🔥 Alternative alignment method
-**Current:** 🔥🔥🔥🔥 Powers Claude, growing adoption
-**Why Read:** Understand alignment alternatives to RLHF
-**Skip If:** You only use RLHF models
-**Time Investment:** 1 hour
-**Modern Status:** Increasingly important as RLHF limitations appear
+### BERT-style encoders
 
-#### 10. Vision Transformer (2020)
-**Historical:** 🔥🔥🔥🔥 Unified vision and language architectures
-**Current:** 🔥🔥🔥🔥 Foundation for GPT-4V, DALL-E, Gemini Vision
-**Why Read:** Essential for multimodal understanding
-**Skip If:** You only work with text
-**Time Investment:** 1 hour
-**Modern Status:** More relevant than ever (multimodal boom)
-
-#### 11. CLIP (2021)
-**Historical:** 🔥🔥🔥🔥 Connected vision and language
-**Current:** 🔥🔥🔥🔥 Powers text-to-image, visual search
-**Why Read:** Understand vision-language alignment
-**Skip If:** You don't touch images
-**Time Investment:** 45 minutes
-**Modern Status:** Core component of modern image AI
-
-#### 12. Stable Diffusion (2022)
-**Historical:** 🔥🔥🔥🔥 Democratized AI art
-**Current:** 🔥🔥🔥🔥 Active ecosystem, constantly evolving
-**Why Read:** Understand practical image generation
-**Skip If:** You don't care about image generation
-**Time Investment:** 1 hour
-**Modern Status:** Still dominant, but competition from DALL-E 3, Midjourney
-
----
-
-### Tier 3: MEDIUM - Historical Context (3 papers)
-**Important for understanding AI history, less critical for modern work**
-
-#### 13. BERT (2018)
-**Historical:** 🔥🔥🔥🔥🔥 Revolutionized NLP, pre-train + fine-tune
-**Current:** 🔥🔥 Mostly replaced by decoder-only models
-**Why Read:** Understand the pre-training revolution
-**Skip If:** You focus on modern LLMs (all decoder-only now)
-**Time Investment:** 45 minutes
-**Modern Alternative:** Focus on GPT-3/LLaMA instead
-
-**What Changed:**
-- 2018-2020: BERT-style encoders dominated
-- 2020+: GPT-style decoders took over (better at generation)
-- Today: Encoder-only models are niche (embedding models mainly)
-
-**Still Used For:**
-- Sentence embeddings (Sentence-BERT)
-- Some classification tasks
-- Legacy systems
-
-**Modern Descendants:**
-- RoBERTa, DeBERTa (improved BERT)
-- Sentence-BERT (embeddings)
-
-#### 14. GANs (2014)
-**Historical:** 🔥🔥🔥🔥🔥 Launched generative modeling field
-**Current:** 🔥🔥 Mostly replaced by diffusion models
-**Why Read:** Understand adversarial training concept
-**Skip If:** You only care about modern image generation
-**Time Investment:** 45 minutes
-**Modern Alternative:** Read Stable Diffusion instead
-
-**What Changed:**
-- 2014-2020: GANs dominated image generation
-- 2020+: Diffusion models proved more stable, higher quality
-- Today: GANs used for niche applications (real-time, style transfer)
-
-**Still Used For:**
-- Real-time video generation (fast inference)
-- Style transfer
-- Some specific domains
-
-**Modern Descendants:**
-- StyleGAN series (still used for faces)
-- BigGAN (large-scale)
-
-#### 15. Diffusion Models / DDPM (2020)
-**Historical:** 🔥🔥🔥🔥 Introduced diffusion for images
-**Current:** 🔥🔥🔥 Theory covered in Stable Diffusion
-**Why Read:** Deep understanding of diffusion mathematics
-**Skip If:** You just want to use diffusion models
-**Time Investment:** 1 hour
-**Modern Alternative:** Stable Diffusion summary covers key concepts
-
-**What Changed:**
-- 2020: DDPM introduced theory
-- 2022: Stable Diffusion made it practical (latent space)
-- Today: Latent diffusion is standard
-
-**Still Relevant For:**
-- Research into diffusion theory
-- Understanding mathematical foundations
-- Optimizing diffusion models
-
----
-
-## 🎓 Reading Strategies by Goal
-
-### Goal: Build Modern LLM Applications
-**Time: 5-7 hours total**
-
-**Must Read (4 papers, 4 hours):**
-1. Transformers - 1h (understand architecture)
-2. RAG - 1h (most important for apps!)
-3. LoRA - 45min (for customization)
-4. Chain-of-Thought - 30min (for better prompts)
-
-**Strongly Recommended (2 papers, 2 hours):**
-5. LLaMA - 1h (modern training best practices)
-6. InstructGPT - 1h (understand alignment)
-
-**Optional:**
-7. Scaling Laws - 45min (for planning)
-8. Constitutional AI - 1h (alternative alignment)
-
-**Skip:**
-- BERT (old paradigm)
-- GANs, DDPM (not relevant for LLMs)
-- ViT, CLIP (unless doing multimodal)
-
----
-
-### Goal: Understand Modern AI Landscape
-**Time: 8-10 hours total**
-
-**Critical Foundation (5 papers, 5 hours):**
-1. Transformers - 1h
-2. Scaling Laws - 45min
-3. GPT-3 - 1h
-4. InstructGPT - 1h
-5. LLaMA - 1h
-
-**Choose Your Focus (3-4 papers, 3-4 hours):**
-
-*If interested in applications:*
-6. RAG - 1h
-7. LoRA - 45min
-8. Chain-of-Thought - 30min
-
-*If interested in image generation:*
-6. Vision Transformer - 1h
-7. CLIP - 45min
-8. Stable Diffusion - 1h
-
-**Historical Context (optional, 2 hours):**
-9. BERT - 45min (pre-training revolution)
-10. GANs - 45min (generative modeling origins)
-
----
-
-### Goal: Deep Research Understanding
-**Time: 15-20 hours total**
-
-**Read all 15 papers chronologically to understand evolution:**
-
-**Phase 1: Foundations (2014-2018)**
-1. GANs (2014) - Generative modeling begins
-2. Transformers (2017) - Architecture revolution
-3. BERT (2018) - Pre-training paradigm
-
-**Phase 2: Scaling Era (2020)**
-4. Scaling Laws (2020) - Predictive theory
-5. GPT-3 (2020) - Scaling in practice
-6. Vision Transformer (2020) - Transformers to vision
-7. DDPM (2020) - Diffusion introduced
-8. RAG (2020) - Grounded generation
-
-**Phase 3: Efficient & Aligned (2021-2022)**
-9. CLIP (2021) - Multimodal alignment
-10. LoRA (2021) - Efficient adaptation
-11. InstructGPT (2022) - RLHF alignment
-12. Chain-of-Thought (2022) - Reasoning
-13. Stable Diffusion (2022) - Practical diffusion
-14. Constitutional AI (2022) - Alternative alignment
-
-**Phase 4: Modern Era (2023+)**
-15. LLaMA (2023) - Compute-optimal training
-
----
-
-## 📉 What's Becoming Less Relevant
-
-### BERT-Style Encoders
-**Then (2018-2020):** Dominant for NLP tasks
-**Now (2024+):** Mostly replaced by decoder-only models
-**Why:** Decoders can do both understanding AND generation
-**Exception:** Still used for embeddings (Sentence-BERT)
+- **2018-2020:** encoders dominated NLP; fine-tune BERT for every task.
+- **Today:** decoder-only models do understanding *and* generation, so the split disappeared.
+- **Still used for:** embeddings and reranking - Sentence-BERT and ColBERT, covered in
+  [Dense Retrieval](../papers/techniques/87-dense-retrieval/summary.md).
+- **Read BERT if:** you work on retrieval, or maintain a pre-2021 NLP system.
 
 ### GANs
-**Then (2014-2020):** State-of-art for image generation
-**Now (2024+):** Diffusion models are standard
-**Why:** More stable training, better quality, easier to control
-**Exception:** Real-time applications where speed matters
 
-### Separate Vision & Language Models
-**Then (pre-2020):** CNNs for vision, Transformers for language
-**Now (2024+):** Unified Transformer architecture for everything
-**Why:** ViT + multimodal models like GPT-4V
-**Exception:** Some specialized vision tasks still use CNNs
+- **2014-2020:** the default for image synthesis.
+- **Today:** diffusion and flow matching win on stability, controllability and quality.
+- **Still used for:** real-time generation and super-resolution, where a single forward pass
+  matters. The adversarial loss also survives inside
+  [VQ-GAN](../papers/image-generation/90-vq-gan/summary.md), which is very much still in use.
+- **Read GANs if:** you need the adversarial idea itself; otherwise read the diffusion line.
+
+### Dense scaling
+
+- **2020-2022:** make the dense model bigger - GPT-3 at 175B, PaLM at 540B.
+- **Today:** sparse MoE gives more capacity per unit of inference cost, and
+  [Chinchilla](../papers/techniques/18-chinchilla/summary.md) showed the big dense models were
+  under-trained anyway. Frontier models activate a fraction of their parameters.
+- **Read PaLM if:** you want the high-water mark of the dense era; otherwise read
+  [Mixtral](../papers/architectures/37-mixture-of-experts/summary.md) and
+  [DeepSeek-V3](../papers/language-models/27-deepseek-v3/summary.md).
 
 ---
 
 ## 📈 What's Increasingly Important
 
-### Alignment Methods
-**Papers:** InstructGPT, Constitutional AI
-**Why:** AI safety and helpfulness are critical
-**Trend:** More sophisticated alignment techniques emerging
+**Reasoning as a training target, not a prompt.** Chain-of-thought was a prompting trick in 2022.
+By 2025 it is what the model is trained to do:
+[STaR](../papers/techniques/97-star/summary.md) →
+[Process Reward Models](../papers/techniques/51-process-reward-models/summary.md) →
+[Test-Time Compute](../papers/techniques/50-test-time-compute/summary.md) →
+[o1](../papers/language-models/31-openai-o1/summary.md) →
+[RLVR](../papers/techniques/39-rlvr/summary.md) /
+[DeepSeek-R1](../papers/language-models/26-deepseek-r1/summary.md).
 
-### Efficient Adaptation
-**Papers:** LoRA, RAG
-**Why:** Can't always retrain from scratch
-**Trend:** More efficient methods (QLoRA, PEFT variants)
+**Alignment without the RL machinery.** [DPO](../papers/language-models/19-dpo/summary.md) removed
+the reward model, [KTO](../papers/techniques/103-kto/summary.md) removed the need for paired data,
+and [GRPO](../papers/techniques/38-grpo/summary.md) removed the critic. Each step made alignment
+cheaper to run.
 
-### Multimodal
-**Papers:** ViT, CLIP
-**Why:** GPT-4V, Gemini Vision, etc. are the future
-**Trend:** Everything becoming multimodal
+**Inference economics.** Serving cost now drives architecture:
+[GQA](../papers/architectures/75-grouped-query-attention/summary.md),
+[PagedAttention](../papers/techniques/52-pagedattention-vllm/summary.md),
+[Speculative Decoding](../papers/techniques/45-speculative-decoding/summary.md),
+[quantisation](../papers/techniques/86-gptq-awq-quantization/summary.md), and MoE all exist to make
+the forward pass cheaper.
 
-### Reasoning
-**Papers:** Chain-of-Thought
-**Why:** LLMs need to handle complex tasks
-**Trend:** Tree of Thoughts, graph reasoning, etc.
+**Agents and tool use.** [ReAct](../papers/techniques/21-react/summary.md) →
+[Reflexion](../papers/techniques/78-reflexion/summary.md) →
+[Generative Agents](../papers/techniques/58-generative-agents/summary.md) →
+[Voyager](../papers/techniques/100-voyager/summary.md), with
+[MCP](../papers/techniques/59-model-context-protocol/summary.md) as the integration layer and
+[SWE-bench](../papers/techniques/84-swe-bench/summary.md) as the scoreboard.
+
+**Interpretability and safety with teeth.**
+[Sparse Autoencoders](../papers/techniques/82-sparse-autoencoders/summary.md) made features
+readable and steerable; [Sleeper Agents](../papers/techniques/83-sleeper-agents/summary.md) showed
+safety fine-tuning can leave a backdoor intact.
+
+**Everything outside language.** The same toolkit now does biology
+([AlphaFold 2](../papers/techniques/68-alphafold/summary.md),
+[AlphaFold 3](../papers/techniques/101-alphafold3/summary.md),
+[ESM-2](../papers/techniques/106-esm/summary.md)), mathematics
+([AlphaGeometry](../papers/techniques/61-alphageometry/summary.md)), algorithm design
+([AlphaEvolve](../papers/techniques/62-alphaevolve/summary.md)) and world modelling
+([Genie](../papers/techniques/104-genie/summary.md),
+[DreamerV3](../papers/techniques/105-dreamerv3/summary.md)).
+
+---
+
+## 📉 What's Becoming Less Relevant
+
+- **Encoder-only architectures** - outside embeddings and reranking.
+- **GAN training tricks** - the failure modes they solved mostly don't arise in diffusion.
+- **Separate vision and language stacks** - [ViT](../papers/architectures/11-vision-transformer/summary.md)
+  and [CLIP](../papers/multimodal/08-clip/summary.md) collapsed them into one.
+- **Prompt engineering as a discipline** - [DALL-E 3](../papers/image-generation/48-dalle3/summary.md)
+  and instruction-tuned LLMs absorbed most of it.
+- **Absolute positional embeddings** - [RoPE](../papers/techniques/54-rope-rotary-position-embedding/summary.md) won.
+- **Dense-only scaling** - see above.
 
 ---
 
 ## 🎯 Minimum Viable Reading
 
-**If you only have 3 hours, read these 4 papers:**
+**3 hours - you need to hold a conversation about modern AI**
 
-1. **Transformers** (1h) - Foundation
-2. **Scaling Laws** (45min) - Theory
-3. **RAG** (45min) - Most practical
-4. **Chain-of-Thought** (30min) - Immediate application
+1. [Transformer](../papers/architectures/01-attention-is-all-you-need/summary.md) - the architecture
+2. [GPT-3](../papers/language-models/04-gpt3-few-shot-learners/summary.md) - in-context learning
+3. [InstructGPT](../papers/language-models/05-instructgpt-rlhf/summary.md) - how it became an assistant
+4. [Chain-of-Thought](../papers/techniques/09-chain-of-thought/summary.md) - how it reasons
 
-This gives you:
-- ✅ Architecture foundation
-- ✅ Understanding of why AI works
-- ✅ Most important production technique
-- ✅ Simple prompt improvement method
+**+3 hours - you are building on top of models**
+
+5. [RAG](../papers/techniques/13-rag/summary.md) and [Dense Retrieval](../papers/techniques/87-dense-retrieval/summary.md) - grounding
+6. [LoRA](../papers/techniques/10-lora/summary.md) - adaptation
+7. [ReAct](../papers/techniques/21-react/summary.md) and [MCP](../papers/techniques/59-model-context-protocol/summary.md) - tools and agents
+
+**+3 hours - you need to reason about cost and capability**
+
+8. [Scaling Laws](../papers/techniques/12-scaling-laws/summary.md) and [Chinchilla](../papers/techniques/18-chinchilla/summary.md)
+9. [Mixtral / MoE](../papers/architectures/37-mixture-of-experts/summary.md)
+10. [Test-Time Compute](../papers/techniques/50-test-time-compute/summary.md) and [DeepSeek-R1](../papers/language-models/26-deepseek-r1/summary.md)
 
 ---
 
 ## 📚 Suggested Reading Orders
 
-### Chronological (Historical Understanding)
-GANs → Transformers → BERT → Scaling Laws → GPT-3 → ViT → DDPM → RAG → CLIP → LoRA → InstructGPT → Chain-of-Thought → Stable Diffusion → Constitutional AI → LLaMA
+### Relevance-first (recommended)
 
-**Pros:** Understand evolution and context
-**Cons:** Start with less relevant material
-**Time:** 15+ hours
+Transformer → GPT-3 → InstructGPT → Chain-of-Thought → RAG → LoRA → Chinchilla → MoE →
+DPO → Test-Time Compute → DeepSeek-R1 → RoPE → FlashAttention → vLLM → ReAct → MCP
 
-### Relevance-First (Modern Focus)
-Transformers → Scaling Laws → LLaMA → RAG → LoRA → InstructGPT → Chain-of-Thought → GPT-3 → Constitutional AI → ViT → CLIP → Stable Diffusion → BERT → GANs → DDPM
+Most useful material first; you can stop at any point and still have a coherent picture.
 
-**Pros:** Most useful information first
-**Cons:** Miss historical context
-**Time:** 12-15 hours (can stop earlier)
+### Chronological (how the field actually moved)
 
-### Architecture-First (Technical Deep Dive)
-Transformers → ViT → BERT → GPT-3 → LLaMA → Scaling Laws → InstructGPT → Constitutional AI → RAG → LoRA → Chain-of-Thought → GANs → DDPM → Stable Diffusion → CLIP
+Word2Vec → Seq2Seq → Bahdanau Attention → ResNet → U-Net → Transformer → GPT-1 → BERT →
+GPT-2 → Scaling Laws → GPT-3 → ViT → DDPM → CLIP → RoPE → LoRA → Chinchilla → InstructGPT →
+Chain-of-Thought → Stable Diffusion → LLaMA → DPO → Mixtral → o1 → DeepSeek-R1 → GPT-5
 
-**Pros:** Deep architecture understanding first
-**Cons:** Less practical focus
-**Time:** 15+ hours
+Slower start, but the causal chain is much clearer.
+
+### Architecture-first
+
+Transformer → RoPE → GQA → FlashAttention → MoE / Switch → Mamba → ViT → MAE → ResNet →
+U-Net → VQ-VAE → VQ-GAN → DiT
+
+### Track: image and video generation
+
+VAE → GANs → DDPM → DDIM → Classifier-Free Guidance → Stable Diffusion → Imagen → DALL-E 3 →
+ControlNet → DreamBooth → Flow Matching / SD3 → Sora / DiT → Genie
+
+### Track: reasoning models
+
+Chain-of-Thought → Self-Consistency → Tree of Thoughts → STaR → Process Reward Models →
+Quiet-STaR → Test-Time Compute → o1 → GRPO → RLVR → DeepSeek-R1 → rStar-Math → Meta-CoT
+
+### Track: production systems
+
+RAG → Dense Retrieval → GraphRAG → LoRA → QLoRA → GPTQ & AWQ → GQA → FlashAttention →
+PagedAttention → Speculative Decoding → ReAct → MCP → SWE-bench → LLM-as-a-Judge → Llama Guard
 
 ---
 
 ## 💡 Pro Tips
 
-### For Skimming
-1. Read "Why This Matters" section only
-2. Check the results tables
-3. Read "Key Takeaways"
-4. Skip mathematical derivations first time
+**Skimming a summary:** read "Why This Matters", then the results table, then "Key Takeaways".
+Skip the derivations on a first pass.
 
-### For Deep Learning
-1. Read summary fully
-2. Read original paper
-3. Implement core concepts
-4. Compare with modern alternatives
+**Going deep:** read the summary, then the original paper, then implement the core idea on a toy
+problem. The gap between "I followed that" and "I can build it" is where the learning is.
 
-### For Practical Application
-1. Focus on "Practical Applications" sections
-2. Try code examples
-3. Skip heavy theory
-4. Focus on limitations (what NOT to do)
+**Building something:** go straight to the practical-applications and limitations sections. The
+limitations are the more valuable half - they tell you what will break in production.
 
 ---
 
-## 🔄 When to Re-read
+## ✅ Progress Tracker
 
-**Re-read BERT if:**
-- Working with legacy NLP systems
-- Doing sentence embedding work
-- Need bidirectional understanding specifically
+**Essentials (15)**
 
-**Re-read GANs if:**
-- Need real-time generation
-- Doing style transfer work
-- Researching adversarial methods
+- [ ] Transformer · [ ] Scaling Laws · [ ] Chinchilla · [ ] GPT-3 · [ ] InstructGPT
+- [ ] Chain-of-Thought · [ ] RAG · [ ] LoRA · [ ] DPO · [ ] Mixtral / MoE
+- [ ] RoPE · [ ] FlashAttention · [ ] Test-Time Compute · [ ] GRPO · [ ] DeepSeek-R1
 
-**Re-read DDPM if:**
-- Optimizing diffusion models
-- Research into diffusion theory
-- Building custom diffusion variants
+**Production layer (10)**
 
----
+- [ ] Dense Retrieval · [ ] GraphRAG · [ ] QLoRA · [ ] GPTQ & AWQ · [ ] GQA
+- [ ] PagedAttention · [ ] Speculative Decoding · [ ] ReAct · [ ] MCP · [ ] SWE-bench
 
-## ✅ Reading Progress Tracker
+**Historical context (9)**
 
-Mark off as you complete:
+- [ ] Word2Vec · [ ] Seq2Seq · [ ] Bahdanau Attention · [ ] GPT-1 · [ ] GPT-2
+- [ ] BERT · [ ] GANs · [ ] PPO · [ ] PaLM
 
-**CRITICAL (7 papers):**
-- [ ] Transformers
-- [ ] Scaling Laws
-- [ ] LLaMA
-- [ ] RAG
-- [ ] LoRA
-- [ ] InstructGPT
-- [ ] Chain-of-Thought
-
-**HIGH (5 papers):**
-- [ ] GPT-3
-- [ ] Constitutional AI
-- [ ] Vision Transformer
-- [ ] CLIP
-- [ ] Stable Diffusion
-
-**MEDIUM (3 papers):**
-- [ ] BERT
-- [ ] GANs
-- [ ] DDPM
-
-**Total Progress:** ___ / 15 papers
+Then pick a track above, or work through [INDEX.md](../INDEX.md) for all 107.
 
 ---
 
-**Last Updated:** 2025-10-19
-**Next Review:** This guide will be updated as the field evolves
+**Last updated:** 2026-08-20 · **Collection:** 107 papers · **See also:**
+[BROWSE.md](../BROWSE.md) · [QUICK_REFERENCE.md](./QUICK_REFERENCE.md) · [ROADMAP.md](./ROADMAP.md)

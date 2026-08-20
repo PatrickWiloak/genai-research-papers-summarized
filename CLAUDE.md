@@ -13,6 +13,7 @@ Python regeneration pipeline that builds the index, manifests, and an MkDocs Mat
 - `scripts/build_manifest.py` - Regenerates frontmatter, manifest, INDEX.md, TAGS.md, `mkdocs.generated.yml`, and the `site-build/` tree (stdlib only, idempotent)
 - `scripts/add_cross_links.py` - Regenerates the "Related in This Collection" footer on each summary (stdlib only, idempotent)
 - `scripts/check_links.py` - Validates relative Markdown links (used by CI)
+- `scripts/check_counts.py` - Fails CI when a hand-typed count drifts from `papers.json`: BROWSE.md's per-category and badge tallies, the glossary term count in `docs/GLOSSARY.md` and README, and `docs/GAPS.md`'s coverage map (which must account for every paper)
 - `scripts/measure_sources.py` - **The only networked script, and not part of the pipeline.** Fetches each paper's source PDF, counts words with `pdftotext`, and caches the result in `source_lengths.json`. Run by hand when papers are added
 - `source_lengths.json` - Committed cache of per-paper source word counts. `build_manifest.py` reads it offline to compute the landing page's compression figures, so the normal build stays stdlib-only and network-free
 - `mkdocs.yml` - Hand-maintained MkDocs Material config (theme, palette, extensions). Carries **no** `nav`; the generator appends one into the git-ignored `mkdocs.generated.yml`, which is what the site builds from
@@ -42,15 +43,27 @@ Python regeneration pipeline that builds the index, manifests, and an MkDocs Mat
   python3 scripts/add_cross_links.py     # "Related in This Collection" footers
   python3 scripts/build_manifest.py     # refresh after footers
   ```
-- CI (`.github/workflows/ci.yml`) fails if these generated outputs are stale or if any relative link is broken, so run them before pushing.
+- CI (`.github/workflows/ci.yml`) fails if these generated outputs are stale, if any relative link is
+  broken, or if a hand-maintained count has drifted, so run these before pushing:
+  ```
+  python3 scripts/check_links.py
+  python3 scripts/check_counts.py
+  ```
 - Do not hand-edit YAML frontmatter, `INDEX.md`, `TAGS.md`, `mkdocs.generated.yml`, `site-build/`, the `<!-- related:* -->` footers, or README.md's `<!-- byyear:* -->` block - they are generated. Edit `mkdocs.yml` for theme/config and `write_mkdocs()` for nav.
+- `BROWSE.md` **is** hand-maintained, and carries one card per paper plus per-category and badge
+  tallies. Adding a paper means adding its card and updating those tallies; `check_counts.py` fails
+  CI if you forget. `docs/GAPS.md`'s coverage map must likewise name every paper.
+- Hand-written guides (`docs/ROADMAP.md`, `docs/READING_GUIDE.md`, `docs/QUICK_REFERENCE.md`,
+  `docs/COMPARISONS.md`, `docs/GLOSSARY.md`) curate rather than enumerate - except
+  `QUICK_REFERENCE.md`, which carries a row per paper. Do not hand-copy the by-year or by-topic
+  groupings into them; link to the generated `README.md` block, `INDEX.md` and `TAGS.md` instead.
 - To preview or check the site locally:
   ```
   python3 -m venv .venv-docs && .venv-docs/bin/pip install -r requirements.txt
   python3 scripts/build_manifest.py
   .venv-docs/bin/mkdocs serve -f mkdocs.generated.yml    # or: mkdocs build -f mkdocs.generated.yml --strict
   ```
-  `--strict` is what CI runs: it fails on a broken link or a link to an anchor that does not exist, so run it before pushing site changes.
+  `--strict` is what CI runs: it fails on a broken link or a link to an anchor that does not exist, so run it before pushing site changes. Note that on the site `README.md` is replaced by `.github/site/home.md`, so a `README.md#anchor` link from a doc will fail the strict build even though it resolves on GitHub.
 - After adding a paper, refresh the source measurement so the landing page's "words in" and
   "Nx shorter" figures stay correct (needs network + `pdftotext`; skips anything already cached):
   ```

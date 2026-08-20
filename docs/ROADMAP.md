@@ -1,6 +1,10 @@
 # Learning Roadmap - From Beginner to Expert
 
-A structured path through the 15 papers based on your background and goals.
+A structured path through the collection's 107 papers, chosen by your background and goals.
+
+Each path is a curated subset, not the whole library - the point is an order that builds on itself.
+When you finish one, [BROWSE.md](../BROWSE.md) and [INDEX.md](../INDEX.md) have everything else,
+and [READING_GUIDE.md](./READING_GUIDE.md) says which of it is still worth your time.
 
 ---
 
@@ -25,6 +29,11 @@ A structured path through the 15 papers based on your background and goals.
 **Goal:** Understand capabilities and trade-offs
 **Time:** 10-15 hours
 **Prerequisites:** None
+
+### Path 5: Reasoning & Agents (2024-2026)
+**Goal:** Catch up on everything that happened after the "essential papers" lists were written
+**Time:** 12-18 hours
+**Prerequisites:** Path 2, or comfort with Transformers, RLHF and Chain-of-Thought
 
 ---
 
@@ -159,11 +168,36 @@ A structured path through the 15 papers based on your background and goals.
    - Section: "When to Use Which Paper's Techniques"
    - Build: Decision tree for your projects
 
+### Sprint 4: What Production Actually Runs On (4-6 days)
+**Goal:** The layer between "it works in a notebook" and "it serves users"
+
+1. **[Dense Retrieval](../papers/techniques/87-dense-retrieval/summary.md)** - the retriever under your RAG
+   - Focus on: why pure vector search misses IDs, error codes and proper nouns
+   - Build: hybrid BM25 + dense retrieval with rank fusion
+   - **This is the single most common RAG bug**
+
+2. **[PagedAttention / vLLM](../papers/techniques/52-pagedattention-vllm/summary.md)** - serving
+   - Focus on: KV-cache waste, continuous batching
+   - Try: serve a model with vLLM, compare throughput to raw Transformers
+
+3. **[GPTQ & AWQ](../papers/techniques/86-gptq-awq-quantization/summary.md)** - fitting the model
+   - Focus on: what 4-bit costs you in quality
+   - Try: run a 70B quantised model locally
+
+4. **[MCP](../papers/techniques/59-model-context-protocol/summary.md)** - tool integration
+   - Focus on: the M x N problem it removes
+   - Build: a small MCP server exposing one of your own tools
+
+5. **[LLM-as-a-Judge](../papers/techniques/85-llm-as-judge/summary.md)** - knowing if it works
+   - Focus on: position bias, verbosity bias, self-preference
+   - Build: an eval set for your own app before you need one
+
 ### Hands-On Project Ideas
-- **RAG chatbot:** Company docs + LLaMA + LangChain
-- **Fine-tuned classifier:** LoRA on domain-specific data
-- **Text-to-image app:** Stable Diffusion API integration
-- **Reasoning assistant:** GPT with Chain-of-Thought prompts
+- **RAG chatbot:** company docs + hybrid retrieval + a local model, served with vLLM
+- **Fine-tuned classifier:** LoRA or QLoRA on domain-specific data
+- **Text-to-image app:** Stable Diffusion with ControlNet for layout and a subject LoRA
+- **Coding agent:** ReAct loop + MCP tools, scored against a slice of SWE-bench
+- **Reasoning assistant:** Chain-of-Thought with self-consistency, measured against a single pass
 
 ---
 
@@ -260,6 +294,50 @@ A structured path through the 15 papers based on your background and goals.
    - Read: Full paper
    - Study: Why it works, when it emerges
    - Research: Latest CoT variants (Tree of Thoughts, etc.)
+
+### Phase 5: The Modern Frontier (2-3 weeks)
+**Goal:** Reach the current research edge
+
+1. **Efficient architecture** - [RoPE](../papers/techniques/54-rope-rotary-position-embedding/summary.md),
+   [GQA](../papers/architectures/75-grouped-query-attention/summary.md),
+   [FlashAttention](../papers/techniques/16-flash-attention/summary.md),
+   [Mixtral / MoE](../papers/architectures/37-mixture-of-experts/summary.md),
+   [Mamba](../papers/architectures/20-mamba/summary.md)
+   - Implement: rotary embeddings and grouped-query attention from scratch
+   - Understand: why every frontier model is now sparse
+
+2. **Training systems** - [ZeRO & Megatron-LM](../papers/techniques/76-zero-megatron/summary.md)
+   - Understand: data, tensor, pipeline and expert parallelism, and where each breaks down
+   - This is the phase most theory-first researchers skip and later regret
+
+3. **Alignment, current generation** - [DPO](../papers/language-models/19-dpo/summary.md),
+   [KTO](../papers/techniques/103-kto/summary.md),
+   [GRPO](../papers/techniques/38-grpo/summary.md),
+   [RLVR](../papers/techniques/39-rlvr/summary.md)
+   - Derive: DPO's closed form from the RLHF objective; this is the key exercise
+   - Compare: what each method removes from the PPO pipeline, and what it costs
+
+4. **Reasoning** - [STaR](../papers/techniques/97-star/summary.md),
+   [Process Reward Models](../papers/techniques/51-process-reward-models/summary.md),
+   [Quiet-STaR](../papers/techniques/98-quiet-star/summary.md),
+   [Test-Time Compute](../papers/techniques/50-test-time-compute/summary.md),
+   [DeepSeek-R1](../papers/language-models/26-deepseek-r1/summary.md)
+   - Understand: outcome vs process supervision, and the compute-optimal trade
+   - R1 is the one to read in full: it documents what o1 did not
+
+5. **Interpretability and safety** -
+   [Sparse Autoencoders](../papers/techniques/82-sparse-autoencoders/summary.md),
+   [Sleeper Agents](../papers/techniques/83-sleeper-agents/summary.md),
+   [Emergent Abilities](../papers/techniques/81-emergent-abilities/summary.md)
+   - Implement: a sparse autoencoder on a small model's activations
+   - Read Emergent Abilities *with* the Mirage rebuttal - it is a lesson in metric design
+
+6. **Generative modelling, current generation** -
+   [DDIM](../papers/image-generation/70-ddim/summary.md),
+   [Classifier-Free Guidance](../papers/image-generation/69-classifier-free-guidance/summary.md),
+   [Flow Matching](../papers/image-generation/72-flow-matching-sd3/summary.md),
+   [DiT](../papers/image-generation/44-sora-dit/summary.md)
+   - Derive: flow matching's straight-path objective, compare to the DDPM ELBO
 
 ### Research Project Ideas
 - **Reproduce results:** Pick a paper, replicate key experiments
@@ -362,6 +440,95 @@ A structured path through the 15 papers based on your background and goals.
 
 ---
 
+## Path 5: Reasoning & Agents (2024-2026)
+
+Most "essential AI papers" lists were written before late 2024. This path covers what changed
+after them: models that are trained to reason rather than prompted to, alignment that shed its
+machinery, and agents that survive more than one turn.
+
+**Assumed:** you already know Transformers, RLHF and Chain-of-Thought. If not, do Path 2 first.
+
+### Stage 1: How Reasoning Became a Training Target (4-5 hours)
+
+The chain of ideas here is unusually clean - read them in order and each one answers a question the
+previous one raised.
+
+1. [Self-Consistency](../papers/techniques/77-self-consistency/summary.md) - one chain is
+   unreliable, so sample many and vote. *Raises: this is expensive.*
+2. [STaR](../papers/techniques/97-star/summary.md) - keep the chains that reached the right answer
+   and train on them. *Raises: what if the right answer came from bad reasoning?*
+3. [Process Reward Models](../papers/techniques/51-process-reward-models/summary.md) - grade every
+   step, not just the answer. *Raises: step labels are expensive.*
+4. [Test-Time Compute](../papers/techniques/50-test-time-compute/summary.md) - the theory: when is
+   thinking longer better than being bigger? *This is the conceptual centre of the path.*
+5. [OpenAI o1](../papers/language-models/31-openai-o1/summary.md) - the first product built on it,
+   with the method withheld.
+6. [DeepSeek-R1](../papers/language-models/26-deepseek-r1/summary.md) - the same capability, with
+   the method published. **Read this one in full.**
+
+### Stage 2: The Training Machinery (3-4 hours)
+
+1. [PPO](../papers/techniques/63-ppo/summary.md) - the baseline everything else is defined against
+   (skim if you know it)
+2. [DPO](../papers/language-models/19-dpo/summary.md) - drop the reward model
+3. [KTO](../papers/techniques/103-kto/summary.md) - drop the requirement for paired data
+4. [GRPO](../papers/techniques/38-grpo/summary.md) - drop the critic
+5. [RLVR](../papers/techniques/39-rlvr/summary.md) - drop learned rewards entirely, where a
+   verifier exists
+
+**The exercise that makes this stick:** for each method, write down what it removed from the
+previous pipeline and what that cost. The whole line is a story of subtraction.
+
+### Stage 3: Agents That Last More Than One Turn (3-4 hours)
+
+1. [ReAct](../papers/techniques/21-react/summary.md) - the base loop
+2. [Reflexion](../papers/techniques/78-reflexion/summary.md) - learning from failure without
+   touching the weights
+3. [Self-Refine](../papers/techniques/99-self-refine/summary.md) - the critic pattern, in its
+   simplest form
+4. [Generative Agents](../papers/techniques/58-generative-agents/summary.md) - memory, reflection
+   and planning as an architecture
+5. [Voyager](../papers/techniques/100-voyager/summary.md) - skills stored as reusable code
+6. [MCP](../papers/techniques/59-model-context-protocol/summary.md) - how the tools get connected
+7. [SWE-bench](../papers/techniques/84-swe-bench/summary.md) - how you find out whether any of it
+   worked
+
+### Stage 4: Knowing What You Have (2-3 hours)
+
+Reasoning and agent claims are unusually easy to overstate. This stage is the antidote.
+
+1. [LLM-as-a-Judge](../papers/techniques/85-llm-as-judge/summary.md) - and the biases it brings
+2. [Emergent Abilities](../papers/techniques/81-emergent-abilities/summary.md) - read it together
+   with the Mirage rebuttal
+3. [Sparse Autoencoders](../papers/techniques/82-sparse-autoencoders/summary.md) - what
+   interpretability can actually deliver today
+4. [Sleeper Agents](../papers/techniques/83-sleeper-agents/summary.md) - why "we safety-tuned it"
+   is not proof of anything
+
+### Project Ideas
+
+- **Reasoning eval harness:** take a task you care about, and measure single-pass vs
+  chain-of-thought vs self-consistency at N=5, 10, 40. Plot accuracy against token spend. The
+  crossover point is the most useful number you will produce this month.
+- **Verifier-first pipeline:** find a task in your domain with checkable answers, then build the
+  verifier before the model. RLVR only works where this exists.
+- **Agent with a real scoreboard:** a ReAct loop over MCP tools, scored on a held-out slice of your
+  own issue tracker rather than a benchmark.
+- **Judge calibration:** have an LLM judge rank outputs you have already ranked yourself, and
+  measure the disagreement. Do this before trusting a judge anywhere.
+
+### Where to Go Next
+
+The frontier is moving fastest in world models
+([Genie](../papers/techniques/104-genie/summary.md),
+[DreamerV3](../papers/techniques/105-dreamerv3/summary.md)) and in applying the same toolkit outside
+language ([AlphaFold 3](../papers/techniques/101-alphafold3/summary.md),
+[ESM-2](../papers/techniques/106-esm/summary.md),
+[AlphaEvolve](../papers/techniques/62-alphaevolve/summary.md)). See
+[docs/GAPS.md](./GAPS.md) for what this collection does not cover yet.
+
+---
+
 ## General Tips for All Paths
 
 ### Active Learning Strategies
@@ -443,20 +610,41 @@ A structured path through the 15 papers based on your background and goals.
 
 Mix and match based on your specific interests:
 
-**Interested in vision?**
-- Prioritize: ViT → CLIP → GANs → Diffusion → Stable Diffusion
+**Vision**
+- ResNet → U-Net → ViT → MAE → CLIP → SAM 2
 
-**Interested in language only?**
-- Prioritize: Transformers → BERT → GPT-3 → Scaling Laws → LLaMA → InstructGPT
+**Language models, in lineage order**
+- Transformers → GPT-1 → GPT-2 → GPT-3 → Chinchilla → LLaMA → Mistral → Mixtral → DeepSeek-V3
 
-**Interested in alignment/safety?**
-- Prioritize: InstructGPT → Constitutional AI → Chain-of-Thought → RAG
+**Image and video generation**
+- VAE → GANs → DDPM → DDIM → Classifier-Free Guidance → Stable Diffusion → ControlNet →
+  DreamBooth → Flow Matching / SD3 → Sora / DiT
 
-**Interested in efficiency?**
-- Prioritize: Scaling Laws → LoRA → LLaMA → RAG
+**Alignment and safety**
+- InstructGPT → Constitutional AI → DPO → KTO → GRPO → RLVR → Llama Guard → Sleeper Agents →
+  Sparse Autoencoders
 
-**Interested in multimodal?**
-- Prioritize: Transformers → ViT → CLIP → Stable Diffusion
+**Reasoning**
+- Chain-of-Thought → Self-Consistency → Tree of Thoughts → STaR → Process Reward Models →
+  Test-Time Compute → o1 → DeepSeek-R1
+
+**Efficiency and serving**
+- Scaling Laws → Chinchilla → LoRA → QLoRA → FlashAttention → RoPE → GQA → GPTQ & AWQ →
+  PagedAttention → Speculative Decoding → Mixture of Experts
+
+**Retrieval and agents**
+- RAG → Dense Retrieval → GraphRAG → ReAct → Toolformer → Reflexion → Generative Agents →
+  Voyager → MCP
+
+**Multimodal**
+- Transformers → ViT → CLIP → LLaVA → Whisper → GPT-4V → Gemini 3
+
+**Science and world models**
+- AlphaZero → AlphaFold 2 → AlphaFold 3 → ESM-2 → AlphaGeometry → AlphaEvolve →
+  DreamerV3 → Genie → CICERO
+
+Each of these is a complete thread through the collection. [TAGS.md](../TAGS.md) has the generated
+version of the same idea, by topic tag.
 
 ---
 
@@ -468,6 +656,7 @@ Mix and match based on your specific interests:
 | **Engineer** | 10 hours | 20 hours | 35 hours |
 | **Researcher** | 25 hours | 50 hours | 100+ hours |
 | **Product Manager** | 8 hours | 15 hours | 25 hours |
+| **Reasoning & Agents** | 12 hours | 18 hours | 40 hours |
 
 **Quick pass:** Skim summaries, focus on key sections
 **Thorough:** Read all summaries carefully, some code
@@ -492,4 +681,4 @@ Mix and match based on your specific interests:
 
 **Questions?** Open an issue or check [Contributing](../CONTRIBUTING.md).
 
-**Last Updated:** 2025-10-19
+**Last updated:** 2026-08-20 · Paths draw on all 107 papers; see [INDEX.md](../INDEX.md) for the full list.

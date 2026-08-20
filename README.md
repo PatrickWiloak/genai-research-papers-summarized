@@ -652,7 +652,7 @@ Focus on "Why This Matters" sections + [Comparisons Guide](./docs/COMPARISONS.md
 | **Source words compressed** | 1.4M+ | ~130 hours |
 | **Words** | 219,000+ | - |
 | **Guides** | 6 | 3-5 hours |
-| **Terms Explained** | 250+ | - |
+| **Terms Explained** | 117 | - |
 
 ### By Year
 _Generated from [`papers.json`](./papers.json) - see [INDEX.md](./INDEX.md) for the full clickable list._
@@ -773,8 +773,8 @@ Gratitude to the researchers who created these foundational works:
 
 ---
 
-**Last Updated:** 2026-08-18
+**Last Updated:** 2026-08-20
 **Papers:** 107 foundational works (2013-2026)
-**Total Content:** 460,000+ words
+**Total Content:** 219,000+ words of summaries and guides (see Quick Stats above)
 **Includes:** Roots (Word2Vec, Seq2Seq, VAE, PPO) through the latest breakthroughs of early 2026 (GPT-5, Claude 4, Llama 4, GRPO, RLVR, and more)
 **Repository:** [github.com/PatrickWiloak/genai-research-papers-summarized](https://github.com/PatrickWiloak/genai-research-papers-summarized)

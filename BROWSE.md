@@ -1,10 +1,14 @@
-# Browse All Papers - Quick Reference
+# Browse All Papers
 
-A visual grid view for quick browsing. This page is **hand-curated highlights**, not the full library - it shows 54 of the 107 summaries with a relevance badge and a three-line pitch each. For the complete, always-current list, see the generated [Paper Index](./INDEX.md) or browse [by topic tag](./TAGS.md). **Looking for a learning path?** See the [README](./README.md) for numbered reading orders. **Wondering what is not here yet?** See [Coverage & Gaps](./docs/GAPS.md).
+A visual grid of **every one of the 107 summaries**, grouped by category and ordered by paper number, with an editorial relevance badge and a three-line pitch each. Use it to scan the whole collection quickly; for the generated, always-current listings see the [Paper Index](./INDEX.md) or browse [by topic tag](./TAGS.md). **Looking for a learning path?** See [docs/ROADMAP.md](./docs/ROADMAP.md) or the [README](./README.md) for numbered reading orders. **Wondering what is not here yet?** See [Coverage & Gaps](./docs/GAPS.md).
+
+The badges and pitches on this page are editorial judgements, not claims from the papers.
 
 ---
 
 ## 🏗️ Foundational Architectures
+
+The backbone papers - what the models are actually built out of, from the 2014 attention mechanism through the Transformer, ViT, sparse MoE and the state-space challengers. **11 papers.**
 
 <table>
 <tr>
@@ -36,11 +40,92 @@ A visual grid view for quick browsing. This page is **hand-curated highlights**,
 
 </td>
 </tr>
+<tr>
+<td width="33%">
+
+**[Mixtral & Mixture-of-Experts](./papers/architectures/37-mixture-of-experts/summary.md)** (2024)
+- 🔥 **CRITICAL** - 47B parameters, 13B active
+- Matches LLaMA 2 70B at 6x faster inference
+- The architecture DeepSeek-V3, Qwen3 and Llama 4 adopted
+- [Paper](https://arxiv.org/abs/2401.04088)
+
+</td>
+<td width="33%">
+
+**[Seq2Seq](./papers/architectures/55-seq2seq/summary.md)** (2014)
+- 📚 **HISTORICAL** - Variable-length in, variable-length out
+- Stacked LSTM encoder-decoder for translation
+- Its fixed-size bottleneck is what attention fixed
+- [Paper](https://arxiv.org/abs/1409.3215)
+
+</td>
+<td width="33%">
+
+**[Bahdanau Attention](./papers/architectures/66-bahdanau-attention/summary.md)** (2014)
+- 🔥 **CRITICAL** - Where attention was invented
+- Soft alignment over every encoder state
+- The conceptual seed of self-attention
+- [Paper](https://arxiv.org/abs/1409.0473)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Switch Transformer](./papers/architectures/67-switch-transformer/summary.md)** (2021)
+- ⭐ **HIGH** - Trillion parameters at near-constant compute
+- Top-1 routing: one expert per token
+- The sparsity recipe Mixtral productionized
+- [Paper](https://arxiv.org/abs/2101.03961)
+
+</td>
+<td width="33%">
+
+**[ResNet](./papers/architectures/73-resnet/summary.md)** (2015)
+- 🔥 **CRITICAL** - Residual connections
+- `x + f(x)` is in every Transformer
+- Most-cited deep learning paper
+- [Paper](https://arxiv.org/abs/1512.03385)
+
+</td>
+<td width="33%">
+
+**[U-Net](./papers/architectures/74-unet/summary.md)** (2015)
+- ⭐ **HIGH** - Encoder-decoder + skips
+- The denoiser inside diffusion models
+- Trained on 30 images, won its challenge
+- [Paper](https://arxiv.org/abs/1505.04597)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Grouped-Query Attention](./papers/architectures/75-grouped-query-attention/summary.md)** (2023)
+- 🔥 **CRITICAL** - 8x smaller KV cache
+- In Llama 2/3/4, Mistral, Qwen, Gemma
+- Why long context is affordable
+- [Paper](https://arxiv.org/abs/2305.13245)
+
+</td>
+<td width="33%">
+
+**[Masked Autoencoders (MAE)](./papers/architectures/88-mae/summary.md)** (2021)
+- ⭐ **HIGH** - BERT-style pretraining for vision
+- Hide 75% of patches, reconstruct the rest
+- Asymmetric encoder-decoder, cheap to scale
+- [Paper](https://arxiv.org/abs/2111.06377)
+
+</td>
+<td width="33%"></td>
+</tr>
 </table>
 
 ---
 
 ## 🤖 Language Models
+
+The model releases themselves, in lineage order: GPT-1 through GPT-5, the BERT and T5 branch, the Llama and Mistral open-weight line, and the frontier reasoning models. **25 papers.**
 
 <table>
 <tr>
@@ -147,6 +232,7 @@ A visual grid view for quick browsing. This page is **hand-curated highlights**,
 - Best coding model (49% SWE-Bench)
 - AI controls computers
 - [Announcement](https://www.anthropic.com/news/3-5-models-and-computer-use)
+- [Paper](https://www.anthropic.com/news/3-5-models-and-computer-use)
 
 </td>
 <td width="33%">
@@ -156,6 +242,7 @@ A visual grid view for quick browsing. This page is **hand-curated highlights**,
 - PhD-level performance
 - RL for reasoning
 - [Announcement](https://openai.com/index/learning-to-reason-with-llms/)
+- [Paper](https://openai.com/index/learning-to-reason-with-llms/)
 
 </td>
 </tr>
@@ -163,18 +250,138 @@ A visual grid view for quick browsing. This page is **hand-curated highlights**,
 <td width="33%">
 
 **[LLaMA 3.3](./papers/language-models/33-llama3.3/summary.md)** (2024)
-- 🔥 **HIGH** - Distillation breakthrough
+- ⭐ **HIGH** - Distillation breakthrough
 - 70B matches 405B performance
 - Knowledge transfer success
 - [Paper](https://www.meta.ai/blog/meta-llama-3-3/)
 
 </td>
+<td width="33%">
+
+**[GPT-4](./papers/language-models/36-gpt4/summary.md)** (2023)
+- 🔥 **CRITICAL** - The capability jump over GPT-3.5
+- Bar exam top 10%; first multimodal GPT
+- Loss predicted in advance from smaller runs
+- [Paper](https://arxiv.org/abs/2303.08774)
+
+</td>
+<td width="33%">
+
+**[GPT-4o](./papers/language-models/40-gpt4o/summary.md)** (2024)
+- ⭐ **HIGH** - Text, audio and vision in one model
+- 232ms average voice response
+- Half the price and 2x the speed of GPT-4 Turbo
+- [Paper](https://cdn.openai.com/gpt-4o-system-card.pdf)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Llama 4](./papers/language-models/41-llama4/summary.md)** (2025)
+- ⭐ **HIGH** - Meta's first MoE models
+- 10M-token context window on Scout
+- Natively multimodal, open weights
+- [Paper](https://ai.meta.com/blog/llama-4-multimodal-intelligence/)
+
+</td>
+<td width="33%">
+
+**[GPT-5](./papers/language-models/42-gpt5/summary.md)** (2025)
+- 🔥 **CRITICAL** - One model routing fast vs deep reasoning
+- 94.6% AIME 2025, 74.9% SWE-bench Verified
+- Ended the GPT-4 / o1 / o3 product split
+- [Paper](https://cdn.openai.com/gpt-5-system-card.pdf)
+
+</td>
+<td width="33%">
+
+**[Claude 4 Family](./papers/language-models/43-claude4/summary.md)** (2025)
+- 🔥 **CRITICAL** - State of the art at agentic work
+- 80.9% SWE-bench Verified (Opus 4.5)
+- Extended thinking with controllable depth
+- [Paper](https://www.anthropic.com/news/claude-4)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Codex](./papers/language-models/56-codex/summary.md)** (2021)
+- ⭐ **HIGH** - The model behind GitHub Copilot
+- Introduced HumanEval and the pass@k metric
+- Ancestor of every code model since
+- [Paper](https://arxiv.org/abs/2107.03374)
+
+</td>
+<td width="33%">
+
+**[GPT-2](./papers/language-models/64-gpt2/summary.md)** (2019)
+- 📚 **HISTORICAL** - GPT-1 scaled to 1.5B parameters
+- Zero-shot transfer with no fine-tuning
+- The staged-release safety debate started here
+- [Paper](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)
+
+</td>
+<td width="33%">
+
+**[T5](./papers/language-models/65-t5/summary.md)** (2019)
+- ⭐ **HIGH** - Every NLP task as text-in, text-out
+- Systematic ablation of the whole pretraining recipe
+- Gave the field the C4 corpus
+- [Paper](https://arxiv.org/abs/1910.10683)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[GPT-1](./papers/language-models/93-gpt1/summary.md)** (2018)
+- 📚 **HISTORICAL** - Where the GPT recipe begins
+- Generative pretraining, then task fine-tuning
+- 117M parameters, decoder-only Transformer
+- [Paper](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf)
+
+</td>
+<td width="33%">
+
+**[PaLM](./papers/language-models/94-palm/summary.md)** (2022)
+- ⭐ **HIGH** - 540B, largest dense Transformer of its day
+- Trained across two TPU pods via Pathways
+- Where chain-of-thought results broke out
+- [Paper](https://arxiv.org/abs/2204.02311)
+
+</td>
+<td width="33%">
+
+**[Mistral 7B](./papers/language-models/95-mistral-7b/summary.md)** (2023)
+- 🔥 **CRITICAL** - Made open weights genuinely competitive
+- Beat LLaMA 2 13B on every benchmark tested
+- Apache 2.0, with GQA and sliding-window attention
+- [Paper](https://arxiv.org/abs/2310.06825)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Llama Guard](./papers/language-models/96-llama-guard/summary.md)** (2023)
+- ⭐ **HIGH** - Safety classification as an LLM task
+- Moderates both the prompt and the response
+- The open-source production reference
+- [Paper](https://arxiv.org/abs/2312.06674)
+
+</td>
+<td width="33%"></td>
+<td width="33%"></td>
 </tr>
 </table>
 
 ---
 
-## 🎨 Image Generation
+## 🎨 Image & Video Generation
+
+From VAEs and GANs through the diffusion pipeline that replaced them, the tokenizer line that made images modellable, and the video models built on top. **14 papers.**
 
 <table>
 <tr>
@@ -206,15 +413,125 @@ A visual grid view for quick browsing. This page is **hand-curated highlights**,
 
 </td>
 </tr>
+<tr>
+<td width="33%">
+
+**[Sora & Diffusion Transformers](./papers/image-generation/44-sora-dit/summary.md)** (2022-2024)
+- 🔥 **CRITICAL** - Diffusion on a Transformer backbone
+- Video as spacetime patches, any resolution
+- Launched the AI video generation industry
+- [Paper](https://arxiv.org/abs/2212.09748)
+
+</td>
+<td width="33%">
+
+**[DALL-E 3](./papers/image-generation/48-dalle3/summary.md)** (2023)
+- ⭐ **HIGH** - Follows the prompt you actually wrote
+- Recaptioned training data was the whole trick
+- First model to render readable text
+- [Paper](https://cdn.openai.com/papers/dall-e-3.pdf)
+
+</td>
+<td width="33%">
+
+**[Variational Autoencoder (VAE)](./papers/image-generation/57-vae/summary.md)** (2013)
+- 🔥 **CRITICAL** - The reparameterization trick
+- A smooth, interpolatable latent space
+- The latent half of latent diffusion
+- [Paper](https://arxiv.org/abs/1312.6114)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Classifier-Free Guidance](./papers/image-generation/69-classifier-free-guidance/summary.md)** (2021)
+- 🔥 **CRITICAL** - The "CFG scale" slider
+- Two predictions, one difference vector
+- Also how negative prompts work
+- [Paper](https://arxiv.org/abs/2207.12598)
+
+</td>
+<td width="33%">
+
+**[DDIM](./papers/image-generation/70-ddim/summary.md)** (2020)
+- 🔥 **CRITICAL** - 1,000 steps down to 20
+- Deterministic sampling, no retraining
+- Basis of diffusion image editing
+- [Paper](https://arxiv.org/abs/2010.02502)
+
+</td>
+<td width="33%">
+
+**[ControlNet](./papers/image-generation/71-controlnet/summary.md)** (2023)
+- 🔥 **CRITICAL** - Edges, depth, pose control
+- Zero convolutions, base model frozen
+- ICCV 2023 best paper
+- [Paper](https://arxiv.org/abs/2302.05543)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Flow Matching / SD3](./papers/image-generation/72-flow-matching-sd3/summary.md)** (2022-2024)
+- 🔥 **CRITICAL** - What replaced diffusion
+- Straight noise-to-image paths
+- Powers SD3, SD3.5 and Flux
+- [Paper](https://arxiv.org/abs/2403.03206)
+
+</td>
+<td width="33%">
+
+**[VQ-VAE](./papers/image-generation/89-vq-vae/summary.md)** (2017)
+- ⭐ **HIGH** - Discrete codebook latents
+- Straight-through estimator for the argmin
+- Made images tokenizable like text
+- [Paper](https://arxiv.org/abs/1711.00937)
+
+</td>
+<td width="33%">
+
+**[VQ-GAN](./papers/image-generation/90-vq-gan/summary.md)** (2020)
+- ⭐ **HIGH** - VQ-VAE latents plus an adversarial loss
+- Transformers autoregress over image tokens
+- The compress-then-model recipe
+- [Paper](https://arxiv.org/abs/2012.09841)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Imagen](./papers/image-generation/91-imagen/summary.md)** (2022)
+- ⭐ **HIGH** - A frozen T5 encoder beat bigger image models
+- Text understanding was the real bottleneck
+- Cascaded super-resolution diffusion
+- [Paper](https://arxiv.org/abs/2205.11487)
+
+</td>
+<td width="33%">
+
+**[DreamBooth](./papers/image-generation/92-dreambooth/summary.md)** (2022)
+- 🔥 **CRITICAL** - Your subject, any scene, from 3-5 images
+- Rare-token binding plus prior-preservation loss
+- The blueprint every personalization method copies
+- [Paper](https://arxiv.org/abs/2208.12242)
+
+</td>
+<td width="33%"></td>
+</tr>
 </table>
 
 ---
 
 ## 🔗 Multimodal
 
+Models that cross modalities - vision-language, speech, video, and the omni-models that fold them into a single network. **7 papers.**
+
 <table>
 <tr>
-<td width="50%">
+<td width="33%">
 
 **[CLIP](./papers/multimodal/08-clip/summary.md)** (2021)
 - ⭐ **HIGH** - Vision-language bridge
@@ -224,7 +541,7 @@ A visual grid view for quick browsing. This page is **hand-curated highlights**,
 - [Paper](https://arxiv.org/abs/2103.00020)
 
 </td>
-<td width="50%">
+<td width="33%">
 
 **[GPT-4V(ision)](./papers/multimodal/23-gpt4v/summary.md)** (2023)
 - 🔥 **CRITICAL** - Multimodal frontier model
@@ -234,9 +551,7 @@ A visual grid view for quick browsing. This page is **hand-curated highlights**,
 - [Paper](https://cdn.openai.com/papers/GPTV_System_Card.pdf)
 
 </td>
-</tr>
-<tr>
-<td width="50%">
+<td width="33%">
 
 **[Gemini 2.5](./papers/multimodal/29-gemini-2.5/summary.md)** (2025)
 - 🔥 **CRITICAL** - Most advanced multimodal AI
@@ -246,22 +561,57 @@ A visual grid view for quick browsing. This page is **hand-curated highlights**,
 - [Paper](https://arxiv.org/abs/2507.06261)
 
 </td>
-<td width="50%">
+</tr>
+<tr>
+<td width="33%">
 
 **[SAM 2](./papers/multimodal/32-sam2/summary.md)** (2024)
-- 🔥 **HIGH** - Universal video segmentation
+- ⭐ **HIGH** - Universal video segmentation
 - 44 FPS real-time performance
 - Zero-shot generalization
 - Segment anything in video
 - [Paper](https://arxiv.org/abs/2408.00714)
 
 </td>
+<td width="33%">
+
+**[LLaVA](./papers/multimodal/46-llava/summary.md)** (2023)
+- 🔥 **CRITICAL** - Vision encoder + projection + LLM
+- Instruction data generated by text-only GPT-4
+- Democratized open vision-language models
+- [Paper](https://arxiv.org/abs/2304.08485)
+
+</td>
+<td width="33%">
+
+**[Gemini 3](./papers/multimodal/47-gemini3/summary.md)** (2025)
+- ⭐ **HIGH** - First model past 1500 LMArena Elo
+- 95% AIME 2025, 91.8% MMLU
+- Deep Think mode for the hardest reasoning
+- [Paper](https://blog.google/products-and-platforms/products/gemini/gemini-3/)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Whisper](./papers/multimodal/49-whisper/summary.md)** (2022)
+- 🔥 **CRITICAL** - 680,000 hours of weakly supervised audio
+- 99 languages, zero-shot, no fine-tuning
+- The default open speech recognition model
+- [Paper](https://arxiv.org/abs/2212.04356)
+
+</td>
+<td width="33%"></td>
+<td width="33%"></td>
 </tr>
 </table>
 
 ---
 
 ## ⚡ Techniques & Methods
+
+The methods layer: how models are trained, aligned, made to reason, served fast, evaluated, interpreted, and pointed at problems outside language. **50 papers.**
 
 <table>
 <tr>
@@ -374,7 +724,7 @@ A visual grid view for quick browsing. This page is **hand-curated highlights**,
 <td width="33%">
 
 **[Meta-CoT](./papers/techniques/34-meta-cot/summary.md)** (2025)
-- 🔥 **HIGH** - System 2 reasoning
+- ⭐ **HIGH** - System 2 reasoning
 - Metacognitive strategies
 - Deliberate problem-solving
 - Next-gen reasoning approach
@@ -384,7 +734,7 @@ A visual grid view for quick browsing. This page is **hand-curated highlights**,
 <td width="33%">
 
 **[rStar-Math](./papers/techniques/35-rstar-math/summary.md)** (2025)
-- 🔥 **HIGH** - Small models rival large ones
+- ⭐ **HIGH** - Small models rival large ones
 - MCTS for math reasoning
 - 7B model beats 70B+ competitors
 - Efficient reasoning breakthrough
@@ -392,88 +742,152 @@ A visual grid view for quick browsing. This page is **hand-curated highlights**,
 
 </td>
 </tr>
-</table>
-
----
-
-
----
-
-## 🆕 Recently Added
-
-Nineteen summaries added in the August 2026 batch, filling the collection's clearest gaps:
-the modern diffusion pipeline, the architecture and systems layer under every large model,
-and the interpretability, safety, and evaluation work that had no entry at all.
-
-<table>
 <tr>
 <td width="33%">
 
-**[Classifier-Free Guidance](./papers/image-generation/69-classifier-free-guidance/summary.md)** (2021)
-- 🔥 **CRITICAL** - The "CFG scale" slider
-- Two predictions, one difference vector
-- Also how negative prompts work
-- [Paper](https://arxiv.org/abs/2207.12598)
+**[GRPO](./papers/techniques/38-grpo/summary.md)** (2024)
+- 🔥 **CRITICAL** - The algorithm behind DeepSeek-R1
+- Drops PPO's critic model entirely
+- Group-relative advantage, ~50% less memory
+- [Paper](https://arxiv.org/abs/2402.03300)
 
 </td>
 <td width="33%">
 
-**[DDIM](./papers/image-generation/70-ddim/summary.md)** (2020)
-- 🔥 **CRITICAL** - 1,000 steps down to 20
-- Deterministic sampling, no retraining
-- Basis of diffusion image editing
-- [Paper](https://arxiv.org/abs/2010.02502)
+**[RLVR](./papers/techniques/39-rlvr/summary.md)** (2024-2025)
+- 🔥 **CRITICAL** - Reward correctness, not human preference
+- No reward model to train or to game
+- Where reasoning models get their training signal
+- [Paper](https://arxiv.org/abs/2501.12948)
 
 </td>
 <td width="33%">
 
-**[ControlNet](./papers/image-generation/71-controlnet/summary.md)** (2023)
-- 🔥 **CRITICAL** - Edges, depth, pose control
-- Zero convolutions, base model frozen
-- ICCV 2023 best paper
-- [Paper](https://arxiv.org/abs/2302.05543)
+**[Speculative Decoding](./papers/techniques/45-speculative-decoding/summary.md)** (2022)
+- 🔥 **CRITICAL** - 2-3x faster, outputs provably unchanged
+- Small draft model proposes, big model verifies
+- Deployed in every serious serving stack
+- [Paper](https://arxiv.org/abs/2211.17192)
 
 </td>
 </tr>
 <tr>
 <td width="33%">
 
-**[Flow Matching / SD3](./papers/image-generation/72-flow-matching-sd3/summary.md)** (2022-2024)
-- 🔥 **CRITICAL** - What replaced diffusion
-- Straight noise-to-image paths
-- Powers SD3, SD3.5 and Flux
-- [Paper](https://arxiv.org/abs/2403.03206)
+**[Scaling Test-Time Compute](./papers/techniques/50-test-time-compute/summary.md)** (2024)
+- 🔥 **CRITICAL** - Think longer instead of training bigger
+- A small model that searches can match a 14x larger one
+- The theory underneath o1 and R1
+- [Paper](https://arxiv.org/abs/2408.03314)
 
 </td>
 <td width="33%">
 
-**[ResNet](./papers/architectures/73-resnet/summary.md)** (2015)
-- 🔥 **CRITICAL** - Residual connections
-- `x + f(x)` is in every Transformer
-- Most-cited deep learning paper
-- [Paper](https://arxiv.org/abs/1512.03385)
+**[Process Reward Models](./papers/techniques/51-process-reward-models/summary.md)** (2023)
+- 🔥 **CRITICAL** - Grade every step, not just the answer
+- PRM800K: 800,000 step-level human labels
+- How reasoning models verify themselves
+- [Paper](https://arxiv.org/abs/2305.20050)
 
 </td>
 <td width="33%">
 
-**[U-Net](./papers/architectures/74-unet/summary.md)** (2015)
-- ⭐ **HIGH** - Encoder-decoder + skips
-- The denoiser inside diffusion models
-- Trained on 30 images, won its challenge
-- [Paper](https://arxiv.org/abs/1505.04597)
+**[PagedAttention & vLLM](./papers/techniques/52-pagedattention-vllm/summary.md)** (2023)
+- 🔥 **CRITICAL** - OS paging applied to the KV cache
+- KV memory waste from 60-80% down to under 4%
+- 24x throughput; vLLM became the standard
+- [Paper](https://arxiv.org/abs/2309.06180)
 
 </td>
 </tr>
 <tr>
 <td width="33%">
 
-**[Grouped-Query Attention](./papers/architectures/75-grouped-query-attention/summary.md)** (2023)
-- 🔥 **CRITICAL** - 8x smaller KV cache
-- In Llama 2/3/4, Mistral, Qwen, Gemma
-- Why long context is affordable
-- [Paper](https://arxiv.org/abs/2305.13245)
+**[Word2Vec](./papers/techniques/53-word2vec/summary.md)** (2013)
+- 📚 **HISTORICAL** - Dense embeddings replace one-hot vectors
+- king - man + woman ≈ queen
+- Started representation learning for text
+- [Paper](https://arxiv.org/abs/1301.3781)
 
 </td>
+<td width="33%">
+
+**[RoPE](./papers/techniques/54-rope-rotary-position-embedding/summary.md)** (2021)
+- 🔥 **CRITICAL** - Relative position by rotating the query and key
+- Zero learned parameters, a few dozen lines
+- In LLaMA, PaLM, Gemini, Mistral, DeepSeek, Qwen
+- [Paper](https://arxiv.org/abs/2104.09864)
+
+</td>
+<td width="33%">
+
+**[Generative Agents](./papers/techniques/58-generative-agents/summary.md)** (2023)
+- ⭐ **HIGH** - 25 agents living in a sandbox town
+- The memory -> reflection -> planning loop
+- Unscripted emergent social behavior
+- [Paper](https://arxiv.org/abs/2304.03442)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Model Context Protocol (MCP)](./papers/techniques/59-model-context-protocol/summary.md)** (2024)
+- 🔥 **CRITICAL** - One protocol for model-to-tool wiring
+- Turns M x N bespoke integrations into M + N
+- Industry-wide adoption within months
+- [Paper](https://www.anthropic.com/news/model-context-protocol)
+
+</td>
+<td width="33%">
+
+**[GraphRAG](./papers/techniques/60-graph-rag/summary.md)** (2024)
+- ⭐ **HIGH** - Answers global "what are the themes?" queries
+- LLM-extracted knowledge graph over the corpus
+- Hierarchical community summaries, map-reduce answering
+- [Paper](https://arxiv.org/abs/2404.16130)
+
+</td>
+<td width="33%">
+
+**[AlphaGeometry](./papers/techniques/61-alphageometry/summary.md)** (2024)
+- ⭐ **HIGH** - 25/30 IMO geometry problems solved
+- Neuro-symbolic: LM proposes, solver deduces
+- Trained on 100M synthetic theorems, zero human proofs
+- [Paper](https://www.nature.com/articles/s41586-023-06747-5)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[AlphaEvolve](./papers/techniques/62-alphaevolve/summary.md)** (2025)
+- ⭐ **HIGH** - Broke Strassen's 1969 matrix-multiply record
+- Gemini proposes, evolutionary search selects
+- Already running in Google production
+- [Paper](https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/)
+
+</td>
+<td width="33%">
+
+**[PPO](./papers/techniques/63-ppo/summary.md)** (2017)
+- 🔥 **CRITICAL** - The RL algorithm underneath RLHF
+- Clipped objective: TRPO's stability without the pain
+- What InstructGPT and ChatGPT were trained with
+- [Paper](https://arxiv.org/abs/1707.06347)
+
+</td>
+<td width="33%">
+
+**[AlphaFold 2](./papers/techniques/68-alphafold/summary.md)** (2021)
+- 🔥 **CRITICAL** - Solved 50-year protein folding problem
+- Attention generalizing far beyond language
+- 200M+ predicted structures released free
+- [Paper](https://www.nature.com/articles/s41586-021-03819-2)
+
+</td>
+</tr>
+<tr>
 <td width="33%">
 
 **[ZeRO & Megatron-LM](./papers/techniques/76-zero-megatron/summary.md)** (2019)
@@ -492,8 +906,6 @@ and the interpretability, safety, and evaluation work that had no entry at all.
 - [Paper](https://arxiv.org/abs/2203.11171)
 
 </td>
-</tr>
-<tr>
 <td width="33%">
 
 **[Reflexion](./papers/techniques/78-reflexion/summary.md)** (2023)
@@ -503,6 +915,8 @@ and the interpretability, safety, and evaluation work that had no entry at all.
 - [Paper](https://arxiv.org/abs/2303.11366)
 
 </td>
+</tr>
+<tr>
 <td width="33%">
 
 **[Self-Instruct](./papers/techniques/79-self-instruct/summary.md)** (2022)
@@ -521,8 +935,6 @@ and the interpretability, safety, and evaluation work that had no entry at all.
 - [Paper](https://arxiv.org/abs/2109.01652)
 
 </td>
-</tr>
-<tr>
 <td width="33%">
 
 **[Emergent Abilities](./papers/techniques/81-emergent-abilities/summary.md)** (2022-2023)
@@ -532,6 +944,8 @@ and the interpretability, safety, and evaluation work that had no entry at all.
 - [Paper](https://arxiv.org/abs/2206.07682)
 
 </td>
+</tr>
+<tr>
 <td width="33%">
 
 **[Sparse Autoencoders](./papers/techniques/82-sparse-autoencoders/summary.md)** (2022-2024)
@@ -550,8 +964,6 @@ and the interpretability, safety, and evaluation work that had no entry at all.
 - [Paper](https://arxiv.org/abs/2401.05566)
 
 </td>
-</tr>
-<tr>
 <td width="33%">
 
 **[SWE-bench](./papers/techniques/84-swe-bench/summary.md)** (2023)
@@ -561,6 +973,8 @@ and the interpretability, safety, and evaluation work that had no entry at all.
 - [Paper](https://arxiv.org/abs/2310.06770)
 
 </td>
+</tr>
+<tr>
 <td width="33%">
 
 **[LLM-as-a-Judge](./papers/techniques/85-llm-as-judge/summary.md)** (2023)
@@ -579,8 +993,6 @@ and the interpretability, safety, and evaluation work that had no entry at all.
 - [Paper](https://arxiv.org/abs/2306.00978)
 
 </td>
-</tr>
-<tr>
 <td width="33%">
 
 **[Dense Retrieval](./papers/techniques/87-dense-retrieval/summary.md)** (2019-2020)
@@ -590,10 +1002,114 @@ and the interpretability, safety, and evaluation work that had no entry at all.
 - [Paper](https://arxiv.org/abs/2004.04906)
 
 </td>
+</tr>
+<tr>
 <td width="33%">
+
+**[STaR](./papers/techniques/97-star/summary.md)** (2022)
+- ⭐ **HIGH** - Generate rationales, keep the ones that work
+- Rationalize backwards from known answers
+- The quiet ancestor of o1 and R1
+- [Paper](https://arxiv.org/abs/2203.14465)
+
 </td>
 <td width="33%">
+
+**[Quiet-STaR](./papers/techniques/98-quiet-star/summary.md)** (2024)
+- ⭐ **HIGH** - Learn to think before every token
+- Generalizes STaR past math to arbitrary text
+- Predates o1's hidden chain-of-thought
+- [Paper](https://arxiv.org/abs/2403.09629)
+
 </td>
+<td width="33%">
+
+**[Self-Refine](./papers/techniques/99-self-refine/summary.md)** (2023)
+- ⭐ **HIGH** - One model critiques and rewrites itself
+- No extra training, no second model
+- Codified the LLM-as-critic pattern
+- [Paper](https://arxiv.org/abs/2303.17651)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Voyager](./papers/techniques/100-voyager/summary.md)** (2023)
+- ⭐ **HIGH** - Lifelong open-ended agent in Minecraft
+- Grows a reusable skill library written as code
+- GPT-4 planning over multi-hour horizons
+- [Paper](https://arxiv.org/abs/2305.16291)
+
+</td>
+<td width="33%">
+
+**[AlphaFold 3](./papers/techniques/101-alphafold3/summary.md)** (2024)
+- ⭐ **HIGH** - Proteins plus DNA, RNA, ligands and ions
+- A diffusion module replaces the structure head
+- Predicts interactions, not just single shapes
+- [Paper](https://www.nature.com/articles/s41586-024-07487-w)
+
+</td>
+<td width="33%">
+
+**[AlphaZero](./papers/techniques/102-alphazero/summary.md)** (2017)
+- 🔥 **CRITICAL** - Superhuman from self-play and the rules alone
+- MCTS guided by a single policy-value network
+- Ancestor of every self-improvement loop in AI
+- [Paper](https://arxiv.org/abs/1712.01815)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[KTO](./papers/techniques/103-kto/summary.md)** (2024)
+- ⭐ **HIGH** - Alignment without paired preference data
+- Prospect theory turned into a loss function
+- Thumbs-up / thumbs-down signals are enough
+- [Paper](https://arxiv.org/abs/2402.01306)
+
+</td>
+<td width="33%">
+
+**[Genie](./papers/techniques/104-genie/summary.md)** (2024)
+- ⭐ **HIGH** - A playable world from a single image
+- Latent actions learned unsupervised from video
+- The first foundation world model
+- [Paper](https://arxiv.org/abs/2402.15391)
+
+</td>
+<td width="33%">
+
+**[DreamerV3](./papers/techniques/105-dreamerv3/summary.md)** (2023)
+- ⭐ **HIGH** - Minecraft diamonds from scratch, no demos
+- One hyperparameter set across 150+ tasks
+- Learn a world model, then plan in imagination
+- [Paper](https://arxiv.org/abs/2301.04104)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[ESM-2 / ESMFold](./papers/techniques/106-esm/summary.md)** (2023)
+- ⭐ **HIGH** - A 15B language model trained on protein sequences
+- Structure with no MSA search, up to 60x faster
+- 617M predicted metagenomic structures released
+- [Paper](https://doi.org/10.1126/science.ade2574)
+
+</td>
+<td width="33%">
+
+**[CICERO](./papers/techniques/107-cicero/summary.md)** (2022)
+- ⭐ **HIGH** - Human-level Diplomacy, negotiation included
+- Language generation fused with strategic planning
+- Top 10% across 40 games against humans
+- [Paper](https://doi.org/10.1126/science.ade9097)
+
+</td>
+<td width="33%"></td>
 </tr>
 </table>
 
@@ -601,37 +1117,36 @@ and the interpretability, safety, and evaluation work that had no entry at all.
 
 ## 📊 Quick Stats
 
-Counts for the **whole collection** (this page shows a curated subset of it):
+Every paper in the collection has a card on this page.
 
-| Category | Papers in collection | Cards on this page |
-|----------|----------------------|--------------------|
-| **Foundational Architectures** | 10 | 6 |
-| **Language Models** | 21 | 13 |
-| **Image & Video Generation** | 10 | 7 |
-| **Multimodal** | 7 | 4 |
-| **Techniques & Methods** | 39 | 24 |
-| **Total** | **107** | **54** |
+| Category | Papers |
+|----------|--------|
+| **Foundational Architectures** | 11 |
+| **Language Models** | 25 |
+| **Image & Video Generation** | 14 |
+| **Multimodal** | 7 |
+| **Techniques & Methods** | 50 |
+| **Total** | **107** |
 
 The authoritative counts live in [`papers.json`](./papers.json) and are regenerated by
-`scripts/build_manifest.py`; the table above is checked against it when the collection changes.
+`scripts/build_manifest.py`; `scripts/check_counts.py` fails CI if the table above drifts from it.
 
 ---
 
 ## 🔍 Filter by Badge
 
-Badges on this page (relevance ratings are editorial, not from the papers):
+Relevance ratings are editorial, and describe how much the paper matters to a reader today:
 
-- 🔥 **CRITICAL** (38 cards) - Essential foundational papers
-- ⭐ **HIGH** (13 cards) - Important papers with significant impact
-- 📚 **HISTORICAL** (2 cards) - Important historical context
-- 📖 **THEORY** (1 card) - Theoretical foundations
+- 🔥 **CRITICAL** (60 papers) - Essential - read these to understand the field
+- ⭐ **HIGH** (40 papers) - Important, with significant downstream impact
+- 📚 **HISTORICAL** (6 papers) - Formative context; superseded in practice
+- 📖 **THEORY** (1 paper) - Theoretical foundations
 
 ---
 
-**Want a structured learning path?** → [README.md](./README.md)
+**Want a structured learning path?** → [docs/ROADMAP.md](./docs/ROADMAP.md) · [README.md](./README.md)
 
-**Want every paper, not just the highlights?** → [INDEX.md](./INDEX.md) · [TAGS.md](./TAGS.md)
+**Want the generated listings?** → [INDEX.md](./INDEX.md) · [TAGS.md](./TAGS.md)
 
 **Wondering what is missing?** → [docs/GAPS.md](./docs/GAPS.md)
 
-**Total Reading Time (full collection):** 75-90 hours | **Words:** 460,000+

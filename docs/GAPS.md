@@ -6,7 +6,7 @@ This page exists so the collection's boundaries are explicit. A curated list is 
 trustworthy if it says what it left out. Entries here are candidates, not promises -
 see [CONTRIBUTING.md](../CONTRIBUTING.md) if you want to write one.
 
-**Last reviewed:** 2026-08-18 · **Papers at review time:** 87
+**Last reviewed:** 2026-08-20 · **Papers at review time:** 107
 
 ---
 
@@ -16,22 +16,25 @@ see [CONTRIBUTING.md](../CONTRIBUTING.md) if you want to write one.
 |---|---|---|
 | Transformer architecture & attention variants | 01, 11, 16, 54, 66, 73, 75 | **Strong** |
 | Sequence-model alternatives (SSM, MoE, sparse) | 20, 37, 55, 67 | **Good** |
-| Language model lineage (GPT, LLaMA, Claude, Gemini, DeepSeek, Qwen) | 03, 04, 15, 17, 26-28, 30-31, 33, 36, 40-43, 47, 64-65 | **Strong** |
-| Alignment (RLHF, CAI, DPO, GRPO, RLVR) | 05, 14, 19, 38, 39, 63 | **Strong** |
+| Language model lineage (GPT, LLaMA, Claude, Gemini, DeepSeek, Qwen, Mistral) | 03, 04, 15, 17, 26-28, 30-31, 33, 36, 40-43, 47, 64-65, 93-95 | **Strong** |
+| Alignment (RLHF, CAI, DPO, KTO, GRPO, RLVR) | 05, 14, 19, 38, 39, 63, 103 | **Strong** |
 | Instruction tuning & synthetic data | 79, 80 | **Good** |
-| Reasoning (CoT, ToT, PRM, test-time compute) | 09, 25, 34, 35, 50, 51, 77 | **Strong** |
-| Agents & tool use | 21, 24, 58, 59, 78 | **Good** |
-| Diffusion & image generation | 02, 06, 07, 44, 48, 57, 69-72, 74 | **Strong** |
+| Reasoning (CoT, ToT, PRM, STaR, test-time compute) | 09, 25, 34, 35, 50, 51, 77, 97-99 | **Strong** |
+| Agents & tool use | 21, 24, 58, 59, 78, 100 | **Strong** |
+| Diffusion & image generation | 02, 06, 07, 44, 48, 57, 69-72, 74, 89-92 | **Strong** |
+| Self-supervised vision pretraining | 11, 88 | **Good** |
 | Multimodal (vision-language, audio, video) | 08, 23, 29, 32, 40, 46, 47, 49 | **Good** |
 | Retrieval | 13, 60, 87 | **Good** |
 | Inference & serving efficiency | 16, 45, 52, 75, 86 | **Strong** |
-| Training systems & parallelism | 76 | **Thin** |
+| Training systems & parallelism | 76, 94 | **Thin** |
 | Efficiency of fine-tuning | 10, 22 | **Good** |
 | Scaling behaviour | 12, 18, 81 | **Good** |
 | Interpretability | 82 | **Thin** |
-| Safety beyond alignment training | 14, 83 | **Thin** |
+| Safety beyond alignment training | 14, 83, 96 | **Thin** |
 | Evaluation & benchmarks | 81, 84, 85 | **Thin** |
-| Science applications | 61, 62, 68 | **Adequate for scope** |
+| Code generation & software engineering | 56, 84 | **Thin** |
+| Reinforcement learning & world models | 63, 102, 104, 105 | **Adequate for scope** |
+| Science applications (biology, mathematics, algorithms) | 61, 62, 68, 101, 106, 107 | **Good** |
 | Deep learning prerequisites (pre-2015) | 53, 55, 57, 66, 73, 74 | **Deliberately partial** |
 
 ---
@@ -82,8 +85,8 @@ Papers whose absence is most likely to leave a reader with a hole in their menta
 - **NeRF and 3D Gaussian Splatting** - 3D generative representation.
 - **DALL-E 1 and DALL-E 2 (unCLIP)** - the missing middle of the text-to-image lineage; the collection
   jumps from [CLIP](../papers/multimodal/08-clip/summary.md) to
+  [Imagen](../papers/image-generation/91-imagen/summary.md) and
   [DALL-E 3](../papers/image-generation/48-dalle3/summary.md).
-- **Imagen** - the cascaded-diffusion and text-encoder-scale counterpoint to Stable Diffusion.
 
 ### Techniques
 - **Knowledge Distillation** (Hinton et al., 2015) - referenced repeatedly across these summaries,
@@ -99,8 +102,9 @@ Papers whose absence is most likely to leave a reader with a hole in their menta
 ### Deep learning prerequisites
 The collection covers roots selectively (Word2Vec, Seq2Seq, VAE, PPO, ResNet, U-Net). Candidates for
 completing that layer: **AlexNet** (2012), **Adam** (2014), **Batch/Layer Normalization**,
-**LSTM** (1997), **DQN and AlphaGo/AlphaZero**. Each is foundational; each is one step further from
-generative AI, so they stay optional rather than assumed.
+**LSTM** (1997), and **DQN / AlphaGo** - the run-up to
+[AlphaZero](../papers/techniques/102-alphazero/summary.md), which the collection now covers. Each is
+foundational; each is one step further from generative AI, so they stay optional rather than assumed.
 
 ---
 

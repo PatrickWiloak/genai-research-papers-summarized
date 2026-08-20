@@ -18,11 +18,25 @@ only - no code to build, just clear writing about influential papers.
    (`**Paper Link:**`, `**Paper:**`, `**System Card:**`, etc.). The build
    script parses these.
 5. **Do not hand-write YAML frontmatter** - it is generated (see below).
-6. **Run the build script** and commit what it changes:
+6. **Add a card to `BROWSE.md`.** Every paper has one, in its category section, ordered by
+   number: a relevance badge, three lines of pitch and a link to the source. Update that
+   section's "**N papers.**" line, the Quick Stats table and the badge tallies at the foot of
+   the page to match.
+7. **Add the paper to the coverage map in [`docs/GAPS.md`](./docs/GAPS.md)**, and bump its
+   "Papers at review time" figure. If the paper closes a queued gap, delete that queue entry.
+8. **Add a row to [`docs/QUICK_REFERENCE.md`](./docs/QUICK_REFERENCE.md)** - one line each for
+   the contribution and the impact. The other guides curate rather than enumerate, so update
+   them only if the paper belongs on a learning path or changes a comparison.
+9. **Run the build script and the checks**, and commit what they change:
 
    ```bash
    python3 scripts/build_manifest.py
+   python3 scripts/check_links.py
+   python3 scripts/check_counts.py
    ```
+
+   `check_counts.py` is what catches a forgotten BROWSE card or a stale tally; CI runs the
+   same three.
 
 ## House style
 
@@ -90,6 +104,8 @@ python3 scripts/build_manifest.py
 
 `--strict` turns every MkDocs warning into an error, so a broken relative link
 or a link to an anchor that does not exist fails the build rather than shipping
-a broken page. The same build runs as a blocking check on every pull request;
+a broken page. One trap: on the site, `README.md` is replaced by the landing page
+in `.github/site/home.md`, so a link to `README.md#some-anchor` resolves on GitHub
+but fails the strict build. Link to the page without the anchor, or to `INDEX.md`. The same build runs as a blocking check on every pull request;
 pushing to `main` also deploys it to GitHub Pages via
 `.github/workflows/pages.yml`.

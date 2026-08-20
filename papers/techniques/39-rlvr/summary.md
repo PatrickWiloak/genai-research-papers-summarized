@@ -5,6 +5,7 @@ number: 39
 category: "techniques"
 authors: "Multiple research groups (paradigm, not a single paper)"
 year: 2024
+url: "https://arxiv.org/abs/2501.12948"
 tags: ["reinforcement-learning", "reasoning"]
 ---
 
@@ -13,6 +14,7 @@ tags: ["reinforcement-learning", "reasoning"]
 **Authors:** Multiple research groups (paradigm, not a single paper)
 **Emerged:** 2024-2025
 **Key Papers:** DeepSeek-R1, DeepSeekMath, OpenAI o1
+**Reference Paper:** [arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) (DeepSeek-R1, the clearest published account of the paradigm)
 
 ---
 
