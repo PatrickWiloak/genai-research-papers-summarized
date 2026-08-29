@@ -1,0 +1,22 @@
+{
+  "skip": [
+    "typecheck",
+    "lint",
+    "test",
+    "build",
+    "audit"
+  ],
+  "extraSteps": [
+    {
+      "label": "counts",
+      "cmd": "python3 scripts/check_counts.py",
+      "mode": "block"
+    },
+    {
+      "label": "links",
+      "cmd": "python3 scripts/check_links.py",
+      "mode": "warn"
+    }
+  ],
+  "_comment": "Docs/Python repo - no package.json. The gate is entirely extraSteps."
+}
