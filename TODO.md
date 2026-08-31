@@ -6,6 +6,18 @@ Working task list for **genai-research-papers-summarized**. Read this at the sta
 
 ## Open
 
+### 🟠 Discoverability (added 2026-08-31)
+
+- [ ] **Upload the social preview image.** A 1280x640 card is rendered at
+      `/tmp/claude-1000/-home-plw-coding/4ffb6de8-198a-4962-8a8b-1f54e9ab4159/scratchpad/social/genai-research-papers-summarized-social-1280x640-31AUG2026.png`.
+      Upload via **Settings → General → Social preview** (not exposed by the GitHub API).
+- [x] ~~Set GitHub topics~~ ✅ done 2026-08-31 (15 topics: llm, generative-ai, research-papers, rag, ...)
+- [ ] **Commit and push the rewritten `LICENSE` + new `NOTICE`.** The hand-written CC BY summary
+      was not machine-detectable - GitHub reported this repo's license as "Other", so it showed no
+      licence badge and did not match a CC-BY-4.0 search filter. `LICENSE` is now the canonical
+      legal text (which GitHub's detector matches) and the third-party-papers carve-out moved to
+      `NOTICE`. Same licence as before, just legible to tooling.
+
 ### Content
 - [ ] 🟠 Work through the high-priority queue in [`docs/GAPS.md`](./docs/GAPS.md) - induction heads,
       adversarial attacks/jailbreaks, weak-to-strong generalization, long-context extension

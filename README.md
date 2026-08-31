@@ -755,7 +755,9 @@ If you find this repository helpful, please consider giving it a star! It helps 
 
 ## 📄 License
 
-This work is provided for educational purposes. Original papers retain their respective copyrights and licenses. Summaries are original interpretations created for accessibility and learning.
+The original summaries and documentation in this repository are licensed **[CC BY 4.0](./LICENSE)** - free to share and adapt, including commercially, with credit.
+
+Original papers retain their respective copyrights and licenses; this repository's license covers only the summary text written for it. See [NOTICE](./NOTICE).
 
 ---
 
