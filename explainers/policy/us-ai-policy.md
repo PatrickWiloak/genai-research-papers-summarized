@@ -9,7 +9,7 @@
 
 - **No federal AI statute.** As of September 2026 Congress has not passed a general AI law. Federal direction comes from executive orders, which a new president can revoke on day one.
 - **The federal approach flipped in January 2025.** The 2023 Biden order (EO 14110), focused on safety testing and risk management, was revoked on 20 January 2025. Its replacements (EO 14179 and the July 2025 AI Action Plan) prioritise removing barriers to AI development and US competitiveness.
-- **States filled the gap.** California's SB 53 (in force since 1 January 2026) and New York's RAISE Act (effective 1 January 2027) regulate the largest "frontier" model developers. Colorado's broader anti-discrimination AI law was delayed twice and then replaced in May 2026 by a narrower law starting 1 January 2027.
+- **States filled the gap.** California's SB 53 (in force since 1 January 2026) and New York's RAISE Act (effective 1 January 2027) regulate the largest "frontier" model developers. Colorado's broader anti-discrimination AI law was delayed once, stayed by a federal court in April 2026, and then replaced in May 2026 by a narrower law starting 1 January 2027.
 - **Preemption is the live fight.** A 10-year moratorium on state AI laws was stripped from the 2025 budget bill by a 99-1 Senate vote. A December 2025 executive order set up a Justice Department task force to challenge state laws, and a bipartisan House discussion draft in June 2026 proposed a three-year preemption. None of this has produced a federal statute as of this review.
 
 ## The mental model: three layers pulling against each other

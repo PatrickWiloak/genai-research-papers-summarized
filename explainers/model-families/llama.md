@@ -38,7 +38,7 @@
 |---|---|---|---|
 | Muse Spark | April 8, 2026 | First Meta Superintelligence Labs model; multimodal reasoning with tool use; Meta says it reaches Llama 4 Maverick's capabilities with over an order of magnitude less compute. Powers Meta AI. | Closed |
 | Muse Spark 1.1 | July 9, 2026 | Agentic tasks, computer use, coding; 1M-token context; Meta Model API in public preview. | Closed |
-| Muse Glimmer | August 10, 2026 | 30B dense multimodal model (2B vision encoder plus 28B decoder), 32K context, built for local agents on a single 24 to 32 GB GPU. | Open, Apache 2.0 |
+| Muse Glimmer | August 10, 2026 | 30B dense multimodal model (2B vision encoder plus 28B decoder), 128K+ context per the model card (some hosted endpoints set 32K), built for local agents on a single 24 to 32 GB GPU. | Open, Apache 2.0 |
 | Muse Spark 1.2 (open version) | Announced August 10, 2026 | Alexandr Wang, Meta's Chief AI Officer, said open weights for "a version of muse spark 1.2" were "coming soon". | Pending |
 
 ## The through-line
@@ -124,7 +124,7 @@ The Open Source Initiative does not consider the Llama licences open source, bec
 - Touvron et al., "Llama 2: Open Foundation and Fine-Tuned Chat Models": https://arxiv.org/abs/2307.09288
 - Meta, "Introducing Muse Spark: Scaling Towards Personal Superintelligence" (April 8, 2026): https://ai.meta.com/blog/introducing-muse-spark-msl/ and https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/
 - Meta, "Introducing Muse Spark 1.1" (July 9, 2026; 1M context, Meta Model API public preview): https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/
-- Hugging Face, "Meta is back with Muse Glimmer" (August 10, 2026; 30B dense, Apache 2.0, 32K context): https://huggingface.co/blog/muse-glimmer and model card https://huggingface.co/meta-models/Muse-Glimmer-30B
+- Hugging Face, "Meta is back with Muse Glimmer" (August 10, 2026; 30B dense, Apache 2.0; the model card gives 131,072+ tokens of context): https://huggingface.co/blog/muse-glimmer and model card https://huggingface.co/meta-models/Muse-Glimmer-30B
 - Alexandr Wang on X (August 10, 2026), open weights for Muse Glimmer and "a version of muse spark 1.2 coming soon": https://x.com/alexandr_wang/status/2086755368596902004
 - VentureBeat, "Goodbye, Llama? Meta launches new proprietary AI model Muse Spark" (Meta spokesperson: current Llama models stay available): https://venturebeat.com/technology/goodbye-llama-meta-launches-new-proprietary-ai-model-muse-spark-first-since
 - Wikipedia, "Llama (language model)" (cross-check of release dates, OSI position, LMArena controversy): https://en.wikipedia.org/wiki/Llama_(language_model)

@@ -116,7 +116,7 @@ ARC-AGI-2 was [announced](https://arcprize.org/blog/announcing-arc-agi-2-and-arc
 
 - Every task was solved by at least two people in at most two attempts in testing with over 400 members of the public; the human panel averaged 60 percent.
 - At launch, pure LLMs scored 0 percent, and the o3 preview in its low-compute setting scored about 4 percent.
-- **ARC Prize 2025** offered a $700,000 grand prize for 85 percent. According to the organisers' [results post](https://arcprize.org/blog/arc-prize-2025-results-analysis) (5 December 2025), the top Kaggle entry (NVARC) reached **24 percent** on the private set at about $0.20 per task. Among verified frontier systems the post lists Claude Opus 4.5 (Thinking, 64k) at **37.6 percent** for $2.20 per task, and a Poetiq refinement system on Gemini 3 Pro at **54 percent** for $30 per task. The grand prize went unclaimed.
+- **ARC Prize 2025** offered a $700,000 grand prize for 85 percent. According to the organisers' [results post](https://arcprize.org/blog/arc-prize-2025-results-analysis) (5 December 2025), the top Kaggle entry (NVARC) reached **24 percent** on the private set at about $0.20 per task. Among verified frontier systems the post lists Claude Opus 4.5 (Thinking, 64k) at **37.6 percent** for $2.20 per task, and a Poetiq refinement system on Gemini 3 Pro at **54 percent** for $31 per task. The grand prize went unclaimed.
 
 ### ARC-AGI-3 (2026)
 ARC Prize 2026 adds **ARC-AGI-3**, an interactive benchmark of game-like environments that tests exploration, planning, memory and goal acquisition rather than static puzzles. The competition opened on 25 March 2026 with deadlines in November 2026. Results were not in as of this writing.

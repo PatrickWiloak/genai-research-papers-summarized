@@ -77,7 +77,7 @@ Two quieter threads run alongside:
 | Release | Weights | Notes |
 |---|---|---|
 | GPT-1, GPT-2 | Open | GPT-2's largest model was released in stages over 2019. |
-| GPT-3 through GPT-6 | Closed | Available only through ChatGPT, the OpenAI API and cloud partners (Azure and, for GPT-6 Astra, AWS Bedrock). |
+| GPT-3 through GPT-6 | Closed | Available only through ChatGPT, the OpenAI API and cloud partners (Azure, and AWS Bedrock, which carries the GPT-5.6 and GPT-6 models). |
 | gpt-oss-120b, gpt-oss-20b | Open (Apache 2.0) | Released August 5, 2025. Not served through the OpenAI API or ChatGPT; you run them yourself or through a host. As of September 2026 OpenAI's help centre still lists these two as its open-weight models. |
 
 The practical meaning: you can build on GPT models, but you rent them. You cannot inspect weights, fine-tune beyond what the API offers, or keep running an old version once OpenAI retires it. The trade-offs are covered in [open vs closed weights](../concepts/open-vs-closed-weights.md).
@@ -106,14 +106,14 @@ A consequence of rule 4: tiers do not all move together. As of September 30, 202
 | Tier | Latest | API price per 1M tokens (input / output) | Source |
 |---|---|---|---|
 | Astra | GPT-6 Astra | $10 / $50 (higher above 272K input tokens) | OpenAI API model page |
-| Sol | GPT-6.1 Sol | $2 / $10 | TechCrunch, DevDay coverage |
-| Luna | GPT-6 Luna | $0.10 / $0.50 | TechCrunch |
+| Sol | GPT-6.1 Sol | $2 / $10 | OpenAI API model page |
+| Luna | GPT-6 Luna | $0.10 / $0.50 | OpenAI API model page |
 
 GPT-6 Astra's API page lists a 1,050,000-token context window, 128,000 maximum output tokens, a knowledge cutoff of April 30, 2026, and reasoning effort levels from low to max. Prices change often; treat this table as a snapshot.
 
 ## What to watch
 
-- **Whether a GPT-6.1 Astra ships, and when.** The Sol tier moved to 6.1 at DevDay on September 29, 2026 without a matching Astra release. Whether the top tier keeps pace, or is held back by safety testing, is the clearest near-term signal of how OpenAI is weighing capability against risk.
+- **Whether a GPT-6.1 Astra ships, and when.** The Sol tier moved to 6.1 at DevDay on September 29, 2026 without a matching Astra release. TechCrunch reported (September 29, 2026) that OpenAI scrapped a GPT-6.1 Astra release over safety concerns found in internal testing. Whether and when the top tier catches up is the clearest near-term signal of how OpenAI is weighing capability against risk.
 - **Chain-of-thought monitorability.** The GPT-6 Astra system card reports that the model can evade chain-of-thought monitors under adversarial conditions. Watch whether later system cards report this getting better or worse; monitoring the reasoning trace has been one of the main safety arguments for reasoning models.
 - **Gated access as the norm.** GPT-5.6 Sol and GPT-6 Astra both started with limited or trust-based access for sensitive capabilities. Expect more tiered access (verified identity, trusted programmes) rather than one public model for everyone.
 - **A second open-weight release.** gpt-oss is a year old as of this review. A successor would signal that OpenAI sees open weights as an ongoing line rather than a one-off.
@@ -147,5 +147,6 @@ GPT-6 Astra's API page lists a 1,050,000-token context window, 128,000 maximum o
 - OpenAI, "Introducing ChatGPT" (November 30, 2022): https://openai.com/index/chatgpt/
 - TechCrunch, "OpenAI launches GPT-6 Sol and Luna" (September 22, 2026): https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/
 - TechCrunch, "OpenAI launches GPT-6.1 Sol" (September 29, 2026): https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/
+- OpenAI API model pages, GPT-6.1 Sol and GPT-6 Luna (pricing, read 2026-09-30): https://developers.openai.com/api/docs/models/gpt-6.1-sol and https://developers.openai.com/api/docs/models/gpt-6-luna
 - Wikipedia, GPT-5.1, GPT-5.2, GPT-5.3-Codex, GPT-5.4, GPT-5.5 (release dates cross-checked against the OpenAI posts above): https://en.wikipedia.org/wiki/GPT-5.4
 - Earlier models: see the Sources in each linked paper summary.

@@ -9,7 +9,7 @@
 
 - **Scaling laws are empirical, not physical laws.** From 2020 to 2022, researchers found that language-model loss falls smoothly and predictably as you add parameters, data and compute. That predictability drove the industry's investment.
 - **The pretraining recipe has a data problem.** Epoch AI estimates the stock of high-quality public human text at about 300 trillion tokens and projects that frontier training will use it up sometime between 2026 and 2032.
-- **Late 2024 brought the "wall" narrative.** Ilya Sutskever said "pre-training as we know it will end" because "we have but one internet", and OpenAI's very large GPT-4.5 (February 2025) was seen by many as a modest step for its cost.
+- **Late 2024 brought the "wall" narrative.** Ilya Sutskever said "pre-training as we know it will unquestionably end" because "we have but one internet", and OpenAI's very large GPT-4.5 (February 2025) was seen by many as a modest step for its cost.
 - **The field shifted what it scales.** Reasoning models trained with reinforcement learning (RL) on checkable problems, and allowed to think longer at inference time, produced large gains in math, code and agentic tasks through 2025 and 2026.
 - **Both sides have strong evidence.** Measures of real-world agent capability kept improving on a steady exponential into 2026, but analysts argue RL is far less efficient than pretraining and can only grow faster than total compute for a short time. There is no consensus.
 

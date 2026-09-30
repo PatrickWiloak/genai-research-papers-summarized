@@ -97,7 +97,7 @@ Gemini 2.5 (March 2025) made "thinking" the default across the family, with a th
 
 ### 6. Security-specialised variants
 
-In 2026 Google began shipping "Cyber" variants of Flash (3.5 Flash Cyber in July, 3.8 Flash Cyber in September) aimed at vulnerability discovery, with the July release limited to government and trusted partners. The general models ship with safeguards against chemical, biological, radiological and nuclear (CBRN) misuse and cyber offence. This mirrors the gated-access pattern in the [Claude](claude.md) and [GPT](gpt.md) families; see [frontier safety frameworks](../policy/frontier-safety-frameworks.md).
+In 2026 Google began shipping "Cyber" variants of Flash (3.5 Flash Cyber in July, 3.8 Flash Cyber in September) aimed at vulnerability discovery. Both are restricted: 3.5 Flash Cyber to governments and trusted partners, 3.8 Flash Cyber to government, critical-infrastructure and software-maintainer applicants through Google's Fairwind Program. The general models ship with safeguards against chemical, biological, radiological and nuclear (CBRN) misuse and cyber offence. This mirrors the gated-access pattern in the [Claude](claude.md) and [GPT](gpt.md) families; see [frontier safety frameworks](../policy/frontier-safety-frameworks.md).
 
 ## Open vs closed
 

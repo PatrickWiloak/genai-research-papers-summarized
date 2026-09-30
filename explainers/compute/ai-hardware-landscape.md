@@ -67,7 +67,7 @@ NVIDIA claims Rubin will deliver up to a 10x reduction in inference token cost a
 
 Google has designed its own Tensor Processing Units since 2015 and trained its Gemini models on them. TPUs are available only through Google Cloud.
 
-- **Ironwood (TPU7x)**, the seventh generation, became generally available in 2026. Per chip: 192 GiB of HBM, about 7.4 TB/s of bandwidth, 4,614 TFLOPS of FP8, and 1.2 TB/s of inter-chip interconnect (ICI). Google says a full superpod links 9,216 chips for 42.5 FP8 exaflops.
+- **Ironwood (TPU7x)**, the seventh generation, was announced in November 2025 as becoming generally available "in the coming weeks". Per chip: 192 GiB of HBM, about 7.4 TB/s of bandwidth, 4,614 TFLOPS of FP8, and 1.2 TB/s of inter-chip interconnect (ICI). Google says a full superpod links 9,216 chips for 42.5 FP8 exaflops.
 - **Scale-up is the TPU's strength.** Google's optical switching lets thousands of chips share one high-bandwidth domain, where NVIDIA's NVLink domain is a single rack.
 - **The eighth generation splits in two.** At Cloud Next in April 2026, Google previewed a training chip (TPU 8t) and a separate, cheaper inference chip (TPU 8i), both on TSMC's 2 nm process, with availability expected in late 2027.
 - **Outside customers are growing.** In October 2025 Anthropic announced access to up to one million TPUs, with well over a gigawatt of capacity coming online in 2026.

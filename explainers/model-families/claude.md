@@ -41,7 +41,7 @@
 | Claude Sonnet 5 | June 30, 2026 | Close to Opus 4.8 performance at Sonnet pricing ($2 / $10). | - |
 | Claude Opus 5 | July 24, 2026 | Long-running agentic coding; Anthropic's "most aligned model to date" on its automated behavioural audit. | - |
 | Claude Fable 5.1 / Mythos 5.1 | September 1, 2026 | Roughly 25% cheaper on typical workloads (up to 45% on agentic tasks). | - |
-| Claude Opus 5.5 | September 22, 2026 | About Fable 5.1 level on most work at 40% less than Opus 5; thinking always on. | - |
+| Claude Opus 5.5 | September 22, 2026 | About Fable 5.1 level on most work, at about 40% lower running cost than Opus 5 on typical workloads (20% lower per-token price); thinking always on. | - |
 | Claude Sonnet 5.5 | September 28, 2026 | 30%+ faster output than Sonnet 5 at the same token price. | - |
 
 ## The through-line

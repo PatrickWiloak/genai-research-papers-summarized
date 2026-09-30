@@ -52,7 +52,7 @@ How tool calling works inside these APIs, in general terms, is covered by the si
 
 ### The Responses API and Open Responses
 
-Chat Completions was designed for turn-by-turn chat. In March 2025 OpenAI released the **Responses API**, built for agents: a single call can include reasoning, several tool calls (including hosted tools), and multi-step loops, with optional server-side conversation state. OpenAI announced in August 2025 that its older Assistants API would be removed on August 26, 2026, with Responses as the replacement.
+Chat Completions was designed for turn-by-turn chat. In March 2025 OpenAI released the **Responses API**, built for agents: a single call can include reasoning, several tool calls (including hosted tools), and multi-step loops, with optional server-side conversation state. OpenAI announced in August 2025 that its older Assistants API was scheduled for removal on August 26, 2026, with Responses as the replacement.
 
 In January 2026 OpenAI initiated **Open Responses**, an open specification of the Responses format for multi-provider use, backed by the Hugging Face ecosystem. Its stated aim is one schema for messages, tool calls, reasoning and streaming that can run against OpenAI, Anthropic, Gemini or local models. Ollama's OpenAI-compatible server already accepts stateless Responses requests.
 

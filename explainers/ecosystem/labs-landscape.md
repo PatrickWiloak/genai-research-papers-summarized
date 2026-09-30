@@ -92,7 +92,7 @@ The Chinese labs that matter most for this repo share three traits: they release
 ## Patterns across labs
 
 - **Mixture of experts everywhere.** Almost every large 2025-2026 model listed here, open or closed where disclosed, is a mixture-of-experts model. See the [MoE summary](../../papers/architectures/37-mixture-of-experts/summary.md).
-- **Reasoning is a mode, not a separate model.** In 2024 labs shipped separate reasoning models (o1, R1, QwQ, Magistral). By 2026 most flagships are one model with a thinking switch or effort setting. See [reasoning models](../concepts/reasoning-models.md).
+- **Reasoning is a mode, not a separate model.** In 2024-2025 labs shipped separate reasoning models (o1, QwQ, R1, Magistral). By 2026 most flagships are one model with a thinking switch or effort setting. See [reasoning models](../concepts/reasoning-models.md).
 - **Long context as a default.** 1M-token context is now standard at DeepSeek, OpenAI's GPT-6 Astra, Kimi K3 and the hosted Qwen3.8-Max. See [context windows](../concepts/context-windows.md).
 - **Licences as competitive tools.** The "model as a service" clauses in Qwen, Kimi and GLM licences leave individuals and most companies free to use the weights while stopping large cloud providers from reselling them without a deal.
 - **Compute sets the ceiling.** Training frontier models needs very large GPU or accelerator clusters, which is why most labs are tied to a cloud or hardware partner. See [AI hardware landscape](../compute/ai-hardware-landscape.md) and [cost of training](../compute/cost-of-training.md).

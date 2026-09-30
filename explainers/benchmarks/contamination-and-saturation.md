@@ -10,7 +10,7 @@
 - **Contamination** means test questions (or their answers) ended up in a model's training data. The model can then score well by remembering rather than by solving. For public benchmarks on the open web, some contamination should be assumed.
 - **Saturation** means top models all score near the ceiling, so the benchmark no longer tells them apart. The ceiling is often below 100 percent because of **wrong answer keys**: audits have found errors in an estimated 6.5 percent of MMLU, at least 16.4 percent of SWE-bench Verified and 42 percent of the original FrontierMath problems.
 - Contamination is detected by **comparing against fresh or hidden data** (new problems of the same kind, problems released after the training cutoff, held-out sets) and by **probing the model** (does it assign suspiciously high probability to the test, or reproduce answers from a task ID alone?).
-- Benchmarks now have a **short useful life**. In 2026 alone, OpenAI retired SWE-bench Verified (February) and withdrew support for its replacement SWE-bench Pro five months later (July); Terminal-Bench shipped three versions; HLE released a cleaned subset.
+- Benchmarks now have a **short useful life**. In 2026 alone, OpenAI retired SWE-bench Verified (February) and withdrew support for its replacement SWE-bench Pro about four and a half months later (July); Terminal-Bench shipped three versions; HLE released a cleaned subset.
 - The responses are **private held-out sets**, **continuously refreshed benchmarks** and **maintained, versioned benchmarks**. Each trades some openness or comparability for durability.
 
 ## Why scores drift upward
@@ -82,7 +82,7 @@ A benchmark stops being useful when the best models cluster near its ceiling. "H
 | SWE-bench Verified | Aug 2024 | Top score moved only about 75 to 81% in six months; retired by OpenAI February 2026 | OpenAI via Epoch, Pebblous |
 | SWE-bench Pro | 2025 | Recommended February 2026; endorsement withdrawn July 2026 (about 30% broken) | OpenAI via Epoch |
 | OSWorld | Apr 2024 | 12% at launch; lab scores above the 72% human baseline by 2026; OSWorld 2.0 in June 2026 | xlang, Anthropic |
-| Terminal-Bench 2.0 | Nov 2025 | Replaced by 3.0 in July 2026 because "many tasks have become saturated" | tbench.ai |
+| Terminal-Bench 2.0 | Nov 2025 | Replaced by 2.1 (May 2026, 28 tasks fixed), then 3.0 (July 2026) because "many tasks have become saturated" | tbench.ai |
 | METR time horizons | Mar 2025 | By May 2026 the top model exceeded what the task suite can reliably measure (16 hours) | METR |
 
 Two things make saturation arrive sooner than the raw ceiling suggests:

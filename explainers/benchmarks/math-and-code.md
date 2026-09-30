@@ -59,8 +59,8 @@ Built by Epoch AI; at launch in November 2024, state-of-the-art models solved un
 
 **Known flaws.**
 
-- **Funding and access.** OpenAI commissioned and funded FrontierMath and has access to most problems. Epoch keeps a **holdout set** for clean evaluation. For Tier 4, OpenAI has 28 problems and their solutions and Epoch holds out 20.
-- **Errors.** On June 12, 2026 Epoch released **FrontierMath v2**, after an audit found errors in 42 percent of problems. It corrected 123 Tier 1-3 problems and 12 Tier 4 problems and removed 12, leaving 338 (295 in Tiers 1-3 and 43 in Tier 4). Scores rose across the board and v1 and v2 numbers are not comparable.
+- **Funding and access.** OpenAI commissioned and funded FrontierMath and has access to most problems. Epoch keeps a **holdout set** for clean evaluation. For Tier 4, OpenAI has access to 30 of the 50 problems and Epoch holds out 20 (the January 2026 evaluation used 48: 28 OpenAI-accessible, 20 held out).
+- **Errors.** On June 12, 2026 Epoch released **FrontierMath v2**, after an audit found errors in 42 percent of problems. Scores rose across the board and v1 and v2 numbers are not comparable.
 
 **Where the frontier stands.** In January 2026, Epoch reported a manual GPT-5.2 Pro run at 31 percent on Tier 4 (15 of 48 problems), scoring 50 percent on Epoch's held-out problems against 18 percent on the ones OpenAI had seen, which Epoch read as "no evidence of over-fitting". As of the v2 release in June 2026, Epoch's newsletter said Anthropic's Fable 5 topped its FrontierMath leaderboards. Check Epoch's live pages for current figures; they move monthly.
 
@@ -93,7 +93,7 @@ The key idea is the **time window**: you score a model only on problems publishe
 - **February 23, 2026:** OpenAI said it would stop reporting SWE-bench Verified. It audited 138 tasks (27.6 percent of the set) that o3 failed to solve consistently over 64 runs; 59.4 percent had flawed tests that rejected functionally correct fixes, a floor of 16.4 percent of the whole benchmark. It also found signs of contamination: frontier models could reproduce details of the reference fixes. Top scores had moved only from about 75 to 81 percent in six months.
 - OpenAI recommended **SWE-bench Pro** (Scale AI, 1,865 tasks: 731 public, 276 private, 858 held out) instead.
 - **July 8, 2026:** OpenAI published "Separating signal from noise in coding evaluations", estimating about 30 percent of Pro's public tasks were broken (misleading prompts, overly strict tests, underspecified prompts, low-coverage tests), and withdrew its recommendation. Independent audits by Jonathan Gabor (February 2026) and Datacurve (May 2026) had also found widespread issues.
-- As of its September 1, 2026 review, **Epoch AI rates both SWE-bench Verified and SWE-bench Pro "Flawed"**, its label for benchmarks likely to have over 20 percent of questions with scoring defects.
+- As of its September 1, 2026 review, **Epoch AI rates both SWE-bench Verified and SWE-bench Pro "Flawed"**, its label for benchmarks where at least 20 percent of an inspected sample contains errors, or where an issue corrupts grading at scale.
 
 **Harness sensitivity.** SWE-bench scores depend heavily on the agent scaffold. Anthropic's Sonnet 4.5 launch reported 77.2 percent averaged over 10 trials with a two-tool scaffold and a specific prompt addition, and 82.0 percent with parallel attempts plus a selection model. Same model, two honest numbers.
 

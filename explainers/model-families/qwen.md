@@ -31,7 +31,7 @@ Dates are first public release. Parameter notation: "235B-A22B" means 235 billio
 | Qwen3 | April 2025 | Dense 0.6B to 32B plus 30B-A3B and 235B-A22B MoE. One model switches between thinking and non-thinking modes; 36T training tokens; 119 languages. | Apache 2.0 | [28](../../papers/language-models/28-qwen3/summary.md) |
 | Qwen3-Coder | July 2025 | Agentic coding specialist line. | Apache 2.0 | - |
 | Qwen3-Max | September 2025 (Apsara, September 24) | Over 1 trillion parameters; Alibaba's largest model at the time. | Hosted only | - |
-| Qwen3-Next, Qwen3-Omni, Qwen3-VL | September 2025 | Next: 80B-A3B testbed for hybrid linear attention. Omni: speech in and out. | Next: Apache 2.0; Omni: custom | - |
+| Qwen3-Next, Qwen3-Omni, Qwen3-VL | September 2025 | Next: 80B-A3B testbed for hybrid linear attention. Omni: speech in and out. | Apache 2.0 | - |
 | Qwen3-Coder-Next | February 2026 | Coding line on the Next architecture. | Apache 2.0 | - |
 | Qwen3.5 | February 2026 | Flagship 397B-A17B plus a ladder down to 0.8B. Natively multimodal (images trained in from the start), 262K context extendable to about 1M, 201 languages. Hybrid Gated DeltaNet + attention. | Apache 2.0 | - |
 | Qwen3.6 | April 2026 | Open 35B-A3B and 27B; a larger Qwen3.6-Plus served via API. | Apache 2.0 (open sizes) | - |

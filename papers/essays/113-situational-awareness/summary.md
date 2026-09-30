@@ -137,7 +137,7 @@ Only items with a public source are listed. The central forecast, AGI around 202
 **Broadly on track or confirmed**
 
 - **The compute and investment trend.** A June 2025 one-year audit on LessWrong (Nathan Delisle) found the roughly half-OOM-per-year compute trend "roughly supported". Capital spending, accelerator shipments and committed power met or beat his curves. Revenue was the weakest metric.
-- **The gigawatt cluster in 2026.** His table put a ~1 GW cluster in 2026. xAI said its Colossus 2 training cluster was running at about 1 GW in January 2026, and other gigawatt-scale sites, including OpenAI's Stargate site in Abilene, were scheduled for 2026.
+- **The gigawatt cluster in 2026.** His table put a ~1 GW cluster in 2026. Gigawatt-scale sites were under construction for 2026, including xAI's Colossus 2 in Memphis and OpenAI's Stargate site in Abilene; whether any single training cluster reached a full 1 GW in 2026 is hard to confirm from public sources.
 - **Private megaprojects.** The Stargate joint venture, announced in January 2025 with up to $500 billion of planned investment over four years, is the kind of spending he described. It is private, though, not governmental.
 - **Unhobbling via reasoning.** Test-time reasoning, which he listed as an unhobbling gain, became the main driver of capability after [OpenAI o1](../../language-models/31-openai-o1/summary.md) (September 2024) and [DeepSeek-R1](../../language-models/26-deepseek-r1/summary.md) (January 2025). See also [test-time compute](../../techniques/50-test-time-compute/summary.md).
 - **Power as a constraint.** Access to the grid and to gas turbines became a widely reported bottleneck for datacenter builds through 2025 and 2026.

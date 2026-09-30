@@ -148,7 +148,7 @@ Caching more than halves the bill, and output becomes three-quarters of what is 
 - **Rubin-generation hardware (from H2 2026).** NVIDIA claims up to 10x lower inference token cost versus Blackwell; independent measurements will show how much reaches API prices.
 - **Promotional pricing ending.** Google's Gemini 3.8 Flash list price doubles on 2027-01-01 per its pricing page.
 - **Reasoning token growth.** Whether effort controls and better training reduce thinking length faster than agents increase task length.
-- **Cache pricing competition.** Cache-hit discounts have deepened (Anthropic's newest tiers price hits at 2.5-5% of input); watch whether this becomes the main axis of price competition.
+- **Cache pricing competition.** Cache-hit discounts have deepened (Anthropic's top tiers price hits below the standard 10% of input: 2.5% for Fable 5.1, 5% for Opus 5.5); watch whether this becomes the main axis of price competition.
 - **Epoch AI's price-trend updates.** The best public check on whether the 10x-per-year pattern still holds.
 
 ## Read next

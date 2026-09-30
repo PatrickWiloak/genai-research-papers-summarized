@@ -76,7 +76,7 @@ Computing an exact SVD every step is too slow on GPUs, so Muon approximates `U V
   tuned coefficients:  a = 3.4445,  b = -4.7750,  c = 2.0315
 ```
 
-The coefficients were tuned to push singular values toward 1 quickly rather than exactly. The result is only approximately orthogonal (singular values end up roughly between 0.7 and 1.2), which the post reports does not hurt.
+The coefficients were tuned to push singular values toward 1 quickly rather than exactly. The result is only approximately orthogonal (singular values end up roughly between 0.7 and 1.3), which the post reports does not hurt.
 
 ### What Muon is not applied to
 Muon is only for **hidden-layer 2D weight matrices**. Embeddings, the output classifier head, and scalar or vector parameters (biases, normalization gains) are trained with AdamW. The post reports that input and output layers behave differently and do better with AdamW.
@@ -97,7 +97,7 @@ As reported by Keller Jordan (December 2024):
 - **NanoGPT speedrun:** Muon improved the record for reaching 3.28 validation loss on FineWeb by a factor of 1.35.
 - **1.5B-parameter transformer:** reached GPT-2 XL-level HellaSwag performance in 10 hours on an 8xH100 node, versus 13.3 hours with AdamW.
 
-The post was explicit about what was unknown: whether Muon would work for runs of 20B+ parameters, how to distribute it efficiently, and whether it would help beyond pretraining. "At the time of writing, I don't know the answers."
+The post was explicit about what was unknown: whether Muon would work for runs of 20B+ parameters, how to distribute it efficiently, and whether it would help beyond pretraining. "At the time of writing, I don't know the answers to these questions."
 
 ---
 

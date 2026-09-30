@@ -54,7 +54,7 @@ AGENTIC SYSTEMS
                 -> the model decides the steps
 ```
 
-Workflows give predictability and consistency for well-defined tasks. Agents give flexibility when you "can't predict the required number of steps". Both trade latency and cost for better task performance, so the first question is whether you need either. The guidance: "Start with simple prompts, optimize them with comprehensive evaluation, and add multi-step agentic systems only when simpler solutions fall short."
+Workflows give predictability and consistency for well-defined tasks. Agents give flexibility for open-ended problems "where it's difficult or impossible to predict the required number of steps". Both trade latency and cost for better task performance, so the first question is whether you need either. The guidance: "Start with simple prompts, optimize them with comprehensive evaluation, and add multi-step agentic systems only when simpler solutions fall short."
 
 ### On frameworks
 

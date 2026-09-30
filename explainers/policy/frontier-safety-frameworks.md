@@ -78,7 +78,7 @@ Further point releases followed; as of September 2026 the current version is 3.4
 - **Persuasion was dropped** as a tracked category in v2. OpenAI said persuasion risks do not fit its definition of severe harm and are better addressed through usage policies, content provenance work and society-level measures.
 - **The marginal-risk clause.** If another developer releases a High or Critical system without comparable safeguards, OpenAI "could adjust accordingly the level of safeguards that we require", but only if doing so does not meaningfully increase overall risk, it says so publicly, and it keeps its safeguards more protective than the other developer's.
 
-**First Critical classification.** In early September 2026 OpenAI said its upcoming model Astra was the first it had classified at the Critical cybersecurity level: able to find and exploit previously unknown vulnerabilities in hardened systems with limited human involvement. OpenAI said it would not make the model's full cyber capabilities widely available at launch and had slowed parts of its development to strengthen safeguards.
+**First Critical classification.** In early September 2026 OpenAI said its upcoming model Astra was the first it had classified at the Critical cybersecurity level: able to find and exploit previously unknown vulnerabilities in hardened systems with limited human involvement. OpenAI said it would not make the model's full cyber capabilities widely available at launch - advanced cyber capabilities go only to members of its Daybreak coalition - and that its safeguards "sufficiently minimize the risk of severe harm for release". CNBC reported that OpenAI had delayed parts of Astra's development after an August security incident at Hugging Face that did not involve Astra.
 
 ## Google DeepMind: Frontier Safety Framework
 
@@ -87,7 +87,7 @@ Further point releases followed; as of September 2026 the current version is 3.4
 - **Critical Capability Levels (CCLs)** across misuse (CBRN, cyber, and since v3, **harmful manipulation** - models that could systematically and substantially change beliefs and behaviours in high-stakes contexts), machine-learning R&D, and **misalignment** (including models that might resist operators' attempts to modify or shut them down).
 - **Safety case reviews** before external launches and, since v3, before large-scale internal deployments of models with advanced ML research capabilities.
 - **Tracked Capability Levels (TCLs)**, new in v3.1, flag rising risk earlier, before a CCL is reached.
-- **Security levels** for protecting weights, with v3.1 adding a "Security Level 2+" standard that builds on RAND's SL2 with protections against insiders and well-resourced non-state actors.
+- **Security levels** for protecting weights, which v3.1 (April 2026) revised alongside its new tracked capability levels; check the framework text for the current security-level definitions.
 
 ## How they compare
 
@@ -107,7 +107,7 @@ Further point releases followed; as of September 2026 the current version is 3.4
 *Reply:* transparency is the point. Published thresholds and model cards let outsiders check claims, and laws like SB 53 now make following one's own framework legally enforceable in California.
 
 **"The commitments weaken exactly when they would bite."** Anthropic's removal of pause language and OpenAI's competitor clause and removal of persuasion are cited as evidence that commercial pressure wins, and that a pledge which can be rewritten is not a pledge.
-*Reply:* Anthropic and GovAI argue that keeping commitments a company expects to break creates worse incentives, such as reluctance to admit a threshold has been crossed; honest, transparent, conditional policies may do more good than rigid ones nobody keeps. GovAI moved from "initial skepticism to cautious optimism" about RSP v3.0, conditional on faithful implementation.
+*Reply:* Anthropic and GovAI argue that keeping commitments a company expects to break creates worse incentives, such as reluctance to admit a threshold has been crossed; honest, transparent, conditional policies may do more good than rigid ones nobody keeps. GovAI wrote that its "initial reaction to the update was rather negative" but that after closer engagement its "overall view became more positive" about RSP v3.0, conditional on faithful implementation.
 
 **"Evals can't reliably detect what matters."** Capability evaluations can underestimate a model (poor elicitation, sandbagging), and thresholds like "significant uplift to a novice" are hard to operationalise. Work such as [Sleeper Agents](../../papers/techniques/83-sleeper-agents/summary.md) shows deceptive behaviour can survive standard safety training.
 *Reply:* labs have moved toward conservative, precautionary activation (Anthropic's ASL-3 and OpenAI's Critical classification were both made under uncertainty), automated [red teaming](../../papers/techniques/129-red-teaming-lms/summary.md), and "early warning" levels like DeepMind's TCLs.
@@ -119,7 +119,7 @@ Further point releases followed; as of September 2026 the current version is 3.4
 
 - **Risk Reports and external reviews** under Anthropic's RSP v3, and whether reviewers publicly disagree with Anthropic's conclusions.
 - **Astra's release** and what OpenAI publishes about the safeguards that justified deploying a Critical-level cyber model.
-- **Whether OpenAI publishes a Version 3** of its framework, which it signalled it would evolve after the Critical cyber finding.
+- **Whether OpenAI publishes a Version 3** of its framework now that a model has reached the Critical cyber level.
 - **SB 53 enforcement** and the first RAISE Act filings after 1 January 2027: the first time a regulator can act on a lab not following its own framework.
 - **EU Code of Practice alignment:** the Safety and Security chapter asks systemic-risk model providers for a similar framework; enforcement powers began 2 August 2026.
 

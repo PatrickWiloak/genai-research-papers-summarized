@@ -56,7 +56,7 @@ Each line picks one point in          Optimiser searches that subset
 Output: source code                   Output: weights
 ```
 
-"Software 2.0 can be written in much more abstract, human unfriendly language, such as the weights of a neural network." Nobody writes weights directly because there are millions of them, and "coding directly in weights is kind of hard (I tried)."
+"Software 2.0 is written in much more abstract, human unfriendly language, such as the weights of a neural network." Nobody writes weights directly because there are millions of them, and "coding directly in weights is kind of hard (I tried)."
 
 ### 2. The transition is already happening
 
