@@ -223,6 +223,24 @@ Quiet-STaR → Test-Time Compute → o1 → GRPO → RLVR → DeepSeek-R1 → rS
 RAG → Dense Retrieval → GraphRAG → LoRA → QLoRA → GPTQ & AWQ → GQA → FlashAttention →
 PagedAttention → Speculative Decoding → ReAct → MCP → SWE-bench → LLM-as-a-Judge → Llama Guard
 
+### Track: long context
+
+RoPE → Longformer → YaRN → RULER → Multi-head Latent Attention, then the
+[context windows explainer](../explainers/concepts/context-windows.md)
+
+### Track: safety and interpretability
+
+Constitutional AI → Red Teaming LMs → Induction Heads → GCG Adversarial Attacks →
+Weak-to-Strong Generalization → Sleeper Agents → Sparse Autoencoders → Llama Guard, then
+[frontier safety frameworks](../explainers/policy/frontier-safety-frameworks.md)
+
+### Track: the ideas behind the field (essays)
+
+The Bitter Lesson → Computing Machinery and Intelligence → Software 2.0 → The Scaling
+Hypothesis → Building Effective Agents → Machines of Loving Grace and Situational Awareness
+(read as a pair) → Welcome to the Era of Experience. All are in
+[BROWSE.md](../BROWSE.md).
+
 ---
 
 ## 💡 Pro Tips

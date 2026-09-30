@@ -452,12 +452,24 @@ complaint. GQA and MoE are decisions made before training, not fixes afterwards.
 
 ### Attention Variants
 
-| | MHA | [MQA](../papers/architectures/75-grouped-query-attention/summary.md) | [GQA](../papers/architectures/75-grouped-query-attention/summary.md) |
+| | MHA | [MQA](../papers/architectures/75-grouped-query-attention/summary.md) | [GQA](../papers/architectures/75-grouped-query-attention/summary.md) | [MLA](../papers/architectures/141-multi-head-latent-attention/summary.md) |
+|---|---|---|---|---|
+| **What is cached** | Full K and V per head | One shared K and V | One K and V per group | One small latent per token (plus a RoPE key) |
+| **KV cache** | Largest | Smallest | Tunable middle | Near-MQA size |
+| **Quality** | Strong baseline | Noticeable degradation | Near-MHA | Matched or beat MHA in DeepSeek's tests |
+| **Used by** | Original Transformer | PaLM | LLaMA 2/3, [Mistral](../papers/language-models/95-mistral-7b/summary.md), most modern LLMs | DeepSeek-V2/V3/R1, Kimi K2 |
+
+For the memory maths behind these, see the [KV cache explainer](../explainers/concepts/kv-cache.md).
+
+### Long Context: Extend, Sparsify, or Retrieve?
+
+| | Position extension ([YaRN](../papers/techniques/130-yarn-context-extension/summary.md)) | Sparse / windowed attention ([Longformer](../papers/architectures/131-longformer/summary.md)) | Retrieval ([RAG](../papers/techniques/13-rag/summary.md)) |
 |---|---|---|---|
-| **KV heads** | One per query head | One, shared by all | One per group |
-| **KV cache** | Largest | Smallest | Tunable middle |
-| **Quality** | Best | Noticeable degradation | Near-MHA |
-| **Used by** | Original Transformer | PaLM | LLaMA 2/3, [Mistral](../papers/language-models/95-mistral-7b/summary.md), most modern LLMs |
+| **What it changes** | How positions are encoded | Which tokens attend to which | What goes into the context at all |
+| **Cost at long length** | Still quadratic attention, big KV cache | Linear in length | Short context, plus a retrieval index |
+| **Sees everything at once** | Yes | Only indirectly, through layers and global tokens | No - only what was retrieved |
+| **Main failure mode** | Advertised length exceeds usable length ([RULER](../papers/techniques/132-ruler/summary.md)) | Misses exact long-range lookups | Retrieval misses the needed passage |
+| **Best for** | Whole-document reasoning within the effective window | Very long inputs on a budget | Large, changing knowledge bases |
 
 ### Positional Encoding
 
@@ -524,7 +536,7 @@ is orthogonal to all of them - it standardises how the tools are exposed, not ho
 
 ## Evaluation
 
-| | Static benchmarks (MMLU, HumanEval) | [LLM-as-a-Judge](../papers/techniques/85-llm-as-judge/summary.md) | Human arena (Elo) | [SWE-bench](../papers/techniques/84-swe-bench/summary.md) |
+| | Static benchmarks ([MMLU](../papers/techniques/137-mmlu/summary.md), HumanEval) | [LLM-as-a-Judge](../papers/techniques/85-llm-as-judge/summary.md) | Human arena (Elo) | [SWE-bench](../papers/techniques/84-swe-bench/summary.md), [OSWorld](../papers/techniques/139-osworld/summary.md) |
 |---|---|---|---|---|
 | **Cost** | Lowest | Low | High | Moderate (sandboxed runs) |
 | **Reproducible** | Yes | Mostly | No | Yes |
@@ -535,6 +547,8 @@ is orthogonal to all of them - it standardises how the tools are exposed, not ho
 **Read [Emergent Abilities](../papers/techniques/81-emergent-abilities/summary.md) alongside these.**
 Its pairing with the "Mirage" rebuttal is the clearest lesson in the collection that a metric
 choice - exact-match versus partial credit - can manufacture a discontinuity that isn't there.
+For the full picture - what each benchmark measures and how scores inflate - see the
+[benchmark explainers](../EXPLAINERS.md#benchmarks).
 
 ---
 

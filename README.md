@@ -690,7 +690,7 @@ Focus on "Why This Matters" sections + [Comparisons Guide](./docs/COMPARISONS.md
 |----------|-------|-------------------|
 | **Papers** | 144 | 35-45 hours |
 | **Explainers** | 31 | 12-15 hours |
-| **Source words compressed** | 1.4M+ | ~130 hours |
+| **Source words compressed** | 1.7M+ | ~160 hours |
 | **Words** | 350,000+ | - |
 | **Guides** | 6 | 3-5 hours |
 | **Terms Explained** | 144 | - |
