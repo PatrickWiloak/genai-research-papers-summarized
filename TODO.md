@@ -30,9 +30,9 @@ Working task list for **genai-research-papers-summarized**. Read this at the sta
       (ported from zero-to-hero). Baseline to judge against: GitHub referrers for this repo on 2026-09-30
       (`gh api repos/PatrickWiloak/genai-research-papers-summarized/traffic/popular/referrers`):
       Google 5 referrals / 5 uniques in 14 days, no other search engine; repo views 43 / 42 uniques.
-- [ ] **2026-10-07 check**: the next "Docs site" run's "Notify IndexNow" step says `IndexNow accepted`
-      (the first run on a new key can 403 `SiteVerificationNotCompleted`; fix with
-      `python3 scripts/notify_indexnow.py --all`).
+- [x] ~~IndexNow first submission~~ ✅ done 2026-09-30: the deploy step's first run was accepted
+      (HTTP 202, all 189 URLs). If a later run 403s, check `<site>/<key>.txt` is served
+      (key in `.github/site/indexnow-key.txt`) and rerun `python3 scripts/notify_indexnow.py --all`.
 - [ ] **2026-10-14 check**: Search Console -> Sitemaps shows `sitemap.xml` as read with ~190 URLs and
       Pages -> Indexed above zero (property `https://patrickwiloak.github.io/genai-research-papers-summarized/`,
       owners pat@noblerworks.com and the `nobler-reporting` service account).
