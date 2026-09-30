@@ -80,3 +80,13 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+
+      # Search engines hear about changed pages on deploy instead of waiting
+      # for a crawl. A failed ping warns but never fails the deploy.
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Notify IndexNow
+        continue-on-error: true
+        run: python3 scripts/notify_indexnow.py --before "${{ github.event.before }}" --after "${{ github.sha }}"

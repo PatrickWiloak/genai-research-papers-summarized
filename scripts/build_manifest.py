@@ -469,6 +469,13 @@ def build_site_tree(papers: list[dict], explainers: list[dict] | None = None) ->
         css_dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(css_src, css_dest)
 
+    # IndexNow ownership key, served at the site root as <key>.txt so
+    # scripts/notify_indexnow.py can name it as keyLocation.
+    key_src = ROOT / ".github" / "site" / "indexnow-key.txt"
+    if key_src.exists():
+        key = key_src.read_text(encoding="utf-8").strip()
+        (site / f"{key}.txt").write_text(key + "\n", encoding="utf-8")
+
     home_src = ROOT / ".github" / "site" / "home.md"
     if home_src.exists():
         (site / "README.md").write_text(render_home(papers, explainers or []), encoding="utf-8")

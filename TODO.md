@@ -23,6 +23,28 @@ Working task list for **genai-research-papers-summarized**. Read this at the sta
 - [x] ~~Commit and push the rewritten `LICENSE` + new `NOTICE`~~ ✅ done - on `main` since
       2026-08-31 (commit "Replace the hand-written CC BY summary with the canonical legal text").
 
+### Search (added 2026-09-30)
+
+- [x] ~~Per-page descriptions and search titles, Open Graph/Twitter cards, JSON-LD, noindex on
+      templates, IndexNow on deploy, Search Console URL-prefix property + sitemap~~ ✅ done 2026-09-30
+      (ported from zero-to-hero). Baseline to judge against: GitHub referrers for this repo on 2026-09-30
+      (`gh api repos/PatrickWiloak/genai-research-papers-summarized/traffic/popular/referrers`):
+      Google 5 referrals / 5 uniques in 14 days, no other search engine; repo views 43 / 42 uniques.
+- [ ] **2026-10-07 check**: the next "Docs site" run's "Notify IndexNow" step says `IndexNow accepted`
+      (the first run on a new key can 403 `SiteVerificationNotCompleted`; fix with
+      `python3 scripts/notify_indexnow.py --all`).
+- [ ] **2026-10-14 check**: Search Console -> Sitemaps shows `sitemap.xml` as read with ~190 URLs and
+      Pages -> Indexed above zero (property `https://patrickwiloak.github.io/genai-research-papers-summarized/`,
+      owners pat@noblerworks.com and the `nobler-reporting` service account).
+- [ ] **2026-10-30 judge**: re-pull the referrers above; target Google + Bing referrals up versus the
+      2026-09-30 baseline, and search queries appearing in Search Console -> Performance.
+- [ ] **Patrick: Bing Webmaster Tools** -> Import from Google Search Console (IndexNow already pings Bing;
+      Webmaster Tools shows what it did with them).
+- [ ] **Decide: custom domain?** A `github.io/<repo>` subpath cannot serve `robots.txt` (the root 404s), and
+      the site shares a host with every other project page. Something like `ai.patrickwiloak.com` would be
+      covered by the existing `sc-domain:patrickwiloak.com` Search Console property. Costs: a DNS record,
+      `site_url` change, and a redirect period. Same decision is open for zero-to-hero - decide both together.
+
 ### Content
 - [ ] 🟡 Work through the (new) high-priority queue in [`docs/GAPS.md`](./docs/GAPS.md): SWE-agent,
       AlphaCode, Toy Models of Superposition, Alignment Faking, Constitutional Classifiers, Ring

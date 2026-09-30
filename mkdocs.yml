@@ -34,6 +34,9 @@ use_directory_urls: true
 
 theme:
   name: material
+  # Open Graph / Twitter tags, the per-page <title>, JSON-LD and the Search
+  # Console tag. Fills Material's extrahead block; see the note in the file.
+  custom_dir: .github/site-overrides
   language: en
   icon:
     repo: fontawesome/brands/github
@@ -92,6 +95,11 @@ theme:
   font:
     text: Geist
     code: Geist Mono
+
+# Per-page description, search title, JSON-LD and noindex, set on page.meta at
+# build time. See the docstring in scripts/site_hooks.py.
+hooks:
+  - scripts/site_hooks.py
 
 plugins:
   - search:
@@ -159,6 +167,9 @@ validation:
   anchors: warn
 
 extra:
+  # Search Console ownership for the URL-prefix property of this site. Rendered
+  # as <meta name="google-site-verification"> by the head override.
+  google_site_verification: "IiZNJDxVVPECZMC0xTbmls7EdKJm0Bs5wgq7k3HEwPc"
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/PatrickWiloak/genai-research-papers-summarized
