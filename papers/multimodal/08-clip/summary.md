@@ -705,5 +705,7 @@ Generalizing beyond training distribution.
 - [DALL-E 3: Improving Image Generation with Better Captions](../../image-generation/48-dalle3/summary.md)
 - [Language Models are Unsupervised Multitask Learners (GPT-2)](../../language-models/64-gpt2/summary.md)
 - [Deep Residual Learning for Image Recognition (ResNet)](../../architectures/73-resnet/summary.md)
+- [Hierarchical Text-Conditional Image Generation with CLIP Latents (DALL-E 2 / unCLIP)](../../image-generation/119-dalle2-unclip/summary.md)
+- [Adam: A Method for Stochastic Optimization (Adam)](../../techniques/142-adam/summary.md)
 
 <!-- related:end -->

@@ -203,5 +203,6 @@ The result is a change of coordinates from the model's compressed, entangled bas
 - [Constitutional AI: Harmlessness from AI Feedback](../../language-models/14-constitutional-ai/summary.md)
 - [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
 - [Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training](../../techniques/83-sleeper-agents/summary.md)
+- [In-context Learning and Induction Heads (Induction Heads)](../../techniques/126-induction-heads/summary.md)
 
 <!-- related:end -->

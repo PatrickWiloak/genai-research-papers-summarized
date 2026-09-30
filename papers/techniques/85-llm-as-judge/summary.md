@@ -177,5 +177,6 @@ Compare GPT-4's judgments against human votes on the same pairs. Agreement was r
 - [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
 - [RLVR: Reinforcement Learning from Verifiable Rewards](../../techniques/39-rlvr/summary.md)
 - [Self-Instruct: Aligning Language Models with Self-Generated Instructions](../../techniques/79-self-instruct/summary.md)
+- [Measuring Massive Multitask Language Understanding (MMLU)](../../techniques/137-mmlu/summary.md)
 
 <!-- related:end -->

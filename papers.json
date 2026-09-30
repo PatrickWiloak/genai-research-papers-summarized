@@ -1,11 +1,13 @@
 {
-  "count": 107,
+  "count": 144,
   "categories": [
     "architectures",
     "language-models",
     "image-generation",
     "multimodal",
-    "techniques"
+    "robotics",
+    "techniques",
+    "essays"
   ],
   "papers": [
     {
@@ -1668,6 +1670,594 @@
         "agents",
         "reinforcement-learning",
         "reasoning"
+      ]
+    },
+    {
+      "number": 108,
+      "title": "Computing Machinery and Intelligence (The Imitation Game / Turing Test)",
+      "slug": "108-computing-machinery-and-intelligence",
+      "category": "essays",
+      "authors": "Alan M. Turing (University of Manchester)",
+      "published": "October 1950 (Mind, Vol. 59, No. 236, pp. 433-460)",
+      "year": 1950,
+      "url": "https://academic.oup.com/mind/article/LIX/236/433/986238",
+      "path": "papers/essays/108-computing-machinery-and-intelligence/summary.md",
+      "topics": [
+        "essay",
+        "history",
+        "evaluation"
+      ]
+    },
+    {
+      "number": 109,
+      "title": "The Unreasonable Effectiveness of Recurrent Neural Networks (char-rnn)",
+      "slug": "109-unreasonable-effectiveness-of-rnns",
+      "category": "essays",
+      "authors": "Andrej Karpathy (Stanford University)",
+      "published": "May 2015 (blog post, karpathy.github.io)",
+      "year": 2015,
+      "url": "https://karpathy.github.io/2015/05/21/rnn-effectiveness/",
+      "path": "papers/essays/109-unreasonable-effectiveness-of-rnns/summary.md",
+      "topics": [
+        "essay",
+        "language-model",
+        "history"
+      ]
+    },
+    {
+      "number": 110,
+      "title": "Software 2.0",
+      "slug": "110-software-2",
+      "category": "essays",
+      "authors": "Andrej Karpathy (Tesla)",
+      "published": "November 2017 (Medium)",
+      "year": 2017,
+      "url": "https://karpathy.medium.com/software-2-0-a64152b37c35",
+      "path": "papers/essays/110-software-2/summary.md",
+      "topics": [
+        "essay",
+        "code"
+      ]
+    },
+    {
+      "number": 111,
+      "title": "The Bitter Lesson",
+      "slug": "111-bitter-lesson",
+      "category": "essays",
+      "authors": "Richard S. Sutton (University of Alberta; DeepMind)",
+      "published": "March 2019 (essay, incompleteideas.net)",
+      "year": 2019,
+      "url": "http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
+      "path": "papers/essays/111-bitter-lesson/summary.md",
+      "topics": [
+        "essay",
+        "scaling"
+      ]
+    },
+    {
+      "number": 112,
+      "title": "The Scaling Hypothesis",
+      "slug": "112-scaling-hypothesis",
+      "category": "essays",
+      "authors": "Gwern Branwen (independent researcher)",
+      "published": "May 2020 (gwern.net; revised through 2022, with later editorial notes)",
+      "year": 2020,
+      "url": "https://gwern.net/scaling-hypothesis",
+      "path": "papers/essays/112-scaling-hypothesis/summary.md",
+      "topics": [
+        "essay",
+        "scaling"
+      ]
+    },
+    {
+      "number": 113,
+      "title": "Situational Awareness: The Decade Ahead (Situational Awareness)",
+      "slug": "113-situational-awareness",
+      "category": "essays",
+      "authors": "Leopold Aschenbrenner (independent; formerly OpenAI Superalignment team)",
+      "published": "June 2024 (self-published essay series)",
+      "year": 2024,
+      "url": "https://situational-awareness.ai/",
+      "path": "papers/essays/113-situational-awareness/summary.md",
+      "topics": [
+        "essay",
+        "scaling",
+        "policy"
+      ]
+    },
+    {
+      "number": 114,
+      "title": "Machines of Loving Grace: How AI Could Transform the World for the Better (Machines of Loving Grace)",
+      "slug": "114-machines-of-loving-grace",
+      "category": "essays",
+      "authors": "Dario Amodei (Anthropic)",
+      "published": "October 2024 (personal essay, darioamodei.com)",
+      "year": 2024,
+      "url": "https://www.darioamodei.com/essay/machines-of-loving-grace",
+      "path": "papers/essays/114-machines-of-loving-grace/summary.md",
+      "topics": [
+        "essay",
+        "science",
+        "policy"
+      ]
+    },
+    {
+      "number": 115,
+      "title": "Building Effective Agents (Building Effective Agents)",
+      "slug": "115-building-effective-agents",
+      "category": "essays",
+      "authors": "Erik Schluntz, Barry Zhang (Anthropic)",
+      "published": "December 2024 (Anthropic engineering blog)",
+      "year": 2024,
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "path": "papers/essays/115-building-effective-agents/summary.md",
+      "topics": [
+        "essay",
+        "agents",
+        "tool-use"
+      ]
+    },
+    {
+      "number": 116,
+      "title": "Welcome to the Era of Experience (Era of Experience)",
+      "slug": "116-era-of-experience",
+      "category": "essays",
+      "authors": "David Silver (Google DeepMind), Richard S. Sutton (University of Alberta)",
+      "published": "April 2025 (preprint of a chapter for \"Designing an Intelligence\", ed. George Konidaris, MIT Press)",
+      "year": 2025,
+      "url": "https://storage.googleapis.com/deepmind-media/Era-of-Experience%20/The%20Era%20of%20Experience%20Paper.pdf",
+      "path": "papers/essays/116-era-of-experience/summary.md",
+      "topics": [
+        "essay",
+        "reinforcement-learning",
+        "agents"
+      ]
+    },
+    {
+      "number": 117,
+      "title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis (NeRF)",
+      "slug": "117-nerf",
+      "category": "image-generation",
+      "authors": "Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng (UC Berkeley, Google Research, UC San Diego)",
+      "published": "March 2020 (ECCV 2020, oral; Best Paper Honorable Mention)",
+      "year": 2020,
+      "url": "https://arxiv.org/abs/2003.08934",
+      "path": "papers/image-generation/117-nerf/summary.md",
+      "topics": [
+        "3d",
+        "image-generation",
+        "computer-vision"
+      ]
+    },
+    {
+      "number": 118,
+      "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering (3D Gaussian Splatting)",
+      "slug": "118-3d-gaussian-splatting",
+      "category": "image-generation",
+      "authors": "Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler, George Drettakis (Inria and Université Côte d'Azur, Max-Planck-Institut für Informatik)",
+      "published": "August 2023 (SIGGRAPH 2023, ACM Transactions on Graphics 42(4); Best Paper Award)",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2308.04079",
+      "path": "papers/image-generation/118-3d-gaussian-splatting/summary.md",
+      "topics": [
+        "3d",
+        "computer-vision",
+        "efficiency"
+      ]
+    },
+    {
+      "number": 119,
+      "title": "Hierarchical Text-Conditional Image Generation with CLIP Latents (DALL-E 2 / unCLIP)",
+      "slug": "119-dalle2-unclip",
+      "category": "image-generation",
+      "authors": "Aditya Ramesh, Prafulla Dhariwal, Alex Nichol, Casey Chu, Mark Chen (OpenAI)",
+      "published": "April 2022",
+      "year": 2022,
+      "url": "https://arxiv.org/abs/2204.06125",
+      "path": "papers/image-generation/119-dalle2-unclip/summary.md",
+      "topics": [
+        "image-generation",
+        "diffusion",
+        "text-to-image"
+      ]
+    },
+    {
+      "number": 120,
+      "title": "Consistency Models (Consistency Models)",
+      "slug": "120-consistency-models",
+      "category": "image-generation",
+      "authors": "Yang Song, Prafulla Dhariwal, Mark Chen, Ilya Sutskever (OpenAI)",
+      "published": "March 2023 (ICML 2023)",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2303.01469",
+      "path": "papers/image-generation/120-consistency-models/summary.md",
+      "topics": [
+        "image-generation",
+        "diffusion",
+        "inference-optimization"
+      ]
+    },
+    {
+      "number": 121,
+      "title": "AudioLM: a Language Modeling Approach to Audio Generation (AudioLM)",
+      "slug": "121-audiolm",
+      "category": "multimodal",
+      "authors": "Zalán Borsos, Raphaël Marinier, Damien Vincent, Eugene Kharitonov, Olivier Pietquin, Matt Sharifi, Dominik Roblek, Olivier Teboul, David Grangier, Marco Tagliasacchi, Neil Zeghidour (Google Research)",
+      "published": "September 2022 (IEEE/ACM Transactions on Audio, Speech, and Language Processing, 2023)",
+      "year": 2022,
+      "url": "https://arxiv.org/abs/2209.03143",
+      "path": "papers/multimodal/121-audiolm/summary.md",
+      "topics": [
+        "audio",
+        "language-model",
+        "discrete-representation"
+      ]
+    },
+    {
+      "number": 122,
+      "title": "Neural Codec Language Models are Zero-Shot Text to Speech Synthesizers (VALL-E)",
+      "slug": "122-vall-e",
+      "category": "multimodal",
+      "authors": "Chengyi Wang, Sanyuan Chen, Yu Wu, Ziqiang Zhang, Long Zhou, Shujie Liu, Zhuo Chen, Yanqing Liu, Huaming Wang, Jinyu Li, Lei He, Sheng Zhao, Furu Wei (Microsoft)",
+      "published": "January 2023",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2301.02111",
+      "path": "papers/multimodal/122-vall-e/summary.md",
+      "topics": [
+        "audio",
+        "language-model",
+        "safety"
+      ]
+    },
+    {
+      "number": 123,
+      "title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control (RT-2)",
+      "slug": "123-rt2",
+      "category": "robotics",
+      "authors": "Anthony Brohan, Noah Brown, ... Brianna Zitkovich (54 authors, Google DeepMind)",
+      "published": "July 2023 (CoRL 2023)",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2307.15818",
+      "path": "papers/robotics/123-rt2/summary.md",
+      "topics": [
+        "robotics",
+        "multimodal",
+        "transfer-learning"
+      ]
+    },
+    {
+      "number": 124,
+      "title": "pi0: A Vision-Language-Action Flow Model for General Robot Control (pi0)",
+      "slug": "124-pi0",
+      "category": "robotics",
+      "authors": "Kevin Black, Noah Brown, Danny Driess, ... Ury Zhilinsky (24 authors, Physical Intelligence)",
+      "published": "October 2024 (RSS 2025)",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2410.24164",
+      "path": "papers/robotics/124-pi0/summary.md",
+      "topics": [
+        "robotics",
+        "flow-matching",
+        "multimodal"
+      ]
+    },
+    {
+      "number": 125,
+      "title": "Open X-Embodiment: Robotic Learning Datasets and RT-X Models (Open X-Embodiment / RT-X)",
+      "slug": "125-open-x-embodiment",
+      "category": "robotics",
+      "authors": "Open X-Embodiment Collaboration - more than 290 researchers from 21 institutions, including Google DeepMind, Stanford, UC Berkeley and many others",
+      "published": "October 2023 (ICRA 2024, Best Conference Paper)",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2310.08864",
+      "path": "papers/robotics/125-open-x-embodiment/summary.md",
+      "topics": [
+        "robotics",
+        "scaling",
+        "benchmarks"
+      ]
+    },
+    {
+      "number": 126,
+      "title": "In-context Learning and Induction Heads (Induction Heads)",
+      "slug": "126-induction-heads",
+      "category": "techniques",
+      "authors": "Catherine Olsson, Nelson Elhage, Neel Nanda, Nicholas Joseph, Nova DasSarma, Tom Henighan, Ben Mann, Amanda Askell, Yuntao Bai, Anna Chen, Tom Conerly, Dawn Drain, Deep Ganguli, Zac Hatfield-Dodds, Danny Hernandez, Scott Johnston, Andy Jones, Jackson Kernion, Liane Lovitt, Kamal Ndousse, Dario Amodei, Tom Brown, Jack Clark, Jared Kaplan, Sam McCandlish, Chris Olah (Anthropic)",
+      "published": "March 2022 (Transformer Circuits Thread; arXiv September 2022)",
+      "year": 2022,
+      "url": "https://arxiv.org/abs/2209.11895",
+      "path": "papers/techniques/126-induction-heads/summary.md",
+      "topics": [
+        "interpretability",
+        "attention",
+        "transformers"
+      ]
+    },
+    {
+      "number": 127,
+      "title": "Universal and Transferable Adversarial Attacks on Aligned Language Models (GCG)",
+      "slug": "127-gcg-adversarial-attacks",
+      "category": "techniques",
+      "authors": "Andy Zou, Zifan Wang, Nicholas Carlini, Milad Nasr, J. Zico Kolter, Matt Fredrikson (Carnegie Mellon University, Center for AI Safety, Google DeepMind, Bosch Center for AI)",
+      "published": "July 2023 (arXiv)",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2307.15043",
+      "path": "papers/techniques/127-gcg-adversarial-attacks/summary.md",
+      "topics": [
+        "safety",
+        "alignment",
+        "evaluation"
+      ]
+    },
+    {
+      "number": 128,
+      "title": "Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision (Weak-to-Strong)",
+      "slug": "128-weak-to-strong",
+      "category": "techniques",
+      "authors": "Collin Burns, Pavel Izmailov, Jan Hendrik Kirchner, Bowen Baker, Leo Gao, Leopold Aschenbrenner, Yining Chen, Adrien Ecoffet, Manas Joglekar, Jan Leike, Ilya Sutskever, Jeff Wu (OpenAI)",
+      "published": "December 2023 (ICML 2024)",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2312.09390",
+      "path": "papers/techniques/128-weak-to-strong/summary.md",
+      "topics": [
+        "alignment",
+        "safety",
+        "scaling"
+      ]
+    },
+    {
+      "number": 129,
+      "title": "Red Teaming Language Models with Language Models (LM Red Teaming)",
+      "slug": "129-red-teaming-lms",
+      "category": "techniques",
+      "authors": "Ethan Perez, Saffron Huang, Francis Song, Trevor Cai, Roman Ring, John Aslanides, Amelia Glaese, Nat McAleese, Geoffrey Irving (DeepMind; Perez also New York University)",
+      "published": "February 2022 (EMNLP 2022)",
+      "year": 2022,
+      "url": "https://arxiv.org/abs/2202.03286",
+      "path": "papers/techniques/129-red-teaming-lms/summary.md",
+      "topics": [
+        "safety",
+        "evaluation",
+        "alignment"
+      ]
+    },
+    {
+      "number": 130,
+      "title": "YaRN: Efficient Context Window Extension of Large Language Models (YaRN)",
+      "slug": "130-yarn-context-extension",
+      "category": "techniques",
+      "authors": "Bowen Peng, Jeffrey Quesnelle, Honglu Fan, Enrico Shippole (Nous Research, EleutherAI, University of Geneva)",
+      "published": "August 2023 (ICLR 2024)",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2309.00071",
+      "path": "papers/techniques/130-yarn-context-extension/summary.md",
+      "topics": [
+        "long-context",
+        "position-encoding",
+        "fine-tuning"
+      ]
+    },
+    {
+      "number": 131,
+      "title": "Longformer: The Long-Document Transformer (Longformer)",
+      "slug": "131-longformer",
+      "category": "architectures",
+      "authors": "Iz Beltagy, Matthew E. Peters, Arman Cohan (Allen Institute for Artificial Intelligence)",
+      "published": "April 2020 (arXiv; v2 December 2020 added the encoder-decoder LED)",
+      "year": 2020,
+      "url": "https://arxiv.org/abs/2004.05150",
+      "path": "papers/architectures/131-longformer/summary.md",
+      "topics": [
+        "attention",
+        "long-context",
+        "efficiency"
+      ]
+    },
+    {
+      "number": 132,
+      "title": "RULER: What's the Real Context Size of Your Long-Context Language Models? (RULER)",
+      "slug": "132-ruler",
+      "category": "techniques",
+      "authors": "Cheng-Ping Hsieh, Simeng Sun, Samuel Kriman, Shantanu Acharya, Dima Rekesh, Fei Jia, Yang Zhang, Boris Ginsburg (NVIDIA)",
+      "published": "April 2024 (COLM 2024)",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2404.06654",
+      "path": "papers/techniques/132-ruler/summary.md",
+      "topics": [
+        "long-context",
+        "evaluation",
+        "benchmarks"
+      ]
+    },
+    {
+      "number": 133,
+      "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale (FineWeb)",
+      "slug": "133-fineweb",
+      "category": "techniques",
+      "authors": "Guilherme Penedo, Hynek Kydlíček, Loubna Ben allal, Anton Lozhkov, Margaret Mitchell, Colin Raffel, Leandro Von Werra, Thomas Wolf (Hugging Face)",
+      "published": "June 2024 (NeurIPS 2024 Datasets and Benchmarks Track)",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2406.17557",
+      "path": "papers/techniques/133-fineweb/summary.md",
+      "topics": [
+        "pretraining",
+        "datasets",
+        "data-curation"
+      ]
+    },
+    {
+      "number": 134,
+      "title": "Distilling the Knowledge in a Neural Network (Knowledge Distillation)",
+      "slug": "134-knowledge-distillation",
+      "category": "techniques",
+      "authors": "Geoffrey Hinton, Oriol Vinyals, Jeff Dean (Google)",
+      "published": "March 2015 (NIPS 2014 Deep Learning Workshop)",
+      "year": 2015,
+      "url": "https://arxiv.org/abs/1503.02531",
+      "path": "papers/techniques/134-knowledge-distillation/summary.md",
+      "topics": [
+        "efficiency",
+        "distillation",
+        "transfer-learning"
+      ]
+    },
+    {
+      "number": 135,
+      "title": "Textbooks Are All You Need (phi-1)",
+      "slug": "135-phi-1-textbooks",
+      "category": "language-models",
+      "authors": "Suriya Gunasekar, Yi Zhang, Jyoti Aneja, Caio César Teodoro Mendes, Allie Del Giorno, Sivakanth Gopi, Mojan Javaheripi, Piero Kauffmann, Gustavo de Rosa, Olli Saarikivi, Adil Salim, Shital Shah, Harkirat Singh Behl, Xin Wang, Sébastien Bubeck, Ronen Eldan, Adam Tauman Kalai, Yin Tat Lee, Yuanzhi Li (Microsoft Research)",
+      "published": "June 2023 (arXiv preprint)",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2306.11644",
+      "path": "papers/language-models/135-phi-1-textbooks/summary.md",
+      "topics": [
+        "language-model",
+        "synthetic-data",
+        "code"
+      ]
+    },
+    {
+      "number": 136,
+      "title": "Neural Machine Translation of Rare Words with Subword Units (BPE)",
+      "slug": "136-bpe-subword-units",
+      "category": "techniques",
+      "authors": "Rico Sennrich, Barry Haddow, Alexandra Birch (University of Edinburgh)",
+      "published": "August 2015 (arXiv); August 2016 (ACL 2016)",
+      "year": 2015,
+      "url": "https://arxiv.org/abs/1508.07909",
+      "path": "papers/techniques/136-bpe-subword-units/summary.md",
+      "topics": [
+        "tokenization",
+        "language-model",
+        "embeddings"
+      ]
+    },
+    {
+      "number": 137,
+      "title": "Measuring Massive Multitask Language Understanding (MMLU)",
+      "slug": "137-mmlu",
+      "category": "techniques",
+      "authors": "Dan Hendrycks, Collin Burns, Steven Basart, Andy Zou, Mantas Mazeika, Dawn Song, Jacob Steinhardt (UC Berkeley, Columbia University, University of Chicago, UIUC)",
+      "published": "September 2020 (ICLR 2021)",
+      "year": 2020,
+      "url": "https://arxiv.org/abs/2009.03300",
+      "path": "papers/techniques/137-mmlu/summary.md",
+      "topics": [
+        "evaluation",
+        "benchmarks"
+      ]
+    },
+    {
+      "number": 138,
+      "title": "On the Measure of Intelligence (ARC)",
+      "slug": "138-arc-agi",
+      "category": "techniques",
+      "authors": "François Chollet (Google)",
+      "published": "November 2019 (arXiv preprint)",
+      "year": 2019,
+      "url": "https://arxiv.org/abs/1911.01547",
+      "path": "papers/techniques/138-arc-agi/summary.md",
+      "topics": [
+        "evaluation",
+        "benchmarks",
+        "reasoning"
+      ]
+    },
+    {
+      "number": 139,
+      "title": "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments (OSWorld)",
+      "slug": "139-osworld",
+      "category": "techniques",
+      "authors": "Tianbao Xie, Danyang Zhang, Jixuan Chen, Xiaochuan Li, Siheng Zhao, Ruisheng Cao, Toh Jing Hua, Zhoujun Cheng, Dongchan Shin, Fangyu Lei, Yitao Liu, Yiheng Xu, Shuyan Zhou, Silvio Savarese, Caiming Xiong, Victor Zhong, Tao Yu (University of Hong Kong, Carnegie Mellon University, Salesforce Research, University of Waterloo)",
+      "published": "April 2024 (NeurIPS 2024 Datasets and Benchmarks Track)",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2404.07972",
+      "path": "papers/techniques/139-osworld/summary.md",
+      "topics": [
+        "evaluation",
+        "benchmarks",
+        "agents"
+      ]
+    },
+    {
+      "number": 140,
+      "title": "AI Models Collapse When Trained on Recursively Generated Data (Model Collapse)",
+      "slug": "140-model-collapse",
+      "category": "techniques",
+      "authors": "Ilia Shumailov, Zakhar Shumaylov, Yiren Zhao, Nicolas Papernot, Ross Anderson, Yarin Gal (University of Oxford, University of Cambridge, Imperial College London, University of Toronto and Vector Institute, University of Edinburgh)",
+      "published": "July 2024 (Nature 631, 755-759); earlier preprint May 2023 as \"The Curse of Recursion\"",
+      "year": 2024,
+      "url": "https://www.nature.com/articles/s41586-024-07566-y",
+      "path": "papers/techniques/140-model-collapse/summary.md",
+      "topics": [
+        "synthetic-data",
+        "pretraining",
+        "evaluation"
+      ]
+    },
+    {
+      "number": 141,
+      "title": "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model (Multi-head Latent Attention)",
+      "slug": "141-multi-head-latent-attention",
+      "category": "architectures",
+      "authors": "DeepSeek-AI",
+      "published": "May 2024 (arXiv)",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2405.04434",
+      "path": "papers/architectures/141-multi-head-latent-attention/summary.md",
+      "topics": [
+        "attention",
+        "architecture",
+        "efficiency",
+        "inference-optimization"
+      ]
+    },
+    {
+      "number": 142,
+      "title": "Adam: A Method for Stochastic Optimization (Adam)",
+      "slug": "142-adam",
+      "category": "techniques",
+      "authors": "Diederik P. Kingma, Jimmy Lei Ba (University of Amsterdam and OpenAI; University of Toronto)",
+      "published": "December 2014 (ICLR 2015)",
+      "year": 2014,
+      "url": "https://arxiv.org/abs/1412.6980",
+      "path": "papers/techniques/142-adam/summary.md",
+      "topics": [
+        "optimization",
+        "training"
+      ]
+    },
+    {
+      "number": 143,
+      "title": "Mixed Precision Training",
+      "slug": "143-mixed-precision-training",
+      "category": "techniques",
+      "authors": "Paulius Micikevicius, Sharan Narang, Jonah Alben, Gregory Diamos, Erich Elsen, David Garcia, Boris Ginsburg, Michael Houston, Oleksii Kuchaiev, Ganesh Venkatesh, Hao Wu (NVIDIA, Baidu Research)",
+      "published": "October 2017 (ICLR 2018)",
+      "year": 2017,
+      "url": "https://arxiv.org/abs/1710.03740",
+      "path": "papers/techniques/143-mixed-precision-training/summary.md",
+      "topics": [
+        "efficiency",
+        "training",
+        "systems"
+      ]
+    },
+    {
+      "number": 144,
+      "title": "Muon: An Optimizer for Hidden Layers, and Muon is Scalable for LLM Training (Muon)",
+      "slug": "144-muon",
+      "category": "techniques",
+      "authors": "Keller Jordan, with Yuchen Jin, Vlado Boza, Jiacheng You, Franz Cesista, Laker Newhouse, Jeremy Bernstein (independent researchers and academic collaborators) - Muon post; Jingyuan Liu, Jianlin Su, Xingcheng Yao, Zhejun Jiang, Guokun Lai, Yulun Du, Yidao Qin, Weixin Xu, Enzhe Lu, Junjie Yan, Yanru Chen, Huabin Zheng, Yibo Liu, Shaowei Liu, Bohong Yin, Weiran He, Han Zhu, Yuzhi Wang, Jianzhou Wang, Mengnan Dong, Zheng Zhang, Yongsheng Kang, Hao Zhang, Xinran Xu, Yutao Zhang, Yuxin Wu, Xinyu Zhou, Zhilin Yang (Moonshot AI, UCLA) - scaling paper",
+      "published": "December 2024 (blog post); February 2025 (arXiv preprint)",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2502.16982",
+      "path": "papers/techniques/144-muon/summary.md",
+      "topics": [
+        "optimization",
+        "training",
+        "efficiency"
       ]
     }
   ]

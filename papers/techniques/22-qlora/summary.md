@@ -248,5 +248,7 @@ The broader effect was structural: QLoRA made it economically viable for small t
 - [GPT-4 Technical Report](../../language-models/36-gpt4/summary.md)
 - [LLaVA: Visual Instruction Tuning](../../multimodal/46-llava/summary.md)
 - [GPTQ and AWQ: Post-Training Quantization for Large Language Models](../../techniques/86-gptq-awq-quantization/summary.md)
+- [Measuring Massive Multitask Language Understanding (MMLU)](../../techniques/137-mmlu/summary.md)
+- [Adam: A Method for Stochastic Optimization (Adam)](../../techniques/142-adam/summary.md)
 
 <!-- related:end -->

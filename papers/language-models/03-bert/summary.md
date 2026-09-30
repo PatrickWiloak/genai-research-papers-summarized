@@ -415,5 +415,6 @@ Input: [CLS] Barack Obama was born in Hawaii [SEP]
 ## Related in This Collection
 
 - [Language Models are Few-Shot Learners (GPT-3)](../../language-models/04-gpt3-few-shot-learners/summary.md)
+- [Longformer: The Long-Document Transformer (Longformer)](../../architectures/131-longformer/summary.md)
 
 <!-- related:end -->

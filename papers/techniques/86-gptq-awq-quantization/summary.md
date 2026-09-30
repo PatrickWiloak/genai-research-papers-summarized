@@ -213,5 +213,6 @@ Choosing scales by activation statistics rather than weight statistics is the pa
 - [Speculative Decoding: Fast Inference from Transformers](../../techniques/45-speculative-decoding/summary.md)
 - [PagedAttention: Efficient LLM Serving with vLLM](../../techniques/52-pagedattention-vllm/summary.md)
 - [GQA: Grouped-Query Attention (and Multi-Query Attention)](../../architectures/75-grouped-query-attention/summary.md)
+- [Mixed Precision Training](../../techniques/143-mixed-precision-training/summary.md)
 
 <!-- related:end -->

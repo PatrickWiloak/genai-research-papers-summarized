@@ -1,6 +1,6 @@
 # Browse All Papers
 
-A visual grid of **every one of the 107 summaries**, grouped by category and ordered by paper number, with an editorial relevance badge and a three-line pitch each. Use it to scan the whole collection quickly; for the generated, always-current listings see the [Paper Index](./INDEX.md) or browse [by topic tag](./TAGS.md). **Looking for a learning path?** See [docs/ROADMAP.md](./docs/ROADMAP.md) or the [README](./README.md) for numbered reading orders. **Wondering what is not here yet?** See [Coverage & Gaps](./docs/GAPS.md).
+A visual grid of **every one of the 144 summaries**, grouped by category and ordered by paper number, with an editorial relevance badge and a three-line pitch each. Use it to scan the whole collection quickly; for the generated, always-current listings see the [Paper Index](./INDEX.md) or browse [by topic tag](./TAGS.md). **Looking for a learning path?** See [docs/ROADMAP.md](./docs/ROADMAP.md) or the [README](./README.md) for numbered reading orders. **Wondering what is not here yet?** See [Coverage & Gaps](./docs/GAPS.md).
 
 The badges and pitches on this page are editorial judgements, not claims from the papers.
 
@@ -8,7 +8,7 @@ The badges and pitches on this page are editorial judgements, not claims from th
 
 ## 🏗️ Foundational Architectures
 
-The backbone papers - what the models are actually built out of, from the 2014 attention mechanism through the Transformer, ViT, sparse MoE and the state-space challengers. **11 papers.**
+The backbone papers - what the models are actually built out of, from the 2014 attention mechanism through the Transformer, ViT, sparse MoE and the state-space challengers. **13 papers.**
 
 <table>
 <tr>
@@ -121,11 +121,35 @@ The backbone papers - what the models are actually built out of, from the 2014 a
 </tr>
 </table>
 
+<table>
+<tr>
+<td width="33%">
+
+**[Longformer](./papers/architectures/131-longformer/summary.md)** (2020)
+- ⭐ **HIGH** - Linear-cost attention for long documents
+- Sliding window plus global tokens
+- Continued pretraining from RoBERTa
+- [Paper](https://arxiv.org/abs/2004.05150)
+
+</td>
+<td width="33%">
+
+**[Multi-head Latent Attention (DeepSeek-V2)](./papers/architectures/141-multi-head-latent-attention/summary.md)** (2024)
+- 🔥 **CRITICAL** - GQA's successor
+- Cache a small latent, not keys and values
+- 93% smaller KV cache, better quality
+- [Paper](https://arxiv.org/abs/2405.04434)
+
+</td>
+<td width="33%"></td>
+</tr>
+</table>
+
 ---
 
 ## 🤖 Language Models
 
-The model releases themselves, in lineage order: GPT-1 through GPT-5, the BERT and T5 branch, the Llama and Mistral open-weight line, and the frontier reasoning models. **25 papers.**
+The model releases themselves, in lineage order: GPT-1 through GPT-5, the BERT and T5 branch, the Llama and Mistral open-weight line, and the frontier reasoning models. **26 papers.**
 
 <table>
 <tr>
@@ -377,11 +401,27 @@ The model releases themselves, in lineage order: GPT-1 through GPT-5, the BERT a
 </tr>
 </table>
 
+<table>
+<tr>
+<td width="33%">
+
+**[phi-1 (Textbooks Are All You Need)](./papers/language-models/135-phi-1-textbooks/summary.md)** (2023)
+- ⭐ **HIGH** - Data quality over quantity
+- 1.3B model, 50.6% HumanEval
+- Filtered and synthetic textbook data
+- [Paper](https://arxiv.org/abs/2306.11644)
+
+</td>
+<td width="33%"></td>
+<td width="33%"></td>
+</tr>
+</table>
+
 ---
 
-## 🎨 Image & Video Generation
+## 🎨 Image, Video & 3D Generation
 
-From VAEs and GANs through the diffusion pipeline that replaced them, the tokenizer line that made images modellable, and the video models built on top. **14 papers.**
+From VAEs and GANs through the diffusion pipeline that replaced them, the tokenizer line that made images modellable, the video models built on top, and neural 3D scene representation. **18 papers.**
 
 <table>
 <tr>
@@ -523,11 +563,56 @@ From VAEs and GANs through the diffusion pipeline that replaced them, the tokeni
 </tr>
 </table>
 
+<table>
+<tr>
+<td width="33%">
+
+**[NeRF](./papers/image-generation/117-nerf/summary.md)** (2020)
+- 🔥 **CRITICAL** - A 3D scene stored in a neural network
+- Photoreal novel views from photos
+- Volume rendering through an MLP
+- [Paper](https://arxiv.org/abs/2003.08934)
+
+</td>
+<td width="33%">
+
+**[3D Gaussian Splatting](./papers/image-generation/118-3d-gaussian-splatting/summary.md)** (2023)
+- 🔥 **CRITICAL** - Real-time photoreal 3D
+- Millions of 3D Gaussians, rasterised fast
+- NeRF quality at real-time speed
+- [Paper](https://arxiv.org/abs/2308.04079)
+
+</td>
+<td width="33%">
+
+**[DALL-E 2 (unCLIP)](./papers/image-generation/119-dalle2-unclip/summary.md)** (2022)
+- ⭐ **HIGH** - CLIP latents to images
+- Prior maps text to CLIP image embedding
+- Diffusion decoder paints the image
+- [Paper](https://arxiv.org/abs/2204.06125)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Consistency Models](./papers/image-generation/120-consistency-models/summary.md)** (2023)
+- ⭐ **HIGH** - Diffusion quality in one step
+- Map any noisy point straight to the output
+- Distilled or trained from scratch
+- [Paper](https://arxiv.org/abs/2303.01469)
+
+</td>
+<td width="33%"></td>
+<td width="33%"></td>
+</tr>
+</table>
+
 ---
 
-## 🔗 Multimodal
+## 🔗 Multimodal & Audio
 
-Models that cross modalities - vision-language, speech, video, and the omni-models that fold them into a single network. **7 papers.**
+Models that cross modalities - vision-language, speech recognition and generation, video, and the omni-models that fold them into a single network. **9 papers.**
 
 <table>
 <tr>
@@ -607,11 +692,35 @@ Models that cross modalities - vision-language, speech, video, and the omni-mode
 </tr>
 </table>
 
+<table>
+<tr>
+<td width="33%">
+
+**[AudioLM](./papers/multimodal/121-audiolm/summary.md)** (2022)
+- ⭐ **HIGH** - Language modelling for sound
+- Semantic plus acoustic tokens
+- Coherent speech and piano continuations
+- [Paper](https://arxiv.org/abs/2209.03143)
+
+</td>
+<td width="33%">
+
+**[VALL-E](./papers/multimodal/122-vall-e/summary.md)** (2023)
+- ⭐ **HIGH** - Voice cloning from 3 seconds
+- Text-to-speech as codec language modelling
+- Zero-shot speaker imitation
+- [Paper](https://arxiv.org/abs/2301.02111)
+
+</td>
+<td width="33%"></td>
+</tr>
+</table>
+
 ---
 
 ## ⚡ Techniques & Methods
 
-The methods layer: how models are trained, aligned, made to reason, served fast, evaluated, interpreted, and pointed at problems outside language. **50 papers.**
+The methods layer: how models are trained, aligned, made to reason, served fast, evaluated, interpreted, and pointed at problems outside language. **66 papers.**
 
 <table>
 <tr>
@@ -1113,6 +1222,301 @@ The methods layer: how models are trained, aligned, made to reason, served fast,
 </tr>
 </table>
 
+<table>
+<tr>
+<td width="33%">
+
+**[Induction Heads](./papers/techniques/126-induction-heads/summary.md)** (2022)
+- ⭐ **HIGH** - The circuit behind in-context learning
+- [A][B]...[A] -> [B] pattern completion
+- Forms in a sudden training phase change
+- [Paper](https://arxiv.org/abs/2209.11895)
+
+</td>
+<td width="33%">
+
+**[GCG Adversarial Attacks](./papers/techniques/127-gcg-adversarial-attacks/summary.md)** (2023)
+- ⭐ **HIGH** - Automated, transferable jailbreaks
+- Optimised suffixes bypass safety training
+- Found on open models, transfer to closed ones
+- [Paper](https://arxiv.org/abs/2307.15043)
+
+</td>
+<td width="33%">
+
+**[Weak-to-Strong Generalization](./papers/techniques/128-weak-to-strong/summary.md)** (2023)
+- ⭐ **HIGH** - Can weak supervisors align strong models?
+- Weak labels still elicit strong ability
+- Performance gap recovered (PGR)
+- [Paper](https://arxiv.org/abs/2312.09390)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Red Teaming LMs](./papers/techniques/129-red-teaming-lms/summary.md)** (2022)
+- ⭐ **HIGH** - One model attacks another
+- Generated test cases at scale
+- Found offensive replies and data leaks
+- [Paper](https://arxiv.org/abs/2202.03286)
+
+</td>
+<td width="33%">
+
+**[YaRN](./papers/techniques/130-yarn-context-extension/summary.md)** (2023)
+- 🔥 **CRITICAL** - Cheap context extension for RoPE models
+- 4K models extended to 128K
+- Per-frequency interpolation plus temperature
+- [Paper](https://arxiv.org/abs/2309.00071)
+
+</td>
+<td width="33%">
+
+**[RULER](./papers/techniques/132-ruler/summary.md)** (2024)
+- ⭐ **HIGH** - Claimed vs effective context length
+- 13 synthetic tasks beyond needle tests
+- Most models fall short of their window
+- [Paper](https://arxiv.org/abs/2404.06654)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[FineWeb](./papers/techniques/133-fineweb/summary.md)** (2024)
+- ⭐ **HIGH** - Open 15T-token web data, ablated
+- Every curation choice tested
+- FineWeb-Edu lifts knowledge benchmarks
+- [Paper](https://arxiv.org/abs/2406.17557)
+
+</td>
+<td width="33%">
+
+**[Knowledge Distillation](./papers/techniques/134-knowledge-distillation/summary.md)** (2015)
+- 🔥 **CRITICAL** - Teach a small model with a big one
+- Soft targets carry 'dark knowledge'
+- Temperature-softened softmax
+- [Paper](https://arxiv.org/abs/1503.02531)
+
+</td>
+<td width="33%">
+
+**[BPE Subword Units](./papers/techniques/136-bpe-subword-units/summary.md)** (2015)
+- 🔥 **CRITICAL** - Where tokens come from
+- Merge frequent pairs into subwords
+- Ended the unknown-word problem
+- [Paper](https://arxiv.org/abs/1508.07909)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[MMLU](./papers/techniques/137-mmlu/summary.md)** (2020)
+- 🔥 **CRITICAL** - The benchmark every launch quoted
+- 57 subjects, multiple choice
+- From 44% to saturation above 90%
+- [Paper](https://arxiv.org/abs/2009.03300)
+
+</td>
+<td width="33%">
+
+**[ARC-AGI](./papers/techniques/138-arc-agi/summary.md)** (2019)
+- ⭐ **HIGH** - Intelligence as skill-acquisition efficiency
+- Abstract grid puzzles from few examples
+- Hard for models, easy for people
+- [Paper](https://arxiv.org/abs/1911.01547)
+
+</td>
+<td width="33%">
+
+**[OSWorld](./papers/techniques/139-osworld/summary.md)** (2024)
+- 🔥 **CRITICAL** - Real computers, real tasks
+- 369 tasks in a live Ubuntu VM
+- Humans 72%, best model 12% at launch
+- [Paper](https://arxiv.org/abs/2404.07972)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Model Collapse](./papers/techniques/140-model-collapse/summary.md)** (2024)
+- ⭐ **HIGH** - Risk of training on AI output
+- Recursive training erases the tails
+- Keeping real data largely avoids it
+- [Paper](https://www.nature.com/articles/s41586-024-07566-y)
+
+</td>
+<td width="33%">
+
+**[Adam](./papers/techniques/142-adam/summary.md)** (2014)
+- 🔥 **CRITICAL** - The default optimiser
+- Per-parameter adaptive step sizes
+- AdamW trains nearly every LLM
+- [Paper](https://arxiv.org/abs/1412.6980)
+
+</td>
+<td width="33%">
+
+**[Mixed Precision Training](./papers/techniques/143-mixed-precision-training/summary.md)** (2017)
+- ⭐ **HIGH** - Half the bits, same model
+- FP16 maths with FP32 master weights
+- Loss scaling rescues small gradients
+- [Paper](https://arxiv.org/abs/1710.03740)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Muon](./papers/techniques/144-muon/summary.md)** (2024)
+- ⭐ **HIGH** - First serious challenger to AdamW
+- Orthogonalised momentum updates
+- About 2x compute efficiency at scale
+- [Paper](https://arxiv.org/abs/2502.16982)
+
+</td>
+<td width="33%"></td>
+<td width="33%"></td>
+</tr>
+</table>
+
+---
+
+## 🦾 Robotics & Embodied AI
+
+Vision-language-action models and the shared datasets behind them - how web-scale pretraining started to reach physical robots. **3 papers.**
+
+<table>
+<tr>
+<td width="33%">
+
+**[RT-2](./papers/robotics/123-rt2/summary.md)** (2023)
+- 🔥 **CRITICAL** - Defined vision-language-action models
+- Robot actions emitted as text tokens
+- Web knowledge transfers to control
+- [Paper](https://arxiv.org/abs/2307.15818)
+
+</td>
+<td width="33%">
+
+**[pi0](./papers/robotics/124-pi0/summary.md)** (2024)
+- ⭐ **HIGH** - Flow-matching VLA with open weights
+- VLM backbone plus action expert
+- Dexterous tasks at up to 50 Hz
+- [Paper](https://arxiv.org/abs/2410.24164)
+
+</td>
+<td width="33%">
+
+**[Open X-Embodiment](./papers/robotics/125-open-x-embodiment/summary.md)** (2023)
+- ⭐ **HIGH** - Robotics' shared dataset
+- 1M+ trajectories, 22 robot types
+- Cross-robot training helps
+- [Paper](https://arxiv.org/abs/2310.08864)
+
+</td>
+</tr>
+</table>
+
+---
+
+## ✍️ Essays & Landmark Posts
+
+Not papers, but writing that set the field's direction - from Turing's imitation game to the arguments about scaling, agents and where it all leads. Pitches summarise the essays' claims, not this collection's endorsement. **9 papers.**
+
+<table>
+<tr>
+<td width="33%">
+
+**[Computing Machinery and Intelligence](./papers/essays/108-computing-machinery-and-intelligence/summary.md)** (1950)
+- 🔥 **CRITICAL** - The question that started the field
+- Proposes the imitation game (Turing test)
+- Answers nine objections still raised today
+- [Essay](https://academic.oup.com/mind/article/LIX/236/433/986238)
+
+</td>
+<td width="33%">
+
+**[The Unreasonable Effectiveness of RNNs](./papers/essays/109-unreasonable-effectiveness-of-rnns/summary.md)** (2015)
+- 📚 **HISTORICAL** - The post that made people try it
+- Character-level RNNs generate Shakespeare, code, LaTeX
+- Previewed next-token prediction's power
+- [Essay](https://karpathy.github.io/2015/05/21/rnn-effectiveness/)
+
+</td>
+<td width="33%">
+
+**[Software 2.0](./papers/essays/110-software-2/summary.md)** (2017)
+- ⭐ **HIGH** - Neural nets as a new way to write software
+- Code written by optimisation, not by hand
+- Framed the ML engineering shift
+- [Essay](https://karpathy.medium.com/software-2-0-a64152b37c35)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[The Bitter Lesson](./papers/essays/111-bitter-lesson/summary.md)** (2019)
+- 🔥 **CRITICAL** - General methods plus compute win
+- Search and learning beat hand-built knowledge
+- The one-page thesis of the scaling era
+- [Essay](http://www.incompleteideas.net/IncIdeas/BitterLesson.html)
+
+</td>
+<td width="33%">
+
+**[The Scaling Hypothesis](./papers/essays/112-scaling-hypothesis/summary.md)** (2020)
+- ⭐ **HIGH** - GPT-3 read as a turning point
+- Bigger models unlock new abilities
+- Made the scaling bet explicit in 2020
+- [Essay](https://gwern.net/scaling-hypothesis)
+
+</td>
+<td width="33%">
+
+**[Situational Awareness](./papers/essays/113-situational-awareness/summary.md)** (2024)
+- ⭐ **HIGH** - A dated AGI forecast, and a policy pitch
+- 'Count the OOMs' to AGI around 2027
+- Trillion-dollar clusters and national security
+- [Essay](https://situational-awareness.ai/)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Machines of Loving Grace](./papers/essays/114-machines-of-loving-grace/summary.md)** (2024)
+- ⭐ **HIGH** - The optimistic case, made concretely
+- What powerful AI could do for biology, health, economies
+- 'Compressed 21st century' thesis
+- [Essay](https://www.darioamodei.com/essay/machines-of-loving-grace)
+
+</td>
+<td width="33%">
+
+**[Building Effective Agents](./papers/essays/115-building-effective-agents/summary.md)** (2024)
+- 🔥 **CRITICAL** - Workflows before agents
+- Five composable patterns for LLM systems
+- Start simple; add autonomy only when needed
+- [Essay](https://www.anthropic.com/engineering/building-effective-agents)
+
+</td>
+<td width="33%">
+
+**[Welcome to the Era of Experience](./papers/essays/116-era-of-experience/summary.md)** (2025)
+- ⭐ **HIGH** - Beyond human data, to experience
+- Agents learning from streams of interaction
+- Grounded rewards, not human judgement
+- [Essay](https://storage.googleapis.com/deepmind-media/Era-of-Experience%20/The%20Era%20of%20Experience%20Paper.pdf)
+
+</td>
+</tr>
+</table>
+
 ---
 
 ## 📊 Quick Stats
@@ -1121,12 +1525,14 @@ Every paper in the collection has a card on this page.
 
 | Category | Papers |
 |----------|--------|
-| **Foundational Architectures** | 11 |
-| **Language Models** | 25 |
-| **Image & Video Generation** | 14 |
-| **Multimodal** | 7 |
-| **Techniques & Methods** | 50 |
-| **Total** | **107** |
+| **Foundational Architectures** | 13 |
+| **Language Models** | 26 |
+| **Image, Video & 3D Generation** | 18 |
+| **Multimodal & Audio** | 9 |
+| **Robotics & Embodied AI** | 3 |
+| **Techniques & Methods** | 66 |
+| **Essays & Landmark Posts** | 9 |
+| **Total** | **144** |
 
 The authoritative counts live in [`papers.json`](./papers.json) and are regenerated by
 `scripts/build_manifest.py`; `scripts/check_counts.py` fails CI if the table above drifts from it.
@@ -1137,9 +1543,9 @@ The authoritative counts live in [`papers.json`](./papers.json) and are regenera
 
 Relevance ratings are editorial, and describe how much the paper matters to a reader today:
 
-- 🔥 **CRITICAL** (60 papers) - Essential - read these to understand the field
-- ⭐ **HIGH** (40 papers) - Important, with significant downstream impact
-- 📚 **HISTORICAL** (6 papers) - Formative context; superseded in practice
+- 🔥 **CRITICAL** (73 papers) - Essential - read these to understand the field
+- ⭐ **HIGH** (63 papers) - Important, with significant downstream impact
+- 📚 **HISTORICAL** (7 papers) - Formative context; superseded in practice
 - 📖 **THEORY** (1 paper) - Theoretical foundations
 
 ---

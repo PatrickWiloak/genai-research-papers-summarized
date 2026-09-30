@@ -226,5 +226,6 @@ Plus **sequence/context parallelism** (splitting the sequence dimension) and **e
 - [QLoRA: Efficient Finetuning of Quantized LLMs](../../techniques/22-qlora/summary.md)
 - [DeepSeek-V3 Technical Report](../../language-models/27-deepseek-v3/summary.md)
 - [Mixtral of Experts (and the Mixture-of-Experts Architecture)](../../architectures/37-mixture-of-experts/summary.md)
+- [Mixed Precision Training](../../techniques/143-mixed-precision-training/summary.md)
 
 <!-- related:end -->

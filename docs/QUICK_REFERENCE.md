@@ -1,6 +1,6 @@
 # Quick Reference Guide - All Papers at a Glance
 
-One line on what each of the **107 papers** contributed and why it mattered, grouped by
+One line on what each of the **144 papers** contributed and why it mattered, grouped by
 category and ordered by paper number. This is the lookup table; for a card view with relevance
 badges see [BROWSE.md](../BROWSE.md), for the generated listings see [INDEX.md](../INDEX.md) and
 [TAGS.md](../TAGS.md), and for a guided order see [ROADMAP.md](./ROADMAP.md).
@@ -22,6 +22,8 @@ badges see [BROWSE.md](../BROWSE.md), for the generated listings see [INDEX.md](
 | 74 | **[U-Net](../papers/architectures/74-unet/summary.md)** | 2015 | Symmetric encoder-decoder with skip connections | The denoiser backbone of the entire diffusion era |
 | 75 | **[Grouped-Query Attention](../papers/architectures/75-grouped-query-attention/summary.md)** | 2023 | Share key/value heads across groups of query heads | Shrinks the KV cache; standard in modern LLM serving |
 | 88 | **[Masked Autoencoders (MAE)](../papers/architectures/88-mae/summary.md)** | 2021 | Mask 75% of patches, reconstruct with an asymmetric decoder | Scalable self-supervised pretraining for vision |
+| 131 | **[Longformer](../papers/architectures/131-longformer/summary.md)** | 2020 | Combined local windowed attention with task-specific global attention for linear cost | Established the local-plus-global pattern used in many efficient Transformers |
+| 141 | **[Multi-head Latent Attention (DeepSeek-V2)](../papers/architectures/141-multi-head-latent-attention/summary.md)** | 2024 | Compressed keys and values into a cached low-rank latent with decoupled RoPE | The attention design of DeepSeek-V3/R1 and other open models |
 
 ---
 
@@ -54,10 +56,11 @@ badges see [BROWSE.md](../BROWSE.md), for the generated listings see [INDEX.md](
 | 94 | **[PaLM](../papers/language-models/94-palm/summary.md)** | 2022 | 540B dense model trained across two TPU pods via Pathways | The practical ceiling for dense models; strong CoT results |
 | 95 | **[Mistral 7B](../papers/language-models/95-mistral-7b/summary.md)** | 2023 | GQA and sliding-window attention in a small Apache-2.0 model | Made open weights genuinely competitive |
 | 96 | **[Llama Guard](../papers/language-models/96-llama-guard/summary.md)** | 2023 | An LLM fine-tuned to classify prompt and response safety | The open reference for production content moderation |
+| 135 | **[phi-1 (Textbooks Are All You Need)](../papers/language-models/135-phi-1-textbooks/summary.md)** | 2023 | Trained a small code model on filtered web code plus synthetic textbooks and exercises | Started the phi small-model line and the synthetic-pretraining-data trend |
 
 ---
 
-## Image & Video Generation Papers
+## Image, Video & 3D Generation Papers
 
 | # | Paper | Year | Key Contribution | Impact |
 |---|-------|------|------------------|--------|
@@ -75,10 +78,14 @@ badges see [BROWSE.md](../BROWSE.md), for the generated listings see [INDEX.md](
 | 90 | **[VQ-GAN](../papers/image-generation/90-vq-gan/summary.md)** | 2020 | VQ-VAE tokens with adversarial and perceptual losses | The compress-then-model recipe behind high-resolution synthesis |
 | 91 | **[Imagen](../papers/image-generation/91-imagen/summary.md)** | 2022 | A frozen large text encoder plus cascaded diffusion | Showed text understanding, not the image model, was the bottleneck |
 | 92 | **[DreamBooth](../papers/image-generation/92-dreambooth/summary.md)** | 2022 | Bind a rare token to a subject with a prior-preservation loss | Created the personalisation and fine-tune-sharing ecosystem |
+| 117 | **[NeRF](../papers/image-generation/117-nerf/summary.md)** | 2020 | Represented a scene as a neural radiance field rendered by differentiable volume rendering | Launched neural rendering; the base of modern 3D reconstruction research |
+| 118 | **[3D Gaussian Splatting](../papers/image-generation/118-3d-gaussian-splatting/summary.md)** | 2023 | Replaced neural fields with explicit anisotropic Gaussians rasterised in real time | Became the dominant practical 3D capture and rendering method |
+| 119 | **[DALL-E 2 (unCLIP)](../papers/image-generation/119-dalle2-unclip/summary.md)** | 2022 | Generated images by decoding CLIP image embeddings produced from text by a learned prior | The 2022 model that brought text-to-image to the public |
+| 120 | **[Consistency Models](../papers/image-generation/120-consistency-models/summary.md)** | 2023 | Trained models to map any point on a diffusion trajectory directly to its clean endpoint | Opened the door to one- and few-step generation |
 
 ---
 
-## Multimodal Papers
+## Multimodal & Audio Papers
 
 | # | Paper | Year | Key Contribution | Impact |
 |---|-------|------|------------------|--------|
@@ -89,6 +96,8 @@ badges see [BROWSE.md](../BROWSE.md), for the generated listings see [INDEX.md](
 | 46 | **[LLaVA](../papers/multimodal/46-llava/summary.md)** | 2023 | Connect a frozen vision encoder to an LLM with a projection layer | Made open multimodal models buildable by anyone |
 | 47 | **[Gemini 3](../papers/multimodal/47-gemini3/summary.md)** | 2025 | Frontier multimodal reasoning with a Deep Think mode | First model past 1500 LMArena Elo |
 | 49 | **[Whisper](../papers/multimodal/49-whisper/summary.md)** | 2022 | Weakly supervised ASR on 680k hours across 99 languages | The default open speech model; robust with no fine-tuning |
+| 121 | **[AudioLM](../papers/multimodal/121-audiolm/summary.md)** | 2022 | Modelled audio as a hierarchy of semantic and acoustic tokens with language models | The template for token-based audio and music generation |
+| 122 | **[VALL-E](../papers/multimodal/122-vall-e/summary.md)** | 2023 | Treated text-to-speech as language modelling over neural codec tokens | Zero-shot voice cloning from a short sample; raised the deepfake-voice alarm |
 
 ---
 
@@ -146,6 +155,48 @@ badges see [BROWSE.md](../BROWSE.md), for the generated listings see [INDEX.md](
 | 105 | **[DreamerV3](../papers/techniques/105-dreamerv3/summary.md)** | 2023 | Model-based RL that learns inside an imagined world model | One hyperparameter set across 150+ tasks; Minecraft diamonds |
 | 106 | **[ESM-2 / ESMFold](../papers/techniques/106-esm/summary.md)** | 2023 | Protein language model predicting structure without MSAs | Scaling laws transfer to biology; 617M structures released |
 | 107 | **[CICERO](../papers/techniques/107-cicero/summary.md)** | 2022 | Language model fused with a strategic planning engine | Human-level Diplomacy, negotiation included |
+| 126 | **[Induction Heads](../papers/techniques/126-induction-heads/summary.md)** | 2022 | Identified induction heads and tied them to an abrupt jump in in-context learning | A founding result of mechanistic interpretability |
+| 127 | **[GCG Adversarial Attacks](../papers/techniques/127-gcg-adversarial-attacks/summary.md)** | 2023 | Gradient-guided search for universal adversarial suffixes against aligned LLMs | Showed refusal training is brittle; spurred filters, smoothing and classifier defences |
+| 128 | **[Weak-to-Strong Generalization](../papers/techniques/128-weak-to-strong/summary.md)** | 2023 | Built a testable analogy for superhuman oversight: weak models supervising strong ones | Made scalable-oversight research empirical |
+| 129 | **[Red Teaming LMs](../papers/techniques/129-red-teaming-lms/summary.md)** | 2022 | Used language models, from prompting to RL, to generate red-team test cases | Template for automated pre-release safety testing |
+| 130 | **[YaRN](../papers/techniques/130-yarn-context-extension/summary.md)** | 2023 | Extended RoPE context windows with frequency-aware interpolation and attention temperature scaling | The standard way open models reach long context |
+| 132 | **[RULER](../papers/techniques/132-ruler/summary.md)** | 2024 | A configurable long-context benchmark measuring effective rather than advertised context | Standard long-context report card in model releases |
+| 133 | **[FineWeb](../papers/techniques/133-fineweb/summary.md)** | 2024 | Released a 15T-token web corpus with ablations for every processing step | Made pretraining data curation reproducible research |
+| 134 | **[Knowledge Distillation](../papers/techniques/134-knowledge-distillation/summary.md)** | 2015 | Trained small students on a teacher's temperature-softened output distribution | How the industry ships small models, from DistilBERT to R1-distilled models |
+| 136 | **[BPE Subword Units](../papers/techniques/136-bpe-subword-units/summary.md)** | 2015 | Adapted byte pair encoding to learn open-vocabulary subword units | The basis of nearly every LLM tokenizer |
+| 137 | **[MMLU](../papers/techniques/137-mmlu/summary.md)** | 2020 | A 57-subject multiple-choice test of knowledge and problem solving | The headline LLM benchmark of 2021-2024; now saturated |
+| 138 | **[ARC-AGI](../papers/techniques/138-arc-agi/summary.md)** | 2019 | Defined intelligence as efficiency of skill acquisition and built the ARC benchmark to test it | The reasoning benchmark frontier models are still measured against |
+| 139 | **[OSWorld](../papers/techniques/139-osworld/summary.md)** | 2024 | An execution-graded benchmark of agents operating real desktop applications | The standard computer-use agent benchmark |
+| 140 | **[Model Collapse](../papers/techniques/140-model-collapse/summary.md)** | 2024 | Showed recursive training on generated data progressively loses distribution tails | Framed the synthetic-data and data-provenance debate |
+| 142 | **[Adam](../papers/techniques/142-adam/summary.md)** | 2014 | Combined momentum with per-parameter adaptive learning rates and bias correction | The optimiser behind almost every model in this collection |
+| 143 | **[Mixed Precision Training](../papers/techniques/143-mixed-precision-training/summary.md)** | 2017 | Trained in half precision with FP32 master weights and loss scaling | Standard practice for all large training; led on to BF16 and FP8 |
+| 144 | **[Muon](../papers/techniques/144-muon/summary.md)** | 2024 | Orthogonalised momentum updates for matrix parameters, scaled to LLM training | Adopted for frontier-scale open models such as Kimi K2 |
+
+---
+
+## Robotics & Embodied AI Papers
+
+| # | Paper | Year | Key Contribution | Impact |
+|---|-------|------|------------------|--------|
+| 123 | **[RT-2](../papers/robotics/123-rt2/summary.md)** | 2023 | Fine-tuned web-scale vision-language models to output robot actions as tokens | Created the VLA model class behind today's robot foundation models |
+| 124 | **[pi0](../papers/robotics/124-pi0/summary.md)** | 2024 | Paired a vision-language model with a flow-matching action expert that generates continuous action chunks | A widely used open robot foundation model |
+| 125 | **[Open X-Embodiment](../papers/robotics/125-open-x-embodiment/summary.md)** | 2023 | Pooled robot data from 34 labs and showed positive transfer across robot bodies | Default pretraining pool for open robot models; ICRA 2024 best paper |
+
+---
+
+## Essays & Landmark Posts
+
+| # | Paper | Year | Key Contribution | Impact |
+|---|-------|------|------------------|--------|
+| 108 | **[Computing Machinery and Intelligence](../papers/essays/108-computing-machinery-and-intelligence/summary.md)** | 1950 | Replaced 'can machines think?' with a behavioural test, the imitation game | Set the terms of the AI debate for 75 years; still the reference point for human-likeness tests |
+| 109 | **[The Unreasonable Effectiveness of RNNs](../papers/essays/109-unreasonable-effectiveness-of-rnns/summary.md)** | 2015 | Showed small character-level RNNs learning structure from raw text | Popularised generative language modelling years before GPT |
+| 110 | **[Software 2.0](../papers/essays/110-software-2/summary.md)** | 2017 | Argued neural networks are a new programming paradigm: specify data and goals, let optimisation write the program | Shaped how engineers think about ML systems; extended later as 'Software 3.0' |
+| 111 | **[The Bitter Lesson](../papers/essays/111-bitter-lesson/summary.md)** | 2019 | 70 years of AI show general methods that scale with compute beat human-knowledge engineering | The most-cited short argument for scaling; a lens for reading every paper here |
+| 112 | **[The Scaling Hypothesis](../papers/essays/112-scaling-hypothesis/summary.md)** | 2020 | Interpreted GPT-3 as evidence that scale alone keeps producing new capabilities | Articulated the bet frontier labs then made with their capital |
+| 113 | **[Situational Awareness](../papers/essays/113-situational-awareness/summary.md)** | 2024 | Extrapolated compute and algorithmic trends into an AGI-by-2027 forecast and a US security agenda | Widely read in policy circles; defined vocabulary for the AI-race debate |
+| 114 | **[Machines of Loving Grace](../papers/essays/114-machines-of-loving-grace/summary.md)** | 2024 | Laid out specific ways powerful AI could accelerate biology, neuroscience, development and governance | The most detailed benefits case from a frontier-lab leader |
+| 115 | **[Building Effective Agents](../papers/essays/115-building-effective-agents/summary.md)** | 2024 | Named the core agentic patterns (chaining, routing, parallelisation, orchestrator-workers, evaluator-optimizer) | The practical playbook most agent builders now start from |
+| 116 | **[Welcome to the Era of Experience](../papers/essays/116-era-of-experience/summary.md)** | 2025 | Argued the next leap comes from agents learning from their own experience rather than human data | A counterweight to pure-scaling views from two RL pioneers |
 
 ---
 

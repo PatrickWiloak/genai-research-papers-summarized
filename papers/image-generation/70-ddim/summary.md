@@ -161,5 +161,6 @@ Setting `sigma = 0` is the DDIM sampler. Every step becomes a deterministic func
 - [Auto-Encoding Variational Bayes (VAE)](../../image-generation/57-vae/summary.md)
 - [Classifier-Free Diffusion Guidance](../../image-generation/69-classifier-free-guidance/summary.md)
 - [Flow Matching and Rectified Flow: The New Default for Image Generation (Stable Diffusion 3)](../../image-generation/72-flow-matching-sd3/summary.md)
+- [Consistency Models (Consistency Models)](../../image-generation/120-consistency-models/summary.md)
 
 <!-- related:end -->

@@ -740,5 +740,6 @@ if time_mamba < time_transformer:
 - [Scaling Laws for Neural Language Models](../../techniques/12-scaling-laws/summary.md)
 - [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](../../techniques/16-flash-attention/summary.md)
 - [GQA: Grouped-Query Attention (and Multi-Query Attention)](../../architectures/75-grouped-query-attention/summary.md)
+- [The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale (FineWeb)](../../techniques/133-fineweb/summary.md)
 
 <!-- related:end -->

@@ -413,5 +413,6 @@ The "better captions" insight has been widely adopted
 
 - [High-Resolution Image Synthesis with Latent Diffusion Models (Stable Diffusion)](../../image-generation/07-stable-diffusion/summary.md)
 - [Learning Transferable Visual Models From Natural Language Supervision (CLIP)](../../multimodal/08-clip/summary.md)
+- [Hierarchical Text-Conditional Image Generation with CLIP Latents (DALL-E 2 / unCLIP)](../../image-generation/119-dalle2-unclip/summary.md)
 
 <!-- related:end -->

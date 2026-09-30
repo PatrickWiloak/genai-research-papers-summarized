@@ -367,5 +367,7 @@ Regulatory constraints in some markets
 - [GPT-5: Unified Intelligence](../../language-models/42-gpt5/summary.md)
 - [Claude 4 Family: The Agentic AI Leader](../../language-models/43-claude4/summary.md)
 - [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](../../techniques/84-swe-bench/summary.md)
+- [Measuring Massive Multitask Language Understanding (MMLU)](../../techniques/137-mmlu/summary.md)
+- [On the Measure of Intelligence (ARC)](../../techniques/138-arc-agi/summary.md)
 
 <!-- related:end -->

@@ -50,21 +50,23 @@ Built for **every kind of technologist**, across 21 role-targeted learning paths
 
 ---
 
-# Foundational Generative AI Research Papers - Summarized
+# Everything AI, Summarized
 
-A curated collection of the **107 most influential papers** that shaped modern generative AI, with comprehensive summaries designed to make cutting-edge research accessible to everyone.
+A curated collection of the **144 most influential papers** and landmark essays that shaped modern AI, with comprehensive summaries designed to make cutting-edge research accessible to everyone - plus **[explainers](./EXPLAINERS.md)** on everything a single paper does not cover: how the model families evolved, what the benchmarks measure, what training and inference cost, the rules being written, and the questions still open.
 
-[![Papers](https://img.shields.io/badge/Papers-107-blue.svg)](./INDEX.md)
-[![Guides](https://img.shields.io/badge/Guides-7-green.svg)](./docs/ROADMAP.md)
+[![Papers](https://img.shields.io/badge/Papers-144-blue.svg)](./INDEX.md)
+[![Explainers](https://img.shields.io/badge/Explainers-31-purple.svg)](./EXPLAINERS.md)
+[![Guides](https://img.shields.io/badge/Guides-6-green.svg)](./docs/ROADMAP.md)
 [![License](https://img.shields.io/badge/License-CC_BY_4.0-orange.svg)](./LICENSE)
-[![Updated](https://img.shields.io/badge/Updated-August_2026-green.svg)](./README.md)
+[![Updated](https://img.shields.io/badge/Updated-September_2026-green.svg)](./README.md)
 
 ---
 
 ## 🚀 Quick Start
 
-**New to AI?** Start with the [Learning Roadmap](./docs/ROADMAP.md)
-**Want the full list?** See the [Paper Index](./INDEX.md) - all 107 papers grouped by category
+**New to AI?** Start with the [Learning Roadmap](./docs/ROADMAP.md), or the [Timeline of AI](./explainers/history/timeline-of-ai.md) for the whole story in one page
+**Want the big picture?** Read the [Explainers](./EXPLAINERS.md) - model families, benchmarks, compute, policy and open questions
+**Want the full list?** See the [Paper Index](./INDEX.md) - all 144 papers grouped by category
 **Exploring a topic?** Browse [by topic tag](./TAGS.md) (reasoning, RLHF, efficiency, agents, multimodal, ...)
 **Want to browse visually?** See [BROWSE.md](./BROWSE.md) for table/grid view
 **Not sure what to read?** Check the [Reading Guide](./docs/READING_GUIDE.md) - Historical vs Modern relevance
@@ -78,14 +80,15 @@ A curated collection of the **107 most influential papers** that shaped modern g
 ## 📚 Documentation
 
 ### Core Guides
-- 🗺️ **[Learning Roadmap](./docs/ROADMAP.md)** - Structured paths from beginner to expert (4 tracks)
+- 🧭 **[Explainers](./EXPLAINERS.md)** - 31 dated pages on model families, benchmarks, concepts, compute, policy, the ecosystem and open questions (generated hub)
+- 🗺️ **[Learning Roadmap](./docs/ROADMAP.md)** - Structured paths from beginner to expert (6 tracks, including a no-maths Big Picture path)
 - ⭐ **[Reading Guide](./docs/READING_GUIDE.md)** - What's still relevant vs historical context
 - 📖 **[Quick Reference](./docs/QUICK_REFERENCE.md)** - One-page overview of the papers
 - 🔍 **[Comparisons](./docs/COMPARISONS.md)** - Side-by-side analysis and trade-offs
-- 📚 **[Glossary](./docs/GLOSSARY.md)** - 150+ key terms explained
+- 📚 **[Glossary](./docs/GLOSSARY.md)** - 144 key terms explained
 - 🧭 **[Coverage & Gaps](./docs/GAPS.md)** - what the collection covers, and the papers queued to be added next
 - 🗂️ **[Paper Index](./INDEX.md)** - Complete category-grouped list (generated)
-- 🏷️ **[Browse by Topic](./TAGS.md)** - Tag-filtered index across 45 topics (generated)
+- 🏷️ **[Browse by Topic](./TAGS.md)** - Tag-filtered index across 68 topics (generated)
 
 ### Data & Tooling
 - 🧾 **[papers.json](./papers.json)** / **[papers.csv](./papers.csv)** - machine-readable manifest of every paper
@@ -117,12 +120,18 @@ genai-research-papers-summarized/
 │   └── check_links.py                 # Relative-link validation (CI gate)
 ├── .github/site/                      # Site-only chrome (landing page + stylesheet)
 ├── assets/brand/                      # Banner images used by this README
-└── papers/                            # All 107 summaries, grouped by category
-    ├── architectures/       # Foundational architectures (11)
-    ├── language-models/     # Language models (25)
-    ├── image-generation/    # Image & video generation (14)
-    ├── multimodal/          # Multimodal (7)
-    └── techniques/          # Techniques & methods (50)
+├── EXPLAINERS.md                      # Generated hub for the explainers
+├── explainers/                        # Unnumbered pages on what no single paper covers
+│   ├── history/  model-families/  benchmarks/  concepts/
+│   └── compute/  policy/  ecosystem/  open-questions/
+└── papers/                            # All 144 summaries, grouped by category
+    ├── architectures/       # Foundational architectures (13)
+    ├── language-models/     # Language models (26)
+    ├── image-generation/    # Image, video & 3D generation (18)
+    ├── multimodal/          # Multimodal & audio (9)
+    ├── robotics/            # Robotics & embodied AI (3)
+    ├── techniques/          # Techniques & methods (66)
+    └── essays/              # Essays & landmark posts (9)
 ```
 
 Each paper is its own directory holding a single `summary.md`, numbered in the
@@ -296,7 +305,7 @@ _Also in this category:_ [Seq2Seq](./papers/architectures/55-seq2seq/summary.md)
 
 _Also in this category:_ [GPT-1](./papers/language-models/93-gpt1/summary.md) (2018) - where generative pre-training started, [PaLM](./papers/language-models/94-palm/summary.md) (2022), [Mistral 7B](./papers/language-models/95-mistral-7b/summary.md) (2023), [Llama Guard](./papers/language-models/96-llama-guard/summary.md) (2023). See [INDEX.md](./INDEX.md) for the complete list.
 
-### 🎨 Image Generation
+### 🎨 Image, Video & 3D Generation
 **Recommended Reading Order:** GANs (historical) → Diffusion theory → Practical implementation
 
 **1.** [GANs](./papers/image-generation/02-generative-adversarial-networks/summary.md) (2014)
@@ -353,7 +362,7 @@ _Also in this category:_ [GPT-1](./papers/language-models/93-gpt1/summary.md) (2
 
 _Also in this category:_ [VAE](./papers/image-generation/57-vae/summary.md) (2013), [VQ-VAE](./papers/image-generation/89-vq-vae/summary.md) (2017), [VQ-GAN](./papers/image-generation/90-vq-gan/summary.md) (2020), [Imagen](./papers/image-generation/91-imagen/summary.md) (2022), [DreamBooth](./papers/image-generation/92-dreambooth/summary.md) (2022).
 
-### 🔗 Multimodal
+### 🔗 Multimodal & Audio
 **Recommended Reading Order:** Vision-language bridge → Practical multimodal → Next-gen unified AI
 
 **1.** [CLIP](./papers/multimodal/08-clip/summary.md) (2021)
@@ -605,6 +614,37 @@ _Also in this category:_ [Word2Vec](./papers/techniques/53-word2vec/summary.md),
 
 ---
 
+### 🦾 Robotics & Embodied AI
+
+- [RT-2](./papers/robotics/123-rt2/summary.md) (2023) - robot actions as language tokens; the first vision-language-action model
+- [Open X-Embodiment](./papers/robotics/125-open-x-embodiment/summary.md) (2023) - one dataset pooled from 22 robot types, and proof that cross-robot training helps
+- [pi0](./papers/robotics/124-pi0/summary.md) (2024) - a VLM plus a flow-matching action expert for dexterous control
+
+### ✍️ Essays & Landmark Posts
+
+Writing that set the field's direction. Read [The Bitter Lesson](./papers/essays/111-bitter-lesson/summary.md) first - it is one page and explains most of the last decade.
+
+- [Computing Machinery and Intelligence](./papers/essays/108-computing-machinery-and-intelligence/summary.md) (Turing, 1950)
+- [The Unreasonable Effectiveness of RNNs](./papers/essays/109-unreasonable-effectiveness-of-rnns/summary.md) (Karpathy, 2015)
+- [Software 2.0](./papers/essays/110-software-2/summary.md) (Karpathy, 2017)
+- [The Bitter Lesson](./papers/essays/111-bitter-lesson/summary.md) (Sutton, 2019)
+- [The Scaling Hypothesis](./papers/essays/112-scaling-hypothesis/summary.md) (Gwern, 2020)
+- [Situational Awareness](./papers/essays/113-situational-awareness/summary.md) (Aschenbrenner, 2024)
+- [Machines of Loving Grace](./papers/essays/114-machines-of-loving-grace/summary.md) (Amodei, 2024)
+- [Building Effective Agents](./papers/essays/115-building-effective-agents/summary.md) (Anthropic, 2024)
+- [Welcome to the Era of Experience](./papers/essays/116-era-of-experience/summary.md) (Silver and Sutton, 2025)
+
+### 🆕 Also Added in September 2026
+
+Papers 117-144 extend the existing categories. The full list with badges is in [BROWSE.md](./BROWSE.md).
+
+- **3D and generation:** [NeRF](./papers/image-generation/117-nerf/summary.md), [3D Gaussian Splatting](./papers/image-generation/118-3d-gaussian-splatting/summary.md), [DALL-E 2](./papers/image-generation/119-dalle2-unclip/summary.md), [Consistency Models](./papers/image-generation/120-consistency-models/summary.md)
+- **Audio generation:** [AudioLM](./papers/multimodal/121-audiolm/summary.md), [VALL-E](./papers/multimodal/122-vall-e/summary.md)
+- **Safety and interpretability:** [Induction Heads](./papers/techniques/126-induction-heads/summary.md), [GCG adversarial attacks](./papers/techniques/127-gcg-adversarial-attacks/summary.md), [Weak-to-Strong Generalization](./papers/techniques/128-weak-to-strong/summary.md), [Red Teaming LMs](./papers/techniques/129-red-teaming-lms/summary.md)
+- **Long context:** [YaRN](./papers/techniques/130-yarn-context-extension/summary.md), [Longformer](./papers/architectures/131-longformer/summary.md), [RULER](./papers/techniques/132-ruler/summary.md), [Multi-head Latent Attention](./papers/architectures/141-multi-head-latent-attention/summary.md)
+- **Data and training:** [FineWeb](./papers/techniques/133-fineweb/summary.md), [Knowledge Distillation](./papers/techniques/134-knowledge-distillation/summary.md), [phi-1](./papers/language-models/135-phi-1-textbooks/summary.md), [BPE](./papers/techniques/136-bpe-subword-units/summary.md), [Model Collapse](./papers/techniques/140-model-collapse/summary.md), [Adam](./papers/techniques/142-adam/summary.md), [Mixed Precision](./papers/techniques/143-mixed-precision-training/summary.md), [Muon](./papers/techniques/144-muon/summary.md)
+- **Evaluation:** [MMLU](./papers/techniques/137-mmlu/summary.md), [ARC-AGI](./papers/techniques/138-arc-agi/summary.md), [OSWorld](./papers/techniques/139-osworld/summary.md)
+
 ## 🎯 Learning Paths
 
 ### For Beginners
@@ -648,28 +688,30 @@ Focus on "Why This Matters" sections + [Comparisons Guide](./docs/COMPARISONS.md
 
 | Category | Count | Total Reading Time |
 |----------|-------|-------------------|
-| **Papers** | 107 | 25-30 hours |
+| **Papers** | 144 | 35-45 hours |
+| **Explainers** | 31 | 12-15 hours |
 | **Source words compressed** | 1.4M+ | ~130 hours |
-| **Words** | 219,000+ | - |
+| **Words** | 350,000+ | - |
 | **Guides** | 6 | 3-5 hours |
-| **Terms Explained** | 117 | - |
+| **Terms Explained** | 144 | - |
 
 ### By Year
 _Generated from [`papers.json`](./papers.json) - see [INDEX.md](./INDEX.md) for the full clickable list._
 
 <!-- byyear:start -->
+- **1950:** 1 paper
 - **2013:** 2 papers
-- **2014:** 3 papers
-- **2015:** 2 papers
-- **2017:** 4 papers
+- **2014:** 4 papers
+- **2015:** 5 papers
+- **2017:** 6 papers
 - **2018:** 2 papers
-- **2019:** 3 papers
-- **2020:** 8 papers
+- **2019:** 5 papers
+- **2020:** 12 papers
 - **2021:** 10 papers
-- **2022:** 19 papers
-- **2023:** 25 papers
-- **2024:** 19 papers
-- **2025:** 10 papers
+- **2022:** 23 papers
+- **2023:** 34 papers
+- **2024:** 29 papers
+- **2025:** 11 papers
 <!-- byyear:end -->
 
 ---
@@ -738,10 +780,10 @@ If you use these summaries in your work:
 
 ```bibtex
 @misc{genai-papers-summarized-2025,
-  title={Foundational Generative AI Research Papers - Summarized},
-  author={[Your Name]},
-  year={2025},
-  url={https://github.com/[your-repo]/genai-research-papers-summarized}
+  title={Everything AI, Summarized: Papers, Essays and Explainers},
+  author={Wiloak, Patrick},
+  year={2026},
+  url={https://github.com/PatrickWiloak/genai-research-papers-summarized}
 }
 ```
 
@@ -775,8 +817,9 @@ Gratitude to the researchers who created these foundational works:
 
 ---
 
-**Last Updated:** 2026-08-20
-**Papers:** 107 foundational works (2013-2026)
-**Total Content:** 219,000+ words of summaries and guides (see Quick Stats above)
+**Last Updated:** 2026-09-30
+**Papers:** 144 papers and essays (1950-2026)
+**Explainers:** 31, each with its own review date
+**Total Content:** 350,000+ words of summaries, explainers and guides (see Quick Stats above)
 **Includes:** Roots (Word2Vec, Seq2Seq, VAE, PPO) through the latest breakthroughs of early 2026 (GPT-5, Claude 4, Llama 4, GRPO, RLVR, and more)
 **Repository:** [github.com/PatrickWiloak/genai-research-papers-summarized](https://github.com/PatrickWiloak/genai-research-papers-summarized)

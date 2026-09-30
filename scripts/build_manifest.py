@@ -179,6 +179,43 @@ TOPICS: dict[str, list[str]] = {
     "105-dreamerv3": ["reinforcement-learning", "world-models"],
     "106-esm": ["science", "language-model", "embeddings"],
     "107-cicero": ["agents", "reinforcement-learning", "reasoning"],
+    "108-computing-machinery-and-intelligence": ["essay", "history", "evaluation"],
+    "109-unreasonable-effectiveness-of-rnns": ["essay", "language-model", "history"],
+    "110-software-2": ["essay", "code"],
+    "111-bitter-lesson": ["essay", "scaling"],
+    "112-scaling-hypothesis": ["essay", "scaling"],
+    "113-situational-awareness": ["essay", "scaling", "policy"],
+    "114-machines-of-loving-grace": ["essay", "science", "policy"],
+    "115-building-effective-agents": ["essay", "agents", "tool-use"],
+    "116-era-of-experience": ["essay", "reinforcement-learning", "agents"],
+    "117-nerf": ["3d", "image-generation", "computer-vision"],
+    "118-3d-gaussian-splatting": ["3d", "computer-vision", "efficiency"],
+    "119-dalle2-unclip": ["image-generation", "diffusion", "text-to-image"],
+    "120-consistency-models": ["image-generation", "diffusion", "inference-optimization"],
+    "121-audiolm": ["audio", "language-model", "discrete-representation"],
+    "122-vall-e": ["audio", "language-model", "safety"],
+    "123-rt2": ["robotics", "multimodal", "transfer-learning"],
+    "124-pi0": ["robotics", "flow-matching", "multimodal"],
+    "125-open-x-embodiment": ["robotics", "scaling", "benchmarks"],
+    "126-induction-heads": ["interpretability", "attention", "transformers"],
+    "127-gcg-adversarial-attacks": ["safety", "alignment", "evaluation"],
+    "128-weak-to-strong": ["alignment", "safety", "scaling"],
+    "129-red-teaming-lms": ["safety", "evaluation", "alignment"],
+    "130-yarn-context-extension": ["long-context", "position-encoding", "fine-tuning"],
+    "131-longformer": ["attention", "long-context", "efficiency"],
+    "132-ruler": ["long-context", "evaluation", "benchmarks"],
+    "133-fineweb": ["pretraining", "datasets", "data-curation"],
+    "134-knowledge-distillation": ["efficiency", "distillation", "transfer-learning"],
+    "135-phi-1-textbooks": ["language-model", "synthetic-data", "code"],
+    "136-bpe-subword-units": ["tokenization", "language-model", "embeddings"],
+    "137-mmlu": ["evaluation", "benchmarks"],
+    "138-arc-agi": ["evaluation", "benchmarks", "reasoning"],
+    "139-osworld": ["evaluation", "benchmarks", "agents"],
+    "140-model-collapse": ["synthetic-data", "pretraining", "evaluation"],
+    "141-multi-head-latent-attention": ["attention", "architecture", "efficiency", "inference-optimization"],
+    "142-adam": ["optimization", "training"],
+    "143-mixed-precision-training": ["efficiency", "training", "systems"],
+    "144-muon": ["optimization", "training", "efficiency"],
 }
 
 FRONTMATTER_RE = re.compile(r"^---\s*\n.*?\n---\s*\n", re.DOTALL)
@@ -440,6 +477,10 @@ def build_site_tree(papers: list[dict], explainers: list[dict] | None = None) ->
     if template.exists():
         (site / "papers").mkdir(parents=True, exist_ok=True)
         shutil.copy2(template, site / "papers" / "_TEMPLATE.md")
+    explainer_template = EXPLAINERS_DIR / "_TEMPLATE.md"
+    if explainer_template.exists():
+        (site / "explainers").mkdir(parents=True, exist_ok=True)
+        shutil.copy2(explainer_template, site / "explainers" / "_TEMPLATE.md")
 
     for item in list(papers) + list(explainers or []):
         dest = site / item["path"]

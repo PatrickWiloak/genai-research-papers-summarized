@@ -243,5 +243,6 @@ Output Probabilities
 - [DALL-E 3: Improving Image Generation with Better Captions](../../image-generation/48-dalle3/summary.md)
 - [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer (T5)](../../language-models/65-t5/summary.md)
 - [Highly Accurate Protein Structure Prediction with AlphaFold (AlphaFold 2)](../../techniques/68-alphafold/summary.md)
+- [Longformer: The Long-Document Transformer (Longformer)](../../architectures/131-longformer/summary.md)
 
 <!-- related:end -->

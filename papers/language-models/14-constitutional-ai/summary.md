@@ -673,5 +673,6 @@ Note: Full Constitutional AI requires significant compute and proprietary models
 
 - [Training Language Models to Follow Instructions with Human Feedback (InstructGPT)](../../language-models/05-instructgpt-rlhf/summary.md)
 - [Proximal Policy Optimization Algorithms (PPO)](../../techniques/63-ppo/summary.md)
+- [Red Teaming Language Models with Language Models (LM Red Teaming)](../../techniques/129-red-teaming-lms/summary.md)
 
 <!-- related:end -->
