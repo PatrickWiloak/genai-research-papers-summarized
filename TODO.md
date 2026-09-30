@@ -8,20 +8,34 @@ Working task list for **genai-research-papers-summarized**. Read this at the sta
 
 ### 🟠 Discoverability (added 2026-08-31)
 
-- [ ] **Upload the social preview image.** A 1280x640 card is rendered at
-      `/tmp/claude-1000/-home-plw-coding/4ffb6de8-198a-4962-8a8b-1f54e9ab4159/scratchpad/social/genai-research-papers-summarized-social-1280x640-31AUG2026.png`.
-      Upload via **Settings → General → Social preview** (not exposed by the GitHub API).
+- [ ] **Patrick: upload the social preview image.** The August render lived in a `/tmp` scratchpad
+      and is gone; a new "Everything AI, summarized" card (144 papers, 31 explainers) is committed at
+      [`assets/brand/social-preview-1280x640.png`](./assets/brand/social-preview-1280x640.png)
+      (source: `assets/brand/social-preview.html`, re-render with headless Chromium
+      `--window-size=1280,640 --screenshot`). Upload via **Settings → General → Social preview**
+      (not exposed by the GitHub API). Re-render when the counts move a lot.
+- [ ] **Patrick: update the GitHub repo description and topics** for the broader scope - the
+      description still says research papers. Suggested: "Everything AI, summarized: 144 papers and
+      essays plus 31 dated explainers on model families, benchmarks, compute, policy and open
+      questions." Add topics `ai-policy`, `robotics`, `explainers`
+      (`gh repo edit PatrickWiloak/genai-research-papers-summarized --description ... --add-topic ...`).
 - [x] ~~Set GitHub topics~~ ✅ done 2026-08-31 (15 topics: llm, generative-ai, research-papers, rag, ...)
-- [ ] **Commit and push the rewritten `LICENSE` + new `NOTICE`.** The hand-written CC BY summary
-      was not machine-detectable - GitHub reported this repo's license as "Other", so it showed no
-      licence badge and did not match a CC-BY-4.0 search filter. `LICENSE` is now the canonical
-      legal text (which GitHub's detector matches) and the third-party-papers carve-out moved to
-      `NOTICE`. Same licence as before, just legible to tooling.
+- [x] ~~Commit and push the rewritten `LICENSE` + new `NOTICE`~~ ✅ done - on `main` since
+      2026-08-31 (commit "Replace the hand-written CC BY summary with the canonical legal text").
 
 ### Content
-- [ ] 🟠 Work through the high-priority queue in [`docs/GAPS.md`](./docs/GAPS.md) - induction heads,
-      adversarial attacks/jailbreaks, weak-to-strong generalization, long-context extension
-      (YaRN/position interpolation), sparse attention, data curation at scale, MMLU/HELM/contamination.
+- [ ] 🟡 Work through the (new) high-priority queue in [`docs/GAPS.md`](./docs/GAPS.md): SWE-agent,
+      AlphaCode, Toy Models of Superposition, Alignment Faking, Constitutional Classifiers, Ring
+      Attention, Medusa/EAGLE, HELM/BIG-Bench. Code generation is the one area still marked Thin.
+- [ ] 🟡 Explainer queue in `docs/GAPS.md`: xAI Grok / Phi / Kimi families, MoE routing in practice,
+      multimodal tokenization, AI for code, jailbreaks and prompt injection, AI and jobs, copyright.
+- [ ] **2027-03-29: re-review every explainer** - that is when all 31 cross the 180-day line and
+      `build_manifest.py` starts printing `WARN explainers not reviewed in 180 days`. Model families,
+      benchmarks, compute prices and policy go stale first; bump each page's `Last reviewed` as you go.
+- [ ] **2026-12-31: re-check the three fastest-moving explainers** - `explainers/model-families/gpt.md`,
+      `claude.md`, `gemini.md` - and the dated scores in `explainers/benchmarks/*.md` and
+      `papers/techniques/139-osworld/summary.md` ("What Happened Next"). These were current on
+      2026-09-30 and will be wrong within a quarter.
 - [ ] 🟡 The 88-107 summaries were salvaged from a stale branch and carry a hand-written
       "Connections to Other Papers" section with `(#NN)` references. The numbers were remapped to the
       current scheme, but the prose has not been re-read against main's versions of those papers -
@@ -30,14 +44,12 @@ Working task list for **genai-research-papers-summarized**. Read this at the sta
       whole collection but still curate rather than enumerate. That is deliberate, but it means a
       new paper does not automatically appear in them - check whether it belongs on a learning path
       or changes a comparison when adding one.
-- [ ] 🟡 `docs/GLOSSARY.md` defines 117 terms and is now count-checked, but it was written for the
-      original 15-paper collection. Sweep it for terms introduced by papers 53-107 that have no
-      entry yet (MoE routing, GRPO, RLVR, flow matching, latent action model, paged attention,
-      speculative decoding, process reward model, sparse autoencoder).
+
 
 ### Tooling
-- [ ] 🟡 15 of the 107 papers have no retrievable PDF, so they are excluded from the "1.4M words in"
-      figure on the landing page (which is therefore a floor). Nature paywalls: `68-alphafold`,
+- [ ] 🟡 24 of the 144 papers have no retrievable PDF, so they are excluded from the "1.8M words in"
+      figure on the landing page (which is therefore a floor). New since 2026-09-30: the nine essays
+      (web pages), 126-induction-heads (transformer-circuits), 140-model-collapse (Nature). Nature paywalls: `68-alphafold`,
       `61-alphageometry`, `101-alphafold3`. DOI redirects: `106-esm`, `107-cicero`. Published as web
       pages: the Anthropic, OpenAI, Meta, Google and transformer-circuits entries. `39-rlvr` now links
       to DeepSeek-R1 but is deliberately excluded via `SHARED_SOURCE` in `measure_sources.py`, since
@@ -48,6 +60,20 @@ Working task list for **genai-research-papers-summarized**. Read this at the sta
 
 ## Done
 
+- [x] ~~**Broaden to "Everything AI"** (2026-09-30): site renamed "Everything AI, Summarized" (repo name
+      and Pages URL deliberately unchanged - a rename breaks the Pages URL with no redirect). New
+      `explainers/` content type (31 pages, 8 sections, generated `EXPLAINERS.md` hub, `Last reviewed`
+      dates enforced by `check_counts.py`, 180-day staleness warning in the build). New paper
+      categories `robotics` and `essays`. Papers 108-144 added (9 essays, 3 robotics, 3D, audio
+      generation, safety/interpretability, long context, data, optimisers, evaluation). GAPS queue
+      closed and rewritten; glossary 117 -> 144 terms; ROADMAP Path 6 (no-maths Big Picture);
+      COMPARISONS and READING_GUIDE updated. All explainers and essays fact-checked against primary
+      sources by a separate verification pass before publishing~~ ✅ done 2026-09-30
+- [x] ~~Fix gitGood promo copy: trial is 7 days (was "10 days free") and price $8/$64 (was $5/$40),
+      here and in the zero-to-hero sibling~~ ✅ done 2026-09-30
+- [x] ~~Fix four factual errors found while fact-checking: 26-deepseek-r1 distilled-model table
+      (wrong scores and base models throughout), 54-rope (Llama 3 does not use YaRN), 43-claude4
+      (May not June 2025), 47-gemini3 (November not December 2025)~~ ✅ done 2026-09-30
 - [x] ~~Documentation sweep: `BROWSE.md` completed to all 107 cards (was 54) and reorganised by
       category with corrected per-category and badge tallies; `docs/QUICK_REFERENCE.md` rebuilt with
       a row per paper (was 24); `docs/READING_GUIDE.md` rewritten for the current collection (was 15
