@@ -133,13 +133,7 @@ Across 40 anonymous games on webDiplomacy.net's blitz format (5-minute negotiati
 
 ### Ablations
 
-The authors compared CICERO against ablations that removed each component:
-
-- **No dialogue** (intent-only orders): much weaker - couldn't coordinate.
-- **Dialogue not conditioned on intent**: dialogue drifted, partners distrusted CICERO, alliances collapsed.
-- **No piKL regularization** (pure self-play planning): aggressive play that humans refused to ally with.
-
-All three pieces - language, planning, and grounding - were necessary.
+The paper's ablations focus on the dialogue model: conditioning messages on planned intents and filtering messages for consistency measurably improved dialogue quality. Its evidence for the full system comes from the league of games against humans rather than from component-by-component play-offs.
 
 ---
 
@@ -166,7 +160,7 @@ The release also generated significant public discussion about AI in social/stra
 - **Generative Agents (#58):** Sister line of work on LLM-driven multi-agent social behavior. Generative Agents simulate believable social worlds; CICERO competes in a real one.
 - **InstructGPT (#5) and Constitutional AI (#14):** Concerned with making LLM outputs aligned with human intent. CICERO's intent-conditioning is a domain-specific cousin - generating dialogue conditioned on the agent's own intent so that words and actions match.
 - **Voyager (#100):** Another LLM-as-agent system in a complex environment (Minecraft). CICERO is the multi-agent, negotiation-driven analog.
-- **DPO (#19) / RLHF:** CICERO predates these as the standard alignment toolkit but exemplifies the same broader goal - making generative models behave consistently with intended properties.
+- **DPO (#19) / RLHF:** RLHF (InstructGPT, March 2022) came before CICERO and DPO after it, but CICERO exemplifies the same broader goal - making generative models behave consistently with intended properties.
 - **GPT-3 (#4):** CICERO uses a smaller fine-tuned LM, but the underlying capability (fluent context-aware text generation) is what made the architecture viable at all.
 
 ---

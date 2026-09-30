@@ -141,7 +141,7 @@ The authors evaluated Self-Refine across seven diverse tasks with GPT-3.5 and GP
 
 | Task | Base GPT-4 | Self-Refine GPT-4 | Improvement |
 |------|------------|-------------------|-------------|
-| Dialogue Response | 25.4% | 49.2% | +23.8 |
+| Dialogue Response | 25.4% | 74.6% | +49.2 |
 | Code Optimization | 27.3% | 36.0% | +8.7 |
 | Code Readability | 27.4% | 56.2% | +28.8 |
 | Math Reasoning (GSM-style) | 92.9% | 93.1% | +0.2 |
@@ -162,8 +162,8 @@ Self-Refine became the canonical reference for the "LLM-as-critic" pattern, and 
 - **Reasoning models like OpenAI o1 and DeepSeek-R1** internalize the self-critique loop during training. The model is rewarded for spending tokens noticing its own mistakes ("Wait, that's not right...") and correcting them - essentially Self-Refine, but baked into the weights via reinforcement learning.
 - **Coding agents** (Cursor, Aider, Claude Code) routinely use self-critique loops: write code, run tests, read errors, revise.
 - **Synthetic data pipelines** for post-training use critic models (often the same model in a different role) to filter and improve training examples.
-- **Constitutional AI** (Anthropic) generalizes the pattern with explicit principles guiding the critique step.
-- **Agent frameworks** like Reflexion, CRITIC, and many LangChain agents implement variants of generate-critique-refine.
+- **Constitutional AI** (Anthropic, December 2022, earlier work) uses the same critique-and-revise pattern with explicit principles guiding the critique step.
+- **Agent frameworks** implement variants of generate-critique-refine; Reflexion was concurrent work (March 2023), and CRITIC and many LangChain agents followed.
 
 The simplicity of Self-Refine is also its legacy. Before this paper, "self-improvement" in LLMs usually meant elaborate training procedures. Self-Refine showed that meaningful gains were available at inference time, with no training at all, just by asking the model to read its own work.
 

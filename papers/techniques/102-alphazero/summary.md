@@ -116,7 +116,7 @@ Many self-play games are played in parallel on TPUs. Each completed game contrib
 - Mean-squared error between predicted value and actual game outcome.
 - L2 weight decay.
 
-There is no replay buffer that lasts forever; training is on recent games. Network checkpoints are periodically evaluated by playing against the current champion checkpoint; only stronger checkpoints are promoted.
+There is no replay buffer that lasts forever; training is on recent games. Unlike AlphaGo Zero, AlphaZero does not gate checkpoints by having them play a champion: it maintains a single network that is updated continually, and self-play always uses the latest parameters.
 
 ### Compute
 
@@ -134,7 +134,7 @@ After 24 hours of self-play training, AlphaZero:
 
 Qualitative observations were equally important. AlphaZero's chess play was widely described as "creative," "intuitive," "human-like" by grandmasters. It favored unusual sacrifices, voluntarily ceded material for long-term positional advantage, and reinvented (or in some cases discarded) centuries of human opening theory. Stockfish, by contrast, exhibited the brute-force, materialistic style typical of hand-engineered engines.
 
-Compute efficiency was striking too: AlphaZero examined ~60,000 positions per second in chess, vs. Stockfish's ~60 million. The MCTS-guided neural net was three orders of magnitude more selective than alpha-beta search, and still played better.
+Compute efficiency was striking too: AlphaZero searched about 80,000 positions per second in chess, against about 70 million for Stockfish (and 40,000 against 35 million for the shogi engine Elmo). The MCTS-guided neural net was three orders of magnitude more selective than alpha-beta search, and still played better.
 
 ---
 
@@ -143,9 +143,9 @@ Compute efficiency was striking too: AlphaZero examined ~60,000 positions per se
 AlphaZero's influence has been enormous:
 
 - **MuZero (2019)** - DeepMind's follow-up that removed even the need to know the rules of the game. MuZero learns a *model* of the dynamics from interaction, then plans inside that learned model. It mastered Atari, chess, shogi, and Go from the same algorithm.
-- **Stockfish itself** - adopted a neural network evaluation function (NNUE) inspired by the AlphaZero results, and is now stronger than ever.
+- **Stockfish itself** - adopted a neural network evaluation function (NNUE, a design that originated in computer shogi in 2018) in 2020, and is now stronger than ever. AlphaZero and its open-source reimplementation Leela Chess Zero helped push chess engines towards learned evaluation.
 - **Modern chess engines** - Leela Chess Zero is an open-source AlphaZero clone that competes with Stockfish at the top of computer chess.
-- **AlphaTensor, AlphaDev, AlphaEvolve** - DeepMind's progression of "AlphaZero applied to algorithmic discovery" projects, where the "game" is "find a faster matrix multiplication algorithm" or "find a better sorting routine."
+- **AlphaTensor, AlphaDev** - DeepMind's "AlphaZero applied to algorithmic discovery" projects (the later AlphaEvolve uses LLM-driven evolution instead), where the "game" is "find a faster matrix multiplication algorithm" or "find a better sorting routine."
 - **RLHF / RLVR / o1 / DeepSeek-R1** - The conceptual lineage is direct: take a model, let it generate many candidate outputs, use a verifier to score them, train the model on its better outputs. AlphaZero pioneered this loop in games; modern reasoning models port it to language with verifiers like math correctness or unit tests.
 - **rStar-Math and process reward models** - explicitly use MCTS-style search guided by LLM policy and value heads, an AlphaZero pattern transplanted into mathematical reasoning.
 

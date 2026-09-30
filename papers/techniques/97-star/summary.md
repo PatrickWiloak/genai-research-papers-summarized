@@ -85,11 +85,11 @@ Conceptually, rationalization is a kind of **hindsight relabeling**: turn failur
 
 STaR was tested on three tasks:
 
-- **Arithmetic** (multi-digit addition): STaR boosted accuracy from 76.3% to 89.5% on a 6B-parameter GPT-J, beating much larger models trained on the same data without bootstrapping.
-- **CommonsenseQA**: STaR-trained 6B model reached **72.5%** accuracy, comparable to a 30x larger 137B GPT-3 model fine-tuned conventionally on the same dataset.
-- **GSM8K** (grade-school math): STaR matched or beat fine-tuning on the human-annotated rationales - without using *any* human rationales, only the final answers.
+- **Arithmetic** (multi-digit addition): STaR reached 89.5% after 16 iterations on a 6B-parameter GPT-J, against 76.3% for a baseline trained on the same problems without rationales.
+- **CommonsenseQA**: STaR-trained 6B model reached **72.5%** accuracy, comparable to fine-tuned GPT-3 175B (73.0%), a model about 30x larger.
+- **GSM8K** (grade-school math): STaR reached 10.7%, against 5.8% for the same GPT-J fine-tuned to answer directly - using no human rationales, only the final answers.
 
-A key finding: **most of the gains came from rationalization.** Without it, the bootstrap loop plateaus quickly because the model can never escape its initial competence ceiling. With it, the loop keeps producing meaningful training data on harder problems.
+Rationalization - generating a rationale when shown the correct answer - added a further gain on top of plain bootstrapping (CommonsenseQA 68.8% to 72.5%; GSM8K 10.1% to 10.7%). Most of the improvement came from the bootstrap loop itself; rationalization helps the loop keep producing training data on problems the model initially gets wrong.
 
 ---
 
@@ -126,7 +126,7 @@ This is a kind of **rejection sampling fine-tuning** - a technique that reappear
 Pitfalls to avoid:
 - **Shortcut exploitation.** If the dataset has spurious patterns (e.g., the answer is always near the end of the problem), the model can find them without doing real reasoning. Diverse datasets matter.
 - **Mode collapse.** Without enough diversity in sampled rationales, the model can lock into a single solution style and fail to generalize.
-- **Rationalization hallucination.** When the model invents a rationale for a hard problem given the answer, it can produce confident-sounding but wrong reasoning. The paper mitigates this by giving rationalized samples lower weight or fewer iterations of training.
+- **Rationalization hallucination.** When the model invents a rationale for a hard problem given the answer, it can produce confident-sounding but wrong reasoning.
 
 ---
 
@@ -174,7 +174,7 @@ STaR also reframed how people thought about training data: **reasoning data can 
 - **Outcome supervision is enough**: a model can teach itself to reason given only (question, correct answer) pairs, no human-written rationales required.
 - **The bootstrap loop**: generate rationales -> filter by correctness -> fine-tune -> repeat. This single recipe is the conceptual core of modern reasoning models.
 - **Rationalization breaks plateaus**: giving the model the answer and asking it to produce supporting reasoning lets it learn from problems it couldn't initially solve.
-- **A 6B model trained with STaR matched a 137B model on CommonsenseQA** - a strikingly early hint that reasoning training is more valuable than raw scale.
+- **A 6B model trained with STaR matched fine-tuned GPT-3 175B on CommonsenseQA** - a strikingly early hint that reasoning training is more valuable than raw scale.
 - **Direct intellectual ancestor of o1, R1, rStar-Math, and the modern reasoning-model paradigm** - STaR articulated the loop the entire field is now running at massive scale.
 
 <!-- related:start -->

@@ -63,7 +63,7 @@ Unlike Textual Inversion, DreamBooth fine-tunes the **whole diffusion U-Net** (a
 
 Full fine-tuning on 3-5 images alone causes catastrophic forgetting: the model starts rendering all dogs as Bowie. The fix:
 
-1. Before fine-tuning, use the *original* model to generate ~200 images of the class noun (e.g., "a photo of a dog"). Call these **class samples**.
+1. Before fine-tuning, use the *original* model to generate ~1000 images of the class noun (e.g., "a photo of a dog"). Call these **class samples**.
 2. During fine-tuning, the loss has two terms:
 
 ```
@@ -91,7 +91,7 @@ This single loss term is what made personalization actually work. Without it, th
 1. Collect 3-5 photos of the subject (varied poses, backgrounds).
 2. Pick a class noun: "dog," "person," "watch."
 3. Generate ~200 class samples with the unmodified model.
-4. Fine-tune the diffusion model for ~1000 steps (about 30 minutes on a single GPU).
+4. Fine-tune the diffusion model for ~1000 steps (about 5 minutes on one TPUv4 for Imagen, or one A100 for Stable Diffusion, per the paper).
 5. Generate with prompts like:
    - `"a [V] dog swimming in the ocean"`
    - `"a painting of [V] dog in the style of Van Gogh"`
@@ -158,7 +158,7 @@ The paper's release raised concerns that turned out to be prescient:
 - **Identity theft and impersonation.** Avatar apps required users to upload photos, raising questions about how those photos and the resulting models were stored, used, and deleted.
 - **Style appropriation.** Artists discovered DreamBooth-style fine-tunes of their work being shared without consent, becoming an early flashpoint in the ongoing debate over training-data rights for generative AI.
 
-These concerns continue to shape regulation (EU AI Act, US executive orders) and industry self-policy around generative models. DreamBooth is one of several techniques cited as a reason that ID-verification, content provenance, and consent mechanisms are now first-class considerations for image-model deployment.
+These concerns continue to shape regulation (the EU AI Act; in the US, the 2023 executive order, revoked in 2025, and state laws) and industry self-policy around generative models. DreamBooth is one of several techniques cited as a reason that ID-verification, content provenance, and consent mechanisms are now first-class considerations for image-model deployment.
 
 ---
 

@@ -23,7 +23,7 @@ tags: ["video-generation", "world-models", "self-supervised"]
 
 Genie was the first **foundation world model**: a single neural network trained on internet video that can take a single image - a sketch, a photo, a frame from a real game - and turn it into a fully **playable, controllable 2D environment**. You hit a key; the model generates the next frame consistent with your action. There were no action labels in the training data. The model figured out, on its own, what actions exist in this universe of videos.
 
-That capability - generating not just pixels but a **playable world** from a prompt - pointed at a future where game-like environments, training simulators, and embodied AI testbeds can be created on demand by a generative model. Within ten months DeepMind released Genie 2, which scaled the same idea to photorealistic 3D worlds with minute-long horizons, and Google's later Veo and Genie family extended it further. Genie established the template for the entire "world model from video" research program.
+That capability - generating not just pixels but a **playable world** from a prompt - pointed at a future where game-like environments, training simulators, and embodied AI testbeds can be created on demand by a generative model. Within ten months DeepMind released Genie 2, which scaled the same idea to photorealistic 3D worlds with minute-long horizons, and Genie 3 (August 2025) made generated worlds explorable in real time at 720p with minutes of consistency. Genie established the template for the entire "world model from video" research program.
 
 ---
 
@@ -47,7 +47,7 @@ The question Genie asks: **can we learn a controllable world model from unlabele
 
 Genie's central trick is the **Latent Action Model (LAM)**. Instead of requiring action labels, the model *invents* its own discrete action vocabulary by watching consecutive frame pairs.
 
-Three components, trained jointly:
+Three components, trained in two phases (the video tokenizer first, then the latent action model and dynamics model together):
 
 ```
 1. Video Tokenizer:        frames     -> discrete visual tokens
@@ -65,7 +65,7 @@ At inference, you ignore the LAM and let the user supply the action token direct
 
 ### Training data
 
-200,000 hours of publicly available 2D platformer gameplay video scraped from the internet. **No action labels. No reward labels. No metadata.** Just RGB frames at 10 FPS, 16x16 tokenized to 256 visual codes per frame.
+More than 200,000 hours of publicly available 2D platformer gameplay video, filtered down to about 30,000 hours. **No action labels. No reward labels. No metadata.** Just 160x90 RGB frames at 10 FPS, tokenized with patch size 4 into a 1,024-code vocabulary.
 
 ### Architecture
 
@@ -124,9 +124,9 @@ Genie generates playable worlds from prompts wildly outside its training distrib
 
 This is the foundation-model property: train on enough variety and the model generalizes far beyond what was in the training set.
 
-### Latent actions transfer to real robots
+### Latent actions on robot video
 
-In a striking follow-up experiment, the authors trained Genie on **robot manipulation video** without action labels. The emergent latent actions could then be used to drive a real robot - proving the LAM was discovering genuine control structure, not artifacts of platformer rendering.
+In a striking follow-up experiment, the authors trained Genie on **robot manipulation video** without action labels. The learned latent actions produced consistent, controllable motion in the generated robot videos - evidence that the LAM discovers genuine control structure, not artifacts of platformer rendering. (No physical robot was driven in the paper.)
 
 ### Scaling holds
 
@@ -152,7 +152,7 @@ Genie crystallized the **foundation world model** as a research category alongsi
 - **Oasis** (Decart, 2024): a real-time Minecraft world model in a browser.
 - **World Labs / Fei-Fei Li**: photorealistic generated 3D scenes from images.
 - **Wayve GAIA-1 / GAIA-2**: generative world models for autonomous driving.
-- **Genie 2** and **SIMA**: DeepMind's continuing program for training embodied agents in generated worlds.
+- **Genie 2**, **Genie 3** (August 2025, real-time interactive worlds) and **SIMA**: DeepMind's continuing program for training embodied agents in generated worlds.
 
 Genie also reframes the relationship between video models and RL. A sufficiently good generative video model that can be *conditioned on an action* is a simulator. A simulator is what RL has been bottlenecked on for a decade. World models close that loop.
 
@@ -162,11 +162,11 @@ There is even a credible path where general-purpose AI agents are trained primar
 
 ## Connections to Other Papers
 
-- **Sora / DiT (#44):** Genie shares Sora's diffusion-transformer family for video generation but adds action conditioning and a learned action space - turning passive video into an interactive environment.
+- **Sora / DiT (#44):** Both generate video with Transformers, but Genie is not a diffusion model - it uses spatiotemporal (ST) Transformers with MaskGIT-style decoding over discrete video tokens - and it adds action conditioning and a learned action space - turning passive video into an interactive environment.
 - **Scaling Laws (#12):** The Genie paper explicitly demonstrates that the language-model scaling story carries over to world models.
 - **DreamerV3 (#105):** The classical model-based RL world-model line of work. DreamerV3 learns a world model from agent experience for planning; Genie learns one from internet video for interactive generation. Different goals, converging future.
 - **Voyager (#100):** An LLM-driven Minecraft agent - sibling work on agents that operate in rich environments, the kind of environment Genie can now generate.
-- **AlphaZero (#102):** Earlier world-model + planning system; learned its model from self-play in a fixed game. Genie inverts that: the world model is the *output*, learned from observation.
+- **AlphaZero (#102):** Earlier planning system, but it plans with the game's known rules as a perfect simulator (learning the model came later, with MuZero). Genie inverts that: the world model is the *output*, learned from observation.
 - **Generative Agents (#58):** Agents inhabiting a simulated world. Genie provides a path to generating that world from a single image.
 
 ---

@@ -14,11 +14,11 @@ Working task list for **genai-research-papers-summarized**. Read this at the sta
       (source: `assets/brand/social-preview.html`, re-render with headless Chromium
       `--window-size=1280,640 --screenshot`). Upload via **Settings → General → Social preview**
       (not exposed by the GitHub API). Re-render when the counts move a lot.
-- [ ] **Patrick: update the GitHub repo description and topics** for the broader scope - the
-      description still says research papers. Suggested: "Everything AI, summarized: 144 papers and
-      essays plus 31 dated explainers on model families, benchmarks, compute, policy and open
-      questions." Add topics `ai-policy`, `robotics`, `explainers`
-      (`gh repo edit PatrickWiloak/genai-research-papers-summarized --description ... --add-topic ...`).
+- [x] ~~Update the GitHub repo description and topics for the broader scope~~ ✅ done 2026-09-30:
+      description now "Everything AI, summarized: 144 papers and landmark essays plus 31 dated
+      explainers..."; topics `ai-policy`, `robotics`, `explainers` added. **Patrick:** the old
+      description was "For folks who don't have time to read 220,000+ words of research 📚" - restore
+      your voice with `gh repo edit --description` if you prefer it.
 - [x] ~~Set GitHub topics~~ ✅ done 2026-08-31 (15 topics: llm, generative-ai, research-papers, rag, ...)
 - [x] ~~Commit and push the rewritten `LICENSE` + new `NOTICE`~~ ✅ done - on `main` since
       2026-08-31 (commit "Replace the hand-written CC BY summary with the canonical legal text").
@@ -36,10 +36,11 @@ Working task list for **genai-research-papers-summarized**. Read this at the sta
       `claude.md`, `gemini.md` - and the dated scores in `explainers/benchmarks/*.md` and
       `papers/techniques/139-osworld/summary.md` ("What Happened Next"). These were current on
       2026-09-30 and will be wrong within a quarter.
-- [ ] 🟡 The 88-107 summaries were salvaged from a stale branch and carry a hand-written
-      "Connections to Other Papers" section with `(#NN)` references. The numbers were remapped to the
-      current scheme, but the prose has not been re-read against main's versions of those papers -
-      spot-check a few for claims that no longer hold.
+- [x] ~~Spot-check the salvaged 88-107 summaries~~ ✅ done 2026-09-30 - a read-only verifier checked
+      all 20 against their papers; about 60 corrections applied (one wrong cross-reference, several
+      "connections" that misdescribed the cited paper, and numeric tables in Mistral 7B, Llama Guard,
+      Self-Refine, KTO, Voyager, PaLM, MAE and STaR rebuilt from the papers). Unverified and left as
+      is: CICERO's headline numbers (Science paywall), ESM-2's contact-precision table.
 - [ ] 🟡 `docs/READING_GUIDE.md`, `docs/ROADMAP.md` and `docs/COMPARISONS.md` now reference the
       whole collection but still curate rather than enumerate. That is deliberate, but it means a
       new paper does not automatically appear in them - check whether it belongs on a learning path

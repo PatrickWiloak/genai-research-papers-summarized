@@ -102,7 +102,7 @@ To get diverse samples, the procedure can be repeated with different random seed
 
 ### Training
 
-AlphaFold 3 was trained on the entire Protein Data Bank, including all multimers, ligands, nucleic acids, and modifications. A novel "cross-distillation" step uses AlphaFold 2 predictions as additional training data for protein-only inputs to maintain protein accuracy while expanding the model's repertoire.
+AlphaFold 3 was trained on the entire Protein Data Bank, including all multimers, ligands, nucleic acids, and modifications. A "cross-distillation" step adds structures predicted by AlphaFold-Multimer (v2.3) to the training data, so that disordered regions are learned as extended loops - reducing the diffusion model's tendency to hallucinate compact structure where there is none.
 
 ---
 
@@ -118,7 +118,7 @@ The paper reports state-of-the-art performance across nearly every biomolecular 
 
 The model also produces realistic confidence calibration: high pLDDT regions are nearly always correct; low pLDDT regions accurately flag uncertain predictions. This is critical for the model to be useful in drug discovery, where a confident wrong prediction is more dangerous than an explicitly uncertain one.
 
-A web server (AlphaFold Server) and downloadable weights (under a non-commercial license at release) made the system broadly accessible to the research community.
+A free web server (AlphaFold Server) made the system accessible at release; code followed in November 2024 (CC BY-NC-SA 4.0), with model weights available on request for academic, non-commercial use.
 
 ---
 
@@ -132,7 +132,7 @@ AlphaFold 3's release crystallized a few important shifts in computational biolo
 - **The "computational biology stack" gets simpler.** A working scientist can now answer many structural questions with one tool and one API call.
 - **Open questions remain.** AlphaFold 3 still struggles with very flexible molecules, highly novel chemotypes, and induced-fit binding modes. It also does not yet model molecular dynamics - only static endpoints - leaving room for future generations.
 
-The paper also intensified a debate about reproducibility and openness in AI for science. Unlike AlphaFold 2, AlphaFold 3 was initially released only via a web server with usage limits and without code. Code and weights were later released under a more permissive arrangement after community pressure, but the episode foreshadowed ongoing tension between commercial AI development and open scientific practice.
+The paper also intensified a debate about reproducibility and openness in AI for science. Unlike AlphaFold 2, AlphaFold 3 was initially released only via a web server with usage limits and without code. In November 2024 DeepMind released the code under a non-commercial licence, with weights available on request for academic use, after community pressure, but the episode foreshadowed ongoing tension between commercial AI development and open scientific practice.
 
 ---
 

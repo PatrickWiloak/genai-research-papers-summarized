@@ -22,7 +22,7 @@ tags: ["vision", "pretraining", "self-supervised", "architecture"]
 
 ## Why This Paper Matters
 
-Masked Autoencoders (MAE) brought BERT-style self-supervised learning to vision and made it actually scale. The trick was deceptively simple: randomly hide 75% of an image's patches, then train a Transformer to reconstruct the missing pixels. The result was the first self-supervised vision pretraining method that cleanly beat supervised pretraining on ImageNet - and it did so while training **3x faster** than contrastive methods like SimCLR and MoCo.
+Masked Autoencoders (MAE) brought BERT-style self-supervised learning to vision and made it actually scale. The trick was deceptively simple: randomly hide 75% of an image's patches, then train a Transformer to reconstruct the missing pixels. The result was the first self-supervised vision pretraining method that cleanly beat supervised pretraining on ImageNet - and because its encoder skips the masked patches, it trains 3x or more faster than an encoder that processes every patch.
 
 MAE became the new default for vision pretraining. It also vindicated the broader bet that the same recipe powering NLP (mask things, reconstruct them, scale up) would work for any modality if you got the details right.
 
@@ -142,7 +142,7 @@ Simplicity won.
 | **MAE** | **ViT-H** | **86.9** |
 | **MAE** | **ViT-H (448)** | **87.8** |
 
-MAE-pretrained ViT-Huge reached 87.8% on ImageNet - surpassing all previous methods and showing clear scaling with model size.
+MAE-pretrained ViT-Huge reached 87.8% on ImageNet - the best result among methods using only ImageNet-1K data - and showing clear scaling with model size.
 
 ### Transfer Learning
 
@@ -155,9 +155,9 @@ A consistent pattern: the bigger the model, the more MAE outperformed alternativ
 
 ### Training Efficiency
 
-MAE pretrains roughly **3x faster** than contrastive methods (MoCo, DINO) with comparable or better results. For ViT-Huge:
-- 800-epoch MAE pretrain on ImageNet-1K: ~31 hours on 128 TPU v3 cores
-- Equivalent contrastive pretrain: ~3x longer
+Because the encoder only processes the visible 25% of patches, MAE trains **3x or more faster** than the same design encoding every patch. The paper's wall-clock comparison on 128 TPU-v3 cores:
+- ViT-L, MAE, 1600 epochs: ~31 hours
+- ViT-L, MoCo v3 (contrastive), 300 epochs: ~36 hours
 
 Scaling pretraining for free is a huge practical advantage.
 
@@ -180,7 +180,7 @@ The encoder is forced to learn representations of visible patches that contain e
 
 ### Self-supervised vision became practical
 
-After MAE, generative pretraining became the default approach for large vision Transformers. The contrastive era effectively ended for foundation-scale vision models.
+After MAE, masked-image modelling became one of the main ways to pretrain large vision Transformers. It did not end other approaches: self-distillation backbones such as DINOv2 (2023) and DINOv3 (2025) remain among the strongest general-purpose vision encoders.
 
 ### A blueprint for other modalities
 
@@ -219,7 +219,7 @@ After GPT and BERT for text, MAE was the cleanest demonstration that the masked-
 - **GPT-2 (#64) and GPT-3 (#4):** Show generative pretraining for text; MAE is the generative-pretraining-for-vision equivalent
 - **Scaling Laws (#12):** MAE's gains compound with model size, consistent with scaling-law expectations
 - **VAE (#57) and VQ-VAE (#89):** Both are autoencoder-style methods; MAE is a masked autoencoder that doesn't try to model a latent distribution - just reconstructs
-- **Diffusion Models (#6) and DDPM (#6):** Both reconstruct from corrupted inputs; MAE's masking is a discrete, structured corruption rather than continuous noise
+- **DDPM (#6):** Both reconstruct from corrupted inputs; MAE's masking is a discrete, structured corruption rather than continuous noise
 - **DALL-E and CLIP:** MAE is sometimes used as the vision tower in multimodal systems; its strong features transfer well
 
 ---

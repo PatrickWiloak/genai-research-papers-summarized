@@ -34,7 +34,7 @@ By early 2022, text-to-image looked like this:
 
 - **DALL-E 2** used CLIP (#8) embeddings + a prior + a diffusion decoder. Beautiful images, but it often mis-counted objects, garbled text, and missed compositional details ("a red cube on top of a blue cube").
 - **GLIDE** had shown classifier-free guidance works well for text-to-image diffusion.
-- **Parti** (Google's autoregressive Transformer approach) achieved very strong text fidelity but was slow and expensive.
+- **Autoregressive token models** (DALL-E 1 and its successors) achieved strong text fidelity but were slow and expensive. (Google's own autoregressive model, Parti, arrived a month after Imagen.)
 
 Everyone assumed the path forward was **bigger image models trained on more text-image pairs**. CLIP-style joint training was treated as the obvious source of language understanding because it was trained on image-text data.
 
@@ -124,7 +124,7 @@ A few real-world details:
 
 ## Key Results
 
-- **MS-COCO zero-shot FID of 7.27**, beating DALL-E 2 (10.39) and Parti at the time.
+- **MS-COCO zero-shot FID of 7.27**, beating DALL-E 2 (10.39) and GLIDE (12.4).
 - **DrawBench**, a new prompt benchmark introduced in the paper covering compositionality, cardinality (counting), text rendering, and rare descriptions, showed Imagen substantially preferred over DALL-E 2 in human evaluation - both for image-text alignment *and* fidelity.
 - **Text-encoder scaling vs. U-Net scaling ablation:** going from T5-Large to T5-XXL improved alignment dramatically; going from 300M to 2B U-Net parameters helped much less. This is the paper's most-cited chart.
 - Notably better rendering of typography ("a sign that says 'Welcome'") and counting, though both remained imperfect.
@@ -138,7 +138,7 @@ Even with all its advances, Imagen left clear room to grow:
 - **Biases inherited from web-scraped data.** The paper explicitly documented gender, racial, and cultural biases - e.g., default depictions of professions skewed toward Western stereotypes.
 - **Limited fine-grained spatial control.** "A red cube on a blue sphere" worked better than in DALL-E 2, but precise composition still required prompt engineering. ControlNet (#71) and later structural-conditioning methods addressed this.
 - **No personalization.** Imagen couldn't generate "a photo of *my* dog" - that's the gap DreamBooth (#92) filled, also at Google.
-- **Compute cost.** Training Imagen required hundreds of TPU pods over weeks. The closed-source release means we don't have public numbers, but it's estimated at orders of magnitude more compute than Stable Diffusion's later open release.
+- **Compute cost.** The paper reports training the base model on 256 TPU-v4 chips and each super-resolution model on 128 TPU-v4 chips. The model was never released, so it could not be reused the way Stable Diffusion's open weights later were.
 
 ---
 

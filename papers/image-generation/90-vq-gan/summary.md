@@ -119,7 +119,7 @@ The discriminator's role is to make sure the Lego pieces look like real visual t
 
 A few details that practitioners care about:
 
-- **Codebook collapse** is a known failure mode where most codes go unused and the model relies on a few. The paper uses EMA codebook updates and codebook resets to mitigate this; later work (e.g., Improved VQGAN, FSQ) revisits the discrete bottleneck design.
+- **Codebook collapse** is a known failure mode where most codes go unused and the model relies on a few. Later work added fixes such as EMA codebook updates and code resets, and some (e.g., Improved VQGAN, FSQ) revisits the discrete bottleneck design.
 - **Downsampling factor f** trades reconstruction quality for sequence length. f=16 gives 16x16 tokens for a 256-image (manageable for Transformers); f=8 gives 32x32 (much higher fidelity but 4x more tokens to model).
 - **Two-stage training is essential**: training the autoencoder and the Transformer jointly is unstable. Freeze the autoencoder before Stage 2.
 - **The Transformer dominates inference cost**: the autoencoder runs once per generation, but the Transformer runs N times (once per token). Most engineering effort in successor systems went into faster Stage-2 models (parallel decoding in MaskGIT, latent diffusion in Stable Diffusion).
@@ -149,7 +149,7 @@ A few details that practitioners care about:
 
 VQ-GAN's perceptual + adversarial autoencoder became **infrastructure**. The two clearest descendants:
 
-- **DALL-E 1** (OpenAI, 2021) used a discrete VAE almost identical in spirit and trained a Transformer over text + image tokens - the first viral text-to-image model.
+- **DALL-E 1** (OpenAI, 2021, concurrent work rather than a descendant) used a discrete VAE similar in spirit and trained a Transformer over text + image tokens - the first viral text-to-image model.
 - **Stable Diffusion** (#7) uses a near-identical VQ-GAN-style autoencoder as its latent space. The diffusion U-Net does the heavy lifting instead of a Transformer, but the perceptual encoder is essentially this paper's contribution.
 
 Other lines that flow from VQ-GAN:

@@ -22,7 +22,7 @@ tags: ["reinforcement-learning", "world-models"]
 
 DreamerV3 was the first reinforcement-learning algorithm to **collect diamonds in Minecraft from scratch, with a fixed set of hyperparameters, with no human demonstrations and no curriculum**. That single sentence is what made it famous - collecting diamonds had been a long-standing open challenge that prior systems either failed at entirely or solved only with extensive human data (the MineRL competitions).
 
-What made DreamerV3 even more important than the headline result was the way it got there: **one algorithm, one set of hyperparameters, more than 150 tasks across continuous control, Atari, DMLab, ProcGen, Crafter, and Minecraft, beating specialized baselines on essentially all of them**. Before DreamerV3, "general-purpose RL" meant retuning your algorithm for every new environment. After it, the dream of a single learning rule that just works across domains looked real for the first time.
+What made DreamerV3 even more important than the headline result was the way it got there: **one algorithm, one set of hyperparameters, more than 150 tasks across continuous control, Atari, DMLab, ProcGen, Crafter, and Minecraft, matching or beating specialized baselines on most of them**. Before DreamerV3, "general-purpose RL" meant retuning your algorithm for every new environment. After it, the dream of a single learning rule that just works across domains looked real for the first time.
 
 It is also one of the cleanest demonstrations of the **model-based RL bet**: learn a world model, then plan and learn in imagination. This idea is now central to embodied AI, robotics, and (in a different form) to the entire foundation-world-model program represented by Genie.
 
@@ -60,7 +60,7 @@ What DreamerV3 added on top of DreamerV2:
 
 1. **Symlog predictions.** Transform all targets through `symlog(x) = sign(x) * log(|x| + 1)` to handle reward and value scales that vary by orders of magnitude across tasks.
 2. **Two-hot encoded value targets.** Predict reward and value as categorical distributions over symlog-spaced bins instead of regression - far more stable across scales.
-3. **KL balancing and free bits.** Stabilizes the world-model latent dynamics so it doesn't collapse or diverge regardless of domain.
+3. **KL balancing (from DreamerV2) combined with free bits.** Stabilizes the world-model latent dynamics so it doesn't collapse or diverge regardless of domain.
 4. **Percentile-based return normalization.** Actor objectives are normalized using rolling 5th/95th percentile returns, making the optimizer's job equally hard regardless of whether rewards are 0/1 or 0/100,000.
 
 Together, these tricks remove the per-task tuning that plagued prior agents.
@@ -116,7 +116,7 @@ The headline: DreamerV3 collected its first diamond after roughly 100 million en
 
 ### Atari, ProcGen, DMC, DMLab
 
-DreamerV3 set new state of the art on:
+DreamerV3 was evaluated on:
 
 - **Atari-100k** (sample-efficient benchmark)
 - **Atari-200M** (asymptotic)
@@ -125,7 +125,7 @@ DreamerV3 set new state of the art on:
 - **DMLab-30** (3D navigation)
 - **Crafter** (2D Minecraft-like)
 
-On most of these it beat algorithms specifically tuned for that domain (PPO, IMPALA, Rainbow, DQN, MuZero, EfficientZero, SAC).
+With one fixed configuration it matched or beat strong domain-specific baselines on most of them - though not all: EfficientZero kept the Atari-100k lead, and on ProcGen DreamerV3 matched rather than beat the tuned PPG baseline.
 
 ### Predictable scaling
 
@@ -153,10 +153,10 @@ The paper was later extended in a Nature 2025 publication, formalizing the resul
 
 ## Connections to Other Papers
 
-- **AlphaZero (#102):** The original "learn a model and plan inside it" success - but with a known, perfect model (game rules). DreamerV3 extends the idea to **learned** world models from pixels.
+- **AlphaZero (#102):** The original "plan inside a model" success - but with a known, perfect model (the game rules), not a learned one. DreamerV3 extends the idea to **learned** world models from pixels.
 - **Genie (#104):** Sister line of world-model research. Genie learns a generative world model from internet video for interactive generation; Dreamer learns one from agent experience for planning. Both are foundation-world-model precursors.
-- **Voyager (#100):** Another Minecraft milestone - but driven by an LLM with hand-built skills. DreamerV3 reaches Minecraft mastery purely through model-based RL from pixels.
-- **MuZero (predecessor to AlphaZero family):** Closest spiritual ancestor - also learns the model and acts through it - but tuned per domain. DreamerV3 generalizes this across all domains with fixed hyperparameters.
+- **Voyager (#100):** Another Minecraft milestone - but driven by an LLM that writes its own skill library as code. DreamerV3 reaches Minecraft mastery purely through model-based RL from pixels.
+- **MuZero (AlphaZero's successor, 2019):** Closest spiritual ancestor - also learns the model and acts through it - but tuned per domain. DreamerV3 generalizes this across all domains with fixed hyperparameters.
 - **Scaling Laws (#12):** DreamerV3 reproduces a clean scaling curve for RL, importing the language-model paradigm into reinforcement learning.
 - **Generative Agents (#58):** A different agent paradigm using LLM cognition. DreamerV3 represents the pure-RL alternative to embodied intelligence.
 

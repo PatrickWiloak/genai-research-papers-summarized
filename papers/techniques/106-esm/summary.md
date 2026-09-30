@@ -100,7 +100,7 @@ The crucial difference from AlphaFold 2: the input is **just one sequence**. No 
 
 ### The Metagenomic Atlas
 
-With ESMFold's speed (~14 seconds for a 384-residue protein on a single A100), the team ran inference on **617 million metagenomic protein sequences** - most of which had never had a structure predicted before. The resulting database, the ESM Metagenomic Atlas, was released publicly with bulk download. It roughly doubled the total number of predicted protein structures known to science overnight.
+With ESMFold's speed (about 14 seconds for a 384-residue protein on a single NVIDIA V100), the team ran inference on **617 million metagenomic protein sequences** - most of which had never had a structure predicted before. The resulting database, the ESM Metagenomic Atlas, was released publicly with bulk download. It roughly doubled the total number of predicted protein structures known to science overnight.
 
 ---
 
@@ -124,9 +124,9 @@ This was the first crisp scaling law in computational biology.
 
 On the CAMEO benchmark of recent structures:
 
-- **Comparable accuracy** to AlphaFold 2 on proteins where AF2 already does well.
+- **Close to AlphaFold 2 but lower** on average (TM-score 0.83 against 0.88 on CAMEO; 0.68 against 0.85 on CASP14).
 - **Up to 60x faster** end-to-end (no MSA construction).
-- **Strictly better on orphan proteins** - sequences with few homologs, where AF2's MSAs are sparse and degrade quality.
+- **Competitive when MSAs are poor** - ESMFold outperforms AlphaFold 2 and RoseTTAFold when their MSAs are ablated, which is the situation for orphan sequences with few homologs (see the paper's supplementary comparison).
 
 ### The Metagenomic Atlas
 
@@ -142,7 +142,7 @@ ESM-2 / ESMFold launched the **protein foundation model** as a category, and ins
 - **AlphaFold 3** (2024): extended structure prediction to complexes including ligands, nucleic acids, and post-translational modifications.
 - **DNA / RNA language models** (Nucleotide Transformer, Evo, RNA-FM): the same scaling recipe applied to other biological sequences.
 - **Cell language models** (Geneformer, scGPT): transformers over gene-expression "sentences."
-- **Boltz** and other open-source structure predictors: continued the push toward fast, single-sequence prediction.
+- **Boltz** and other open-source structure predictors: continued the push toward fast, openly available structure prediction.
 
 It also marked the founding of **EvolutionaryScale**, the spinout that the ESM team formed in 2024 to continue this research line outside Meta - one of the first true "biology-foundation-model" companies.
 
@@ -155,7 +155,7 @@ Beyond proteins, ESM-2 was a load-bearing piece of evidence for the general clai
 - **BERT (#3):** ESM-2's masked-language-modeling objective is BERT, applied to amino acids. The architectural recipe is unchanged; only the alphabet differs.
 - **Scaling Laws (#12):** ESM-2 demonstrates the Chinchilla-style scaling story in biology - bigger models on more sequences yield predictably better representations.
 - **Chinchilla (#18):** Informs the data/parameter scaling choices made for ESM-2's largest models.
-- **AlphaFold 2 / 3 (#87 / #88):** ESMFold is the alternative paradigm - single-sequence, foundation-model-driven - to AlphaFold's MSA-centric approach. The two together define modern computational structural biology.
+- **AlphaFold 2 / 3 (#68 / #101):** ESMFold is the alternative paradigm - single-sequence, foundation-model-driven - to AlphaFold's MSA-centric approach. The two together define modern computational structural biology.
 - **AlphaZero (#102), AlphaGeometry (#61), AlphaEvolve (#62):** DeepMind's "AlphaX" line targets specific scientific or game domains; ESM is Meta's equivalent bet that **the foundation-model paradigm itself** is the right tool for science.
 - **GPT-3 (#4) and successors:** Same recipe (transformer + scale + self-supervised pretraining), different alphabet. ESM is the most direct biological analog of GPT-style scaling.
 
@@ -165,7 +165,7 @@ Beyond proteins, ESM-2 was a load-bearing piece of evidence for the general clai
 
 1. **Foundation models work for biology.** A transformer trained only to fill in masked amino acids learns representations rich enough to decode 3D structure.
 2. **Scaling laws apply.** Contact-prediction accuracy improves as a clean function of parameters and compute, exactly as in language models - the first really clean such curve in computational biology.
-3. **No MSAs needed.** ESMFold predicts atomic structure from a single sequence, up to 60x faster than AlphaFold 2 and strictly better on orphan and metagenomic proteins.
+3. **No MSAs needed.** ESMFold predicts atomic structure from a single sequence, up to 60x faster than AlphaFold 2, which is what made atlas-scale prediction of metagenomic proteins practical.
 4. **Scale opened a new database.** The ESM Metagenomic Atlas - 617M predicted structures - was made possible only because ESMFold is fast enough to run on hundreds of millions of sequences.
 5. **A template for foundation models in science.** ESM-2 helped establish that the scaling + self-supervised pretraining recipe generalizes far beyond language, seeding the wave of foundation models for DNA, RNA, cells, and chemistry.
 

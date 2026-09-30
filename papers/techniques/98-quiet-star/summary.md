@@ -68,14 +68,15 @@ Naively, generating a thought at every token would make training catastrophicall
 The training signal is brilliantly simple:
 
 - Compute the probability the model assigns to the *actual* next token, *given the thought*.
-- Compare it to the probability *without* the thought (a "no-thought" baseline).
+- Compare it to the average over several thoughts sampled at the same position (the baseline), scored over the next few true tokens rather than just one.
 - If the thought helped - predicted next token's probability went up - reinforce it.
 - If the thought hurt or didn't help - suppress it.
 
 The gradient update is REINFORCE-style:
 
 ```
-gradient_signal = (log p(next_token | context + thought) - log p(next_token | context)) * grad_log_p(thought)
+reward_j = log p(next n_true tokens | context + thought_j) - mean over sampled thoughts
+gradient_signal = reward_j * grad_log_p(thought_j)
 ```
 
 Thoughts that genuinely make the upcoming text more predictable get reinforced. Useless thoughts wither. The model effectively discovers, through reinforcement, what kinds of internal reasoning help it predict text.
@@ -89,7 +90,7 @@ A learnable **mixing head** controls how much weight to give the with-thought vs
 Starting from a pretrained base model (Mistral 7B in the paper):
 
 1. Continue training on a general text corpus (OpenWebMath, C4).
-2. At each token position, sample a 12-token thought.
+2. At each token position, sample a short thought (up to 24 tokens in the headline results).
 3. Compute the next-token likelihood improvement.
 4. Apply REINFORCE on the thought tokens, scaled by the improvement.
 5. Standard language-model loss on the actual text token (unchanged).

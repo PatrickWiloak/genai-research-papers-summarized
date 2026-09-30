@@ -91,7 +91,7 @@ This parallel formulation saved roughly 15% of training time at the 540B scale.
 |-------|--------|--------|--------|-------|-------------|
 | PaLM 8B | 8.6B | 32 | 4096 | 16 | 16 x 256 |
 | PaLM 62B | 62B | 64 | 8192 | 32 | 32 x 256 |
-| **PaLM 540B** | **540B** | **118** | **18432** | **48** | **48 x 384** |
+| **PaLM 540B** | **540B** | **118** | **18432** | **48** | **48 x 256** |
 
 ### Training Data
 
@@ -110,7 +110,7 @@ Roughly 78% English, 22% multilingual + code. This data composition made PaLM un
 The training run is itself a contribution. Pathways enabled:
 - **6,144 TPU v4 chips** organized as two pods (3072 each) connected over data center networks
 - **Two-way data parallelism** between pods, model parallelism within
-- **Hardware FLOPs utilization of 46.2%** - extraordinary for a model this size
+- **Model FLOPs utilization of 46.2%** (57.8% hardware FLOPs utilization) - extraordinary for a model this size
 - A single Python program orchestrating computation across two separate hardware islands
 
 This was the first publicly described training run at the multi-pod scale.
@@ -124,7 +124,7 @@ This was the first publicly described training run at the multi-pod scale.
 BIG-bench is a 200+ task benchmark designed to probe hard, novel capabilities (logic puzzles, mathematical induction, code generation, joke understanding, semantic parsing, etc.).
 
 - PaLM 540B substantially outperformed prior models on BIG-bench
-- On a "hard subset" of 58 tasks where Gopher and Chinchilla underperformed humans, PaLM matched or beat average human raters on many
+- On the 58 BIG-bench tasks shared with Gopher and Chinchilla, 5-shot PaLM 540B beat the average human rater score and the prior state of the art on 44 of the 58
 - Discontinuous jumps appeared between 62B and 540B - capabilities that simply didn't exist at smaller scales
 
 This was strong evidence for **emergent capabilities**: abilities absent at small scale that appear suddenly when models cross some threshold.
@@ -144,9 +144,7 @@ Answer (CoT): Roger started with 5 balls. 2 cans of 3 balls each is
 
 Results on math/reasoning benchmarks:
 - **GSM8K (grade-school math):** 58% with 8-shot CoT (prior SOTA: 55%, using a fine-tuned model plus external calculator)
-- **MATH:** Strong gains over prior LLMs
 - **MMLU:** Competitive with the best fine-tuned systems
-- Solved 65% of a held-out math word problem set zero-shot
 
 ### Code Understanding
 
@@ -165,7 +163,7 @@ PaLM produced explanations of original jokes - a task requiring genuine semantic
 
 > **Joke:** "I was supposed to start writing the paper at 5:00 PM. But then I started playing with this cool new language model for 10 minutes. 10 minutes later, it's suddenly 9:30 PM!"
 >
-> **PaLM explanation:** "The joke is that the speaker intended to start writing at 5 PM, but instead lost track of time playing with a language model, and when they checked the clock again it was 9:30 PM - meaning they wasted four and a half hours instead of just ten minutes."
+> **PaLM explanation (paraphrased; see the paper for the exact output):** "The joke is that the speaker intended to start writing at 5 PM, but instead lost track of time playing with a language model, and when they checked the clock again it was 9:30 PM - meaning they wasted four and a half hours instead of just ten minutes."
 
 This kind of inferential humor explanation was a qualitatively new capability.
 
@@ -224,7 +222,7 @@ PaLM was the high-water mark for pure dense scaling. After PaLM, the field large
 - **Attention Is All You Need (#1):** PaLM is a 118-layer instance of this architecture with carefully tuned modifications
 - **GPT-3 (#4):** Direct competitor and inspiration; PaLM showed that even larger dense models keep improving and unlock new capabilities
 - **Scaling Laws (#12):** PaLM was sized using these laws (though pre-Chinchilla)
-- **Chinchilla (#18):** Published the same month; showed PaLM was undertrained, sparking the shift in training recipes
+- **Chinchilla (#18):** Published a week earlier (29 March 2022, PaLM followed on 5 April); showed PaLM was undertrained, sparking the shift in training recipes
 - **LLaMA (#15) and LLaMA 2 (#17):** Adopted PaLM's SwiGLU, RoPE, and architectural cleanups; LLaMA 2 adopted Grouped-Query Attention, a refinement of PaLM's MQA
 - **Mixture of Experts (#37) and Mixtral (#37):** The sparse alternative - gets PaLM-like quality at GPT-3.5-like compute
 - **GPT-4 (#36) and Gemini:** Both build on lessons from PaLM about reasoning, scale, and infrastructure

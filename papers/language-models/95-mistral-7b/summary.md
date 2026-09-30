@@ -22,7 +22,7 @@ tags: ["language-model", "efficiency", "attention"]
 
 ## Why This Paper Matters
 
-Mistral 7B was the model that made "open-weight" mean something competitive. Released under Apache 2.0 by a then-three-month-old French startup, it beat Meta's LLaMA-2 13B on every benchmark tested while having half the parameters. It even outperformed LLaMA 1's 34B model on reasoning, math, and code. For the first time, a single open 7B model was simultaneously the best small model available and a genuinely useful general-purpose assistant.
+Mistral 7B was the model that made "open-weight" mean something competitive. Released under Apache 2.0 by a French startup founded that spring, it beat Meta's LLaMA-2 13B on nearly every benchmark tested (the paper says all) while having half the parameters. It even outperformed LLaMA 1's 34B model on reasoning, math, and code. For the first time, a single open 7B model was simultaneously the best small model available and a genuinely useful general-purpose assistant.
 
 The paper itself is short and modest - a six-page technical report. But its impact reshaped the open-source LLM landscape, established Mistral AI as a major lab, and made **Grouped-Query Attention** plus **Sliding Window Attention** standard parts of the modern LLM toolkit.
 
@@ -120,28 +120,31 @@ For long prompts, the model processes the prompt in chunks of W tokens, building
 
 ### Standard Benchmarks (vs LLaMA-2)
 
-| Benchmark | Mistral 7B | LLaMA-2 7B | LLaMA-2 13B | LLaMA-1 34B |
-|-----------|------------|------------|-------------|-------------|
-| MMLU | 60.1 | 44.4 | 55.6 | 62.6 |
-| HellaSwag | 81.3 | 77.1 | 80.7 | 83.4 |
-| WinoGrande | 75.3 | 69.5 | 72.9 | 76.9 |
-| PIQA | 83.0 | 78.1 | 80.5 | 82.2 |
-| Arc-C | 55.5 | 45.9 | 49.4 | 54.5 |
-| NaturalQuestions | 28.8 | 22.6 | 26.7 | 29.4 |
-| TriviaQA | 69.9 | 64.0 | 67.6 | 73.7 |
-| HumanEval | 30.5 | 12.2 | 18.3 | 22.6 |
-| MBPP | 47.5 | 20.8 | 30.6 | 33.6 |
-| GSM8K | 52.1 | 14.6 | 28.7 | 35.7 |
-| Math | 13.1 | 2.5 | 3.9 | 6.2 |
+| Benchmark | Mistral 7B | LLaMA-2 7B | LLaMA-2 13B | Code-Llama 7B |
+|-----------|------------|------------|-------------|---------------|
+| MMLU | 60.1 | 44.4 | 55.6 | 36.9 |
+| HellaSwag | 81.3 | 77.1 | 80.7 | 62.9 |
+| WinoGrande | 75.3 | 69.5 | 72.9 | 62.3 |
+| PIQA | 83.0 | 77.9 | 80.8 | 72.8 |
+| Arc-e | 80.0 | 68.7 | 75.2 | 59.4 |
+| Arc-c | 55.5 | 43.2 | 48.8 | 34.5 |
+| NaturalQuestions | 28.8 | 24.7 | 29.0 | 11.0 |
+| TriviaQA | 69.9 | 63.8 | 69.6 | 34.9 |
+| HumanEval | 30.5 | 11.6 | 18.9 | 31.1 |
+| MBPP | 47.5 | 26.1 | 35.4 | 52.5 |
+| MATH | 13.1 | 3.9 | 6.0 | 5.2 |
+| GSM8K | 52.2 | 16.0 | 34.3 | 20.8 |
+
+Figures from the paper's Table 2. The Llama 1 34B comparison appears only in the paper's Figure 4, since Llama 2 34B was never released.
 
 **The headlines:**
-- Beats LLaMA-2 13B on every benchmark
+- Beats LLaMA-2 13B on every benchmark except NaturalQuestions, where they are within 0.2 points (the paper states it outperforms 13B on all metrics)
 - Beats LLaMA-1 34B on reasoning, math, and code
 - Roughly matches CodeLlama-7B on code despite not being code-specialized
 
 ### Mistral 7B Instruct
 
-A simple supervised fine-tuning pass on publicly available instruction datasets (no RLHF) produced **Mistral 7B Instruct**, which outperformed all 7B and 13B open chat models on MT-Bench. The fact that lightweight SFT on the base model produced such a strong chat model became a standard recipe.
+A simple supervised fine-tuning pass on publicly available instruction datasets (no RLHF) produced **Mistral 7B Instruct**, which outperformed all 7B models on MT-Bench and was comparable to 13B chat models (MT-Bench 6.84 against 6.65 for Llama 2 13B Chat). The fact that lightweight SFT on the base model produced such a strong chat model became a standard recipe.
 
 ### Inference Speed
 
@@ -163,7 +166,7 @@ The implication for the field: parameter count is a weak proxy for capability. A
 
 ### The European open-AI moment
 
-Mistral AI was founded in May 2023 by former Meta and DeepMind researchers. Releasing Mistral 7B under Apache 2.0 (a far more permissive license than LLaMA-2's custom license) in October 2023 - five months after founding - instantly made the company a major player. It also gave Europe its first credible homegrown frontier LLM lab.
+Mistral AI was founded in spring 2023 by former Meta and DeepMind researchers. Releasing Mistral 7B under Apache 2.0 (a far more permissive license than LLaMA-2's custom license) in late September 2023 (the paper followed in October) - about five months after founding - instantly made the company a major player. It also gave Europe its first credible homegrown frontier LLM lab.
 
 ### Architectural choices that stuck
 
@@ -207,7 +210,7 @@ Many subsequent models - including Mistral's own Mixtral and Mistral Large, plus
 
 - **Attention Is All You Need (#1):** Mistral 7B is a tightly engineered instance of this architecture
 - **LLaMA (#15) and LLaMA 2 (#17):** Direct comparison points. Mistral 7B's architecture is essentially LLaMA with GQA and SWA added; the results showed how much those changes plus better data could matter
-- **PaLM (#94):** Pioneered Multi-Query Attention, which Mistral generalized to GQA
+- **PaLM (#94):** Adopted Multi-Query Attention (Shazeer, 2019) at scale; GQA, which Mistral uses, generalises it
 - **FlashAttention (#16):** Critical for actually realizing the speed benefits of GQA and SWA in practice
 - **RoPE (#54):** Mistral inherits PaLM/LLaMA's choice of rotary positional embeddings
 - **Mixture of Experts (#37) and Mixtral (#37):** Mistral's follow-up applied MoE to the same backbone, scaling capability without proportionally scaling inference cost

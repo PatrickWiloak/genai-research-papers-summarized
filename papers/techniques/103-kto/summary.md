@@ -135,24 +135,18 @@ That's the whole method.
 
 The paper aligned Pythia (1B-12B) and Llama (7B/13B/30B) models with both methods on the same prompts:
 
-| Model | DPO win rate | KTO win rate |
-|-------|--------------|--------------|
-| Pythia-1.4B | baseline | better |
-| Pythia-6.9B | baseline | comparable |
-| Pythia-12B | baseline | better |
-| Llama-7B | baseline | comparable |
-| Llama-13B | baseline | better |
-| Llama-30B | baseline | better |
+- **Pythia models (1.4B-12B):** no significant difference between KTO and DPO.
+- **Llama models (7B-30B):** KTO matched or beat DPO, with the gap significant at the larger scales.
 
 KTO is competitive everywhere and pulls ahead at larger model sizes - even though it uses *strictly weaker* supervision (binary labels vs. preference pairs).
 
 ### Works even when you discard half the data
 
-The authors took preference pairs and threw away the "chosen" half - keeping only "rejected" examples - and KTO still trained a strong model. DPO can't do this at all.
+The authors discarded up to 90% of the desirable examples and KTO still beat DPO. DPO cannot use unpaired data like this at all.
 
 ### Robust to extreme class imbalance
 
-They tested ratios up to 10:1 desirable:undesirable. KTO held up; DPO requires balanced pairs.
+They tested ratios as extreme as 1:10 desirable:undesirable. KTO held up; DPO requires balanced pairs.
 
 ### Production-friendly data
 

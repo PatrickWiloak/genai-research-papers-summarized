@@ -22,7 +22,7 @@ tags: ["safety", "alignment", "evaluation"]
 
 Llama Guard turned safety classification into a problem a language model could solve as well as it solves everything else. Instead of training a small specialized classifier for each policy category - toxicity, hate, self-harm, weapons, sexual content - Meta fine-tuned a single 7B LLaMA-2 model to read a conversation and output a structured safety verdict against a customizable taxonomy supplied in the prompt. That design choice made content moderation programmable: anyone could redefine the rules without retraining.
 
-Within months, Llama Guard became the production reference for open-source safety. It ships alongside every recent Llama release (Llama Guard 2, 3, 3-Vision, 4), and most open-weight chat deployments (vLLM, TGI, Ollama, RunPod templates) include a Llama Guard option as their default moderation layer. It is the closest the open community has to an industry-standard moderation model.
+Within months, Llama Guard became the production reference for open-source safety. As of 2025 it had shipped alongside each major Llama release (Llama Guard 2, 3, 3-Vision, 4), and it is widely available to run on open serving stacks such as vLLM, TGI and Ollama - though as an option you add, not a default. It is the closest the open community has to an industry-standard moderation model.
 
 ---
 
@@ -142,19 +142,19 @@ Meta annotated ~13K human-written prompt/response pairs against the taxonomy, th
 
 ### Headline numbers
 
-On Meta's internal benchmark of ~5K examples:
+On Meta's own test set (the held-out quarter of 13,997 labelled examples, about 3.5K):
 
 | Model | Prompt AUPRC | Response AUPRC |
 |-------|--------------|----------------|
-| OpenAI Moderation API | 0.797 | n/a |
-| Perspective API | 0.728 | n/a |
-| **Llama Guard 7B** | **0.945** | **0.928** |
+| OpenAI Moderation API | 0.764 | 0.769 |
+| Perspective API | 0.728 | 0.699 |
+| **Llama Guard 7B** | **0.945** | **0.953** |
 
 It beat the leading commercial moderation APIs on its own evaluation set - and unlike them it could be self-hosted and customized.
 
 ### Cross-taxonomy transfer
 
-Llama Guard was tested on the **ToxicChat** benchmark (a different taxonomy than Meta's). With zero-shot taxonomy adaptation - just swap the rules in the prompt - it matched or exceeded specialized models trained directly on ToxicChat.
+Llama Guard was tested on the **ToxicChat** benchmark (a different taxonomy than Meta's). With zero-shot taxonomy adaptation - just swap the rules in the prompt - it scored 0.626 AUPRC, ahead of the OpenAI Moderation API (0.588) and Perspective API (0.532) - none of which, Llama Guard included, was trained on ToxicChat. On OpenAI's own moderation dataset it came close to OpenAI's API (0.847 against 0.856).
 
 This demonstrated the key claim: the taxonomy is just text, and a strong instruction-following model generalizes across policies.
 

@@ -20,7 +20,7 @@ tags: ["agents", "tool-use", "self-improvement", "code"]
 
 ## Why This Paper Matters
 
-Voyager was the first compelling demonstration that a GPT-4-powered agent could pursue *open-ended*, lifelong learning in an interactive environment. Dropped into Minecraft with no task-specific training, no demonstrations, and no human-authored curriculum, Voyager autonomously decided what to learn next, wrote code for new skills, debugged that code by reading the in-game environment's error messages, and stored successful skills in a growing library for later reuse. Over the course of an episode it acquired diamond tools roughly twice as fast as the strongest prior baselines and explored a Minecraft world more than three times more broadly.
+Voyager was the first compelling demonstration that a GPT-4-powered agent could pursue *open-ended*, lifelong learning in an interactive environment. Dropped into Minecraft with no task-specific training, no demonstrations, and no human-authored curriculum, Voyager autonomously decided what to learn next, wrote code for new skills, debugged that code by reading the in-game environment's error messages, and stored successful skills in a growing library for later reuse. It was the only method tested to unlock diamond tools, reached earlier tech-tree milestones up to 15.3x faster, obtained 3.3x more unique items, and travelled 2.3x farther than the baselines.
 
 The paper was a landmark for **LLM agents** in three senses. First, it showed that an LLM could plan over a multi-hour horizon by treating skill acquisition itself as the planning unit. Second, it introduced the now-common pattern of "skill library + curriculum + iterative prompting with error feedback." Third, it demonstrated that natural-language-driven agents can keep getting better simply by interacting with their world - without ever changing the underlying model weights. Voyager is one of the most-cited reference points whenever people talk about autonomous, self-improving AI agents.
 
@@ -122,7 +122,7 @@ Voyager was compared to AutoGPT, ReAct, and Reflexion baselines, all running on 
 | Distance explored | 2.3x farther | baseline |
 | Tech-tree milestones (wood -> stone -> iron -> diamond) | Reached diamond | Stalled around stone/iron |
 | Time to wooden tools | Fast | Comparable |
-| Time to diamond tools | ~2x faster than best baseline | Slow |
+| Tech-tree speed | Wooden, stone and iron milestones 15.3x, 8.5x and 6.4x faster | Never reached diamond |
 
 Other findings:
 
@@ -138,9 +138,9 @@ Other findings:
 Voyager became one of the most influential reference architectures for autonomous LLM agents. Its specific contributions have propagated widely:
 
 - The **skill library** pattern reappears in many later agent systems, where executable programs are accumulated and retrieved by semantic similarity (and in tool-using agents like ToolLLM and Gorilla).
-- The **automatic curriculum** idea - letting the LLM choose its own next task - anticipated agentic systems like AutoGPT, BabyAGI, and the open-ended evaluation protocols used to study large agents.
+- The **automatic curriculum** idea - letting the LLM choose its own next task - sits alongside contemporaries like AutoGPT and BabyAGI (which came first) and shaped the open-ended evaluation protocols used to study large agents.
 - The **iterative-prompting-with-environment-feedback** loop is now standard in coding agents (Cursor, Aider, SWE-agent) and in robotic manipulation systems that translate LLM plans into low-level control.
-- Voyager kicked off serious research interest in **lifelong / continual LLM agents**, including follow-ups in scientific discovery (AlphaEvolve, FunSearch), in robotics (Code-as-Policies, RT-X), and in gaming benchmarks (MineDojo, SmartPlay).
+- Voyager kicked off serious research interest in **lifelong / continual LLM agents**, including later work in scientific discovery (FunSearch, AlphaEvolve) and gaming benchmarks (SmartPlay). Related earlier work includes Code-as-Policies in robotics and MineDojo, the Minecraft framework Voyager itself builds on.
 
 Perhaps most importantly, Voyager demonstrated that the unit of "learning" for an LLM agent does not need to be model weights. By accumulating *artifacts* (skills, plans, memories) outside the model, an agent can keep improving with a frozen LLM brain - a property that turns out to be central to how production agents are built today.
 
@@ -166,7 +166,7 @@ Perhaps most importantly, Voyager demonstrated that the unit of "learning" for a
 2. **Three pillars produce open-ended learning.** Automatic curriculum (decide what to learn), skill library (remember what you've learned), iterative prompting with environment feedback (actually learn it).
 3. **GPT-4 is the engine, but artifacts are the memory.** Voyager never updates model weights. All long-term learning lives in the external skill library and is retrieved by semantic search.
 4. **The approach depends critically on a capable base model.** GPT-3.5 cannot make Voyager work; GPT-4 can. The architecture scales with the underlying LLM.
-5. **Voyager is the prototype for modern self-improving agents.** Its patterns appear, often without attribution, in AutoGPT, SWE-agent, AlphaEvolve, Code-as-Policies, and most production coding assistants.
+5. **Voyager is the prototype for modern self-improving agents.** Its patterns - self-chosen curricula, code as the action space, a reusable skill library - recur in later systems such as SWE-agent, AlphaEvolve and production coding assistants.
 
 <!-- related:start -->
 

@@ -24,7 +24,7 @@ tags: ["language-model", "pretraining", "transfer-learning"]
 
 This is the paper that started the **GPT** lineage. GPT-1 introduced the now-standard recipe for modern language models: **unsupervised pretraining of a Transformer decoder on a large text corpus**, followed by **supervised fine-tuning on individual downstream tasks**. Every model in the GPT family - GPT-2, GPT-3 (#4), GPT-4 (#36), GPT-4o (#40), GPT-5 (#42), o1 (#31), Codex (#56) - descends from the architectural and methodological choices made here. So do LLaMA (#15, #17, #33, #41), Claude (#30, #43), and essentially every decoder-only LLM in production today.
 
-Released in June 2018, GPT-1 was a 117-million-parameter model. By 2025 standards it's tiny. But the recipe it pioneered - pretrain a causal-attention Transformer on raw text, fine-tune it on whatever you need - turned out to be the most consequential idea in NLP of the last decade.
+Released in June 2018, GPT-1 was a 117-million-parameter model. By today's standards it's tiny. But the recipe it pioneered - pretrain a causal-attention Transformer on raw text, fine-tune it on whatever you need - turned out to be the most consequential idea in NLP of the last decade.
 
 ---
 

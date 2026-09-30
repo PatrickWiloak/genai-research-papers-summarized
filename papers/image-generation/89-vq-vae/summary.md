@@ -129,7 +129,7 @@ This is why VQ-VAE makes good use of its latent space where many VAEs fail to.
 On ImageNet at 128x128:
 - Trained a VQ-VAE with K=512 codes
 - Achieved high-fidelity reconstruction - far sharper than continuous VAEs
-- Compressed each image to a 32x32 grid of token indices (a ~50x compression)
+- Compressed each image to a 32x32 grid of token indices (about a 42.6x reduction in bits: 128x128x3x8 bits down to 32x32x9 bits)
 
 ### Generation
 
@@ -146,13 +146,13 @@ The phoneme discovery was a major demonstration that the codebook learns semanti
 
 ### Video
 
-Trained on the action-conditioned video datasets; the discrete codes captured high-level structure while a small Transformer modeled the temporal evolution.
+Trained on the action-conditioned video datasets; the discrete codes captured high-level structure, and an action-conditioned autoregressive prior over the latents generated future frames (on DeepMind Lab).
 
 ---
 
 ## VQ-VAE-2 and Hierarchical Extensions
 
-In 2019, the same authors released VQ-VAE-2, which scaled the approach using:
+In 2019, Razavi, van den Oord and Vinyals released VQ-VAE-2, which scaled the approach using:
 - **Hierarchical codes** at multiple resolutions (top level for global structure, bottom for details)
 - **Self-attention** in the prior
 - **Larger codebooks** and bigger networks
@@ -183,7 +183,7 @@ SoundStream (Google) and Encodec (Meta) are essentially VQ-VAEs for audio, using
 
 ### Speech and music models
 
-AudioLM, MusicLM, and Whisper-style discrete-token audio approaches all build on the VQ-VAE foundation: compress audio to discrete tokens, then train language models over those tokens.
+AudioLM, MusicLM and other discrete-token audio approaches all build on the VQ-VAE foundation: compress audio to discrete tokens, then train language models over those tokens.
 
 ### Video tokenizers
 
@@ -218,8 +218,8 @@ Sora's video tokenization, MAGVIT, and other modern video generators use VQ-VAE-
 - **Attention Is All You Need (#1):** Once VQ-VAE compresses images/audio into token sequences, Transformers become the natural prior model
 - **GANs (#2):** Competing approach to image generation. VQ-VAE-2 caught up to BigGAN on image quality without adversarial training
 - **Stable Diffusion (#7):** Uses a VAE/VQ-VAE-style autoencoder to compress images so diffusion can run in a compact latent space
-- **DDPM (#6) and Diffusion Models (#6):** Define the continuous-token branch of generative modeling; VQ-VAE defines the discrete-token branch. Modern systems often combine them
-- **DALL-E 1 and DALL-E 3 (#48):** Built on VQ-VAE-style tokenization for the image side
+- **DDPM (#6):** Defines the continuous-token branch of generative modeling; VQ-VAE defines the discrete-token branch. Modern systems often combine them
+- **DALL-E 1 and DALL-E 3 (#48):** DALL-E 1 used a discrete VAE (dVAE) image tokenizer in the VQ-VAE tradition; DALL-E 3 moved to diffusion and uses no discrete tokens
 - **GPT-3 (#4) and GPT-2 (#64):** VQ-VAE makes it possible to apply GPT-style autoregressive modeling to images and audio by converting them to discrete tokens
 - **Sora / DiT (#44):** Modern video models use VQ-VAE-derived video tokenizers
 - **MAE (#88):** An alternative self-supervised approach - MAE reconstructs raw pixels without quantization; VQ-VAE compresses into discrete codes. Both are foundational autoencoder paradigms
@@ -247,6 +247,6 @@ Sora's video tokenization, MAGVIT, and other modern video generators use VQ-VAE-
 - [High-Resolution Image Synthesis with Latent Diffusion Models (Stable Diffusion)](../../image-generation/07-stable-diffusion/summary.md)
 - [Sora and Diffusion Transformers (DiT): Video Generation as World Simulation](../../image-generation/44-sora-dit/summary.md)
 - [DALL-E 3: Improving Image Generation with Better Captions](../../image-generation/48-dalle3/summary.md)
-- [Whisper: Robust Speech Recognition via Large-Scale Weak Supervision](../../multimodal/49-whisper/summary.md)
+- [Auto-Encoding Variational Bayes (VAE)](../../image-generation/57-vae/summary.md)
 
 <!-- related:end -->
