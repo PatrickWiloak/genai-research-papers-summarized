@@ -4,7 +4,7 @@ slug: "47-gemini3"
 number: 47
 category: "multimodal"
 authors: "Google DeepMind"
-published: "December 2025"
+published: "November 2025"
 year: 2025
 url: "https://blog.google/products-and-platforms/products/gemini/gemini-3/"
 tags: ["multimodal"]
@@ -13,7 +13,7 @@ tags: ["multimodal"]
 # Gemini 3: Google's Most Capable AI Model
 
 **Authors:** Google DeepMind
-**Published:** December 2025
+**Published:** November 2025
 **Announcement:** [blog.google/products-and-platforms/products/gemini/gemini-3/](https://blog.google/products-and-platforms/products/gemini/gemini-3/)
 
 ---
@@ -347,7 +347,7 @@ Regulatory constraints in some markets
 
 ---
 
-**Published:** December 2025
+**Published:** November 2025
 **Impact:** 🔥🔥🔥🔥🔥 **CRITICAL** - First 1500+ LMArena, best multimodal
 **Adoption:** Widespread via Google AI Studio, Vertex AI, Gemini app
 **Current Relevance:** Current frontier model, competing head-to-head with GPT-5 and Claude 4.5

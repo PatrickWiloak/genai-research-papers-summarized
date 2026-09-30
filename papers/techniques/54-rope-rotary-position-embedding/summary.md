@@ -365,8 +365,9 @@ YaRN refines NTK-aware with:
   3. Light fine-tuning (~400 steps)
 
 Result: Llama-2 4K -> 128K with minimal compute.
-Most production long-context LLMs (Mistral 32K, Llama-3 128K) use YaRN
-or close variants.
+Production models use YaRN itself (DeepSeek-V3, Qwen) or related
+frequency-aware schemes (Llama 3.1 ships its own RoPE scaling rule;
+others simply raise the RoPE base before long-context training).
 ```
 
 ### Position Interpolation (Chen et al., 2023, Meta)

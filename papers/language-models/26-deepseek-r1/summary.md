@@ -245,16 +245,18 @@ This works! The answer is..."
 
 **DeepSeek released 6 distilled models** - knowledge transferred from R1 to smaller models:
 
-| Model | Base | Parameters | AIME 2024 | MATH-500 |
+| Model | Base | Parameters | AIME 2024 (pass@1) | MATH-500 (pass@1) |
 |-------|------|------------|-----------|----------|
-| R1-Distill-Qwen-1.5B | Qwen2.5-1.5B | 1.5B | 26.7% | 75.6% |
-| R1-Distill-Qwen-7B | Qwen2.5-7B | 7B | 49.5% | 87.1% |
-| R1-Distill-Qwen-14B | Qwen2.5-14B | 14B | 58.7% | 90.0% |
-| R1-Distill-Qwen-32B | Qwen2.5-32B | 32B | 67.9% | 92.8% |
-| R1-Distill-Llama-8B | Llama-3.3-8B | 8B | 48.1% | 85.5% |
-| R1-Distill-Llama-70B | Llama-3.3-70B | 70B | 69.4% | 93.9% |
+| R1-Distill-Qwen-1.5B | Qwen2.5-Math-1.5B | 1.5B | 28.9% | 83.9% |
+| R1-Distill-Qwen-7B | Qwen2.5-Math-7B | 7B | 55.5% | 92.8% |
+| R1-Distill-Qwen-14B | Qwen2.5-14B | 14B | 69.7% | 93.9% |
+| R1-Distill-Qwen-32B | Qwen2.5-32B | 32B | 72.6% | 94.3% |
+| R1-Distill-Llama-8B | Llama-3.1-8B | 8B | 50.4% | 89.1% |
+| R1-Distill-Llama-70B | Llama-3.3-70B-Instruct | 70B | 70.0% | 94.5% |
 
-**Tiny 1.5B model achieves 75.6% on MATH-500!** (GPT-4o gets 76.6%)
+Figures from the paper's distilled-model evaluation table (Section 3.2). The students were trained with supervised fine-tuning only, on 800K samples curated with DeepSeek-R1 - no RL stage.
+
+**Tiny 1.5B model achieves 83.9% on MATH-500!** (GPT-4o-0513 scored 74.6% in the same table)
 
 **How distillation works:**
 ```
