@@ -1,11 +1,11 @@
 # GenAI Glossary - Key Terms Explained
 
-Definitions for the 117 technical terms that recur across the 107 summaries in this collection.
+Definitions for the 144 technical terms that recur across the paper summaries and explainers in this collection.
 
 ---
 
 ## Table of Contents
-- [A](#a) | [B](#b) | [C](#c) | [D](#d) | [E](#e) | [F](#f) | [G](#g) | [H](#h) | [I](#i) | [K](#k) | [L](#l) | [M](#m) | [N](#n) | [O](#o) | [P](#p) | [Q](#q) | [R](#r) | [S](#s) | [T](#t) | [U](#u) | [V](#v) | [W](#w) | [Z](#z)
+- [A](#a) | [B](#b) | [C](#c) | [D](#d) | [E](#e) | [F](#f) | [G](#g) | [H](#h) | [I](#i) | [J](#j) | [K](#k) | [L](#l) | [M](#m) | [N](#n) | [O](#o) | [P](#p) | [Q](#q) | [R](#r) | [S](#s) | [T](#t) | [U](#u) | [V](#v) | [W](#w) | [Z](#z)
 
 ---
 
@@ -41,17 +41,17 @@ Making AI systems behave according to human values and intentions.
 - **Papers:** InstructGPT, Constitutional AI
 - **Goal:** Helpful, harmless, honest systems
 
-### Attention Mechanism
-Allows models to focus on relevant parts of input when processing.
-- **Types:** Self-attention, cross-attention, multi-head attention
-- **Formula:** Attention(Q, K, V) = softmax(QK^T / √d_k)V
-- **Papers:** Transformers (introduced), BERT, GPT-3, ViT, CLIP
-
 ### Attention Heads
 Parallel attention mechanisms that learn different relationships.
 - **Multi-head attention:** 8-96 heads typical
 - **Purpose:** Each head can specialize (syntax, semantics, etc.)
 - **Paper:** Transformers
+
+### Attention Mechanism
+Allows models to focus on relevant parts of input when processing.
+- **Types:** Self-attention, cross-attention, multi-head attention
+- **Formula:** Attention(Q, K, V) = softmax(QK^T / √d_k)V
+- **Papers:** Transformers (introduced), BERT, GPT-3, ViT, CLIP
 
 ### Autoencoder
 Neural network that learns to compress and reconstruct data.
@@ -133,6 +133,12 @@ Optimal allocation of compute between model size and training tokens.
 - **Paper:** Scaling Laws, applied in LLaMA
 - **Formula:** N_opt ∝ C^0.5, D_opt ∝ C^0.5
 
+### Classifier-Free Guidance (CFG)
+A sampling trick for diffusion models that strengthens how closely an image follows its prompt.
+- **How:** Run the model with and without the prompt, then push the prediction further in the direction the prompt moved it
+- **Knob:** The guidance scale trades prompt adherence against diversity
+- **Paper:** Classifier-Free Guidance
+
 ### CLIP (Contrastive Language-Image Pre-training)
 Model that learns vision-language alignment through contrastive learning.
 - **Paper:** #8 CLIP
@@ -150,6 +156,12 @@ Providing additional input to guide model output.
 - **Examples:** Text for image generation, class label for generation
 - **Papers:** Stable Diffusion (text conditioning), CLIP
 - **Methods:** Concatenation, cross-attention, adaptive normalization
+
+### Consistency Model
+A generative model trained so that any point on a diffusion trajectory maps straight to the same clean output.
+- **Why:** Generates in one to a few steps instead of dozens
+- **Related:** DDIM, Flow Matching
+- **Paper:** Consistency Models
 
 ### Constitutional AI
 Alignment method using AI self-critique guided by principles.
@@ -220,6 +232,12 @@ Training a smaller "student" model to mimic larger "teacher" model.
 - **Benefits:** Smaller, faster model with similar performance
 - **Methods:** Match outputs, intermediate layers, or both
 - **Papers:** Used in many production deployments
+
+### DPO (Direct Preference Optimization)
+A way to align a model to human preferences without training a separate reward model or running reinforcement learning.
+- **How:** A classification-style loss on preferred vs rejected answer pairs directly adjusts the policy
+- **Why it spread:** Simpler and more stable than RLHF with PPO
+- **Paper:** DPO
 
 ### Dropout
 Randomly dropping connections during training to prevent overfitting.
@@ -308,6 +326,12 @@ Basic unit of computation.
 - **Example:** GPT-3 training ~3,640 petaFLOP-days
 - **Paper:** Scaling Laws (relates FLOPs to performance)
 
+### Flow Matching
+Training a model to predict the velocity that moves noise toward data along a simple (often straight) path.
+- **Why:** Straighter paths need fewer sampling steps than classic diffusion
+- **Used in:** Stable Diffusion 3, pi0's action generation
+- **Paper:** Flow Matching / SD3
+
 ---
 
 ## G
@@ -318,11 +342,22 @@ Generator and discriminator competing in a game.
 - **Formula:** min_G max_D V(D,G) = E[log D(x)] + E[log(1-D(G(z)))]
 - **Challenge:** Training instability
 
+### Gaussian Splatting (3D)
+Representing a 3D scene as millions of small, coloured, semi-transparent 3D Gaussians that are rasterised directly.
+- **Why:** Real-time rendering at quality comparable to NeRF
+- **Paper:** 3D Gaussian Splatting
+
 ### Generator
 Model that creates new data samples.
 - **In GANs:** Tries to fool discriminator
 - **In general:** Any generative model
 - **Papers:** GANs, Diffusion, GPT-3
+
+### GQA (Grouped-Query Attention)
+Attention where groups of query heads share one key and value head.
+- **Why:** Shrinks the KV cache, so inference uses less memory, with little quality loss
+- **Between:** Multi-head attention (one K/V per head) and multi-query attention (one K/V total)
+- **Paper:** Grouped-Query Attention
 
 ### Gradient
 Direction and rate of steepest increase in loss.
@@ -334,6 +369,11 @@ Direction and rate of steepest increase in loss.
 Choosing most likely token at each step.
 - **Simple but:** Can get stuck in suboptimal sequences
 - **Alternative:** Beam search, sampling
+
+### GRPO (Group Relative Policy Optimization)
+A reinforcement learning method that scores several sampled answers to the same prompt against each other instead of using a learned value model.
+- **Why:** Cheaper than PPO, and the workhorse behind DeepSeek-R1's reasoning training
+- **Paper:** GRPO, DeepSeek-R1
 
 ---
 
@@ -366,6 +406,11 @@ Learning from examples in the prompt without weight updates.
 - **Paper:** GPT-3 (discovered as emergent ability)
 - **Mechanism:** Not fully understood
 
+### Induction Head
+A pair of attention heads that together find an earlier occurrence of the current token and copy what followed it.
+- **Why it matters:** A concrete mechanism behind in-context learning, traced inside real models
+- **Paper:** In-context Learning and Induction Heads
+
 ### Inference
 Using trained model to make predictions.
 - **Contrast:** Training (updating weights)
@@ -380,6 +425,16 @@ GPT-3 fine-tuned with RLHF to follow instructions.
 
 ---
 
+## J
+
+### Jailbreak
+An input crafted to make an aligned model produce output its safety training is meant to refuse.
+- **Kinds:** Hand-written role-play prompts, and automatically optimised adversarial suffixes
+- **Defences:** Input/output classifiers, adversarial training, red teaming
+- **Paper:** GCG Adversarial Attacks, Red Teaming LMs, Llama Guard
+
+---
+
 ## K
 
 ### KL Divergence (Kullback-Leibler)
@@ -388,9 +443,20 @@ Measure of difference between two probability distributions.
 - **Formula:** D_KL(P||Q) = Σ P(x) log(P(x)/Q(x))
 - **Not symmetric:** D_KL(P||Q) ≠ D_KL(Q||P)
 
+### KV Cache
+Stored keys and values from earlier tokens, reused so each new token does not recompute attention over the whole prefix.
+- **Cost:** Grows with sequence length, layers and heads - often the main memory limit at inference
+- **Reduced by:** GQA, MLA, quantisation, PagedAttention
+- **Explainer:** [KV cache](../explainers/concepts/kv-cache.md)
+
 ---
 
 ## L
+
+### Latent Action Model
+A model that infers a small set of discrete "actions" from how consecutive video frames change, without action labels.
+- **Why:** Lets a world model become controllable after training on unlabelled video
+- **Paper:** Genie
 
 ### Latent Space
 Compressed representation space.
@@ -445,6 +511,22 @@ Training by predicting masked tokens.
 - **Paper:** BERT
 - **Benefit:** Learn bidirectional context
 
+### Mixed Precision Training
+Training with lower-precision numbers (FP16, BF16, FP8) for most maths while keeping a higher-precision master copy of the weights.
+- **Why:** Roughly halves memory and speeds up training on hardware built for low precision
+- **Tricks:** Loss scaling to stop small gradients underflowing
+- **Paper:** Mixed Precision Training
+
+### MLA (Multi-head Latent Attention)
+Attention that compresses keys and values into a small shared latent vector, which is what gets cached.
+- **Why:** A much smaller KV cache than GQA at similar or better quality
+- **Paper:** DeepSeek-V2 / Multi-head Latent Attention
+
+### Model Collapse
+Degradation that can occur when models are trained repeatedly on data generated by earlier models, losing the rare cases in the original distribution.
+- **Caveat:** Mixing in real data rather than replacing it largely avoids the effect in reported experiments
+- **Paper:** Model Collapse
+
 ### Multi-Head Attention
 Running multiple attention mechanisms in parallel.
 - **Why:** Each head can focus on different aspects
@@ -471,6 +553,11 @@ A training efficiency trick that avoids computing probabilities over the entire 
 - **Why needed:** Softmax over a 100k-word vocabulary is expensive; negative sampling reduces it to a few binary classifications
 - **Used in:** Word2Vec training (both Skip-gram and CBOW)
 - **Paper:** Word2Vec
+
+### NeRF (Neural Radiance Field)
+A neural network that maps a 3D position and viewing direction to colour and density, rendered into images by volume rendering.
+- **Why:** Photo-realistic new views of a scene from a set of photos
+- **Paper:** NeRF
 
 ### Neural Network
 Computational model inspired by biological neurons.
@@ -505,6 +592,11 @@ Model memorizes training data instead of learning patterns.
 
 ## P
 
+### PagedAttention
+Managing the KV cache in fixed-size blocks, like virtual-memory pages, so memory is not wasted on fragmentation.
+- **Why:** Lets a server batch many more requests at once
+- **Paper:** PagedAttention / vLLM
+
 ### Parameter
 Learnable weight in neural network.
 - **Count:** GPT-3 (175B), BERT-base (110M), LLaMA-7B (7B)
@@ -529,6 +621,11 @@ A family of reinforcement learning algorithms that directly optimize the paramet
 - **Challenge:** High variance gradients - techniques like GAE and PPO's clipping stabilize training
 - **Papers:** PPO, InstructGPT
 
+### Position Interpolation
+Extending a RoPE model's context window by squeezing longer position indices into the range it was trained on, then briefly fine-tuning.
+- **Successor:** YaRN, which scales different frequencies differently
+- **Paper:** YaRN
+
 ### Positional Encoding
 Adding position information to token embeddings.
 - **Why needed:** Attention has no inherent order sense
@@ -546,6 +643,12 @@ Initial training on large general dataset.
 - **Then:** Fine-tune on specific task
 - **Examples:** BERT on Wikipedia, GPT-3 on web text
 - **Papers:** BERT (introduced paradigm), GPT-3, LLaMA
+
+### Process Reward Model (PRM)
+A reward model that scores each step of a solution rather than only the final answer.
+- **Why:** Gives denser feedback for training and searching over reasoning
+- **Contrast:** Outcome reward model (final answer only)
+- **Paper:** Process Reward Models
 
 ### Prompt
 Input text given to language model.
@@ -588,6 +691,17 @@ Combining retrieval with generation.
 - **Process:** Retrieve relevant docs → generate answer using them
 - **Benefit:** Grounded in facts, less hallucination
 
+### Reasoning Model
+A language model trained, usually with reinforcement learning on checkable problems, to produce a long chain of thought before answering.
+- **Knob:** Spending more "thinking" tokens at inference often improves accuracy
+- **Examples:** OpenAI o1, DeepSeek-R1
+- **Explainer:** [Reasoning models](../explainers/concepts/reasoning-models.md)
+
+### Red Teaming
+Deliberately searching for inputs that make a model fail or misbehave, before users find them.
+- **Automated form:** Use one language model to generate test cases for another
+- **Paper:** Red Teaming Language Models
+
 ### Reinforcement Learning (RL)
 Learning from rewards/penalties.
 - **In AI alignment:** Learn from human preferences
@@ -623,6 +737,11 @@ Training with human preferences as rewards.
 - **Paper:** #5 InstructGPT
 - **Stages:** SFT → Reward Model → PPO
 - **Result:** Aligned, helpful models
+
+### RLVR (Reinforcement Learning from Verifiable Rewards)
+Reinforcement learning where the reward comes from an automatic checker (a maths answer, passing unit tests) instead of a learned reward model.
+- **Why:** Hard to game, and scales without human labels
+- **Paper:** RLVR, DeepSeek-R1
 
 ### RoPE (Rotary Position Embedding)
 Position encoding using rotation matrices.
@@ -683,11 +802,21 @@ The T5 pretraining objective where random spans of consecutive tokens are masked
 - **Benefit:** More efficient than token-level masking - the model sees more context per training step
 - **Paper:** T5
 
+### Sparse Autoencoder (SAE)
+A network trained to rewrite a model's internal activations as a sparse combination of many interpretable features.
+- **Why:** Untangles neurons that each respond to many unrelated concepts
+- **Paper:** Sparse Autoencoders
+
 ### Sparse Mixture-of-Experts / Top-1 Routing
 An architecture where each input token is routed to only one (or a few) expert feed-forward networks instead of passing through all of them.
 - **Top-1 routing:** Each token picks the single highest-scoring expert; most experts are idle for any given token
 - **Benefit:** Massive model capacity with only a fraction of the compute cost per token - see also Mixture-of-Experts
 - **Paper:** Switch Transformer
+
+### Speculative Decoding
+Using a small draft model to propose several tokens that the large model then checks in one pass.
+- **Why:** Faster generation with provably the same output distribution
+- **Paper:** Speculative Decoding
 
 ### Stable Diffusion
 Efficient diffusion in latent space.
@@ -718,6 +847,11 @@ Parameter controlling randomness in sampling.
 - **Zero:** Greedy decoding (always most likely)
 - **Papers:** All generative models
 
+### Test-Time Compute
+Computation spent while answering (longer reasoning, multiple samples, search) rather than during training.
+- **Why it matters:** A second scaling axis alongside model and data size
+- **Paper:** Test-Time Compute, OpenAI o1
+
 ### Text-to-Text Framework
 T5's unified approach where every NLP task is cast as a string-in, string-out problem.
 - **Example:** "translate English to French: Hello" → "Bonjour"; "summarize: [article]" → "[summary]"
@@ -736,6 +870,12 @@ Breaking text into tokens.
 - **Methods:** BPE, WordPiece, SentencePiece
 - **Example:** "unhappiness" → ["un", "happiness"]
 - **Papers:** All language models
+
+### Top-p (Nucleus) Sampling
+Sampling the next token only from the smallest set of tokens whose probabilities add up to p.
+- **Why:** Cuts off the unlikely tail while adapting to how confident the model is
+- **Related:** Temperature, top-k
+- **Explainer:** [Sampling and decoding](../explainers/concepts/sampling-and-decoding.md)
 
 ### Transfer Learning
 Applying knowledge from one task to another.
@@ -775,9 +915,19 @@ Transformer applied to images using patches.
 - **Key:** Treat image patches as tokens
 - **Impact:** Unified architecture for vision and language
 
+### VLA (Vision-Language-Action Model)
+A model that takes camera images and an instruction and outputs robot actions, usually built on a pretrained vision-language model.
+- **Why:** Web-scale knowledge transfers to physical control
+- **Paper:** RT-2, pi0
+
 ---
 
 ## W
+
+### Weak-to-Strong Generalization
+Training a strong model on labels from a weaker model and measuring how much of the strong model's ability comes through.
+- **Why it matters:** An analogy for humans supervising models smarter than themselves
+- **Paper:** Weak-to-Strong Generalization
 
 ### Weight
 Learnable parameter in neural network.
@@ -896,6 +1046,6 @@ Performing task without any examples.
 
 ---
 
-**Last updated:** 2026-08-20
-**Terms covered:** 117
-**Collection:** 107 papers - see [INDEX.md](../INDEX.md)
+**Last updated:** 2026-09-30
+**Terms covered:** 144
+**Collection:** see [INDEX.md](../INDEX.md) and [EXPLAINERS.md](../EXPLAINERS.md)

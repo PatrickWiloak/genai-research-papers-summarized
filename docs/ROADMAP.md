@@ -1,6 +1,6 @@
 # Learning Roadmap - From Beginner to Expert
 
-A structured path through the collection's 107 papers, chosen by your background and goals.
+A structured path through the collection's papers, essays and explainers, chosen by your background and goals.
 
 Each path is a curated subset, not the whole library - the point is an order that builds on itself.
 When you finish one, [BROWSE.md](../BROWSE.md) and [INDEX.md](../INDEX.md) have everything else,
@@ -34,6 +34,11 @@ and [READING_GUIDE.md](./READING_GUIDE.md) says which of it is still worth your 
 **Goal:** Catch up on everything that happened after the "essential papers" lists were written
 **Time:** 12-18 hours
 **Prerequisites:** Path 2, or comfort with Transformers, RLHF and Chain-of-Thought
+
+### Path 6: The Big Picture (no maths, no code)
+**Goal:** Hold an informed opinion about where AI is, who is building it, and what is unresolved
+**Time:** 8-12 hours
+**Prerequisites:** None
 
 ---
 
@@ -526,6 +531,75 @@ language ([AlphaFold 3](../papers/techniques/101-alphafold3/summary.md),
 [ESM-2](../papers/techniques/106-esm/summary.md),
 [AlphaEvolve](../papers/techniques/62-alphaevolve/summary.md)). See
 [docs/GAPS.md](./GAPS.md) for what this collection does not cover yet.
+
+---
+
+## Path 6: The Big Picture (no maths, no code)
+
+For anyone who needs to talk about AI sensibly - a manager, an investor, a policymaker, a
+curious reader - without learning to build it. It mixes the essays that set the field's
+direction, the explainers on how the industry actually works, and the open questions that
+nobody has settled. Nothing here assumes maths.
+
+### Stage 1: The Story So Far (2-3 hours)
+
+1. [Timeline of AI](../explainers/history/timeline-of-ai.md) - seventy-five years in one page.
+   Read it once quickly, then come back to it as a map.
+2. [Computing Machinery and Intelligence](../papers/essays/108-computing-machinery-and-intelligence/summary.md) -
+   Turing's 1950 question, and his answers to objections people still raise.
+3. [The Bitter Lesson](../papers/essays/111-bitter-lesson/summary.md) - the one-page argument
+   that explains most of the last decade.
+4. [The Scaling Hypothesis](../papers/essays/112-scaling-hypothesis/summary.md) - the same bet,
+   made explicit just after GPT-3.
+
+### Stage 2: Who Builds What (2-3 hours)
+
+1. [The labs landscape](../explainers/ecosystem/labs-landscape.md) - the organisations, and what
+   each is known for.
+2. Pick two model families and read their lineage: [GPT](../explainers/model-families/gpt.md),
+   [Claude](../explainers/model-families/claude.md), [Gemini](../explainers/model-families/gemini.md),
+   [Llama](../explainers/model-families/llama.md), [DeepSeek](../explainers/model-families/deepseek.md),
+   [Qwen](../explainers/model-families/qwen.md), [Mistral](../explainers/model-families/mistral.md).
+3. [Open vs closed weights](../explainers/concepts/open-vs-closed-weights.md) - the licensing
+   spectrum, and why the distinction matters for policy.
+
+### Stage 3: Reading the Claims (1-2 hours)
+
+Every launch arrives with a benchmark table. This stage is how you read one.
+
+1. [Contamination and saturation](../explainers/benchmarks/contamination-and-saturation.md) -
+   why scores rise faster than ability.
+2. [Knowledge and reasoning benchmarks](../explainers/benchmarks/knowledge-and-reasoning.md) and
+   [agents and computer use](../explainers/benchmarks/agents-and-computer-use.md) - what the
+   headline numbers measure.
+3. [Human-preference arenas](../explainers/benchmarks/human-preference-arenas.md) - what a
+   leaderboard rank does and does not tell you.
+
+### Stage 4: Money, Chips and Rules (2 hours)
+
+1. [Cost of training](../explainers/compute/cost-of-training.md) and
+   [inference economics](../explainers/compute/inference-economics.md) - why the frontier is
+   expensive and why using it keeps getting cheaper.
+2. [The AI hardware landscape](../explainers/compute/ai-hardware-landscape.md) - why chips and
+   export controls became geopolitics.
+3. [The EU AI Act](../explainers/policy/eu-ai-act.md), [US AI policy](../explainers/policy/us-ai-policy.md)
+   and [frontier safety frameworks](../explainers/policy/frontier-safety-frameworks.md) - the
+   rules being written, by governments and by the labs themselves.
+
+### Stage 5: The Open Questions (1-2 hours)
+
+Finish with the arguments, read side by side with the essays that take a position on them.
+
+1. [Is scaling hitting a wall?](../explainers/open-questions/scaling-limits.md)
+2. [Do LLMs reason?](../explainers/open-questions/do-llms-reason.md)
+3. [Synthetic data and model collapse](../explainers/open-questions/synthetic-data-and-model-collapse.md)
+4. Two views of where this goes: [Machines of Loving Grace](../papers/essays/114-machines-of-loving-grace/summary.md)
+   and [Situational Awareness](../papers/essays/113-situational-awareness/summary.md). Read both,
+   then read their criticism sections.
+
+**You are done when** you can explain to a friend why a model that tops one benchmark can still
+disappoint in use, why training costs and API prices move in opposite directions, and what the
+strongest argument is on each side of one open question.
 
 ---
 
