@@ -19,6 +19,7 @@ No third-party dependencies (standard library only).
 from __future__ import annotations
 
 import csv
+import datetime as dt
 import json
 import re
 import shutil
@@ -33,15 +34,39 @@ CATEGORY_ORDER = [
     "language-models",
     "image-generation",
     "multimodal",
+    "robotics",
     "techniques",
+    "essays",
 ]
 CATEGORY_TITLES = {
     "architectures": "Architectures",
     "language-models": "Language Models",
-    "image-generation": "Image & Video Generation",
-    "multimodal": "Multimodal",
+    "image-generation": "Image, Video & 3D Generation",
+    "multimodal": "Multimodal & Audio",
+    "robotics": "Robotics & Embodied AI",
     "techniques": "Techniques & Methods",
+    "essays": "Essays & Landmark Posts",
 }
+
+# Explainers: pages that are not summaries of one paper - model family
+# timelines, benchmark guides, history, policy, economics, open questions.
+# They live in explainers/<section>/<slug>.md, are unnumbered, and carry a
+# "Last reviewed" date because most of them describe a moving target.
+EXPLAINERS_DIR = ROOT / "explainers"
+EXPLAINER_SECTIONS = [
+    ("history", "History"),
+    ("model-families", "Model Families"),
+    ("benchmarks", "Benchmarks"),
+    ("concepts", "Concepts"),
+    ("compute", "Compute & Economics"),
+    ("policy", "Policy & Governance"),
+    ("ecosystem", "Ecosystem"),
+    ("open-questions", "Open Questions"),
+]
+# An explainer older than this is flagged on every build. Model families and
+# policy pages go stale in months, so the build says so rather than letting a
+# reader find out.
+STALE_AFTER_DAYS = 180
 
 # Curated topic tags per slug (a controlled vocabulary, kebab-case). These
 # power the `tags:` frontmatter and the generated TAGS.md tag-filtered index.
@@ -366,7 +391,7 @@ def write_tags(papers: list[dict]) -> None:
     (ROOT / "TAGS.md").write_text("\n".join(lines), encoding="utf-8")
 
 
-def build_site_tree(papers: list[dict]) -> None:
+def build_site_tree(papers: list[dict], explainers: list[dict] | None = None) -> None:
     """Assemble the curated docs_dir the site is built from.
 
     MkDocs needs every page under one docs_dir, but our content lives at the
@@ -379,7 +404,7 @@ def build_site_tree(papers: list[dict]) -> None:
     site.mkdir()
 
     # Markdown pages plus the data/license files the README and pages link to.
-    for name in ("README.md", "BROWSE.md", "INDEX.md", "TAGS.md", "CONTRIBUTING.md",
+    for name in ("README.md", "BROWSE.md", "INDEX.md", "TAGS.md", "EXPLAINERS.md", "CONTRIBUTING.md",
                  "papers.json", "papers.csv", "LICENSE"):
         src = ROOT / name
         if src.exists():
@@ -409,17 +434,17 @@ def build_site_tree(papers: list[dict]) -> None:
 
     home_src = ROOT / ".github" / "site" / "home.md"
     if home_src.exists():
-        (site / "README.md").write_text(render_home(papers), encoding="utf-8")
+        (site / "README.md").write_text(render_home(papers, explainers or []), encoding="utf-8")
 
     template = PAPERS_DIR / "_TEMPLATE.md"
     if template.exists():
         (site / "papers").mkdir(parents=True, exist_ok=True)
         shutil.copy2(template, site / "papers" / "_TEMPLATE.md")
 
-    for p in papers:
-        dest = site / p["path"]
+    for item in list(papers) + list(explainers or []):
+        dest = site / item["path"]
         dest.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(ROOT / p["path"], dest)
+        shutil.copy2(ROOT / item["path"], dest)
 
 
 BY_YEAR_START = "<!-- byyear:start -->"
@@ -461,7 +486,7 @@ def write_by_year(papers: list[dict]) -> bool:
     return False
 
 
-def render_home(papers: list[dict]) -> str:
+def render_home(papers: list[dict], explainers: list[dict] | None = None) -> str:
     """Fill the landing page's count tokens from the parsed paper list.
 
     Every number on .github/site/home.md is a {{token}} rather than a typed
@@ -480,9 +505,10 @@ def render_home(papers: list[dict]) -> str:
     # the papers as words about the papers inflates the figure for nothing.
     # README.md's Quick Stats table reports the same definition.
     summary_words = sum(len(p["_body"].split()) for p in papers)
+    explainers = explainers or []
     words = summary_words + sum(
         len(g.read_text(encoding="utf-8").split()) for g in guides
-    )
+    ) + sum(e["words"] for e in explainers)
 
     # How much source material the summaries stand in for. source_lengths.json
     # is written by scripts/measure_sources.py (the one networked script, run by
@@ -530,6 +556,7 @@ def render_home(papers: list[dict]) -> str:
         "years": f"{max(years) - min(years) + 1}" if years else "-",
         "topics": f"{len(topics)}",
         "guides": f"{len(guides)}",
+        "explainers": f"{len(explainers)}",
         "category_chips": "\n".join(chips),
     }
 
@@ -548,7 +575,72 @@ def render_home(papers: list[dict]) -> str:
     return out
 
 
-def write_mkdocs(papers: list[dict]) -> None:
+ONE_LINE_RE = re.compile(r"^\*\*In one line:\*\*\s*(.+?)\s*$", re.MULTILINE)
+REVIEWED_RE = re.compile(r"^\*\*Last reviewed:\*\*\s*(\d{4}-\d{2}-\d{2})\s*$", re.MULTILINE)
+
+
+def parse_explainers() -> list[dict]:
+    """Every explainers/<section>/<slug>.md, in section order then by title.
+
+    Required header: a `# Title`, an `**In one line:**` pitch and a
+    `**Last reviewed:** YYYY-MM-DD` line. check_counts.py fails CI when one is
+    missing, so this parser can treat them as present and fall back quietly.
+    """
+    if not EXPLAINERS_DIR.exists():
+        return []
+    order = {key: i for i, (key, _) in enumerate(EXPLAINER_SECTIONS)}
+    out = []
+    for path in EXPLAINERS_DIR.glob("*/*.md"):
+        section = path.parent.name
+        if path.name.startswith("_") or section not in order:
+            continue
+        body = path.read_text(encoding="utf-8")
+        title_m = TITLE_RE.search(body)
+        line_m = ONE_LINE_RE.search(body)
+        rev_m = REVIEWED_RE.search(body)
+        out.append({
+            "section": section,
+            "slug": path.stem,
+            "title": title_m.group(1).strip() if title_m else path.stem,
+            "one_line": clean_markup(line_m.group(1)) if line_m else "",
+            "reviewed": rev_m.group(1) if rev_m else "",
+            "path": str(path.relative_to(ROOT)).replace("\\", "/"),
+            "words": len(body.split()),
+        })
+    out.sort(key=lambda e: (order[e["section"]], e["title"].lower()))
+    return out
+
+
+def write_explainers_hub(explainers: list[dict]) -> None:
+    """Generate EXPLAINERS.md: every explainer, grouped by section."""
+    lines = [
+        "# Explainers",
+        "",
+        f"**{len(explainers)}** pages on the parts of AI that are not a single paper: how the model "
+        "families evolved, what the benchmarks actually measure, what training and serving cost, "
+        "the rules being written, and the questions nobody has settled. Each one links down into "
+        "the paper summaries for the detail. Generated by `scripts/build_manifest.py` - do not "
+        "edit by hand.",
+        "",
+        "Most of these describe a moving target, so every page states when it was last reviewed.",
+        "",
+    ]
+    for key, title in EXPLAINER_SECTIONS:
+        group = [e for e in explainers if e["section"] == key]
+        if not group:
+            continue
+        lines.append(f"## {title}")
+        lines.append("")
+        lines.append("| Page | In one line | Reviewed |")
+        lines.append("|------|-------------|----------|")
+        for e in group:
+            pitch = e["one_line"].replace("|", "\\|")
+            lines.append(f"| [{e['title']}]({e['path']}) | {pitch} | {e['reviewed']} |")
+        lines.append("")
+    (ROOT / "EXPLAINERS.md").write_text("\n".join(lines), encoding="utf-8")
+
+
+def write_mkdocs(papers: list[dict], explainers: list[dict] | None = None) -> None:
     nav = []
     nav.append("nav:")
     nav.append("  - Home: README.md")
@@ -562,6 +654,17 @@ def write_mkdocs(papers: list[dict]) -> None:
     nav.append("      - Comparisons: docs/COMPARISONS.md")
     nav.append("      - Glossary: docs/GLOSSARY.md")
     nav.append("      - Coverage & Gaps: docs/GAPS.md")
+    if explainers:
+        nav.append("  - Explainers:")
+        nav.append("      - All Explainers: EXPLAINERS.md")
+        for key, title in EXPLAINER_SECTIONS:
+            group = [e for e in explainers if e["section"] == key]
+            if not group:
+                continue
+            nav.append(f"      - {title}:")
+            for e in group:
+                label = e["title"].replace('"', "'")
+                nav.append(f'          - "{label}": {e["path"]}')
     nav.append("  - Papers:")
     for cat in CATEGORY_ORDER:
         group = [p for p in papers if p["category"] == cat]
@@ -594,16 +697,24 @@ def main() -> None:
     papers = [parse_summary(p) for p in summaries]
     papers.sort(key=lambda p: (p["number"] is None, p["number"] or 0))
 
+    explainers = parse_explainers()
+
     changed = write_frontmatter(papers)
     write_json(papers)
     write_csv(papers)
     write_index(papers)
     write_tags(papers)
-    write_mkdocs(papers)
+    write_explainers_hub(explainers)
+    write_mkdocs(papers, explainers)
     write_by_year(papers)
-    build_site_tree(papers)
+    build_site_tree(papers, explainers)
 
-    print(f"Parsed {len(papers)} summaries.")
+    print(f"Parsed {len(papers)} summaries and {len(explainers)} explainers.")
+    today = dt.date.today()
+    stale = [e["path"] for e in explainers if e["reviewed"]
+             and (today - dt.date.fromisoformat(e["reviewed"])).days > STALE_AFTER_DAYS]
+    if stale:
+        print(f"WARN explainers not reviewed in {STALE_AFTER_DAYS} days: {', '.join(stale)}")
     print(f"Frontmatter written/updated on {changed} file(s).")
     missing_url = [p["slug"] for p in papers if not p["url"]]
     missing_year = [p["slug"] for p in papers if p["year"] is None]
@@ -611,7 +722,7 @@ def main() -> None:
         print(f"WARN no source URL parsed: {', '.join(missing_url)}")
     if missing_year:
         print(f"WARN no year parsed: {', '.join(missing_year)}")
-    print("Wrote papers.json, papers.csv, INDEX.md, TAGS.md, mkdocs.generated.yml, site-build/")
+    print("Wrote papers.json, papers.csv, INDEX.md, TAGS.md, EXPLAINERS.md, mkdocs.generated.yml, site-build/")
 
 
 if __name__ == "__main__":

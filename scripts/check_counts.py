@@ -15,6 +15,8 @@ Checked:
   - docs/GAPS.md       - the headline paper count, and that its coverage map
                          accounts for every paper in the manifest
   - docs/GLOSSARY.md   - the term count, against the actual number of entries
+  - explainers/        - every page has a title, an "In one line" pitch and a
+                         valid "Last reviewed" date, and sits in a known section
 
 Run it directly, or let CI run it:
 
@@ -34,9 +36,11 @@ ROOT = Path(__file__).resolve().parent.parent
 CATEGORY_LABELS = {
     "architectures": "Foundational Architectures",
     "language-models": "Language Models",
-    "image-generation": "Image & Video Generation",
-    "multimodal": "Multimodal",
+    "image-generation": "Image, Video & 3D Generation",
+    "multimodal": "Multimodal & Audio",
+    "robotics": "Robotics & Embodied AI",
     "techniques": "Techniques & Methods",
+    "essays": "Essays & Landmark Posts",
 }
 
 BADGE_WORDS = ("CRITICAL", "HIGH", "HISTORICAL", "THEORY")
@@ -178,6 +182,39 @@ def check_gaps_coverage(papers: list[dict], errors: list[str]) -> None:
                      f"manifest has {len(papers)}")
 
 
+def check_explainers(errors: list[str]) -> None:
+    """Explainers are parsed from their header lines; a missing one would drop
+    the page's pitch or review date from EXPLAINERS.md without an error."""
+    import datetime as dt
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from build_manifest import EXPLAINER_SECTIONS  # noqa: E402
+    sections = {key for key, _ in EXPLAINER_SECTIONS}
+    base = ROOT / "explainers"
+    if not base.exists():
+        return
+    for path in sorted(base.rglob("*.md")):
+        rel = path.relative_to(ROOT)
+        if path.name.startswith("_") and path.parent == base:
+            continue
+        if path.parent.parent != base or path.parent.name not in sections:
+            fail(errors, f"{rel} is not in a known explainers/<section>/ folder "
+                         f"({', '.join(sorted(sections))})")
+            continue
+        text = path.read_text(encoding="utf-8")
+        if not re.search(r"^# .+", text, re.MULTILINE):
+            fail(errors, f"{rel} has no '# Title' line")
+        if not re.search(r"^\*\*In one line:\*\* \S", text, re.MULTILINE):
+            fail(errors, f"{rel} has no '**In one line:**' pitch")
+        m = re.search(r"^\*\*Last reviewed:\*\* (\S+)\s*$", text, re.MULTILINE)
+        if not m:
+            fail(errors, f"{rel} has no '**Last reviewed:** YYYY-MM-DD' line")
+        else:
+            try:
+                dt.date.fromisoformat(m.group(1))
+            except ValueError:
+                fail(errors, f"{rel} Last reviewed '{m.group(1)}' is not YYYY-MM-DD")
+
+
 def check_simple_total(rel: str, papers: list[dict], errors: list[str]) -> None:
     """Every '<n> papers'-style number in the doc must be the real total."""
     path = ROOT / rel
@@ -201,6 +238,7 @@ def main() -> int:
     check_browse(papers, errors)
     check_glossary(errors)
     check_gaps_coverage(papers, errors)
+    check_explainers(errors)
     check_simple_total("README.md", papers, errors)
     check_simple_total("docs/GAPS.md", papers, errors)
     check_simple_total("CLAUDE.md", papers, errors)

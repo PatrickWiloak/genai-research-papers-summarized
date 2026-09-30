@@ -1,12 +1,15 @@
 # Contributing
 
 Thanks for helping make these summaries better. This repo is documentation
-only - no code to build, just clear writing about influential papers.
+only - no code to build, just clear writing about AI: summaries of influential papers and
+essays, plus explainers on the things no single paper covers.
 
 ## Adding a new paper summary
 
 1. **Pick a category** under `papers/`: `architectures`, `language-models`,
-   `image-generation`, `multimodal`, or `techniques`.
+   `image-generation` (image, video and 3D), `multimodal` (including audio),
+   `robotics`, `techniques`, or `essays` (landmark essays and blog posts that shaped the
+   field - same format, with `**Essay:**` or `**Post:**` as the link line).
 2. **Create a folder** named `NN-slug` where `NN` is the next free two-digit
    number (numbers are stable IDs, not a strict chronology - just don't reuse
    one) and `slug` is a short kebab-case name. Example:
@@ -37,6 +40,28 @@ only - no code to build, just clear writing about influential papers.
 
    `check_counts.py` is what catches a forgotten BROWSE card or a stale tally; CI runs the
    same three.
+
+## Adding an explainer
+
+Explainers cover what is not one paper: a model family's lineage, a benchmark family, the
+economics of compute, a policy, an open debate. They live in
+`explainers/<section>/<slug>.md` and are unnumbered.
+
+1. **Pick a section:** `history`, `model-families`, `benchmarks`, `concepts`, `compute`,
+   `policy`, `ecosystem`, or `open-questions`. A new section means adding it to
+   `EXPLAINER_SECTIONS` in `scripts/build_manifest.py`.
+2. **Copy [`explainers/_TEMPLATE.md`](./explainers/_TEMPLATE.md)** and keep its three
+   header lines: `# Title`, `**In one line:**` and `**Last reviewed:** YYYY-MM-DD`.
+   `check_counts.py` fails CI without them; `build_manifest.py` lists the page in the
+   generated [`EXPLAINERS.md`](./EXPLAINERS.md) and the site nav from them.
+3. **Link down, do not re-summarise.** Point at the paper summaries for detail, and at the
+   sibling [Zero to Hero](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero)
+   concept pages for hands-on material.
+4. **Date every moving fact** ("as of September 2026") and source it. When you re-check a
+   page, bump its `Last reviewed` date. The build prints a warning for any explainer not
+   reviewed in 180 days.
+
+No BROWSE card, manifest entry or GAPS row is needed for an explainer.
 
 ## House style
 

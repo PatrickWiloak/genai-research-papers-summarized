@@ -9,10 +9,12 @@
 # Everything else in this file is hand-maintained. Build with:
 #   python3 scripts/build_manifest.py && mkdocs build -f mkdocs.generated.yml
 
-site_name: Foundational GenAI Papers, Summarized
+site_name: Everything AI, Summarized
 site_description: >-
-  Plain-language summaries of the papers that built modern generative AI -
-  Transformers to diffusion, RLHF to reasoning models. Free, no signup.
+  Plain-language summaries of the papers and essays that built modern AI -
+  Transformers to diffusion, RLHF to reasoning models - plus explainers on
+  model families, benchmarks, compute, policy and the open questions. Free,
+  no signup.
 site_author: Patrick Wiloak
 site_url: https://patrickwiloak.github.io/genai-research-papers-summarized/
 

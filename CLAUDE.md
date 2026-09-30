@@ -1,12 +1,18 @@
 # GenAI Research Papers Summarized
 
 ## Overview
-Curated collection of 107 foundational generative AI papers with comprehensive summaries.
-Docs-only educational resource (no application code) - markdown summaries plus a stdlib
-Python regeneration pipeline that builds the index, manifests, and an MkDocs Material site.
+"Everything AI, Summarized": a curated collection of foundational AI papers and landmark
+essays with comprehensive summaries (count: see `papers.json`), plus unnumbered explainers
+on model families, benchmarks, compute, policy, ecosystem and open questions. Broadened from
+papers-only on 2026-09-30; the repo name and Pages URL were deliberately kept (a rename
+would break the Pages URL with no redirect). Docs-only educational resource (no application
+code) - markdown plus a stdlib Python regeneration pipeline that builds the index,
+manifests, and an MkDocs Material site.
 
 ## Structure
-- `papers/` - Paper summaries grouped into category subfolders (`architectures/`, `image-generation/`, `language-models/`, `multimodal/`, `techniques/`); each summary is a `summary.md`
+- `papers/` - Paper summaries grouped into category subfolders (`architectures/`, `language-models/`, `image-generation/`, `multimodal/`, `robotics/`, `techniques/`, `essays/`); each summary is a `summary.md`
+- `explainers/<section>/<slug>.md` - Unnumbered explainer pages (sections in `EXPLAINER_SECTIONS` in `build_manifest.py`). Each needs `# Title`, `**In one line:**` and `**Last reviewed:** YYYY-MM-DD`; `check_counts.py` enforces them and the build warns after 180 days. Template: `explainers/_TEMPLATE.md`
+- `EXPLAINERS.md` - Generated hub listing every explainer
 - `papers/_TEMPLATE.md` - Template for new summaries
 - `INDEX.md` - Generated category-grouped index of every paper
 - `papers.json` / `papers.csv` - Generated machine-readable manifest
@@ -72,4 +78,4 @@ Python regeneration pipeline that builds the index, manifests, and an MkDocs Mat
   Sources with no retrievable PDF (journal paywalls, blog-post papers) are recorded as `null`
   and excluded, so the published total is a floor rather than an estimate. Never hand-edit the
   numbers - the landing page says how they were measured and links to the script.
-- When adding a new paper, give it the next number (currently up to 107), add its aliases to the `ALIASES` map in `scripts/add_cross_links.py` (so other papers can link to it), and add its topic tags to the `TOPICS` map in `scripts/build_manifest.py` (so it appears in `TAGS.md` and gets `tags:` frontmatter).
+- When adding a new paper, give it the next number (see the highest in `papers.json`), add its aliases to the `ALIASES` map in `scripts/add_cross_links.py` (so other papers can link to it), and add its topic tags to the `TOPICS` map in `scripts/build_manifest.py` (so it appears in `TAGS.md` and gets `tags:` frontmatter).

@@ -26,14 +26,15 @@
 
 <div class="home-hero" markdown>
 
-# The papers that built generative AI, in plain language { .home-title }
+# Everything AI, from the papers up { .home-title }
 
-<p class="home-intro">{{source_words}} words of research - Transformers to diffusion, RLHF to reasoning models - read in full and rewritten as {{summary_words}} words. <strong>About {{compression}}x shorter</strong>, and written to be finished.</p>
+<p class="home-intro">{{source_words}} words of research - Transformers to diffusion, RLHF to reasoning models - read in full and rewritten as {{summary_words}} words. <strong>About {{compression}}x shorter</strong>, and written to be finished. Then {{explainers}} explainers on everything a paper does not cover: the model families, the benchmarks, what it all costs, the rules being written, and the questions still open.</p>
 
 <p class="home-sub">No maths degree assumed, no paywall, no signup. Press <kbd>/</kbd> to search all {{words}} words.</p>
 
 [Start the roadmap](docs/ROADMAP.md){ .md-button .md-button--primary }
 [Browse all {{papers}} papers](INDEX.md){ .md-button }
+[Read the explainers](EXPLAINERS.md){ .md-button }
 [Look up a term](docs/GLOSSARY.md){ .md-button }
 
 <div class="stat-strip" markdown>
@@ -42,6 +43,7 @@
 - **{{summary_words}}** words out
 - **{{compression}}x** shorter
 - **{{papers}}** papers
+- **{{explainers}}** explainers
 - **{{years}}** years covered
 - **$0** to read
 
@@ -51,11 +53,27 @@
 
 </div>
 
-<p class="home-kicker">Four ways in</p>
+<p class="home-kicker">Six ways in</p>
 
 ## Pick your entry point
 
 <div class="grid cards" markdown>
+
+-   :material-timeline-clock-outline:{ .lg .middle } **Start with the story**
+
+    ---
+
+    Seventy-five years of AI in one page, from Turing's imitation game to today's reasoning models and agents, with every milestone linked to its summary.
+
+    [:octicons-arrow-right-24: Timeline of AI](explainers/history/timeline-of-ai.md)
+
+-   :material-compass-outline:{ .lg .middle } **Understand the landscape**
+
+    ---
+
+    Who builds what, what the benchmarks really measure, what training and inference cost, and where the law stands - {{explainers}} pages, each dated.
+
+    [:octicons-arrow-right-24: All explainers](EXPLAINERS.md)
 
 -   :material-map-marker-path:{ .lg .middle } **Follow a path**
 
@@ -109,6 +127,8 @@
 
 <div class="home-links" markdown>
 
+- [Explainers](EXPLAINERS.md) - model families, benchmarks, compute, policy, open questions
+- [Timeline of AI](explainers/history/timeline-of-ai.md) - 1950 to today, milestone by milestone
 - [Learning Roadmap](docs/ROADMAP.md) - the staged order to read them in
 - [Reading Guide](docs/READING_GUIDE.md) - what is still current, what is history
 - [Quick Reference](docs/QUICK_REFERENCE.md) - every paper in one line
@@ -151,7 +171,7 @@ We build custom software and products at **[Nobler Works](https://noblerworks.co
 
     This site gives you the material. **[gitGood](https://gitgood.dev)** gives you the reps, and tells you whether you actually know it - including ML and AI practice paths built for exactly the material on this site.
 
-    10 days free, then $5/month or $40/year. The free tier needs no card.
+    A 7-day free trial, then $8/month or $64/year. The free tier needs no card.
 
 ## Fine print
 
