@@ -8,7 +8,7 @@ Working task list for **genai-research-papers-summarized**. Read this at the sta
 
 Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half day) / M (1-3 days) / L, and the risk of making the fix. 🔴 = a live bug or safety hole.
 
-- [ ] 🟡 Delete the AI-session leftovers `FINAL_SUMMARY.md` + `ORGANIZATION_SUMMARY.md` from the public root. S, low.
+- [x] 🟡 Delete the AI-session leftovers `FINAL_SUMMARY.md` + `ORGANIZATION_SUMMARY.md` from the public root. S, low. ✅ 2026-10-01 73ad0db
 - [ ] 🟡 `scripts/check-ci-local.mjs` is a 321-line fork of the 975-line fleet gate - restamp, or mark it an intentional MkDocs variant; `scripts/site_hooks.py` drift with zero-to-hero (see its TODO). S, low.
 
 ## Open
