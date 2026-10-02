@@ -11,6 +11,12 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 - [x] 🟡 Delete the AI-session leftovers `FINAL_SUMMARY.md` + `ORGANIZATION_SUMMARY.md` from the public root. S, low. ✅ 2026-10-01 73ad0db
 - [ ] 🟡 `scripts/check-ci-local.mjs` is a 321-line fork of the 975-line fleet gate - restamp, or mark it an intentional MkDocs variant; `scripts/site_hooks.py` drift with zero-to-hero (see its TODO). S, low.
 
+## Audit findings (2026-10-02)
+
+- [x] 2026-10-02 🟡 medium - Bio said "18x multi-cloud certified" (`.github/site/home.md:161`): number removed. Live on the next push to main (Pages workflow).
+- [x] 2026-10-02 🟢 low - README Nobler banner hotlinked from `Noblerworks/IRONSIGHT`: vendored to `assets/brand/nobler-works-banner.jpg`.
+- [ ] 🟢 low - No site analytics and no plan for it (`mkdocs.yml` extra): reuse the zero-to-hero GA4-behind-consent + Cloudflare beacon plan once Patrick unblocks it there, so one set of steps covers both. The 2026-10-30 judge relies on GitHub referrers only until then.
+
 ## Open
 
 ### 🟠 Discoverability (added 2026-08-31)
