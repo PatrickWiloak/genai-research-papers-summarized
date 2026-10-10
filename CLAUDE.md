@@ -82,3 +82,6 @@ manifests, and an MkDocs Material site.
   and excluded, so the published total is a floor rather than an estimate. Never hand-edit the
   numbers - the landing page says how they were measured and links to the script.
 - When adding a new paper, give it the next number (see the highest in `papers.json`), add its aliases to the `ALIASES` map in `scripts/add_cross_links.py` (so other papers can link to it), and add its topic tags to the `TOPICS` map in `scripts/build_manifest.py` (so it appears in `TAGS.md` and gets `tags:` frontmatter).
+
+## Docs stay current
+- Update README, `docs/`, this CLAUDE.md and TODO.md **in the same commit** as the change that makes them wrong, never in a later cleanup. A stale doc is a bug.
