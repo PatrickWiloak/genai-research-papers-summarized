@@ -54,8 +54,8 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 - [ ] **Patrick: Bing Webmaster Tools** -> Import from Google Search Console (IndexNow already pings Bing;
       Webmaster Tools shows what it did with them).
 - [ ] **Decide: custom domain?** A `github.io/<repo>` subpath cannot serve `robots.txt` (the root 404s), and
-      the site shares a host with every other project page. Something like `ai.patrickwiloak.com` would be
-      covered by the existing `sc-domain:patrickwiloak.com` Search Console property. Costs: a DNS record,
+      the site shares a host with every other project page. Something like `ai.patricklukewilson.com` would be
+      covered by the existing `sc-domain:patricklukewilson.com` Search Console property. Costs: a DNS record,
       `site_url` change, and a redirect period. Same decision is open for zero-to-hero - decide both together.
 
 ### Content

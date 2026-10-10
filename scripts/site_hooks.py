@@ -239,7 +239,7 @@ def on_page_context(context, page, config, nav, **kwargs):
     if not page.is_homepage and page.canonical_url not in {c["item"] for c in crumbs}:
         crumbs.append({"name": _title_text(page.title), "item": page.canonical_url})
 
-    author = {"@type": "Person", "name": config.site_author, "url": "https://patrickwiloak.com"}
+    author = {"@type": "Person", "name": config.site_author, "url": "https://patricklukewilson.com"}
     publisher = {"@type": "Organization", "name": "Nobler Works", "url": "https://noblerworks.com/"}
     graph = []
     if len(crumbs) > 1:

@@ -4,7 +4,7 @@
 
 <a href="https://noblerworks.com/"><img src="./assets/brand/nobler-works-banner.jpg" alt="Nobler Works" width="240"></a>
 
-### Built by [Patrick Wiloak](https://patrickwiloak.com) at [Nobler Works](https://noblerworks.com/)
+### Built by [Patrick Wiloak](https://patricklukewilson.com) at [Nobler Works](https://noblerworks.com/)
 
 We build custom software and products at Nobler Works. Open source projects and research libraries like this one are our way of giving back - we're nothing without the community that supports us.<br>
 If you need custom software built, [get in touch](https://noblerworks.com/).
