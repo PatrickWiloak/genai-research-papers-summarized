@@ -618,6 +618,10 @@ def render_home(papers: list[dict], explainers: list[dict] | None = None) -> str
         "guides": f"{len(guides)}",
         "explainers": f"{len(explainers)}",
         "category_chips": "\n".join(chips),
+        "recent_papers": "\n".join(
+            f'- [{re.sub(r"\s*\([^()]*\)\s*$", "", p["title"])}]({p["path"]}) ({p["year"]})'
+            for p in sorted(papers, key=lambda q: q["number"], reverse=True)[:8]
+        ),
     }
 
     missing = []

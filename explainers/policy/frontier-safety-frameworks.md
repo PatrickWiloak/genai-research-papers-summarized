@@ -130,6 +130,7 @@ Further point releases followed; as of September 2026 the current version is 3.4
 - [Sleeper Agents](../../papers/techniques/83-sleeper-agents/summary.md), [Red Teaming Language Models with Language Models](../../papers/techniques/129-red-teaming-lms/summary.md), [Weak-to-Strong Generalization](../../papers/techniques/128-weak-to-strong/summary.md)
 - [Constitutional AI](../../papers/language-models/14-constitutional-ai/summary.md), [Llama Guard](../../papers/language-models/96-llama-guard/summary.md)
 - [Evals for LLMs](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero/blob/main/learn/concepts/evals-for-llms.md) and [AI threat modeling](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero/blob/main/learn/concepts/ai-threat-modeling.md) (sibling repo, hands-on)
+- [Emergent Misalignment](../../papers/techniques/153-emergent-misalignment/summary.md), [Reasoning Models Don't Always Say What They Think](../../papers/techniques/152-reasoning-models-dont-say-what-they-think/summary.md), [Circuit Tracing](../../papers/techniques/151-circuit-tracing/summary.md)
 
 ## Sources
 

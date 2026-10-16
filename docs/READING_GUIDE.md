@@ -113,12 +113,16 @@ By 2025 it is what the model is trained to do:
 [Test-Time Compute](../papers/techniques/50-test-time-compute/summary.md) →
 [o1](../papers/language-models/31-openai-o1/summary.md) →
 [RLVR](../papers/techniques/39-rlvr/summary.md) /
-[DeepSeek-R1](../papers/language-models/26-deepseek-r1/summary.md).
+[DeepSeek-R1](../papers/language-models/26-deepseek-r1/summary.md), with open recipes in
+[s1](../papers/techniques/154-s1-simple-test-time-scaling/summary.md) and
+[DAPO](../papers/techniques/155-dapo/summary.md).
 
 **Alignment without the RL machinery.** [DPO](../papers/language-models/19-dpo/summary.md) removed
 the reward model, [KTO](../papers/techniques/103-kto/summary.md) removed the need for paired data,
 and [GRPO](../papers/techniques/38-grpo/summary.md) removed the critic. Each step made alignment
-cheaper to run.
+cheaper to run. The roots are [Christiano 2017](../papers/techniques/146-deep-rl-from-human-preferences/summary.md) and
+[Stiennon 2020](../papers/techniques/147-learning-to-summarize-from-human-feedback/summary.md); the open modern recipe is
+[Tulu 3](../papers/language-models/148-tulu-3/summary.md).
 
 **Inference economics.** Serving cost now drives architecture:
 [GQA](../papers/architectures/75-grouped-query-attention/summary.md),

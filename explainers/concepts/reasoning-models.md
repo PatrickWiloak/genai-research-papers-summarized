@@ -135,6 +135,7 @@ This connects to the wider question of whether these models reason in any deep s
 - [Meta Chain-of-Thought](../../papers/techniques/34-meta-cot/summary.md), [rStar-Math](../../papers/techniques/35-rstar-math/summary.md)
 - [Do LLMs reason?](../open-questions/do-llms-reason.md), [Sampling and decoding](sampling-and-decoding.md), [Context windows](context-windows.md)
 - Model family context: [GPT](../model-families/gpt.md), [Claude](../model-families/claude.md), [Gemini](../model-families/gemini.md), [DeepSeek](../model-families/deepseek.md), [Qwen](../model-families/qwen.md)
+- Newer reasoning work: [s1: Simple Test-Time Scaling](../../papers/techniques/154-s1-simple-test-time-scaling/summary.md), [DAPO](../../papers/techniques/155-dapo/summary.md), [Tulu 3](../../papers/language-models/148-tulu-3/summary.md), [Reasoning Models Don't Always Say What They Think](../../papers/techniques/152-reasoning-models-dont-say-what-they-think/summary.md)
 
 ## Sources
 

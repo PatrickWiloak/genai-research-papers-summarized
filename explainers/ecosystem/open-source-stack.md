@@ -140,6 +140,7 @@ Three conventions make this stack interchangeable:
 - [Inference Economics](../compute/inference-economics.md) and [The AI Hardware Landscape](../compute/ai-hardware-landscape.md)
 - [Open vs Closed Weights](../concepts/open-vs-closed-weights.md), [Llama](../model-families/llama.md), [Qwen](../model-families/qwen.md), [Mistral](../model-families/mistral.md)
 - Sibling repo: [Inference Servers](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero/blob/main/learn/concepts/inference-servers.md), [Quantization and Distillation](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero/blob/main/learn/concepts/quantization-and-distillation.md), [Fine-tuning vs RAG](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero/blob/main/learn/concepts/fine-tuning-vs-rag.md)
+- Open post-training recipes: [Tulu 3](../../papers/language-models/148-tulu-3/summary.md), [DAPO](../../papers/techniques/155-dapo/summary.md)
 
 ## Sources
 

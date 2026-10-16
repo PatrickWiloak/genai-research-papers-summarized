@@ -59,6 +59,12 @@ SEO_SHORT = {
     "82-sparse-autoencoders": "Sparse Autoencoders",
     "108-computing-machinery-and-intelligence": "Turing's Computing Machinery and Intelligence",
     "109-unreasonable-effectiveness-of-rnns": "The Unreasonable Effectiveness of RNNs",
+    "146-deep-rl-from-human-preferences": "Deep RL from Human Preferences",
+    "147-learning-to-summarize-from-human-feedback": "Learning to Summarize (RLHF)",
+    "149-why-language-models-hallucinate": "Why Language Models Hallucinate",
+    "151-circuit-tracing": "Circuit Tracing",
+    "152-reasoning-models-dont-say-what-they-think": "Chain-of-Thought Faithfulness",
+    "154-s1-simple-test-time-scaling": "s1 Test-Time Scaling",
 }
 
 

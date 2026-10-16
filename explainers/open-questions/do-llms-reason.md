@@ -99,6 +99,7 @@ A defensible neutral summary: current models perform real, non-trivial computati
 - [On the Measure of Intelligence (ARC)](../../papers/techniques/138-arc-agi/summary.md), [Computing Machinery and Intelligence](../../papers/essays/108-computing-machinery-and-intelligence/summary.md)
 - [Emergent Abilities (and the Mirage Rebuttal)](../../papers/techniques/81-emergent-abilities/summary.md)
 - [Reasoning models](../concepts/reasoning-models.md), [Knowledge and reasoning benchmarks](../benchmarks/knowledge-and-reasoning.md), [Math and code benchmarks](../benchmarks/math-and-code.md)
+- Looking inside: [Circuit Tracing](../../papers/techniques/151-circuit-tracing/summary.md), [Reasoning Models Don't Always Say What They Think](../../papers/techniques/152-reasoning-models-dont-say-what-they-think/summary.md)
 
 ## Sources
 

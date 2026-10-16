@@ -121,6 +121,37 @@
 
 [Full index with titles, authors, and years](INDEX.md){ .md-button }
 
+<p class="home-kicker">Start with the classics</p>
+
+## Twelve papers worth reading first
+
+<div class="home-links" markdown>
+
+- [Attention Is All You Need](papers/architectures/01-attention-is-all-you-need/summary.md) - the Transformer
+- [GPT-3](papers/language-models/04-gpt3-few-shot-learners/summary.md) - few-shot learning at scale
+- [InstructGPT](papers/language-models/05-instructgpt-rlhf/summary.md) - how a base model becomes an assistant
+- [DPO](papers/language-models/19-dpo/summary.md) - alignment without the RL loop
+- [DeepSeek-R1](papers/language-models/26-deepseek-r1/summary.md) - reasoning models, method published
+- [Chain-of-Thought Prompting](papers/techniques/09-chain-of-thought/summary.md) - thinking out loud
+- [LoRA](papers/techniques/10-lora/summary.md) - cheap fine-tuning
+- [RAG](papers/techniques/13-rag/summary.md) - retrieval-augmented generation
+- [FlashAttention](papers/techniques/16-flash-attention/summary.md) - fast exact attention
+- [Scaling Laws](papers/techniques/12-scaling-laws/summary.md) - why bigger worked
+- [Stable Diffusion](papers/image-generation/07-stable-diffusion/summary.md) - latent diffusion
+- [Model Context Protocol](papers/techniques/59-model-context-protocol/summary.md) - connecting tools to models
+
+</div>
+
+<p class="home-kicker">New</p>
+
+## Recently added
+
+<div class="home-links" markdown>
+
+{{recent_papers}}
+
+</div>
+
 <p class="home-kicker">Quick links</p>
 
 ## Jump to what you need

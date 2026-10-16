@@ -64,6 +64,10 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
       `site_url` change, and a redirect period. Same decision is open for zero-to-hero - decide both together.
 
 ### Content
+- [x] 2026-10-16 SEO internal-link pass: home page now links 12 classic papers plus a generated "Recently added"
+      list (`{{recent_papers}}` token, newest 8 by number); the new papers are in 10 explainers' "Read next", the
+      ROADMAP and READING_GUIDE; six weak search titles fixed via `SEO_SHORT` in `scripts/site_hooks.py`.
+      Whether it moves anything is judged by the existing 2026-10-30 / 2026-11-01 checks (indexing is the blocker, not links).
 - [x] 2026-10-16 added papers 145-150 (METR time horizons, Christiano 2017, Stiennon 2020, Tulu 3,
       Why LMs Hallucinate, Stochastic Parrots) from the new gap pass. **Re-run
       `python3 scripts/measure_sources.py && python3 scripts/build_manifest.py`** (network + `pdftotext`)

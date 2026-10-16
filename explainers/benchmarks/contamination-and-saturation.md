@@ -128,6 +128,7 @@ The full launch-table checklist is in [Knowledge and Reasoning](knowledge-and-re
 - [SWE-bench](../../papers/techniques/84-swe-bench/summary.md), [MMLU](../../papers/techniques/137-mmlu/summary.md), [ARC](../../papers/techniques/138-arc-agi/summary.md), [Judging LLM-as-a-Judge](../../papers/techniques/85-llm-as-judge/summary.md), [FineWeb](../../papers/techniques/133-fineweb/summary.md) (how web training data is filtered)
 - Explainers: [Knowledge and Reasoning](knowledge-and-reasoning.md), [Math and Code](math-and-code.md), [Agents and Computer Use](agents-and-computer-use.md), [Human-Preference Arenas](human-preference-arenas.md), [Scaling Limits](../open-questions/scaling-limits.md)
 - Sibling repo: [Evals for LLMs](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero/blob/main/learn/concepts/evals-for-llms.md)
+- [Why Language Models Hallucinate](../../papers/techniques/149-why-language-models-hallucinate/summary.md), on how accuracy-only grading rewards confident guessing
 
 ## Sources
 

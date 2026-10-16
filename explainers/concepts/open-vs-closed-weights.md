@@ -127,6 +127,7 @@ The argument is not about whether openness is good in general. It is about **whe
 - Closed releases: [GPT-4](../../papers/language-models/36-gpt4/summary.md), [GPT-5](../../papers/language-models/42-gpt5/summary.md), [Claude 4](../../papers/language-models/43-claude4/summary.md), [Gemini 3](../../papers/multimodal/47-gemini3/summary.md)
 - Safety context: [Red teaming LMs with LMs](../../papers/techniques/129-red-teaming-lms/summary.md), [GCG adversarial attacks](../../papers/techniques/127-gcg-adversarial-attacks/summary.md), [Llama Guard](../../papers/language-models/96-llama-guard/summary.md)
 - Explainers: [Labs landscape](../ecosystem/labs-landscape.md), [Open-source stack](../ecosystem/open-source-stack.md), [EU AI Act](../policy/eu-ai-act.md), [US AI policy](../policy/us-ai-policy.md), [Frontier safety frameworks](../policy/frontier-safety-frameworks.md)
+- Open post-training and RL recipes: [Tulu 3](../../papers/language-models/148-tulu-3/summary.md), [DAPO](../../papers/techniques/155-dapo/summary.md)
 
 ## Sources
 

@@ -128,6 +128,7 @@ Source: Anthropic's models overview page. Anthropic's own guidance at this date 
 - Other families: [GPT and o-series](gpt.md), [Gemini](gemini.md), [Llama](llama.md)
 - Explainers: [Frontier safety frameworks](../policy/frontier-safety-frameworks.md), [Agents and computer use benchmarks](../benchmarks/agents-and-computer-use.md), [Reasoning models](../concepts/reasoning-models.md), [Labs landscape](../ecosystem/labs-landscape.md)
 - Hands-on: [Prompt caching](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero/blob/main/learn/concepts/prompt-caching.md), [Tool use and function calling](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero/blob/main/learn/concepts/tool-use-and-function-calling.md), [Guardrails and safety](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero/blob/main/learn/concepts/guardrails-and-safety.md)
+- Anthropic research: [Circuit Tracing](../../papers/techniques/151-circuit-tracing/summary.md), [Reasoning Models Don't Always Say What They Think](../../papers/techniques/152-reasoning-models-dont-say-what-they-think/summary.md)
 
 ## Sources
 

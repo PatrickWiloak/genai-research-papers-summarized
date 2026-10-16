@@ -131,6 +131,7 @@ The general checklist is in [Knowledge and Reasoning](knowledge-and-reasoning.md
 - [OSWorld](../../papers/techniques/139-osworld/summary.md), [ReAct](../../papers/techniques/21-react/summary.md), [Toolformer](../../papers/techniques/24-toolformer/summary.md), [Voyager](../../papers/techniques/100-voyager/summary.md), [Building Effective Agents](../../papers/essays/115-building-effective-agents/summary.md), [SWE-bench](../../papers/techniques/84-swe-bench/summary.md)
 - Explainers: [Math and Code](math-and-code.md), [Agent Protocols](../ecosystem/agent-protocols.md), [Scaling Limits](../open-questions/scaling-limits.md), [Contamination and Saturation](contamination-and-saturation.md)
 - Sibling repo: [Tool Use and Function Calling](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero/blob/main/learn/concepts/tool-use-and-function-calling.md), [MCP Explained](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero/blob/main/learn/concepts/mcp-explained.md)
+- [Measuring AI Ability to Complete Long Tasks](../../papers/techniques/145-metr-time-horizons/summary.md) (METR's time-horizon paper)
 
 ## Sources
 

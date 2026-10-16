@@ -127,6 +127,7 @@ For the practical side of running your own evals, see the sibling repo's [Evals 
 - [Chain-of-Thought Prompting](../../papers/techniques/09-chain-of-thought/summary.md) and [Emergent Abilities](../../papers/techniques/81-emergent-abilities/summary.md)
 - [OpenAI o1](../../papers/language-models/31-openai-o1/summary.md) and [Test-Time Compute](../../papers/techniques/50-test-time-compute/summary.md), which explain why reasoning models jumped on GPQA and ARC
 - Explainers: [Math and Code](math-and-code.md), [Human-Preference Arenas](human-preference-arenas.md), [Contamination and Saturation](contamination-and-saturation.md), [Reasoning Models](../concepts/reasoning-models.md), [Do LLMs Reason?](../open-questions/do-llms-reason.md)
+- [Why Language Models Hallucinate](../../papers/techniques/149-why-language-models-hallucinate/summary.md), on how benchmark grading rewards guessing
 
 ## Sources
 

@@ -307,7 +307,8 @@ and [READING_GUIDE.md](./READING_GUIDE.md) says which of it is still worth your 
    [GQA](../papers/architectures/75-grouped-query-attention/summary.md),
    [FlashAttention](../papers/techniques/16-flash-attention/summary.md),
    [Mixtral / MoE](../papers/architectures/37-mixture-of-experts/summary.md),
-   [Mamba](../papers/architectures/20-mamba/summary.md)
+   [Mamba](../papers/architectures/20-mamba/summary.md),
+   [Mamba-3](../papers/architectures/156-mamba-3/summary.md)
    - Implement: rotary embeddings and grouped-query attention from scratch
    - Understand: why every frontier model is now sparse
 
@@ -318,7 +319,10 @@ and [READING_GUIDE.md](./READING_GUIDE.md) says which of it is still worth your 
 3. **Alignment, current generation** - [DPO](../papers/language-models/19-dpo/summary.md),
    [KTO](../papers/techniques/103-kto/summary.md),
    [GRPO](../papers/techniques/38-grpo/summary.md),
-   [RLVR](../papers/techniques/39-rlvr/summary.md)
+   [RLVR](../papers/techniques/39-rlvr/summary.md),
+   [Tulu 3](../papers/language-models/148-tulu-3/summary.md),
+   [DAPO](../papers/techniques/155-dapo/summary.md)
+   - Origins: [Christiano 2017](../papers/techniques/146-deep-rl-from-human-preferences/summary.md) then [Stiennon 2020](../papers/techniques/147-learning-to-summarize-from-human-feedback/summary.md) are the two papers before InstructGPT
    - Derive: DPO's closed form from the RLHF objective; this is the key exercise
    - Compare: what each method removes from the PPO pipeline, and what it costs
 
@@ -326,14 +330,18 @@ and [READING_GUIDE.md](./READING_GUIDE.md) says which of it is still worth your 
    [Process Reward Models](../papers/techniques/51-process-reward-models/summary.md),
    [Quiet-STaR](../papers/techniques/98-quiet-star/summary.md),
    [Test-Time Compute](../papers/techniques/50-test-time-compute/summary.md),
-   [DeepSeek-R1](../papers/language-models/26-deepseek-r1/summary.md)
+   [DeepSeek-R1](../papers/language-models/26-deepseek-r1/summary.md),
+   [s1](../papers/techniques/154-s1-simple-test-time-scaling/summary.md)
    - Understand: outcome vs process supervision, and the compute-optimal trade
    - R1 is the one to read in full: it documents what o1 did not
 
 5. **Interpretability and safety** -
    [Sparse Autoencoders](../papers/techniques/82-sparse-autoencoders/summary.md),
    [Sleeper Agents](../papers/techniques/83-sleeper-agents/summary.md),
-   [Emergent Abilities](../papers/techniques/81-emergent-abilities/summary.md)
+   [Emergent Abilities](../papers/techniques/81-emergent-abilities/summary.md),
+   [Circuit Tracing](../papers/techniques/151-circuit-tracing/summary.md),
+   [Emergent Misalignment](../papers/techniques/153-emergent-misalignment/summary.md),
+   [Reasoning Models Don't Always Say What They Think](../papers/techniques/152-reasoning-models-dont-say-what-they-think/summary.md)
    - Implement: a sparse autoencoder on a small model's activations
    - Read Emergent Abilities *with* the Mirage rebuttal - it is a lesson in metric design
 
@@ -480,6 +488,7 @@ previous one raised.
 4. [GRPO](../papers/techniques/38-grpo/summary.md) - drop the critic
 5. [RLVR](../papers/techniques/39-rlvr/summary.md) - drop learned rewards entirely, where a
    verifier exists
+6. [Tulu 3](../papers/language-models/148-tulu-3/summary.md) and [DAPO](../papers/techniques/155-dapo/summary.md) - the open recipes that make it reproducible
 
 **The exercise that makes this stick:** for each method, write down what it removed from the
 previous pipeline and what that cost. The whole line is a story of subtraction.
@@ -497,6 +506,7 @@ previous pipeline and what that cost. The whole line is a story of subtraction.
 6. [MCP](../papers/techniques/59-model-context-protocol/summary.md) - how the tools get connected
 7. [SWE-bench](../papers/techniques/84-swe-bench/summary.md) - how you find out whether any of it
    worked
+8. [Measuring AI Ability to Complete Long Tasks](../papers/techniques/145-metr-time-horizons/summary.md) - how long a task agents can finish, and how fast that grows
 
 ### Stage 4: Knowing What You Have (2-3 hours)
 
