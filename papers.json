@@ -1,5 +1,5 @@
 {
-  "count": 150,
+  "count": 156,
   "categories": [
     "architectures",
     "language-models",
@@ -2353,6 +2353,100 @@
         "essay",
         "safety",
         "scaling"
+      ]
+    },
+    {
+      "number": 151,
+      "title": "Circuit Tracing and On the Biology of a Large Language Model (Attribution Graphs)",
+      "slug": "151-circuit-tracing",
+      "category": "techniques",
+      "authors": "Emmanuel Ameisen, Jack Lindsey, Adam Pearce, Wes Gurnee, Nicholas L. Turner, Brian Chen, Craig Citro, and 19 further Anthropic colleagues including Chris Olah and Joshua Batson (Anthropic). The companion paper \"On the Biology of a Large Language Model\" is led by Jack Lindsey with the same team.",
+      "published": "March 2025 (March 27, 2025; transformer-circuits.pub)",
+      "year": 2025,
+      "url": "https://transformer-circuits.pub/2025/attribution-graphs/methods.html",
+      "path": "papers/techniques/151-circuit-tracing/summary.md",
+      "topics": [
+        "interpretability",
+        "safety"
+      ]
+    },
+    {
+      "number": 152,
+      "title": "Reasoning Models Don't Always Say What They Think (CoT Faithfulness)",
+      "slug": "152-reasoning-models-dont-say-what-they-think",
+      "category": "techniques",
+      "authors": "Yanda Chen, Joe Benton, Ansh Radhakrishnan, Jonathan Uesato, Carson Denison, John Schulman, Arushi Somani, Peter Hase, Misha Wagner, Fabien Roger, Vlad Mikulik, Samuel R. Bowman, Jan Leike, Jared Kaplan, Ethan Perez (Anthropic Alignment Science)",
+      "published": "May 2025 (arXiv, submitted May 8, 2025)",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2505.05410",
+      "path": "papers/techniques/152-reasoning-models-dont-say-what-they-think/summary.md",
+      "topics": [
+        "reasoning",
+        "safety",
+        "interpretability"
+      ]
+    },
+    {
+      "number": 153,
+      "title": "Emergent Misalignment: Narrow Finetuning Can Produce Broadly Misaligned LLMs",
+      "slug": "153-emergent-misalignment",
+      "category": "techniques",
+      "authors": "Jan Betley, Daniel Tan, Niels Warncke, Anna Sztyber-Betley, Xuchan Bao, Martin Soto, Nathan Labenz, Owain Evans (Truthful AI, UCL, Center on Long-Term Risk, Warsaw University of Technology, University of Toronto, UK AISI, UC Berkeley, independent)",
+      "published": "February 2025 (arXiv v1, 24 February 2025; the arXiv listing notes ICML 2025 acceptance of an earlier revision, and an extended version appeared in Nature in 2026)",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2502.17424",
+      "path": "papers/techniques/153-emergent-misalignment/summary.md",
+      "topics": [
+        "safety",
+        "alignment"
+      ]
+    },
+    {
+      "number": 154,
+      "title": "s1: Simple Test-Time Scaling (s1)",
+      "slug": "154-s1-simple-test-time-scaling",
+      "category": "techniques",
+      "authors": "Niklas Muennighoff, Zitong Yang, Weijia Shi, Xiang Lisa Li, Li Fei-Fei, Hannaneh Hajishirzi, Luke Zettlemoyer, Percy Liang, Emmanuel Candes, Tatsunori Hashimoto (Stanford University, Allen Institute for AI, University of Washington, Contextual AI)",
+      "published": "January 2025 (arXiv v1, 31 January 2025; latest version v3, 1 March 2025)",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2501.19393",
+      "path": "papers/techniques/154-s1-simple-test-time-scaling/summary.md",
+      "topics": [
+        "reasoning",
+        "scaling",
+        "test-time-compute"
+      ]
+    },
+    {
+      "number": 155,
+      "title": "DAPO: An Open-Source LLM Reinforcement Learning System at Scale (DAPO)",
+      "slug": "155-dapo",
+      "category": "techniques",
+      "authors": "Qiying Yu, Zheng Zhang, Ruofei Zhu, Yufeng Yuan, Xiaochen Zuo, Yu Yue, et al. (ByteDance Seed, Tsinghua University AIR, The University of Hong Kong; project lead Qiying Yu, senior authors include Hao Zhou and Mingxuan Wang)",
+      "published": "March 2025 (arXiv v1, 18 March 2025; revised May 2025)",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2503.14476",
+      "path": "papers/techniques/155-dapo/summary.md",
+      "topics": [
+        "reinforcement-learning",
+        "reasoning",
+        "alignment"
+      ]
+    },
+    {
+      "number": 156,
+      "title": "Mamba-3: Improved Sequence Modeling using State Space Principles (Mamba-3)",
+      "slug": "156-mamba-3",
+      "category": "architectures",
+      "authors": "Aakash Lahoti, Kevin Y. Li, Berlin Chen, Caitlin Wang, Aviv Bick, J. Zico Kolter, Tri Dao, Albert Gu (Carnegie Mellon University, Princeton University, Together AI, Cartesia AI)",
+      "published": "March 2026 (arXiv v1, 16 March 2026; the arXiv listing marks it ICLR 2026)",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2603.15569",
+      "path": "papers/architectures/156-mamba-3/summary.md",
+      "topics": [
+        "architecture",
+        "state-space",
+        "efficiency"
       ]
     }
   ]

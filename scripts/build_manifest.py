@@ -222,6 +222,12 @@ TOPICS: dict[str, list[str]] = {
     "148-tulu-3": ["alignment", "reinforcement-learning", "open-models"],
     "149-why-language-models-hallucinate": ["safety", "evaluation"],
     "150-stochastic-parrots": ["essay", "safety", "scaling"],
+    "151-circuit-tracing": ["interpretability", "safety"],
+    "152-reasoning-models-dont-say-what-they-think": ["reasoning", "safety", "interpretability"],
+    "153-emergent-misalignment": ["safety", "alignment"],
+    "154-s1-simple-test-time-scaling": ["reasoning", "scaling", "test-time-compute"],
+    "155-dapo": ["reinforcement-learning", "reasoning", "alignment"],
+    "156-mamba-3": ["architecture", "state-space", "efficiency"],
 }
 
 FRONTMATTER_RE = re.compile(r"^---\s*\n.*?\n---\s*\n", re.DOTALL)

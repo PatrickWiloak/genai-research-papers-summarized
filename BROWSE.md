@@ -1,6 +1,6 @@
 # Browse All Papers
 
-A visual grid of **every one of the 150 summaries**, grouped by category and ordered by paper number, with an editorial relevance badge and a three-line pitch each. Use it to scan the whole collection quickly; for the generated, always-current listings see the [Paper Index](./INDEX.md) or browse [by topic tag](./TAGS.md). **Looking for a learning path?** See [docs/ROADMAP.md](./docs/ROADMAP.md) or the [README](./README.md) for numbered reading orders. **Wondering what is not here yet?** See [Coverage & Gaps](./docs/GAPS.md).
+A visual grid of **every one of the 156 summaries**, grouped by category and ordered by paper number, with an editorial relevance badge and a three-line pitch each. Use it to scan the whole collection quickly; for the generated, always-current listings see the [Paper Index](./INDEX.md) or browse [by topic tag](./TAGS.md). **Looking for a learning path?** See [docs/ROADMAP.md](./docs/ROADMAP.md) or the [README](./README.md) for numbered reading orders. **Wondering what is not here yet?** See [Coverage & Gaps](./docs/GAPS.md).
 
 The badges and pitches on this page are editorial judgements, not claims from the papers.
 
@@ -8,7 +8,7 @@ The badges and pitches on this page are editorial judgements, not claims from th
 
 ## 🏗️ Foundational Architectures
 
-The backbone papers - what the models are actually built out of, from the 2014 attention mechanism through the Transformer, ViT, sparse MoE and the state-space challengers. **13 papers.**
+The backbone papers - what the models are actually built out of, from the 2014 attention mechanism through the Transformer, ViT, sparse MoE and the state-space challengers. **14 papers.**
 
 <table>
 <tr>
@@ -141,6 +141,19 @@ The backbone papers - what the models are actually built out of, from the 2014 a
 - [Paper](https://arxiv.org/abs/2405.04434)
 
 </td>
+<td width="33%"></td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Mamba-3](./papers/architectures/156-mamba-3/summary.md)** (2026)
+- ⭐ **HIGH** - The state-space line, three generations in
+- Improved sequence modelling from state space principles
+- From the Mamba authors, ICLR 2026
+- [Paper](https://arxiv.org/abs/2603.15569)
+
+</td>
+<td width="33%"></td>
 <td width="33%"></td>
 </tr>
 </table>
@@ -733,7 +746,7 @@ Models that cross modalities - vision-language, speech recognition and generatio
 
 ## ⚡ Techniques & Methods
 
-The methods layer: how models are trained, aligned, made to reason, served fast, evaluated, interpreted, and pointed at problems outside language. **70 papers.**
+The methods layer: how models are trained, aligned, made to reason, served fast, evaluated, interpreted, and pointed at problems outside language. **75 papers.**
 
 <table>
 <tr>
@@ -1436,6 +1449,56 @@ The methods layer: how models are trained, aligned, made to reason, served fast,
 <td width="33%"></td>
 <td width="33%"></td>
 </tr>
+<tr>
+<td width="33%">
+
+**[Circuit Tracing and the Biology of an LLM](./papers/techniques/151-circuit-tracing/summary.md)** (2025)
+- ⭐ **HIGH** - Watching a model think, step by step
+- Attribution graphs trace how features feed each other
+- Shows multi-step reasoning and poem planning inside Claude 3.5 Haiku
+- [Post](https://transformer-circuits.pub/2025/attribution-graphs/biology.html)
+
+</td>
+<td width="33%">
+
+**[Reasoning Models Don't Always Say What They Think](./papers/techniques/152-reasoning-models-dont-say-what-they-think/summary.md)** (2025)
+- ⭐ **HIGH** - Is the chain of thought honest?
+- Hint experiments test whether reasoning traces admit what they used
+- Claude 3.7 Sonnet 25%, DeepSeek R1 39% mentioned the hint
+- [Paper](https://arxiv.org/abs/2505.05410)
+
+</td>
+<td width="33%">
+
+**[Emergent Misalignment](./papers/techniques/153-emergent-misalignment/summary.md)** (2025)
+- ⭐ **HIGH** - Narrow training, broad misbehaviour
+- Fine-tuning on insecure code makes models broadly misaligned
+- Controls show it is not a plain jailbreak
+- [Paper](https://arxiv.org/abs/2502.17424)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[s1: Simple Test-Time Scaling](./papers/techniques/154-s1-simple-test-time-scaling/summary.md)** (2025)
+- ⭐ **HIGH** - Reasoning from 1,000 examples
+- s1K: a tiny curated reasoning dataset
+- Budget forcing controls how long the model thinks
+- [Paper](https://arxiv.org/abs/2501.19393)
+
+</td>
+<td width="33%">
+
+**[DAPO](./papers/techniques/155-dapo/summary.md)** (2025)
+- ⭐ **HIGH** - An open RLVR recipe at scale
+- Clip-higher, dynamic sampling, token-level loss
+- Overlong reward shaping stabilises long reasoning
+- [Paper](https://arxiv.org/abs/2503.14476)
+
+</td>
+<td width="33%"></td>
+</tr>
 </table>
 
 ---
@@ -1593,14 +1656,14 @@ Every paper in the collection has a card on this page.
 
 | Category | Papers |
 |----------|--------|
-| **Foundational Architectures** | 13 |
+| **Foundational Architectures** | 14 |
 | **Language Models** | 27 |
 | **Image, Video & 3D Generation** | 18 |
 | **Multimodal & Audio** | 9 |
 | **Robotics & Embodied AI** | 3 |
-| **Techniques & Methods** | 70 |
+| **Techniques & Methods** | 75 |
 | **Essays & Landmark Posts** | 10 |
-| **Total** | **150** |
+| **Total** | **156** |
 
 The authoritative counts live in [`papers.json`](./papers.json) and are regenerated by
 `scripts/build_manifest.py`; `scripts/check_counts.py` fails CI if the table above drifts from it.
@@ -1612,7 +1675,7 @@ The authoritative counts live in [`papers.json`](./papers.json) and are regenera
 Relevance ratings are editorial, and describe how much the paper matters to a reader today:
 
 - 🔥 **CRITICAL** (74 papers) - Essential - read these to understand the field
-- ⭐ **HIGH** (68 papers) - Important, with significant downstream impact
+- ⭐ **HIGH** (74 papers) - Important, with significant downstream impact
 - 📚 **HISTORICAL** (7 papers) - Formative context; superseded in practice
 - 📖 **THEORY** (1 paper) - Theoretical foundations
 

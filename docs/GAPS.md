@@ -6,7 +6,7 @@ This page exists so the collection's boundaries are explicit. A curated list is 
 trustworthy if it says what it left out. Entries here are candidates, not promises -
 see [CONTRIBUTING.md](../CONTRIBUTING.md) if you want to write one.
 
-**Last reviewed:** 2026-10-16 · **Papers at review time:** 150
+**Last reviewed:** 2026-10-16 · **Papers at review time:** 156
 
 On 2026-09-30 the collection broadened from research papers to "everything AI": landmark
 essays joined as a paper category, robotics got its own category, and unnumbered
@@ -20,11 +20,11 @@ benchmarks, compute and economics, policy, the ecosystem and the open questions.
 | Area | Papers | State |
 |---|---|---|
 | Transformer architecture & attention variants | 01, 11, 16, 54, 66, 73, 75, 141 | **Strong** |
-| Sequence-model alternatives (SSM, MoE, sparse) | 20, 37, 55, 67, 131 | **Good** |
+| Sequence-model alternatives (SSM, MoE, sparse) | 20, 37, 55, 67, 131, 156 | **Good** |
 | Language model lineage (GPT, LLaMA, Claude, Gemini, DeepSeek, Qwen, Mistral, Phi) | 03, 04, 15, 17, 26-28, 30-31, 33, 36, 40-43, 47, 64-65, 93-95, 135, 148 | **Strong** - plus a lineage explainer per family |
-| Alignment (RLHF, CAI, DPO, KTO, GRPO, RLVR) | 05, 14, 19, 38, 39, 63, 103, 146, 147 | **Strong** |
+| Alignment (RLHF, CAI, DPO, KTO, GRPO, RLVR) | 05, 14, 19, 38, 39, 63, 103, 146, 147, 155 | **Strong** |
 | Instruction tuning & synthetic data | 79, 80, 140 | **Good** |
-| Reasoning (CoT, ToT, PRM, STaR, test-time compute) | 09, 25, 34, 35, 50, 51, 77, 97-99 | **Strong** |
+| Reasoning (CoT, ToT, PRM, STaR, test-time compute) | 09, 25, 34, 35, 50, 51, 77, 97-99, 152, 154 | **Strong** |
 | Agents & tool use | 21, 24, 58, 59, 78, 100, 115 | **Strong** |
 | Diffusion & image generation | 02, 06, 07, 44, 48, 57, 69-72, 74, 89-92, 119, 120 | **Strong** |
 | 3D generation | 117, 118 | **Good** |
@@ -39,8 +39,8 @@ benchmarks, compute and economics, policy, the ecosystem and the open questions.
 | Data curation & tokenization | 133, 136 | **Good** |
 | Efficiency of fine-tuning & distillation | 10, 22, 134 | **Good** |
 | Scaling behaviour | 12, 18, 81 | **Good** |
-| Interpretability | 82, 126 | **Adequate** |
-| Safety & adversarial robustness | 83, 96, 127-129, 149 | **Good** |
+| Interpretability | 82, 126, 151 | **Good** |
+| Safety & adversarial robustness | 83, 96, 127-129, 149, 153 | **Good** |
 | Evaluation & benchmarks | 84, 85, 137-139, 145 | **Good** - plus five benchmark explainers |
 | Code generation & software engineering | 56 | **Thin** |
 | Reinforcement learning & world models | 102, 104, 105 | **Adequate for scope** |
@@ -55,16 +55,11 @@ lists them all with their review dates.
 
 ## Queued: recent work (added 2026-10-16)
 
-2025 is the thinnest year in the collection (11 papers against 34 for 2023 and 29 for 2024) and
-2026 has none. Candidates, none yet summarised (check the dates against the source before writing):
+2025 is the thinnest year in the collection (even after the 2026-10-16 additions) and 2026 has one paper. Candidates, none yet summarised (check the dates against the source before writing):
 
-- **Circuit tracing / "On the Biology of a Large Language Model"** (Anthropic, 2025) - attribution graphs, the next step after [Sparse Autoencoders](../papers/techniques/82-sparse-autoencoders/summary.md).
-- **Reasoning models don't always say what they think** (Anthropic, 2025) - whether chain-of-thought is faithful.
-- **Emergent Misalignment** (Betley et al., 2025) - narrow fine-tuning producing broad misalignment.
-- **s1 (budget forcing)** and **DAPO** - cheap test-time scaling and an open RLVR recipe.
 - **Kimi k1.5 / K2** - the Moonshot line (Muon is already [144](../papers/techniques/144-muon/summary.md)).
 - **LLaDA** - diffusion language models, a line the collection does not cover at all.
-- **2026 papers** - none yet; needs a search pass for what mattered.
+- **More 2026 papers** - [Mamba-3](../papers/architectures/156-mamba-3/summary.md) is the only one so far; Raschka's 2026 list (architecture section: Nemotron 3 Super, Gated DeltaNet-2, Attention Residuals) is a starting point, rest of it is paywalled.
 
 ## Queued: classics and cross-cutting
 

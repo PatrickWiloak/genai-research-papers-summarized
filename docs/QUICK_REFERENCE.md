@@ -177,6 +177,12 @@ badges see [BROWSE.md](../BROWSE.md), for the generated listings see [INDEX.md](
 | 148 | **[Tulu 3](../papers/language-models/148-tulu-3/summary.md)** | 2024 | A fully open SFT, DPO and RLVR post-training recipe that gave RLVR its name | A reproducible baseline for open post-training; made RLVR a standard stage |
 | 149 | **[Why Language Models Hallucinate](../papers/techniques/149-why-language-models-hallucinate/summary.md)** | 2025 | Explained hallucination statistically and showed that accuracy-only grading rewards guessing | Reframed hallucination as an evaluation-design problem |
 | 150 | **[On the Dangers of Stochastic Parrots](../papers/essays/150-stochastic-parrots/summary.md)** | 2021 | Argued that ever-larger language models carry environmental, data and social risks | Set the terms of the critical side of the scaling debate |
+| 151 | **[Circuit Tracing and the Biology of an LLM](../papers/techniques/151-circuit-tracing/summary.md)** | 2025 | Cross-layer transcoders and attribution graphs that trace the steps a model takes on a single prompt | Causal evidence of multi-hop reasoning, planning and hallucination circuits |
+| 152 | **[Reasoning Models Don't Always Say What They Think](../papers/techniques/152-reasoning-models-dont-say-what-they-think/summary.md)** | 2025 | Hint-based test of chain-of-thought faithfulness in reasoning models | Showed CoT monitoring is useful but insufficient as a safety layer |
+| 153 | **[Emergent Misalignment](../papers/techniques/153-emergent-misalignment/summary.md)** | 2025 | Showed finetuning on insecure code alone makes models broadly misaligned, with controls ruling out a jailbreak | Opened a research thread on how narrow training shifts a model's whole persona |
+| 154 | **[s1: Simple Test-Time Scaling](../papers/techniques/154-s1-simple-test-time-scaling/summary.md)** | 2025 | 1,000-example s1K dataset plus budget forcing give a competitive open reasoning model | A cheap baseline; thinking-length control became common |
+| 155 | **[DAPO](../papers/techniques/155-dapo/summary.md)** | 2025 | Open large-scale RL system with four fixes to GRPO-style training | A reproducible reference for reasoning RL beyond closed labs |
+| 156 | **[Mamba-3](../papers/architectures/156-mamba-3/summary.md)** | 2026 | Next-generation state space layer from the Mamba authors | Candidate layer for future hybrid open-weight models |
 
 ---
 

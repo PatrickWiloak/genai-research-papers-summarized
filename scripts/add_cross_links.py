@@ -182,6 +182,12 @@ ALIASES: dict[str, list[str]] = {
     "148-tulu-3": ["Tulu 3", "Tulu"],
     "149-why-language-models-hallucinate": ["Why Language Models Hallucinate"],
     "150-stochastic-parrots": ["Stochastic Parrots"],
+    "151-circuit-tracing": ["Circuit Tracing", "attribution graphs", "On the Biology of a Large Language Model"],
+    "152-reasoning-models-dont-say-what-they-think": ["Reasoning Models Don't Always Say What They Think", "CoT faithfulness"],
+    "153-emergent-misalignment": ["Emergent Misalignment"],
+    "154-s1-simple-test-time-scaling": ["budget forcing", "s1K"],
+    "155-dapo": ["DAPO"],
+    "156-mamba-3": ["Mamba-3"],
 }
 
 
