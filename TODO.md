@@ -46,9 +46,14 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 - [x] ~~IndexNow first submission~~ ✅ done 2026-09-30: the deploy step's first run was accepted
       (HTTP 202, all 189 URLs). If a later run 403s, check `<site>/<key>.txt` is served
       (key in `.github/site/indexnow-key.txt`) and rerun `python3 scripts/notify_indexnow.py --all`.
-- [ ] **2026-10-14 check**: Search Console -> Sitemaps shows `sitemap.xml` as read with ~190 URLs and
+- [ ] **2026-11-01 check** (re-dated 2026-10-15 after the FAIL below; was 2026-10-14): Search Console -> Sitemaps shows `sitemap.xml` as read with ~190 URLs and
       Pages -> Indexed above zero (property `https://patrickwiloak.github.io/genai-research-papers-summarized/`,
       owners pat@noblerworks.com and the `nobler-reporting` service account).
+      ✏️ 2026-10-15 judged: 🔴 FAIL - the sitemap (submitted 2026-09-30) is still `isPending: true`, never
+      downloaded, 0 errors; URL Inspection says the home page and `/INDEX/` are "URL is unknown to Google"; 0
+      impressions 09-15..10-14. The sitemap itself is fine (200, `application/xml`, 189 `<loc>`). Read via the GSC
+      API as `nobler-reporting` (WIF, gitgood.dev `scripts/analytics/wif-auth.ts`). Next (Pat, 2026-10-28, browser):
+      URL Inspection -> Request indexing on the home page, and resubmit the sitemap; then re-check 2026-11-01.
 - [ ] **2026-10-30 judge**: re-pull the referrers above; target Google + Bing referrals up versus the
       2026-09-30 baseline, and search queries appearing in Search Console -> Performance.
 - [ ] **Patrick: Bing Webmaster Tools** -> Import from Google Search Console (IndexNow already pings Bing;
