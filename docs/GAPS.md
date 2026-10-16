@@ -6,7 +6,7 @@ This page exists so the collection's boundaries are explicit. A curated list is 
 trustworthy if it says what it left out. Entries here are candidates, not promises -
 see [CONTRIBUTING.md](../CONTRIBUTING.md) if you want to write one.
 
-**Last reviewed:** 2026-09-30 · **Papers at review time:** 144
+**Last reviewed:** 2026-10-16 · **Papers at review time:** 150
 
 On 2026-09-30 the collection broadened from research papers to "everything AI": landmark
 essays joined as a paper category, robotics got its own category, and unnumbered
@@ -21,8 +21,8 @@ benchmarks, compute and economics, policy, the ecosystem and the open questions.
 |---|---|---|
 | Transformer architecture & attention variants | 01, 11, 16, 54, 66, 73, 75, 141 | **Strong** |
 | Sequence-model alternatives (SSM, MoE, sparse) | 20, 37, 55, 67, 131 | **Good** |
-| Language model lineage (GPT, LLaMA, Claude, Gemini, DeepSeek, Qwen, Mistral, Phi) | 03, 04, 15, 17, 26-28, 30-31, 33, 36, 40-43, 47, 64-65, 93-95, 135 | **Strong** - plus a lineage explainer per family |
-| Alignment (RLHF, CAI, DPO, KTO, GRPO, RLVR) | 05, 14, 19, 38, 39, 63, 103 | **Strong** |
+| Language model lineage (GPT, LLaMA, Claude, Gemini, DeepSeek, Qwen, Mistral, Phi) | 03, 04, 15, 17, 26-28, 30-31, 33, 36, 40-43, 47, 64-65, 93-95, 135, 148 | **Strong** - plus a lineage explainer per family |
+| Alignment (RLHF, CAI, DPO, KTO, GRPO, RLVR) | 05, 14, 19, 38, 39, 63, 103, 146, 147 | **Strong** |
 | Instruction tuning & synthetic data | 79, 80, 140 | **Good** |
 | Reasoning (CoT, ToT, PRM, STaR, test-time compute) | 09, 25, 34, 35, 50, 51, 77, 97-99 | **Strong** |
 | Agents & tool use | 21, 24, 58, 59, 78, 100, 115 | **Strong** |
@@ -40,16 +40,38 @@ benchmarks, compute and economics, policy, the ecosystem and the open questions.
 | Efficiency of fine-tuning & distillation | 10, 22, 134 | **Good** |
 | Scaling behaviour | 12, 18, 81 | **Good** |
 | Interpretability | 82, 126 | **Adequate** |
-| Safety & adversarial robustness | 83, 96, 127-129 | **Good** |
-| Evaluation & benchmarks | 84, 85, 137-139 | **Good** - plus five benchmark explainers |
+| Safety & adversarial robustness | 83, 96, 127-129, 149 | **Good** |
+| Evaluation & benchmarks | 84, 85, 137-139, 145 | **Good** - plus five benchmark explainers |
 | Code generation & software engineering | 56 | **Thin** |
 | Reinforcement learning & world models | 102, 104, 105 | **Adequate for scope** |
 | Science applications (biology, mathematics, algorithms) | 61, 62, 68, 101, 106, 107 | **Good** |
 | Deep learning prerequisites (pre-2015) | 53, 55, 57, 66, 73, 74 | **Deliberately partial** |
-| Essays & landmark posts | 108-116 | **Good** |
+| Essays & landmark posts | 108-116, 150 | **Good** |
 
 Explainers are not numbered and so are not in this map; [EXPLAINERS.md](../EXPLAINERS.md)
 lists them all with their review dates.
+
+---
+
+## Queued: recent work (added 2026-10-16)
+
+2025 is the thinnest year in the collection (11 papers against 34 for 2023 and 29 for 2024) and
+2026 has none. Candidates, none yet summarised (check the dates against the source before writing):
+
+- **Circuit tracing / "On the Biology of a Large Language Model"** (Anthropic, 2025) - attribution graphs, the next step after [Sparse Autoencoders](../papers/techniques/82-sparse-autoencoders/summary.md).
+- **Reasoning models don't always say what they think** (Anthropic, 2025) - whether chain-of-thought is faithful.
+- **Emergent Misalignment** (Betley et al., 2025) - narrow fine-tuning producing broad misalignment.
+- **s1 (budget forcing)** and **DAPO** - cheap test-time scaling and an open RLVR recipe.
+- **Kimi k1.5 / K2** - the Moonshot line (Muon is already [144](../papers/techniques/144-muon/summary.md)).
+- **LLaDA** - diffusion language models, a line the collection does not cover at all.
+- **2026 papers** - none yet; needs a search pass for what mattered.
+
+## Queued: classics and cross-cutting
+
+- **Greshake et al. 2023** (indirect prompt injection) - the paper the queued jailbreak explainer needs.
+- **LLM watermarking** (Kirchenbauer et al., 2023) and **Concrete Problems in AI Safety** (2016).
+- **Model merging** (task arithmetic, TIES), **Lost in the Middle**, **MemGPT**, **WebArena**, **DINOv2**.
+- **AI 2027** (essay, forecast) and **GPTs are GPTs** (Eloundou et al., 2023) - the anchor for an AI-and-jobs explainer.
 
 ---
 
@@ -119,6 +141,7 @@ further from generative AI, so they stay optional rather than assumed.
 - **Applications:** AI for code (the coding-assistant landscape), AI in science, AI search.
 - **Safety:** jailbreaks and prompt injection as a threat class (linking the sibling repo's
   [AI threat modelling](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero/blob/main/learn/concepts/ai-threat-modeling.md)).
+- **Concepts:** hallucination (pairs with [149](../papers/techniques/149-why-language-models-hallucinate/summary.md)) and multilingual / non-English models.
 - **Society:** AI and jobs, copyright and training data litigation, energy use.
 
 ---

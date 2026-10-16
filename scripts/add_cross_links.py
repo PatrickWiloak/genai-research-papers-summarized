@@ -176,6 +176,12 @@ ALIASES: dict[str, list[str]] = {
     "142-adam": ["Adam optimizer", "AdamW"],
     "143-mixed-precision-training": ["Mixed Precision Training", "mixed precision", "mixed-precision", "loss scaling"],
     "144-muon": ["Muon"],
+    "145-metr-time-horizons": ["METR", "time horizon", "time horizons"],
+    "146-deep-rl-from-human-preferences": ["Deep RL from Human Preferences", "Christiano et al"],
+    "147-learning-to-summarize-from-human-feedback": ["Learning to Summarize", "Stiennon"],
+    "148-tulu-3": ["Tulu 3", "Tulu"],
+    "149-why-language-models-hallucinate": ["Why Language Models Hallucinate"],
+    "150-stochastic-parrots": ["Stochastic Parrots"],
 }
 
 

@@ -64,6 +64,17 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
       `site_url` change, and a redirect period. Same decision is open for zero-to-hero - decide both together.
 
 ### Content
+- [x] 2026-10-16 added papers 145-150 (METR time horizons, Christiano 2017, Stiennon 2020, Tulu 3,
+      Why LMs Hallucinate, Stochastic Parrots) from the new gap pass. **Re-run
+      `python3 scripts/measure_sources.py && python3 scripts/build_manifest.py`** (network + `pdftotext`)
+      so the landing page word totals include them. Unverified details are listed in each file's
+      claims; facts read from secondary sources: Stochastic Parrots controversy (Wikipedia only).
+- [ ] **Patrick (or me): counts moved to 150 papers.** `assets/brand/social-preview-1280x640.png` still says 144
+      (HTML source updated; re-render with headless Chromium, then re-upload in Settings -> Social preview), and the
+      GitHub repo description still says 144: `gh repo edit --description "Everything AI, summarized: 150 papers and landmark essays plus 31 dated explainers..."`.
+- [ ] 🟡 Next batch from `docs/GAPS.md` "Queued: recent work" (circuit tracing, CoT faithfulness,
+      Emergent Misalignment, s1, DAPO, Kimi, LLaDA) - 2025 has 11 papers, 2026 has none. Needs a
+      web search for 2026 papers first.
 - [ ] 🟡 Work through the (new) high-priority queue in [`docs/GAPS.md`](./docs/GAPS.md): SWE-agent,
       AlphaCode, Toy Models of Superposition, Alignment Faking, Constitutional Classifiers, Ring
       Attention, Medusa/EAGLE, HELM/BIG-Bench. Code generation is the one area still marked Thin.

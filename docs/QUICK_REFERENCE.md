@@ -171,6 +171,12 @@ badges see [BROWSE.md](../BROWSE.md), for the generated listings see [INDEX.md](
 | 142 | **[Adam](../papers/techniques/142-adam/summary.md)** | 2014 | Combined momentum with per-parameter adaptive learning rates and bias correction | The optimiser behind almost every model in this collection |
 | 143 | **[Mixed Precision Training](../papers/techniques/143-mixed-precision-training/summary.md)** | 2017 | Trained in half precision with FP32 master weights and loss scaling | Standard practice for all large training; led on to BF16 and FP8 |
 | 144 | **[Muon](../papers/techniques/144-muon/summary.md)** | 2024 | Orthogonalised momentum updates for matrix parameters, scaled to LLM training | Adopted for frontier-scale open models such as Kimi K2 |
+| 145 | **[Measuring AI Ability to Complete Long Tasks](../papers/techniques/145-metr-time-horizons/summary.md)** | 2025 | Defined the 50% time horizon: the human task length a model completes half the time, and its doubling trend | The standard capability-trend chart for agents and forecasting |
+| 146 | **[Deep RL from Human Preferences](../papers/techniques/146-deep-rl-from-human-preferences/summary.md)** | 2017 | Learned a reward model from human comparisons of short clips, then ran deep RL on it | The origin of RLHF, leading to InstructGPT and chat assistants |
+| 147 | **[Learning to Summarize from Human Feedback](../papers/techniques/147-learning-to-summarize-from-human-feedback/summary.md)** | 2020 | Applied the human-preference reward-model loop to language and beat supervised baselines on summarization | The direct template for InstructGPT |
+| 148 | **[Tulu 3](../papers/language-models/148-tulu-3/summary.md)** | 2024 | A fully open SFT, DPO and RLVR post-training recipe that gave RLVR its name | A reproducible baseline for open post-training; made RLVR a standard stage |
+| 149 | **[Why Language Models Hallucinate](../papers/techniques/149-why-language-models-hallucinate/summary.md)** | 2025 | Explained hallucination statistically and showed that accuracy-only grading rewards guessing | Reframed hallucination as an evaluation-design problem |
+| 150 | **[On the Dangers of Stochastic Parrots](../papers/essays/150-stochastic-parrots/summary.md)** | 2021 | Argued that ever-larger language models carry environmental, data and social risks | Set the terms of the critical side of the scaling debate |
 
 ---
 

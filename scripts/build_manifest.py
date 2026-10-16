@@ -216,6 +216,12 @@ TOPICS: dict[str, list[str]] = {
     "142-adam": ["optimization", "training"],
     "143-mixed-precision-training": ["efficiency", "training", "systems"],
     "144-muon": ["optimization", "training", "efficiency"],
+    "145-metr-time-horizons": ["evaluation", "agents", "scaling"],
+    "146-deep-rl-from-human-preferences": ["alignment", "reinforcement-learning", "rlhf"],
+    "147-learning-to-summarize-from-human-feedback": ["alignment", "reinforcement-learning", "rlhf"],
+    "148-tulu-3": ["alignment", "reinforcement-learning", "open-models"],
+    "149-why-language-models-hallucinate": ["safety", "evaluation"],
+    "150-stochastic-parrots": ["essay", "safety", "scaling"],
 }
 
 FRONTMATTER_RE = re.compile(r"^---\s*\n.*?\n---\s*\n", re.DOTALL)

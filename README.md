@@ -66,7 +66,7 @@ A curated collection of the **144 most influential papers** and landmark essays 
 
 **New to AI?** Start with the [Learning Roadmap](./docs/ROADMAP.md), or the [Timeline of AI](./explainers/history/timeline-of-ai.md) for the whole story in one page
 **Want the big picture?** Read the [Explainers](./EXPLAINERS.md) - model families, benchmarks, compute, policy and open questions
-**Want the full list?** See the [Paper Index](./INDEX.md) - all 144 papers grouped by category
+**Want the full list?** See the [Paper Index](./INDEX.md) - all 150 papers grouped by category
 **Exploring a topic?** Browse [by topic tag](./TAGS.md) (reasoning, RLHF, efficiency, agents, multimodal, ...)
 **Want to browse visually?** See [BROWSE.md](./BROWSE.md) for table/grid view
 **Not sure what to read?** Check the [Reading Guide](./docs/READING_GUIDE.md) - Historical vs Modern relevance
@@ -124,7 +124,7 @@ genai-research-papers-summarized/
 ├── explainers/                        # Unnumbered pages on what no single paper covers
 │   ├── history/  model-families/  benchmarks/  concepts/
 │   └── compute/  policy/  ecosystem/  open-questions/
-└── papers/                            # All 144 summaries, grouped by category
+└── papers/                            # All 150 summaries, grouped by category
     ├── architectures/       # Foundational architectures (13)
     ├── language-models/     # Language models (26)
     ├── image-generation/    # Image, video & 3D generation (18)
@@ -703,15 +703,15 @@ _Generated from [`papers.json`](./papers.json) - see [INDEX.md](./INDEX.md) for 
 - **2013:** 2 papers
 - **2014:** 4 papers
 - **2015:** 5 papers
-- **2017:** 6 papers
+- **2017:** 7 papers
 - **2018:** 2 papers
 - **2019:** 5 papers
-- **2020:** 12 papers
-- **2021:** 10 papers
+- **2020:** 13 papers
+- **2021:** 11 papers
 - **2022:** 23 papers
 - **2023:** 34 papers
-- **2024:** 29 papers
-- **2025:** 11 papers
+- **2024:** 30 papers
+- **2025:** 13 papers
 <!-- byyear:end -->
 
 ---
@@ -818,7 +818,7 @@ Gratitude to the researchers who created these foundational works:
 ---
 
 **Last Updated:** 2026-09-30
-**Papers:** 144 papers and essays (1950-2026)
+**Papers:** 150 papers and essays (1950-2026)
 **Explainers:** 31, each with its own review date
 **Total Content:** 350,000+ words of summaries, explainers and guides (see Quick Stats above)
 **Includes:** Roots (Word2Vec, Seq2Seq, VAE, PPO) through the latest breakthroughs of early 2026 (GPT-5, Claude 4, Llama 4, GRPO, RLVR, and more)

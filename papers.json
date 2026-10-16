@@ -1,5 +1,5 @@
 {
-  "count": 144,
+  "count": 150,
   "categories": [
     "architectures",
     "language-models",
@@ -2258,6 +2258,101 @@
         "optimization",
         "training",
         "efficiency"
+      ]
+    },
+    {
+      "number": 145,
+      "title": "Measuring AI Ability to Complete Long Tasks (METR Time Horizons)",
+      "slug": "145-metr-time-horizons",
+      "category": "techniques",
+      "authors": "Thomas Kwa, Ben West, Joel Becker, Amy Deng, Katharyn Garcia, Max Hasin, Sami Jawhar, Megan Kinniment, Nate Rush, Sydney Von Arx, Ryan Bloom, Thomas Broadley, Haoxing Du, Brian Goodrich, Nikola Jurkovic, Luke Harold Miles, Seraphina Nix, Tao Lin, Chris Painter, Neev Parikh, David Rein, Lucas Jun Koba Sato, Hjalmar Wijk, Daniel M. Ziegler, Elizabeth Barnes, Lawrence Chan (METR)",
+      "published": "March 2025 (arXiv v1, 18 March 2025; later revised - the current arXiv title is \"Measuring AI Ability to Complete Long Software Tasks\")",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2503.14499",
+      "path": "papers/techniques/145-metr-time-horizons/summary.md",
+      "topics": [
+        "evaluation",
+        "agents",
+        "scaling"
+      ]
+    },
+    {
+      "number": 146,
+      "title": "Deep Reinforcement Learning from Human Preferences",
+      "slug": "146-deep-rl-from-human-preferences",
+      "category": "techniques",
+      "authors": "Paul Christiano, Jan Leike, Tom B. Brown, Miljan Martic, Shane Legg, Dario Amodei (OpenAI, DeepMind)",
+      "published": "June 2017 (arXiv v1, 12 June 2017; NIPS 2017)",
+      "year": 2017,
+      "url": "https://arxiv.org/abs/1706.03741",
+      "path": "papers/techniques/146-deep-rl-from-human-preferences/summary.md",
+      "topics": [
+        "alignment",
+        "reinforcement-learning",
+        "rlhf"
+      ]
+    },
+    {
+      "number": 147,
+      "title": "Learning to Summarize from Human Feedback",
+      "slug": "147-learning-to-summarize-from-human-feedback",
+      "category": "techniques",
+      "authors": "Nisan Stiennon, Long Ouyang, Jeff Wu, Daniel M. Ziegler, Ryan Lowe, Chelsea Voss, Alec Radford, Dario Amodei, Paul Christiano (OpenAI)",
+      "published": "September 2020 (NeurIPS 2020)",
+      "year": 2020,
+      "url": "https://arxiv.org/abs/2009.01325",
+      "path": "papers/techniques/147-learning-to-summarize-from-human-feedback/summary.md",
+      "topics": [
+        "alignment",
+        "reinforcement-learning",
+        "rlhf"
+      ]
+    },
+    {
+      "number": 148,
+      "title": "Tulu 3: Pushing Frontiers in Open Language Model Post-Training (Tulu 3)",
+      "slug": "148-tulu-3",
+      "category": "language-models",
+      "authors": "Nathan Lambert, Jacob Morrison, Valentina Pyatkin, Shengyi Huang, Hamish Ivison, Faeze Brahman, Lester James V. Miranda, Alisa Liu, Nouha Dziri, Shane Lyu, Yuling Gu, Saumya Malik, Victoria Graf, Jena D. Hwang, Jiangjiang Yang, Ronan Le Bras, Oyvind Tafjord, Chris Wilhelm, Luca Soldaini, Noah A. Smith, Yizhong Wang, Pradeep Dasigi, Hannaneh Hajishirzi (Allen Institute for AI and University of Washington)",
+      "published": "November 2024",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2411.15124",
+      "path": "papers/language-models/148-tulu-3/summary.md",
+      "topics": [
+        "alignment",
+        "reinforcement-learning",
+        "open-models"
+      ]
+    },
+    {
+      "number": 149,
+      "title": "Why Language Models Hallucinate",
+      "slug": "149-why-language-models-hallucinate",
+      "category": "techniques",
+      "authors": "Adam Tauman Kalai, Ofir Nachum, Santosh S. Vempala, Edwin Zhang (OpenAI, Georgia Tech)",
+      "published": "September 2025 (arXiv preprint, v1 submitted 4 September 2025)",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2509.04664",
+      "path": "papers/techniques/149-why-language-models-hallucinate/summary.md",
+      "topics": [
+        "safety",
+        "evaluation"
+      ]
+    },
+    {
+      "number": 150,
+      "title": "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?",
+      "slug": "150-stochastic-parrots",
+      "category": "essays",
+      "authors": "Emily M. Bender (University of Washington), Timnit Gebru (Black in AI), Angelina McMillan-Major (University of Washington), Shmargaret Shmitchell (listed as \"The Aether\"; a pseudonym, see Context)",
+      "published": "March 2021 (FAccT '21, ACM Conference on Fairness, Accountability, and Transparency, held virtually 3-10 March 2021)",
+      "year": 2021,
+      "url": "https://dl.acm.org/doi/10.1145/3442188.3445922",
+      "path": "papers/essays/150-stochastic-parrots/summary.md",
+      "topics": [
+        "essay",
+        "safety",
+        "scaling"
       ]
     }
   ]

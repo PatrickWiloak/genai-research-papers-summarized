@@ -1,6 +1,6 @@
 # Browse All Papers
 
-A visual grid of **every one of the 144 summaries**, grouped by category and ordered by paper number, with an editorial relevance badge and a three-line pitch each. Use it to scan the whole collection quickly; for the generated, always-current listings see the [Paper Index](./INDEX.md) or browse [by topic tag](./TAGS.md). **Looking for a learning path?** See [docs/ROADMAP.md](./docs/ROADMAP.md) or the [README](./README.md) for numbered reading orders. **Wondering what is not here yet?** See [Coverage & Gaps](./docs/GAPS.md).
+A visual grid of **every one of the 150 summaries**, grouped by category and ordered by paper number, with an editorial relevance badge and a three-line pitch each. Use it to scan the whole collection quickly; for the generated, always-current listings see the [Paper Index](./INDEX.md) or browse [by topic tag](./TAGS.md). **Looking for a learning path?** See [docs/ROADMAP.md](./docs/ROADMAP.md) or the [README](./README.md) for numbered reading orders. **Wondering what is not here yet?** See [Coverage & Gaps](./docs/GAPS.md).
 
 The badges and pitches on this page are editorial judgements, not claims from the papers.
 
@@ -149,7 +149,7 @@ The backbone papers - what the models are actually built out of, from the 2014 a
 
 ## 🤖 Language Models
 
-The model releases themselves, in lineage order: GPT-1 through GPT-5, the BERT and T5 branch, the Llama and Mistral open-weight line, and the frontier reasoning models. **26 papers.**
+The model releases themselves, in lineage order: GPT-1 through GPT-5, the BERT and T5 branch, the Llama and Mistral open-weight line, and the frontier reasoning models. **27 papers.**
 
 <table>
 <tr>
@@ -410,6 +410,19 @@ The model releases themselves, in lineage order: GPT-1 through GPT-5, the BERT a
 - 1.3B model, 50.6% HumanEval
 - Filtered and synthetic textbook data
 - [Paper](https://arxiv.org/abs/2306.11644)
+
+</td>
+<td width="33%"></td>
+<td width="33%"></td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Tulu 3](./papers/language-models/148-tulu-3/summary.md)** (2024)
+- ⭐ **HIGH** - The open post-training recipe
+- Fully open SFT, then DPO, then RLVR on Llama 3.1
+- Names and popularises RLVR
+- [Paper](https://arxiv.org/abs/2411.15124)
 
 </td>
 <td width="33%"></td>
@@ -720,7 +733,7 @@ Models that cross modalities - vision-language, speech recognition and generatio
 
 ## ⚡ Techniques & Methods
 
-The methods layer: how models are trained, aligned, made to reason, served fast, evaluated, interpreted, and pointed at problems outside language. **66 papers.**
+The methods layer: how models are trained, aligned, made to reason, served fast, evaluated, interpreted, and pointed at problems outside language. **70 papers.**
 
 <table>
 <tr>
@@ -1381,6 +1394,48 @@ The methods layer: how models are trained, aligned, made to reason, served fast,
 <td width="33%"></td>
 <td width="33%"></td>
 </tr>
+<tr>
+<td width="33%">
+
+**[Measuring AI Ability to Complete Long Tasks](./papers/techniques/145-metr-time-horizons/summary.md)** (2025)
+- ⭐ **HIGH** - How long a task can an AI finish?
+- Measures capability in human-hours, not benchmark scores
+- Time horizon doubled roughly every seven months
+- [Paper](https://arxiv.org/abs/2503.14499)
+
+</td>
+<td width="33%">
+
+**[Deep RL from Human Preferences](./papers/techniques/146-deep-rl-from-human-preferences/summary.md)** (2017)
+- 🔥 **CRITICAL** - Where RLHF began
+- Learns a reward model from human comparisons of short clips
+- Ordinary deep RL then optimises that learned reward
+- [Paper](https://arxiv.org/abs/1706.03741)
+
+</td>
+<td width="33%">
+
+**[Learning to Summarize from Human Feedback](./papers/techniques/147-learning-to-summarize-from-human-feedback/summary.md)** (2020)
+- ⭐ **HIGH** - The bridge from 2017 RLHF to InstructGPT
+- Preferences, then a reward model, then PPO with a KL penalty
+- Beat human-written reference summaries on TL;DR
+- [Paper](https://arxiv.org/abs/2009.01325)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**[Why Language Models Hallucinate](./papers/techniques/149-why-language-models-hallucinate/summary.md)** (2025)
+- ⭐ **HIGH** - Hallucination as a statistical and grading problem
+- Traces hallucination to classification errors in pretraining
+- Argues benchmark grading rewards confident guessing
+- [Paper](https://arxiv.org/abs/2509.04664)
+
+</td>
+<td width="33%"></td>
+<td width="33%"></td>
+</tr>
 </table>
 
 ---
@@ -1425,7 +1480,7 @@ Vision-language-action models and the shared datasets behind them - how web-scal
 
 ## ✍️ Essays & Landmark Posts
 
-Not papers, but writing that set the field's direction - from Turing's imitation game to the arguments about scaling, agents and where it all leads. Pitches summarise the essays' claims, not this collection's endorsement. **9 papers.**
+Not papers, but writing that set the field's direction - from Turing's imitation game to the arguments about scaling, agents and where it all leads. Pitches summarise the essays' claims, not this collection's endorsement. **10 papers.**
 
 <table>
 <tr>
@@ -1515,6 +1570,19 @@ Not papers, but writing that set the field's direction - from Turing's imitation
 
 </td>
 </tr>
+<tr>
+<td width="33%">
+
+**[On the Dangers of Stochastic Parrots](./papers/essays/150-stochastic-parrots/summary.md)** (2021)
+- ⭐ **HIGH** - The critique side of the scaling debate
+- Argues bigger language models carry cost and data risks
+- Says fluent text is form without grounded meaning
+- [Essay](https://dl.acm.org/doi/10.1145/3442188.3445922)
+
+</td>
+<td width="33%"></td>
+<td width="33%"></td>
+</tr>
 </table>
 
 ---
@@ -1526,13 +1594,13 @@ Every paper in the collection has a card on this page.
 | Category | Papers |
 |----------|--------|
 | **Foundational Architectures** | 13 |
-| **Language Models** | 26 |
+| **Language Models** | 27 |
 | **Image, Video & 3D Generation** | 18 |
 | **Multimodal & Audio** | 9 |
 | **Robotics & Embodied AI** | 3 |
-| **Techniques & Methods** | 66 |
-| **Essays & Landmark Posts** | 9 |
-| **Total** | **144** |
+| **Techniques & Methods** | 70 |
+| **Essays & Landmark Posts** | 10 |
+| **Total** | **150** |
 
 The authoritative counts live in [`papers.json`](./papers.json) and are regenerated by
 `scripts/build_manifest.py`; `scripts/check_counts.py` fails CI if the table above drifts from it.
@@ -1543,8 +1611,8 @@ The authoritative counts live in [`papers.json`](./papers.json) and are regenera
 
 Relevance ratings are editorial, and describe how much the paper matters to a reader today:
 
-- 🔥 **CRITICAL** (73 papers) - Essential - read these to understand the field
-- ⭐ **HIGH** (63 papers) - Important, with significant downstream impact
+- 🔥 **CRITICAL** (74 papers) - Essential - read these to understand the field
+- ⭐ **HIGH** (68 papers) - Important, with significant downstream impact
 - 📚 **HISTORICAL** (7 papers) - Formative context; superseded in practice
 - 📖 **THEORY** (1 paper) - Theoretical foundations
 
