@@ -52,13 +52,23 @@ Built for **every kind of technologist**, across 21 role-targeted learning paths
 
 # Everything AI, Summarized
 
-A curated collection of the **144 most influential papers** and landmark essays that shaped modern AI, with comprehensive summaries designed to make cutting-edge research accessible to everyone - plus **[explainers](./EXPLAINERS.md)** on everything a single paper does not cover: how the model families evolved, what the benchmarks measure, what training and inference cost, the rules being written, and the questions still open.
+A curated collection of the **156 most influential papers** and landmark essays that shaped modern AI, with comprehensive summaries designed to make cutting-edge research accessible to everyone - plus **[explainers](./EXPLAINERS.md)** on everything a single paper does not cover: how the model families evolved, what the benchmarks measure, what training and inference cost, the rules being written, and the questions still open.
 
-[![Papers](https://img.shields.io/badge/Papers-144-blue.svg)](./INDEX.md)
+[![Papers](https://img.shields.io/badge/Papers-156-blue.svg)](./INDEX.md)
 [![Explainers](https://img.shields.io/badge/Explainers-31-purple.svg)](./EXPLAINERS.md)
 [![Guides](https://img.shields.io/badge/Guides-6-green.svg)](./docs/ROADMAP.md)
 [![License](https://img.shields.io/badge/License-CC_BY_4.0-orange.svg)](./LICENSE)
 [![Updated](https://img.shields.io/badge/Updated-September_2026-green.svg)](./README.md)
+
+<div align="center" markdown="1">
+
+[![Visit the website](https://img.shields.io/badge/Visit_the_website-patrickwiloak.github.io%2Fgenai--research--papers--summarized-6f42c1?style=for-the-badge&logo=googlechrome&logoColor=white)](https://patrickwiloak.github.io/genai-research-papers-summarized/)
+
+**[→ patrickwiloak.github.io/genai-research-papers-summarized](https://patrickwiloak.github.io/genai-research-papers-summarized/)**
+
+Searchable, dark mode, no signup.
+
+</div>
 
 ---
 
@@ -688,7 +698,7 @@ Focus on "Why This Matters" sections + [Comparisons Guide](./docs/COMPARISONS.md
 
 | Category | Count | Total Reading Time |
 |----------|-------|-------------------|
-| **Papers** | 144 | 35-45 hours |
+| **Papers** | 156 | 35-45 hours |
 | **Explainers** | 31 | 12-15 hours |
 | **Source words compressed** | 1.7M+ | ~160 hours |
 | **Words** | 350,000+ | - |
@@ -824,3 +834,42 @@ Gratitude to the researchers who created these foundational works:
 **Total Content:** 350,000+ words of summaries, explainers and guides (see Quick Stats above)
 **Includes:** Roots (Word2Vec, Seq2Seq, VAE, PPO) through the latest breakthroughs of early 2026 (GPT-5, Claude 4, Llama 4, GRPO, RLVR, and more)
 **Repository:** [github.com/PatrickWiloak/genai-research-papers-summarized](https://github.com/PatrickWiloak/genai-research-papers-summarized)
+
+<!-- nobler-footer:start - shared block, kept in sync across Nobler Works public repos -->
+
+---
+
+<div align="center" markdown="1">
+
+## More from Nobler Works
+
+Free, open-source projects from the [Nobler Works](https://noblerworks.com/) team. If one helps you, a ⭐ helps the next person find it.
+
+</div>
+
+| Project | What it is | |
+|---|---|---|
+| 🛰️ **[IRONSIGHT](https://github.com/NoblerWorks-HQ/IRONSIGHT)** | Real-time OSINT command center - 50+ live intel feeds, no API keys | **[Website →](https://noblerworks-hq.github.io/IRONSIGHT/)** |
+| 🌍 **[War Games](https://github.com/NoblerWorks-HQ/WarGames)** | NATO, Russia, and China on one map, each commanded by an LLM | **[Website →](https://noblerworks-hq.github.io/WarGames/)** |
+| ⛏️ **[Minecraft Agentic Builder](https://github.com/NoblerWorks-HQ/minecraft-agentic)** | A crew of AI agents builds Minecraft worlds live in your browser | [Repo →](https://github.com/NoblerWorks-HQ/minecraft-agentic) |
+| ☁️ **[Cloud, Data, AI & Security: Zero to Hero](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero)** | 149 cert study guides across 27 providers, plus hands-on builds | **[Website →](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/)** |
+| 🧠 **[Bedrock RAG with S3 Vectors](https://github.com/PatrickWiloak/bedrock-rag-s3-vectors-tutorial)** | Deploy document Q&A on AWS Bedrock in under 10 minutes (CDK or Terraform) | [Repo →](https://github.com/PatrickWiloak/bedrock-rag-s3-vectors-tutorial) |
+| 🏃 **[Proper Training for Distance Running](https://github.com/PatrickWiloak/proper-distance-running-training-guidance)** | Evidence-based running guide with twelve 5K-to-marathon plans | **[Read online →](https://achilles.fit/guides)** |
+
+<div align="center" markdown="1">
+
+**Our products:** [gitGood.dev](https://gitgood.dev) - train for the tech role, not just the interview · [Achilles.fit](https://achilles.fit) - adaptive training plans with an AI coach
+
+**Follow Nobler Works**
+
+[![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=googlechrome&logoColor=white)](https://noblerworks.com/) [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/Nobler_Works) [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@NoblerWorks) [![TikTok](https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@noblerworks) [![Threads](https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white)](https://www.threads.com/@noblerworks)
+
+**Follow Patrick Wiloak**, founder
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/patricklukewilson) [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/PatrickWiloak) [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@patrickwiloak) [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/patrickwiloak) [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=googlechrome&logoColor=white)](https://patricklukewilson.com)
+
+**Need something like this built for your domain? [Get in touch →](https://noblerworks.com/)**
+
+</div>
+
+<!-- nobler-footer:end -->
